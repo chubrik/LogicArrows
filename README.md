@@ -20,6 +20,10 @@
 [![Матрица RGB](img/matrix-rgb.png)](https://logic-arrows.io/map-matrix-rgb)
 <br><br>
 
+### [Матрица маленькая](https://logic-arrows.io/map-CcGrVgC8)
+[![Матрица маленькая](img/matrix-small.png)](https://logic-arrows.io/map-CcGrVgC8)
+<br><br>
+
 ### [Память 256 байт](https://logic-arrows.io/map-ram256)
 [![Память 256 байт](img/ram256.png)](https://logic-arrows.io/map-ram256)
 <br><br>
@@ -38,6 +42,10 @@
 
 ### [Передатчик](https://logic-arrows.io/map-Io2FESYk)
 [![Передатчик](img/transmitter.png)](https://logic-arrows.io/map-Io2FESYk)
+<br><br>
+
+### [Вентили](https://logic-arrows.io/map-k_R4pB1A)
+[![Вентили](img/gates.png)](https://logic-arrows.io/map-k_R4pB1A)
 <br><br>
 
 ### [Умножитель](https://logic-arrows.io/map-lF-KRVo4vtw)
