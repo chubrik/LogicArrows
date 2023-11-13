@@ -24,8 +24,12 @@
 [![Матрица маленькая](img/matrix-small.png)](https://logic-arrows.io/map-CcGrVgC8)
 <br><br>
 
-### [Память 256 байт](https://logic-arrows.io/map-ram256)
-[![Память 256 байт](img/ram256.png)](https://logic-arrows.io/map-ram256)
+### [Память 256 байт (v2)](https://logic-arrows.io/map-ram256)
+[![Память 256 байт (v2)](img/ram256v2.png)](https://logic-arrows.io/map-ram256)
+<br><br>
+
+### [Память 256 байт (v1)](https://logic-arrows.io/map-utcKt1dM)
+[![Память 256 байт (v1)](img/ram256v1.png)](https://logic-arrows.io/map-utcKt1dM)
 <br><br>
 
 ### [Память 64 байта](https://logic-arrows.io/map-ram64)
