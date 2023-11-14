@@ -20,8 +20,8 @@
 [![Матрица RGB](img/matrix-rgb.png)](https://logic-arrows.io/map-matrix-rgb)
 <br><br>
 
-### [Матрица маленькая](https://logic-arrows.io/map-CcGrVgC8)
-[![Матрица маленькая](img/matrix-small.png)](https://logic-arrows.io/map-CcGrVgC8)
+### [Матрица маленькая (разных цветов)](https://logic-arrows.io/map-CcGrVgC8)
+[![Матрица маленькая (разных цветов)](img/matrix-small-red.png)](https://logic-arrows.io/map-CcGrVgC8)
 <br><br>
 
 ### [Память 256 байт (v2)](https://logic-arrows.io/map-ram256)
