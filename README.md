@@ -8,6 +8,10 @@
 
 ## Мои карты
 
+### [Компьютер](./computer.md)
+[![Компьютер](img/computer.png)](./computer.md)
+<br><br>
+
 ### [Жизнь](https://logic-arrows.io/map-life)
 [![Жизнь](img/life.png)](https://logic-arrows.io/map-life)
 <br><br>
@@ -40,8 +44,8 @@
 [![Цифровой дисплей](img/digits.png)](https://logic-arrows.io/map-Xhj9Pead)
 <br><br>
 
-### [Процессор](https://logic-arrows.io/map-kBhOopki)
-[![Процессор](img/cpu.png)](https://logic-arrows.io/map-kBhOopki)
+### [Прототип процессора](https://logic-arrows.io/map-kBhOopki)
+[![Прототип процессора](img/cpu.png)](https://logic-arrows.io/map-kBhOopki)
 <br><br>
 
 ### [Передатчик](https://logic-arrows.io/map-Io2FESYk)
