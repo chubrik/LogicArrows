@@ -84,4 +84,19 @@
 
 
 ## <a name="examples"></a>Примеры готовых программ
-*Описание в разработке*
+Hello world:
+```asm
+ldi a, 0x80
+st a, 0xBF
+ldi b, 0x20
+ldi c, 0x18
+ldi d, 0xC0
+loop:
+    ld a, c
+    st a, d
+    inc c
+    inc d
+    dec b
+    jnz loop
+hlt
+```
