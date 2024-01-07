@@ -40,6 +40,10 @@
 [![Память 64 байта](img/ram64.png)](https://logic-arrows.io/map-ram64)
 <br><br>
 
+### [Конвертер BCD](https://logic-arrows.io/map-0TNlFXRQa6Y)
+[![Конвертер BCD](img/bcd-converter.png)](https://logic-arrows.io/map-0TNlFXRQa6Y)
+<br><br>
+
 ### [Цифровой дисплей](https://logic-arrows.io/map-Xhj9Pead)
 [![Цифровой дисплей](img/digits.png)](https://logic-arrows.io/map-Xhj9Pead)
 <br><br>
