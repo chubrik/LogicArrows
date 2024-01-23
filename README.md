@@ -44,16 +44,16 @@
 [![Конвертер BCD](img/bcd-converter.png)](https://logic-arrows.io/map-0TNlFXRQa6Y)
 <br><br>
 
-### [Цифровой дисплей](https://logic-arrows.io/map-Xhj9Pead)
-[![Цифровой дисплей](img/digits.png)](https://logic-arrows.io/map-Xhj9Pead)
+### [Сегментные дисплеи](https://logic-arrows.io/map-Xhj9Pead)
+[![Сегментные дисплеи](img/digits.png)](https://logic-arrows.io/map-Xhj9Pead)
 <br><br>
 
 ### [Прототип процессора](https://logic-arrows.io/map-kBhOopki)
 [![Прототип процессора](img/cpu.png)](https://logic-arrows.io/map-kBhOopki)
 <br><br>
 
-### [Передатчик](https://logic-arrows.io/map-Io2FESYk)
-[![Передатчик](img/transmitter.png)](https://logic-arrows.io/map-Io2FESYk)
+### [Передатчики](https://logic-arrows.io/map-Io2FESYk)
+[![Передатчики](img/transmitter.png)](https://logic-arrows.io/map-Io2FESYk)
 <br><br>
 
 ### [Вентили](https://logic-arrows.io/map-k_R4pB1A)
