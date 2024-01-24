@@ -40,6 +40,10 @@
 [![Память 64 байта](img/ram64.png)](https://logic-arrows.io/map-ram64)
 <br><br>
 
+### [ПЗУ 1 клетка на бит](https://logic-arrows.io/map-FI3Ue08n)
+[![ПЗУ 1 клетка на бит](img/rom-compact.png)](https://logic-arrows.io/map-FI3Ue08n)
+<br><br>
+
 ### [Конвертер BCD](https://logic-arrows.io/map-0TNlFXRQa6Y)
 [![Конвертер BCD](img/bcd-converter.png)](https://logic-arrows.io/map-0TNlFXRQa6Y)
 <br><br>
