@@ -3,7 +3,6 @@
 Console.Utils.MaximizeWindow();
 var ram = new Ram();
 Console.Pin(ram.Display);
-var game = new Game();
-ram.Load(game.Bytes());
+ram.Load(SpaceFight.Bytes());
 var cpu = new Cpu(ram);
 cpu.Run();
