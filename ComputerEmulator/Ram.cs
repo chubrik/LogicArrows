@@ -6,11 +6,11 @@ internal class Ram
     private readonly IList<MyByte> _screen = new MyByte[256];
     private MyByte _number = default;
     private bool _numberSetted = false;
-    private static readonly MyByte _outAddr = new("BF");
-    private static readonly MyByte _outScreen = new("80");
+    private static readonly MyByte _outAddr = new("3F");
     private static readonly MyByte _outNumber = new("10");
-    private static readonly MyByte _screenMinAddr = new("C0");
-    private static readonly MyByte _screenMaxAddr = new("DF");
+    private static readonly MyByte _outScreen = new("80");
+    private static readonly MyByte _screenMinAddr = new("40");
+    private static readonly MyByte _screenMaxAddr = new("5F");
 
     public MyByte Read(MyByte addr)
     {
@@ -26,16 +26,16 @@ internal class Ram
     {
         _main[addr] = value;
 
-        if (_main[_outAddr] == _outScreen && addr >= _screenMinAddr && addr <= _screenMaxAddr)
-        {
-            _screen[addr] = value;
-            Console.UpdatePin();
-        }
-
         if (_main[_outAddr] == _outNumber && addr == _screenMinAddr)
         {
             _number = value;
             _numberSetted = true;
+            Console.UpdatePin();
+        }
+
+        if (_main[_outAddr] == _outScreen && addr >= _screenMinAddr && addr <= _screenMaxAddr)
+        {
+            _screen[addr] = value;
             Console.UpdatePin();
         }
     }

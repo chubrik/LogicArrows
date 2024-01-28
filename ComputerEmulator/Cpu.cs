@@ -1,11 +1,9 @@
-﻿using System.Drawing;
-
-namespace ComputerEmulator;
+﻿namespace ComputerEmulator;
 
 internal class Cpu(Ram ram)
 {
     private static readonly Random _random = new();
-    private static readonly MyByte _inAddr = new("BE");
+    private static readonly MyByte _inAddr = new("3E");
 
     private readonly Ram _ram = ram;
     private int counter;
@@ -24,9 +22,11 @@ internal class Cpu(Ram ram)
     private bool _rcSetted;
     private bool _rdSetted;
     private bool _fzsSetted;
-    private bool _fcoSetted;
+    private bool _fcSetted;
+    private bool _foSetted;
     private bool _jumped;
-    private MyByte _inQueued;
+    private bool _halted;
+    private MyByte? _inQueued;
 
     public void Run()
     {
@@ -40,7 +40,7 @@ internal class Cpu(Ram ram)
             if (key == ConsoleKey.Escape)
                 return;
 
-            if (key != ConsoleKey.Enter)
+            if (key != ConsoleKey.NumPad0)
                 _inQueued = (int)key;
 
             var instruction = _instructions[_ir];
@@ -48,6 +48,9 @@ internal class Cpu(Ram ram)
 
             if (!_jumped)
                 _ip++;
+
+            if (_halted)
+                return;
         }
     }
 
@@ -92,11 +95,16 @@ internal class Cpu(Ram ram)
         _fzsSetted = true;
     }
 
-    private void SetFlagsCO(bool fc, bool fo)
+    private void SetFlagsC(bool fc)
     {
         _fc = fc;
+        _fcSetted = true;
+    }
+
+    private void SetFlagsO(bool fo)
+    {
         _fo = fo;
-        _fcoSetted = true;
+        _foSetted = true;
     }
 
     private void State(bool isArgument = false)
@@ -109,9 +117,9 @@ internal class Cpu(Ram ram)
         var rcColor = _rcSetted ? "W" : _rc != 0 ? "G" : "d";
         var rdColor = _rdSetted ? "W" : _rd != 0 ? "G" : "d";
         var fzColor = _fzsSetted ? "W" : _fz ? "G" : "d";
-        var fcColor = _fcoSetted ? "W" : _fc ? "G" : "d";
+        var fcColor = _fcSetted ? "W" : _fc ? "G" : "d";
         var fsColor = _fzsSetted ? "W" : _fs ? "G" : "d";
-        var foColor = _fcoSetted ? "W" : _fo ? "G" : "d";
+        var foColor = _foSetted ? "W" : _fo ? "G" : "d";
 
         Console.WriteLine(
            $"d`{counter,5}  ",
@@ -125,18 +133,27 @@ internal class Cpu(Ram ram)
            "d`C:", $"{fcColor}`{(_fc ? "1" : "0")}  ",
            "d`S:", $"{fsColor}`{(_fs ? "1" : "0")}  ",
            "d`O:", $"{foColor}`{(_fo ? "1" : "0")}    ",
-           $"d`BB:{_ram.Read("BB").Hex}  ",
-           $"d`BC:{_ram.Read("BC").Hex}  ",
-           $"d`BD:{_ram.Read("BD").Hex}  ",
-           $"d`BE:{_ram.Read("BE").Hex}  ",
-           $"d`BF:{_ram.Read("BF").Hex}"
+           $"d`3A:{_ram.Read("3A").Hex}  ",
+           $"d`3B:{_ram.Read("3B").Hex}  ",
+           $"d`3C:{_ram.Read("3C").Hex}  ",
+           $"d`3E:{_ram.Read("3E").Hex}  ",
+           $"d`3F:{_ram.Read("3F").Hex}"
         );
 
-        _raSetted = _rbSetted = _rcSetted = _rdSetted = _fzsSetted = _fcoSetted = _jumped = false;
+        _raSetted = _rbSetted = _rcSetted = _rdSetted = _fzsSetted = _fcSetted = _foSetted = _jumped = false;
     }
 
     [Obsolete]
     private static void Command(Cpu cpu) => throw new NotImplementedException();
+
+    private static void CheckIn(Cpu cpu, MyByte addr)
+    {
+        if (addr == _inAddr && cpu._inQueued != null)
+        {
+            cpu._ram.Write(_inAddr, cpu._inQueued.Value);
+            cpu._inQueued = null;
+        }
+    }
 
     #region Mov
 
@@ -290,8 +307,74 @@ internal class Cpu(Ram ram)
     private static void AddA0(Cpu cpu)
     {
         cpu.SetFlagsZS(cpu._ra);
-        cpu.SetFlagsCO(fc: false, fo: false);
+        cpu.SetFlagsC(false);
+        cpu.SetFlagsO(false);
     }
+
+    private static void AddAB(Cpu cpu)
+    {
+        MyByte result = cpu._ra + cpu._rb;
+        cpu.SetFlagsZS(result);
+        cpu.SetFlagsC(cpu._ra.IsSigned && cpu._rb.IsSigned);
+        cpu.SetFlagsO(cpu._ra.IsSigned == cpu._rb.IsSigned && cpu._rb.IsSigned != result.IsSigned);
+        cpu.SetRegA(result);
+    }
+
+    private static void AddAC(Cpu cpu)
+    {
+        MyByte result = cpu._ra + cpu._rc;
+        cpu.SetFlagsZS(result);
+        cpu.SetFlagsC(cpu._ra.IsSigned && cpu._rc.IsSigned);
+        cpu.SetFlagsO(cpu._ra.IsSigned == cpu._rc.IsSigned && cpu._rb.IsSigned != result.IsSigned);
+        cpu.SetRegA(result);
+    }
+
+    private static void AddAD(Cpu cpu)
+    {
+        MyByte result = cpu._ra + cpu._rd;
+        cpu.SetFlagsZS(result);
+        cpu.SetFlagsC(cpu._ra.IsSigned && cpu._rd.IsSigned);
+        cpu.SetFlagsO(cpu._ra.IsSigned == cpu._rd.IsSigned && cpu._rb.IsSigned != result.IsSigned);
+        cpu.SetRegA(result);
+    }
+
+    #region Sub
+
+    private static void SubA0(Cpu cpu)
+    {
+        cpu.SetFlagsZS(cpu._ra);
+        cpu.SetFlagsC(false);
+        cpu.SetFlagsO(false);
+    }
+
+    private static void SubAB(Cpu cpu)
+    {
+        MyByte result = cpu._ra - cpu._rb;
+        cpu.SetFlagsZS(result);
+        cpu.SetFlagsC(cpu._ra < cpu._rb);
+        cpu.SetFlagsO(cpu._ra.IsSigned != cpu._rb.IsSigned && cpu._rb.IsSigned == result.IsSigned);
+        cpu.SetRegA(result);
+    }
+
+    private static void SubAC(Cpu cpu)
+    {
+        MyByte result = cpu._ra - cpu._rc;
+        cpu.SetFlagsZS(result);
+        cpu.SetFlagsC(cpu._ra < cpu._rb);
+        cpu.SetFlagsO(cpu._ra.IsSigned != cpu._rb.IsSigned && cpu._rb.IsSigned == result.IsSigned);
+        cpu.SetRegA(result);
+    }
+
+    private static void SubAD(Cpu cpu)
+    {
+        MyByte result = cpu._ra - cpu._rd;
+        cpu.SetFlagsZS(result);
+        cpu.SetFlagsC(cpu._ra < cpu._rb);
+        cpu.SetFlagsO(cpu._ra.IsSigned != cpu._rb.IsSigned && cpu._rb.IsSigned == result.IsSigned);
+        cpu.SetRegA(result);
+    }
+
+    #endregion
 
     #endregion
 
@@ -353,7 +436,7 @@ internal class Cpu(Ram ram)
     {
         MyByte shifted = cpu._ra << 1;
         cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsCO(fc: cpu._ra.IsSigned, fo: cpu._ra.IsSigned != shifted.IsSigned);
+        cpu.SetFlagsC(cpu._ra.IsSigned);
         cpu.SetRegA(shifted);
     }
 
@@ -361,7 +444,7 @@ internal class Cpu(Ram ram)
     {
         MyByte shifted = cpu._rb << 1;
         cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsCO(fc: cpu._rb.IsSigned, fo: cpu._rb.IsSigned != shifted.IsSigned);
+        cpu.SetFlagsC(cpu._rb.IsSigned);
         cpu.SetRegB(shifted);
     }
 
@@ -369,7 +452,7 @@ internal class Cpu(Ram ram)
     {
         MyByte shifted = cpu._rc << 1;
         cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsCO(fc: cpu._rc.IsSigned, fo: cpu._rc.IsSigned != shifted.IsSigned);
+        cpu.SetFlagsC(cpu._rc.IsSigned);
         cpu.SetRegC(shifted);
     }
 
@@ -377,7 +460,7 @@ internal class Cpu(Ram ram)
     {
         MyByte shifted = cpu._rd << 1;
         cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsCO(fc: cpu._rd.IsSigned, fo: cpu._rd.IsSigned != shifted.IsSigned);
+        cpu.SetFlagsC(cpu._rd.IsSigned);
         cpu.SetRegD(shifted);
     }
 
@@ -385,7 +468,7 @@ internal class Cpu(Ram ram)
     {
         MyByte shifted = cpu._ra >> 1;
         cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsCO(fc: (cpu._ra & 1) != 0, fo: cpu._ra.IsSigned != shifted.IsSigned);
+        cpu.SetFlagsC((cpu._ra & 1) != 0);
         cpu.SetRegA(shifted);
     }
 
@@ -393,7 +476,7 @@ internal class Cpu(Ram ram)
     {
         MyByte shifted = cpu._rb >> 1;
         cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsCO(fc: (cpu._rb & 1) != 0, fo: cpu._rb.IsSigned != shifted.IsSigned);
+        cpu.SetFlagsC((cpu._rb & 1) != 0);
         cpu.SetRegB(shifted);
     }
 
@@ -401,7 +484,7 @@ internal class Cpu(Ram ram)
     {
         MyByte shifted = cpu._rc >> 1;
         cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsCO(fc: (cpu._rc & 1) != 0, fo: cpu._rc.IsSigned != shifted.IsSigned);
+        cpu.SetFlagsC((cpu._rc & 1) != 0);
         cpu.SetRegC(shifted);
     }
 
@@ -409,7 +492,7 @@ internal class Cpu(Ram ram)
     {
         MyByte shifted = cpu._rd >> 1;
         cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsCO(fc: (cpu._rd & 1) != 0, fo: cpu._rd.IsSigned != shifted.IsSigned);
+        cpu.SetFlagsC((cpu._rd & 1) != 0);
         cpu.SetRegD(shifted);
     }
 
@@ -425,7 +508,7 @@ internal class Cpu(Ram ram)
             shifted |= 1;
 
         cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsCO(fc: cpu._ra.IsSigned, fo: cpu._ra.IsSigned != shifted.IsSigned);
+        cpu.SetFlagsC(cpu._ra.IsSigned);
         cpu.SetRegA(shifted);
     }
 
@@ -437,7 +520,7 @@ internal class Cpu(Ram ram)
             shifted |= 1;
 
         cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsCO(fc: cpu._rb.IsSigned, fo: cpu._rb.IsSigned != shifted.IsSigned);
+        cpu.SetFlagsC(cpu._rb.IsSigned);
         cpu.SetRegB(shifted);
     }
 
@@ -449,7 +532,7 @@ internal class Cpu(Ram ram)
             shifted |= 1;
 
         cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsCO(fc: cpu._rc.IsSigned, fo: cpu._rc.IsSigned != shifted.IsSigned);
+        cpu.SetFlagsC(cpu._rc.IsSigned);
         cpu.SetRegC(shifted);
     }
 
@@ -461,7 +544,7 @@ internal class Cpu(Ram ram)
             shifted |= 1;
 
         cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsCO(fc: cpu._rd.IsSigned, fo: cpu._rd.IsSigned != shifted.IsSigned);
+        cpu.SetFlagsC(cpu._rd.IsSigned);
         cpu.SetRegD(shifted);
     }
 
@@ -473,7 +556,7 @@ internal class Cpu(Ram ram)
             shifted |= 128;
 
         cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsCO(fc: (cpu._ra & 1) != 0, fo: cpu._ra.IsSigned != shifted.IsSigned);
+        cpu.SetFlagsC((cpu._ra & 1) != 0);
         cpu.SetRegA(shifted);
     }
 
@@ -485,7 +568,7 @@ internal class Cpu(Ram ram)
             shifted |= 128;
 
         cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsCO(fc: (cpu._rb & 1) != 0, fo: cpu._rb.IsSigned != shifted.IsSigned);
+        cpu.SetFlagsC((cpu._rb & 1) != 0);
         cpu.SetRegB(shifted);
     }
 
@@ -497,7 +580,7 @@ internal class Cpu(Ram ram)
             shifted |= 128;
 
         cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsCO(fc: (cpu._rc & 1) != 0, fo: cpu._rc.IsSigned != shifted.IsSigned);
+        cpu.SetFlagsC((cpu._rc & 1) != 0);
         cpu.SetRegC(shifted);
     }
 
@@ -509,7 +592,7 @@ internal class Cpu(Ram ram)
             shifted |= 128;
 
         cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsCO(fc: (cpu._rd & 1) != 0, fo: cpu._rd.IsSigned != shifted.IsSigned);
+        cpu.SetFlagsC((cpu._rd & 1) != 0);
         cpu.SetRegD(shifted);
     }
 
@@ -517,10 +600,33 @@ internal class Cpu(Ram ram)
 
     #region Ld / Ldi
 
-    private static void LdA(Cpu cpu) => cpu.SetRegA(cpu._ram.Read(cpu.GetArgument()));
-    private static void LdB(Cpu cpu) => cpu.SetRegB(cpu._ram.Read(cpu.GetArgument()));
-    private static void LdC(Cpu cpu) => cpu.SetRegC(cpu._ram.Read(cpu.GetArgument()));
-    private static void LdD(Cpu cpu) => cpu.SetRegD(cpu._ram.Read(cpu.GetArgument()));
+    private static void LdA(Cpu cpu)
+    {
+        var addr = cpu.GetArgument();
+        CheckIn(cpu, addr);
+        cpu.SetRegA(cpu._ram.Read(addr));
+    }
+
+    private static void LdB(Cpu cpu)
+    {
+        var addr = cpu.GetArgument();
+        CheckIn(cpu, addr);
+        cpu.SetRegB(cpu._ram.Read(addr));
+    }
+
+    private static void LdC(Cpu cpu)
+    {
+        var addr = cpu.GetArgument();
+        CheckIn(cpu, addr);
+        cpu.SetRegC(cpu._ram.Read(addr));
+    }
+
+    private static void LdD(Cpu cpu)
+    {
+        var addr = cpu.GetArgument();
+        CheckIn(cpu, addr);
+        cpu.SetRegD(cpu._ram.Read(addr));
+    }
 
     private static void LdiA(Cpu cpu) => cpu.SetRegA(cpu.GetArgument());
     private static void LdiB(Cpu cpu) => cpu.SetRegB(cpu.GetArgument());
@@ -531,22 +637,101 @@ internal class Cpu(Ram ram)
 
     #region Ld X,Y
 
-    private static void LdAA(Cpu cpu) => cpu.SetRegA(cpu._ram.Read(cpu._ra));
-    private static void LdBA(Cpu cpu) => cpu.SetRegB(cpu._ram.Read(cpu._ra));
-    private static void LdCA(Cpu cpu) => cpu.SetRegC(cpu._ram.Read(cpu._ra));
-    private static void LdDA(Cpu cpu) => cpu.SetRegD(cpu._ram.Read(cpu._ra));
-    private static void LdAB(Cpu cpu) => cpu.SetRegA(cpu._ram.Read(cpu._rb));
-    private static void LdBB(Cpu cpu) => cpu.SetRegB(cpu._ram.Read(cpu._rb));
-    private static void LdCB(Cpu cpu) => cpu.SetRegC(cpu._ram.Read(cpu._rb));
-    private static void LdDB(Cpu cpu) => cpu.SetRegD(cpu._ram.Read(cpu._rb));
-    private static void LdAC(Cpu cpu) => cpu.SetRegA(cpu._ram.Read(cpu._rc));
-    private static void LdBC(Cpu cpu) => cpu.SetRegB(cpu._ram.Read(cpu._rc));
-    private static void LdCC(Cpu cpu) => cpu.SetRegC(cpu._ram.Read(cpu._rc));
-    private static void LdDC(Cpu cpu) => cpu.SetRegD(cpu._ram.Read(cpu._rc));
-    private static void LdAD(Cpu cpu) => cpu.SetRegA(cpu._ram.Read(cpu._rd));
-    private static void LdBD(Cpu cpu) => cpu.SetRegB(cpu._ram.Read(cpu._rd));
-    private static void LdCD(Cpu cpu) => cpu.SetRegC(cpu._ram.Read(cpu._rd));
-    private static void LdDD(Cpu cpu) => cpu.SetRegD(cpu._ram.Read(cpu._rd));
+    private static void LdAA(Cpu cpu)
+    {
+        CheckIn(cpu, cpu._ra);
+        cpu.SetRegA(cpu._ram.Read(cpu._ra));
+    }
+
+    private static void LdBA(Cpu cpu)
+    {
+        CheckIn(cpu, cpu._ra);
+        cpu.SetRegB(cpu._ram.Read(cpu._ra));
+    }
+
+    private static void LdCA(Cpu cpu)
+    {
+        CheckIn(cpu, cpu._ra);
+        cpu.SetRegC(cpu._ram.Read(cpu._ra));
+    }
+
+    private static void LdDA(Cpu cpu)
+    {
+        CheckIn(cpu, cpu._ra);
+        cpu.SetRegD(cpu._ram.Read(cpu._ra));
+    }
+
+    private static void LdAB(Cpu cpu)
+    {
+        CheckIn(cpu, cpu._rb);
+        cpu.SetRegA(cpu._ram.Read(cpu._rb));
+    }
+
+    private static void LdBB(Cpu cpu)
+    {
+        CheckIn(cpu, cpu._rb);
+        cpu.SetRegB(cpu._ram.Read(cpu._rb));
+    }
+
+    private static void LdCB(Cpu cpu)
+    {
+        CheckIn(cpu, cpu._rb);
+        cpu.SetRegC(cpu._ram.Read(cpu._rb));
+    }
+
+    private static void LdDB(Cpu cpu)
+    {
+        CheckIn(cpu, cpu._rb);
+        cpu.SetRegD(cpu._ram.Read(cpu._rb));
+    }
+
+    private static void LdAC(Cpu cpu)
+    {
+        CheckIn(cpu, cpu._rc);
+        cpu.SetRegA(cpu._ram.Read(cpu._rc));
+    }
+
+    private static void LdBC(Cpu cpu)
+    {
+        CheckIn(cpu, cpu._rc);
+        cpu.SetRegB(cpu._ram.Read(cpu._rc));
+    }
+
+    private static void LdCC(Cpu cpu)
+    {
+        CheckIn(cpu, cpu._rc);
+        cpu.SetRegC(cpu._ram.Read(cpu._rc));
+    }
+
+    private static void LdDC(Cpu cpu)
+    {
+        CheckIn(cpu, cpu._rc);
+        cpu.SetRegD(cpu._ram.Read(cpu._rc));
+    }
+
+    private static void LdAD(Cpu cpu)
+    {
+        CheckIn(cpu, cpu._rd);
+        cpu.SetRegA(cpu._ram.Read(cpu._rd));
+    }
+
+    private static void LdBD(Cpu cpu)
+    {
+        CheckIn(cpu, cpu._rd);
+        cpu.SetRegB(cpu._ram.Read(cpu._rd));
+    }
+
+    private static void LdCD(Cpu cpu)
+    {
+        CheckIn(cpu, cpu._rd);
+        cpu.SetRegC(cpu._ram.Read(cpu._rd));
+    }
+
+    private static void LdDD(Cpu cpu)
+    {
+        CheckIn(cpu, cpu._rd);
+        cpu.SetRegD(cpu._ram.Read(cpu._rd));
+    }
 
     #endregion
 
@@ -559,135 +744,52 @@ internal class Cpu(Ram ram)
 
     #endregion
 
-    #region St
+    #region StX
 
     private static void StA(Cpu cpu)
     {
         cpu._ram.Write(cpu.GetArgument(), cpu._ra);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
     }
 
     private static void StB(Cpu cpu)
     {
         cpu._ram.Write(cpu.GetArgument(), cpu._rb);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
     }
 
     private static void StC(Cpu cpu)
     {
         cpu._ram.Write(cpu.GetArgument(), cpu._rc);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
     }
 
     private static void StD(Cpu cpu)
     {
         cpu._ram.Write(cpu.GetArgument(), cpu._rd);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
     }
 
     #endregion
 
     #region St X,Y
 
-    private static void StAA(Cpu cpu)
-    {
-        cpu._ram.Write(cpu._ra, cpu._ra);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
-    }
-
-    private static void StBA(Cpu cpu)
-    {
-        cpu._ram.Write(cpu._ra, cpu._rb);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
-    }
-
-    private static void StCA(Cpu cpu)
-    {
-        cpu._ram.Write(cpu._ra, cpu._rc);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
-    }
-
-    private static void StDA(Cpu cpu)
-    {
-        cpu._ram.Write(cpu._ra, cpu._rd);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
-    }
-
-    private static void StAB(Cpu cpu)
-    {
-        cpu._ram.Write(cpu._rb, cpu._ra);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
-    }
-
-    private static void StBB(Cpu cpu)
-    {
-        cpu._ram.Write(cpu._rb, cpu._rb);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
-    }
-
-    private static void StCB(Cpu cpu)
-    {
-        cpu._ram.Write(cpu._rb, cpu._rc);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
-    }
-
-    private static void StDB(Cpu cpu)
-    {
-        cpu._ram.Write(cpu._rb, cpu._rd);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
-    }
-
-    private static void StAC(Cpu cpu)
-    {
-        cpu._ram.Write(cpu._rc, cpu._ra);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
-    }
-
-    private static void StBC(Cpu cpu)
-    {
-        cpu._ram.Write(cpu._rc, cpu._rb);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
-    }
-
-    private static void StCC(Cpu cpu)
-    {
-        cpu._ram.Write(cpu._rc, cpu._rc);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
-    }
-
-    private static void StDC(Cpu cpu)
-    {
-        cpu._ram.Write(cpu._rc, cpu._rd);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
-    }
-
-    private static void StAD(Cpu cpu)
-    {
-        cpu._ram.Write(cpu._rd, cpu._ra);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
-    }
-
-    private static void StBD(Cpu cpu)
-    {
-        cpu._ram.Write(cpu._rd, cpu._rb);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
-    }
-
-    private static void StCD(Cpu cpu)
-    {
-        cpu._ram.Write(cpu._rd, cpu._rc);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
-    }
-
-    private static void StDD(Cpu cpu)
-    {
-        cpu._ram.Write(cpu._rd, cpu._rd);
-        cpu._ram.Write(_inAddr, cpu._inQueued);
-    }
+    private static void StAA(Cpu cpu) => cpu._ram.Write(cpu._ra, cpu._ra);
+    private static void StBA(Cpu cpu) => cpu._ram.Write(cpu._ra, cpu._rb);
+    private static void StCA(Cpu cpu) => cpu._ram.Write(cpu._ra, cpu._rc);
+    private static void StDA(Cpu cpu) => cpu._ram.Write(cpu._ra, cpu._rd);
+    private static void StAB(Cpu cpu) => cpu._ram.Write(cpu._rb, cpu._ra);
+    private static void StBB(Cpu cpu) => cpu._ram.Write(cpu._rb, cpu._rb);
+    private static void StCB(Cpu cpu) => cpu._ram.Write(cpu._rb, cpu._rc);
+    private static void StDB(Cpu cpu) => cpu._ram.Write(cpu._rb, cpu._rd);
+    private static void StAC(Cpu cpu) => cpu._ram.Write(cpu._rc, cpu._ra);
+    private static void StBC(Cpu cpu) => cpu._ram.Write(cpu._rc, cpu._rb);
+    private static void StCC(Cpu cpu) => cpu._ram.Write(cpu._rc, cpu._rc);
+    private static void StDC(Cpu cpu) => cpu._ram.Write(cpu._rc, cpu._rd);
+    private static void StAD(Cpu cpu) => cpu._ram.Write(cpu._rd, cpu._ra);
+    private static void StBD(Cpu cpu) => cpu._ram.Write(cpu._rd, cpu._rb);
+    private static void StCD(Cpu cpu) => cpu._ram.Write(cpu._rd, cpu._rc);
+    private static void StDD(Cpu cpu) => cpu._ram.Write(cpu._rd, cpu._rd);
 
     #endregion
 
-    #region JX / JnX
+    #region JF / JnF
 
     private static void Jz(Cpu cpu)
     {
@@ -779,7 +881,303 @@ internal class Cpu(Ram ram)
 
     #endregion
 
-    #region Jmp / Nop
+    #region JF X
+
+    private static void JzA(Cpu cpu)
+    {
+        if (cpu._fz)
+        {
+            cpu._ip = cpu._ra;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JcA(Cpu cpu)
+    {
+        if (cpu._fc)
+        {
+            cpu._ip = cpu._ra;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JsA(Cpu cpu)
+    {
+        if (cpu._fs)
+        {
+            cpu._ip = cpu._ra;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JoA(Cpu cpu)
+    {
+        if (cpu._fo)
+        {
+            cpu._ip = cpu._ra;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JzB(Cpu cpu)
+    {
+        if (cpu._fz)
+        {
+            cpu._ip = cpu._rb;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JcB(Cpu cpu)
+    {
+        if (cpu._fc)
+        {
+            cpu._ip = cpu._rb;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JsB(Cpu cpu)
+    {
+        if (cpu._fs)
+        {
+            cpu._ip = cpu._rb;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JoB(Cpu cpu)
+    {
+        if (cpu._fo)
+        {
+            cpu._ip = cpu._rb;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JzC(Cpu cpu)
+    {
+        if (cpu._fz)
+        {
+            cpu._ip = cpu._rc;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JcC(Cpu cpu)
+    {
+        if (cpu._fc)
+        {
+            cpu._ip = cpu._rc;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JsC(Cpu cpu)
+    {
+        if (cpu._fs)
+        {
+            cpu._ip = cpu._rc;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JoC(Cpu cpu)
+    {
+        if (cpu._fo)
+        {
+            cpu._ip = cpu._rc;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JzD(Cpu cpu)
+    {
+        if (cpu._fz)
+        {
+            cpu._ip = cpu._rd;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JcD(Cpu cpu)
+    {
+        if (cpu._fc)
+        {
+            cpu._ip = cpu._rd;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JsD(Cpu cpu)
+    {
+        if (cpu._fs)
+        {
+            cpu._ip = cpu._rd;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JoD(Cpu cpu)
+    {
+        if (cpu._fo)
+        {
+            cpu._ip = cpu._rd;
+            cpu._jumped = true;
+        }
+    }
+
+    #endregion
+
+    #region JnF X
+
+    private static void JnzA(Cpu cpu)
+    {
+        if (!cpu._fz)
+        {
+            cpu._ip = cpu._ra;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JncA(Cpu cpu)
+    {
+        if (!cpu._fc)
+        {
+            cpu._ip = cpu._ra;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JnsA(Cpu cpu)
+    {
+        if (!cpu._fs)
+        {
+            cpu._ip = cpu._ra;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JnoA(Cpu cpu)
+    {
+        if (!cpu._fo)
+        {
+            cpu._ip = cpu._ra;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JnzB(Cpu cpu)
+    {
+        if (!cpu._fz)
+        {
+            cpu._ip = cpu._rb;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JncB(Cpu cpu)
+    {
+        if (!cpu._fc)
+        {
+            cpu._ip = cpu._rb;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JnsB(Cpu cpu)
+    {
+        if (!cpu._fs)
+        {
+            cpu._ip = cpu._rb;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JnoB(Cpu cpu)
+    {
+        if (!cpu._fo)
+        {
+            cpu._ip = cpu._rb;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JnzC(Cpu cpu)
+    {
+        if (!cpu._fz)
+        {
+            cpu._ip = cpu._rc;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JncC(Cpu cpu)
+    {
+        if (!cpu._fc)
+        {
+            cpu._ip = cpu._rc;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JnsC(Cpu cpu)
+    {
+        if (!cpu._fs)
+        {
+            cpu._ip = cpu._rc;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JnoC(Cpu cpu)
+    {
+        if (!cpu._fo)
+        {
+            cpu._ip = cpu._rc;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JnzD(Cpu cpu)
+    {
+        if (!cpu._fz)
+        {
+            cpu._ip = cpu._rd;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JncD(Cpu cpu)
+    {
+        if (!cpu._fc)
+        {
+            cpu._ip = cpu._rd;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JnsD(Cpu cpu)
+    {
+        if (!cpu._fs)
+        {
+            cpu._ip = cpu._rd;
+            cpu._jumped = true;
+        }
+    }
+
+    private static void JnoD(Cpu cpu)
+    {
+        if (!cpu._fo)
+        {
+            cpu._ip = cpu._rd;
+            cpu._jumped = true;
+        }
+    }
+
+    #endregion
+
+    #region Jmp / JmbX / Hlt
 
     private static void Jmp(Cpu cpu)
     {
@@ -787,76 +1185,105 @@ internal class Cpu(Ram ram)
         cpu._jumped = true;
     }
 
-    private static void Nop(Cpu _) { }
+    private static void JmpA(Cpu cpu)
+    {
+        cpu._ip = cpu._ra;
+        cpu._jumped = true;
+    }
+
+    private static void JmpB(Cpu cpu)
+    {
+        cpu._ip = cpu._rb;
+        cpu._jumped = true;
+    }
+
+    private static void JmpC(Cpu cpu)
+    {
+        cpu._ip = cpu._rc;
+        cpu._jumped = true;
+    }
+
+    private static void JmpD(Cpu cpu)
+    {
+        cpu._ip = cpu._rd;
+        cpu._jumped = true;
+    }
+
+    private static void Hlt(Cpu cpu)
+    {
+        cpu._halted = true;
+    }
+
+    //private static void Nop(Cpu _) { }
 
     #endregion
 
     private readonly IReadOnlyList<Instruction> _instructions =
     [
-        new Instruction("mov a,0", MovA0), // 00
-        new Instruction("mov a,b", MovAB),
-        new Instruction("mov a,c", MovAC),
-        new Instruction("mov a,d", MovAD),
-        new Instruction("mov a,0*", MovA0),
-        new Instruction("mov b,a", MovBA),
-        new Instruction("mov c,a", MovCA),
-        new Instruction("mov d,a", MovDA),
-        new Instruction("and a,0", AndA0),
-        new Instruction("and a,b", AndAB),
-        new Instruction("and a,c", AndAC),
-        new Instruction("and a,d", AndAD),
-        new Instruction("and a,0*", AndA0),
-        new Instruction("and b,a", AndBA),
-        new Instruction("and c,a", AndCA),
-        new Instruction("and d,a", AndDA),
-        new Instruction("or a,0", OrA0), // 10
-        new Instruction("or a,b", OrAB),
-        new Instruction("or a,c", OrAC),
-        new Instruction("or a,d", OrAD),
-        new Instruction("or a,0*", OrA0),
-        new Instruction("or b,a", OrBA),
-        new Instruction("or c,a", OrCA),
-        new Instruction("or d,a", OrDA),
-        new Instruction("xor a,0", XorA0),
-        new Instruction("xor a,b", XorAB),
-        new Instruction("xor a,c", XorAC),
-        new Instruction("xor a,d", XorAD),
-        new Instruction("xor a,0*", XorA0),
-        new Instruction("xor b,a", XorBA),
-        new Instruction("xor c,a", XorCA),
-        new Instruction("xor d,a", XorDA),
-        new Instruction("add a,0", AddA0), // 20
-        new Instruction("add a,b", Command),
-        new Instruction("add a,c", Command),
-        new Instruction("add a,d", Command),
-        new Instruction("add a,0*", Command),
-        new Instruction("add b,a", Command),
-        new Instruction("add c,a", Command),
-        new Instruction("add d,a", Command),
-        new Instruction("adc a,0", Command),
-        new Instruction("adc a,b", Command),
-        new Instruction("adc a,c", Command),
-        new Instruction("adc a,d", Command),
-        new Instruction("adc a,0*", Command),
-        new Instruction("adc b,a", Command),
-        new Instruction("adc c,a", Command),
-        new Instruction("adc d,a", Command),
-        new Instruction("sub a,0", Command), // 30
-        new Instruction("sub a,b", Command),
-        new Instruction("sub a,c", Command),
-        new Instruction("sub a,d", Command),
-        new Instruction("sub a,0*", Command),
-        new Instruction("sub b,a", Command),
-        new Instruction("sub c,a", Command),
-        new Instruction("sub d,a", Command),
-        new Instruction("sbb a,0", Command),
-        new Instruction("sbb a,b", Command),
-        new Instruction("sbb a,c", Command),
-        new Instruction("sbb a,d", Command),
-        new Instruction("sbb a,0*", Command),
-        new Instruction("sbb b,a", Command),
-        new Instruction("sbb c,a", Command),
-        new Instruction("sbb d,a", Command),
+        new Instruction("mov a, 0", MovA0), // 00
+        new Instruction("mov a, b", MovAB),
+        new Instruction("mov a, c", MovAC),
+        new Instruction("mov a, d", MovAD),
+        new Instruction("mov a, 0*", MovA0),
+        new Instruction("mov b, a", MovBA),
+        new Instruction("mov c, a", MovCA),
+        new Instruction("mov d, a", MovDA),
+        new Instruction("and a, 0", AndA0),
+        new Instruction("and a, b", AndAB),
+        new Instruction("and a, c", AndAC),
+        new Instruction("and a, d", AndAD),
+        new Instruction("and a, 0*", AndA0),
+        new Instruction("and b, a", AndBA),
+        new Instruction("and c, a", AndCA),
+        new Instruction("and d, a", AndDA),
+        new Instruction("or a, 0", OrA0), // 10
+        new Instruction("or a, b", OrAB),
+        new Instruction("or a, c", OrAC),
+        new Instruction("or a, d", OrAD),
+        new Instruction("or a, 0*", OrA0),
+        new Instruction("or b, a", OrBA),
+        new Instruction("or c, a", OrCA),
+        new Instruction("or d, a", OrDA),
+        new Instruction("xor a, 0", XorA0),
+        new Instruction("xor a, b", XorAB),
+        new Instruction("xor a, c", XorAC),
+        new Instruction("xor a, d", XorAD),
+        new Instruction("xor a, 0*", XorA0),
+        new Instruction("xor b, a", XorBA),
+        new Instruction("xor c, a", XorCA),
+        new Instruction("xor d, a", XorDA),
+        new Instruction("add a, 0", AddA0), // 20
+        new Instruction("add a, b", AddAB),
+        new Instruction("add a, c", AddAC),
+        new Instruction("add a, d", AddAD),
+        new Instruction("add a, 0*", AddA0),
+        new Instruction("add b, a", Command),
+        new Instruction("add c, a", Command),
+        new Instruction("add d, a", Command),
+        new Instruction("adc a, 0", Command),
+        new Instruction("adc a, b", Command),
+        new Instruction("adc a, c", Command),
+        new Instruction("adc a, d", Command),
+        new Instruction("adc a, 0*", Command),
+        new Instruction("adc b, a", Command),
+        new Instruction("adc c, a", Command),
+        new Instruction("adc d, a", Command),
+        new Instruction("sub a, 0", SubA0), // 30
+        new Instruction("sub a, b", SubAB),
+        new Instruction("sub a, c", SubAC),
+        new Instruction("sub a, d", SubAD),
+        new Instruction("sub a, 0*", SubA0),
+        new Instruction("sub b, a", Command),
+        new Instruction("sub c, a", Command),
+        new Instruction("sub d, a", Command),
+        new Instruction("sbb a, 0", Command),
+        new Instruction("sbb a, b", Command),
+        new Instruction("sbb a, c", Command),
+        new Instruction("sbb a, d", Command),
+        new Instruction("sbb a, 0*", Command),
+        new Instruction("sbb b, a", Command),
+        new Instruction("sbb c, a", Command),
+        new Instruction("sbb d, a", Command),
         new Instruction("not a", Command), // 40
         new Instruction("not b", Command),
         new Instruction("not c", Command),
@@ -937,22 +1364,22 @@ internal class Cpu(Ram ram)
         new Instruction("ldi b*", LdiB),
         new Instruction("ldi c*", LdiC),
         new Instruction("ldi d*", LdiD),
-        new Instruction("ld a,a", LdAA), // 90
-        new Instruction("ld b,a", LdBA),
-        new Instruction("ld c,a", LdCA),
-        new Instruction("ld d,a", LdDA),
-        new Instruction("ld a,b", LdAB),
-        new Instruction("ld b,b", LdBB),
-        new Instruction("ld c,b", LdCB),
-        new Instruction("ld d,b", LdDB),
-        new Instruction("ld a,c", LdAC),
-        new Instruction("ld b,c", LdBC),
-        new Instruction("ld c,c", LdCC),
-        new Instruction("ld d,c", LdDC),
-        new Instruction("ld a,d", LdAD),
-        new Instruction("ld b,d", LdBD),
-        new Instruction("ld c,d", LdCD),
-        new Instruction("ld d,d", LdDD),
+        new Instruction("ld a, a", LdAA), // 90
+        new Instruction("ld b, a", LdBA),
+        new Instruction("ld c, a", LdCA),
+        new Instruction("ld d, a", LdDA),
+        new Instruction("ld a, b", LdAB),
+        new Instruction("ld b, b", LdBB),
+        new Instruction("ld c, b", LdCB),
+        new Instruction("ld d, b", LdDB),
+        new Instruction("ld a, c", LdAC),
+        new Instruction("ld b, c", LdBC),
+        new Instruction("ld c, c", LdCC),
+        new Instruction("ld d, c", LdDC),
+        new Instruction("ld a, d", LdAD),
+        new Instruction("ld b, d", LdBD),
+        new Instruction("ld c, d", LdCD),
+        new Instruction("ld d, d", LdDD),
         new Instruction("st a", StA), // A0
         new Instruction("st b", StB),
         new Instruction("st c", StC),
@@ -969,54 +1396,54 @@ internal class Cpu(Ram ram)
         new Instruction("rnd b*", RndB),
         new Instruction("rnd c*", RndC),
         new Instruction("rnd d*", RndD),
-        new Instruction("st a,a", StAA), // B0
-        new Instruction("st b,a", StBA),
-        new Instruction("st c,a", StCA),
-        new Instruction("st d,a", StDA),
-        new Instruction("st a,b", StAB),
-        new Instruction("st b,b", StBB),
-        new Instruction("st c,b", StCB),
-        new Instruction("st d,b", StDB),
-        new Instruction("st a,c", StAC),
-        new Instruction("st b,c", StBC),
-        new Instruction("st c,c", StCC),
-        new Instruction("st d,c", StDC),
-        new Instruction("st a,d", StAD),
-        new Instruction("st b,d", StBD),
-        new Instruction("st c,d", StCD),
-        new Instruction("st d,d", StDD),
-        new Instruction("jz a", Command), // C0
-        new Instruction("jc a", Command),
-        new Instruction("js a", Command),
-        new Instruction("jo a", Command),
-        new Instruction("jz b", Command),
-        new Instruction("jc b", Command),
-        new Instruction("js b", Command),
-        new Instruction("jo b", Command),
-        new Instruction("jz c", Command),
-        new Instruction("jc c", Command),
-        new Instruction("js c", Command),
-        new Instruction("jo c", Command),
-        new Instruction("jz d", Command),
-        new Instruction("jc d", Command),
-        new Instruction("js d", Command),
-        new Instruction("jo d", Command),
-        new Instruction("jnz a", Command), // D0
-        new Instruction("jnc a", Command),
-        new Instruction("jns a", Command),
-        new Instruction("jno a", Command),
-        new Instruction("jnz b", Command),
-        new Instruction("jnc b", Command),
-        new Instruction("jns b", Command),
-        new Instruction("jno b", Command),
-        new Instruction("jnz c", Command),
-        new Instruction("jnc c", Command),
-        new Instruction("jns c", Command),
-        new Instruction("jno c", Command),
-        new Instruction("jnz d", Command),
-        new Instruction("jnc d", Command),
-        new Instruction("jns d", Command),
-        new Instruction("jno d", Command),
+        new Instruction("st a, a", StAA), // B0
+        new Instruction("st b, a", StBA),
+        new Instruction("st c, a", StCA),
+        new Instruction("st d, a", StDA),
+        new Instruction("st a, b", StAB),
+        new Instruction("st b, b", StBB),
+        new Instruction("st c, b", StCB),
+        new Instruction("st d, b", StDB),
+        new Instruction("st a, c", StAC),
+        new Instruction("st b, c", StBC),
+        new Instruction("st c, c", StCC),
+        new Instruction("st d, c", StDC),
+        new Instruction("st a, d", StAD),
+        new Instruction("st b, d", StBD),
+        new Instruction("st c, d", StCD),
+        new Instruction("st d, d", StDD),
+        new Instruction("jz a", JzA), // C0
+        new Instruction("jc a", JcA),
+        new Instruction("js a", JsA),
+        new Instruction("jo a", JoA),
+        new Instruction("jz b", JzB),
+        new Instruction("jc b", JcB),
+        new Instruction("js b", JsB),
+        new Instruction("jo b", JoB),
+        new Instruction("jz c", JzC),
+        new Instruction("jc c", JcC),
+        new Instruction("js c", JsC),
+        new Instruction("jo c", JoC),
+        new Instruction("jz d", JzD),
+        new Instruction("jc d", JcD),
+        new Instruction("js d", JsD),
+        new Instruction("jo d", JoD),
+        new Instruction("jnz a", JnzA), // D0
+        new Instruction("jnc a", JncA),
+        new Instruction("jns a", JnsA),
+        new Instruction("jno a", JnoA),
+        new Instruction("jnz b", JnzB),
+        new Instruction("jnc b", JncB),
+        new Instruction("jns b", JnsB),
+        new Instruction("jno b", JnoB),
+        new Instruction("jnz c", JnzC),
+        new Instruction("jnc c", JncC),
+        new Instruction("jns c", JnsC),
+        new Instruction("jno c", JnoC),
+        new Instruction("jnz d", JnzD),
+        new Instruction("jnc d", JncD),
+        new Instruction("jns d", JnsD),
+        new Instruction("jno d", JnoD),
         new Instruction("jz", Jz), // E0
         new Instruction("jc", Jc),
         new Instruction("js", Js),
@@ -1029,26 +1456,26 @@ internal class Cpu(Ram ram)
         new Instruction("jmp*", Jmp),
         new Instruction("jmp*", Jmp),
         new Instruction("jmp*", Jmp),
-        new Instruction("nop", Nop),
-        new Instruction("nop*", Nop),
-        new Instruction("nop*", Nop),
-        new Instruction("nop*", Nop),
-        new Instruction("jmp a", Command), // F0
-        new Instruction("jmp a*", Command),
-        new Instruction("jmp a*", Command),
-        new Instruction("jmp a*", Command),
-        new Instruction("jmp b", Command),
-        new Instruction("jmp b*", Command),
-        new Instruction("jmp b*", Command),
-        new Instruction("jmp b*", Command),
-        new Instruction("jmp c", Command),
-        new Instruction("jmp c*", Command),
-        new Instruction("jmp c*", Command),
-        new Instruction("jmp c*", Command),
-        new Instruction("jmp d", Command),
-        new Instruction("jmp d*", Command),
-        new Instruction("jmp d*", Command),
-        new Instruction("jmp d*", Command)
+        new Instruction("hlt", Hlt),
+        new Instruction("hlt*", Hlt),
+        new Instruction("hlt*", Hlt),
+        new Instruction("hlt*", Hlt),
+        new Instruction("jmp a", JmpA), // F0
+        new Instruction("jmp a*", JmpA),
+        new Instruction("jmp a*", JmpA),
+        new Instruction("jmp a*", JmpA),
+        new Instruction("jmp b", JmpB),
+        new Instruction("jmp b*", JmpB),
+        new Instruction("jmp b*", JmpB),
+        new Instruction("jmp b*", JmpB),
+        new Instruction("jmp c", JmpC),
+        new Instruction("jmp c*", JmpC),
+        new Instruction("jmp c*", JmpC),
+        new Instruction("jmp c*", JmpC),
+        new Instruction("jmp d", JmpD),
+        new Instruction("jmp d*", JmpD),
+        new Instruction("jmp d*", JmpD),
+        new Instruction("jmp d*", JmpD)
     ];
 
     private class Instruction(string name, Action<Cpu> action)
