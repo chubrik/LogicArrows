@@ -1,6 +1,6 @@
 ﻿using ComputerEmulator;
 
-Console.Utils.MaximizeWindow();
+Console.Extras.WindowMaximize();
 var ram = new Ram();
 Console.Pin(ram.Display);
 ram.Load(SpaceFight.Bytes());
