@@ -8,7 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="XConsole" Version="1.4.*" />
+    <PackageReference Include="XConsole" Version="1.5.*" />
+    <Using Include="Chubrik.XConsole" />
     <Using Include="Chubrik.XConsole.XConsole" Alias="Console" />
   </ItemGroup>
 

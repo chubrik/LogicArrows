@@ -121,7 +121,7 @@ internal class Cpu(Ram ram)
         var fsColor = _fzsSetted ? "W" : _fs ? "G" : "d";
         var foColor = _foSetted ? "W" : _fo ? "G" : "d";
 
-        Console.WriteLine(
+        Console.WriteLine([
            $"d`{counter,5}  ",
            "d`IP:", $"{ipColor}`{_ip.Hex}  ",
            "d`IR:", $"G`{_ir.Hex}  ", $"{irDescrColor}`{irDescr,-10}  ",
@@ -138,7 +138,7 @@ internal class Cpu(Ram ram)
            $"d`3C:{_ram.Read("3C").Hex}  ",
            $"d`3E:{_ram.Read("3E").Hex}  ",
            $"d`3F:{_ram.Read("3F").Hex}"
-        );
+        ]);
 
         _raSetted = _rbSetted = _rcSetted = _rdSetted = _fzsSetted = _fcSetted = _foSetted = _jumped = false;
     }
