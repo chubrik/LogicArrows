@@ -28,6 +28,10 @@
 [![Матрица маленькая (разных цветов)](img/matrix-small-red.png)](https://logic-arrows.io/map-CcGrVgC8)
 <br><br>
 
+### [Память 32 КБ](https://logic-arrows.io/map-fsG82aDy)
+[![Память 32 КБ](img/ram32k.png)](https://logic-arrows.io/map-fsG82aDy)
+<br><br>
+
 ### [Память 256 байт (v2)](https://logic-arrows.io/map-ram256)
 [![Память 256 байт (v2)](img/ram256v2.png)](https://logic-arrows.io/map-ram256)
 <br><br>
@@ -76,6 +80,6 @@
 [![Вычитатель](img/subtractor.png)](https://logic-arrows.io/map-GvPsAA38)
 <br><br>
 
-### [Муравей](https://logic-arrows.io/map-um14l5Qr)
-Клеточный автомат
+### [Муравей (клеточный автомат)](https://logic-arrows.io/map-um14l5Qr)
+[![Вычитатель](img/ant.jpg)](https://logic-arrows.io/map-um14l5Qr)
 <br><br>
