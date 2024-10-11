@@ -1,8 +1,8 @@
-﻿using System.Text.RegularExpressions;
+﻿namespace ComputerEmulator;
 
-namespace ComputerEmulator;
+using System.Text.RegularExpressions;
 
-internal readonly struct MyByte
+internal readonly partial struct MyByte
 {
     public readonly byte Value;
 
@@ -13,11 +13,14 @@ internal readonly struct MyByte
 
     public MyByte(string hex)
     {
-        if (!Regex.IsMatch(hex, @"^[0-9A-F]{2}$"))
+        if (!GetPattern().IsMatch(hex))
             throw new InvalidOperationException();
 
         Value = (byte)(_toNumberMap[hex[0]] * 16 + _toNumberMap[hex[1]]);
     }
+
+    [GeneratedRegex(@"^[0-9A-F]{2}$")]
+    private static partial Regex GetPattern();
 
     public string Hex
     {
