@@ -1,4 +1,4 @@
-﻿namespace ComputerEmulator;
+﻿namespace ComputerEmulator.V1;
 
 internal class Cpu(Ram ram)
 {
@@ -154,6 +154,8 @@ internal class Cpu(Ram ram)
             cpu._inQueued = null;
         }
     }
+
+    #region Commands
 
     #region Mov
 
@@ -338,6 +340,8 @@ internal class Cpu(Ram ram)
         cpu.SetRegA(result);
     }
 
+    #endregion
+
     #region Sub
 
     private static void SubA0(Cpu cpu)
@@ -373,8 +377,6 @@ internal class Cpu(Ram ram)
         cpu.SetFlagsO(cpu._ra.IsSigned != cpu._rb.IsSigned && cpu._rb.IsSigned == result.IsSigned);
         cpu.SetRegA(result);
     }
-
-    #endregion
 
     #endregion
 
@@ -598,7 +600,7 @@ internal class Cpu(Ram ram)
 
     #endregion
 
-    #region Ld / Ldi
+    #region Ld X / Ldi X
 
     private static void LdA(Cpu cpu)
     {
@@ -737,34 +739,19 @@ internal class Cpu(Ram ram)
 
     #region Rnd
 
-    private static void RndA(Cpu cpu) => cpu.SetRegA(_random.Next(0, 255));
-    private static void RndB(Cpu cpu) => cpu.SetRegB(_random.Next(0, 255));
-    private static void RndC(Cpu cpu) => cpu.SetRegC(_random.Next(0, 255));
-    private static void RndD(Cpu cpu) => cpu.SetRegD(_random.Next(0, 255));
+    private static void RndA(Cpu cpu) => cpu.SetRegA(_random.Next(0, 256));
+    private static void RndB(Cpu cpu) => cpu.SetRegB(_random.Next(0, 256));
+    private static void RndC(Cpu cpu) => cpu.SetRegC(_random.Next(0, 256));
+    private static void RndD(Cpu cpu) => cpu.SetRegD(_random.Next(0, 256));
 
     #endregion
 
-    #region StX
+    #region St X
 
-    private static void StA(Cpu cpu)
-    {
-        cpu._ram.Write(cpu.GetArgument(), cpu._ra);
-    }
-
-    private static void StB(Cpu cpu)
-    {
-        cpu._ram.Write(cpu.GetArgument(), cpu._rb);
-    }
-
-    private static void StC(Cpu cpu)
-    {
-        cpu._ram.Write(cpu.GetArgument(), cpu._rc);
-    }
-
-    private static void StD(Cpu cpu)
-    {
-        cpu._ram.Write(cpu.GetArgument(), cpu._rd);
-    }
+    private static void StA(Cpu cpu) => cpu._ram.Write(cpu.GetArgument(), cpu._ra);
+    private static void StB(Cpu cpu) => cpu._ram.Write(cpu.GetArgument(), cpu._rb);
+    private static void StC(Cpu cpu) => cpu._ram.Write(cpu.GetArgument(), cpu._rc);
+    private static void StD(Cpu cpu) => cpu._ram.Write(cpu.GetArgument(), cpu._rd);
 
     #endregion
 
@@ -1177,7 +1164,7 @@ internal class Cpu(Ram ram)
 
     #endregion
 
-    #region Jmp / JmbX / Hlt
+    #region Jmp / Jmp X / Hlt
 
     private static void Jmp(Cpu cpu)
     {
@@ -1213,8 +1200,6 @@ internal class Cpu(Ram ram)
     {
         cpu._halted = true;
     }
-
-    //private static void Nop(Cpu _) { }
 
     #endregion
 
@@ -1475,7 +1460,7 @@ internal class Cpu(Ram ram)
         new Instruction("jmp d", JmpD),
         new Instruction("jmp d*", JmpD),
         new Instruction("jmp d*", JmpD),
-        new Instruction("jmp d*", JmpD)
+        new Instruction("jmp d*", JmpD),
     ];
 
     private class Instruction(string name, Action<Cpu> action)
@@ -1483,4 +1468,6 @@ internal class Cpu(Ram ram)
         public readonly string Name = name;
         public readonly Action<Cpu> Action = action;
     }
+
+    #endregion
 }

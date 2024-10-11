@@ -1,4 +1,4 @@
-﻿namespace ComputerEmulator;
+﻿namespace ComputerEmulator.V1;
 
 internal static class SpaceFight
 {
