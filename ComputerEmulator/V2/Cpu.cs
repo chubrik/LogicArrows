@@ -157,11 +157,10 @@ internal class Cpu(Ram ram)
            $"d`39:{_ram.Get("39").Hex}  ",
            $"d`3A:{_ram.Get("3A").Hex}  ",
            $"d`3B:{_ram.Get("3B").Hex}  ",
-           $"d`3C:{_ram.Get("3C").Hex}    ",
+           $"d`3C:{_ram.Get("3C").Hex}  ",
            $"d`3D:{_ram.Get("3D").Hex}  ",
            $"d`3E:{_ram.Get("3E").Hex}  ",
            $"d`3F:{_ram.Get("3F").Hex}    ",
-           $"d`30:{_ram.Get("30").Hex}    ",
            $"d`{caches}"
         ]);
 
@@ -525,265 +524,6 @@ internal class Cpu(Ram ram)
 
     #endregion
 
-    #region Clr / Test
-
-    private static void ClrA(Cpu cpu) => cpu.SetRegA(0);
-    private static void ClrB(Cpu cpu) => cpu.SetRegB(0);
-    private static void ClrC(Cpu cpu) => cpu.SetRegC(0);
-    private static void ClrD(Cpu cpu) => cpu.SetRegD(0);
-
-    private static void TestA(Cpu cpu) => cpu.SetFlagsZS(cpu._ra);
-    private static void TestB(Cpu cpu) => cpu.SetFlagsZS(cpu._rb);
-    private static void TestC(Cpu cpu) => cpu.SetFlagsZS(cpu._rc);
-    private static void TestD(Cpu cpu) => cpu.SetFlagsZS(cpu._rd);
-
-    #endregion
-
-    #region Mov
-
-    private static void MovBA(Cpu cpu) => cpu.SetRegB(cpu._ra);
-    private static void MovCA(Cpu cpu) => cpu.SetRegC(cpu._ra);
-    private static void MovDA(Cpu cpu) => cpu.SetRegD(cpu._ra);
-    private static void MovAB(Cpu cpu) => cpu.SetRegA(cpu._rb);
-    private static void MovCB(Cpu cpu) => cpu.SetRegC(cpu._rb);
-    private static void MovDB(Cpu cpu) => cpu.SetRegD(cpu._rb);
-    private static void MovAC(Cpu cpu) => cpu.SetRegA(cpu._rc);
-    private static void MovBC(Cpu cpu) => cpu.SetRegB(cpu._rc);
-    private static void MovDC(Cpu cpu) => cpu.SetRegD(cpu._rc);
-    private static void MovAD(Cpu cpu) => cpu.SetRegA(cpu._rd);
-    private static void MovBD(Cpu cpu) => cpu.SetRegB(cpu._rd);
-    private static void MovCD(Cpu cpu) => cpu.SetRegC(cpu._rd);
-
-    #endregion
-
-    #region And
-
-    private static void AndBA(Cpu cpu)
-    {
-        cpu.SetRegB(cpu._rb & cpu._ra);
-        cpu.SetFlagsZS(cpu._rb);
-    }
-
-    private static void AndCA(Cpu cpu)
-    {
-        cpu.SetRegC(cpu._rc & cpu._ra);
-        cpu.SetFlagsZS(cpu._rc);
-    }
-
-    private static void AndDA(Cpu cpu)
-    {
-        cpu.SetRegD(cpu._rd & cpu._ra);
-        cpu.SetFlagsZS(cpu._rd);
-    }
-
-    private static void AndAB(Cpu cpu)
-    {
-        cpu.SetRegA(cpu._ra & cpu._rb);
-        cpu.SetFlagsZS(cpu._ra);
-    }
-
-    private static void AndCB(Cpu cpu)
-    {
-        cpu.SetRegC(cpu._rc & cpu._rb);
-        cpu.SetFlagsZS(cpu._rc);
-    }
-
-    private static void AndDB(Cpu cpu)
-    {
-        cpu.SetRegD(cpu._rd & cpu._rb);
-        cpu.SetFlagsZS(cpu._rd);
-    }
-
-    private static void AndBC(Cpu cpu)
-    {
-        cpu.SetRegB(cpu._rb & cpu._rc);
-        cpu.SetFlagsZS(cpu._rb);
-    }
-
-    private static void AndAC(Cpu cpu)
-    {
-        cpu.SetRegA(cpu._ra & cpu._rc);
-        cpu.SetFlagsZS(cpu._ra);
-    }
-
-    private static void AndDC(Cpu cpu)
-    {
-        cpu.SetRegD(cpu._rd & cpu._rc);
-        cpu.SetFlagsZS(cpu._rd);
-    }
-
-    private static void AndAD(Cpu cpu)
-    {
-        cpu.SetRegA(cpu._ra & cpu._rd);
-        cpu.SetFlagsZS(cpu._ra);
-    }
-
-    private static void AndBD(Cpu cpu)
-    {
-        cpu.SetRegB(cpu._rb & cpu._rd);
-        cpu.SetFlagsZS(cpu._rb);
-    }
-
-    private static void AndCD(Cpu cpu)
-    {
-        cpu.SetRegC(cpu._rc & cpu._rd);
-        cpu.SetFlagsZS(cpu._rc);
-    }
-
-    #endregion
-
-    #region Or
-
-    private static void OrBA(Cpu cpu)
-    {
-        cpu.SetRegB(cpu._rb | cpu._ra);
-        cpu.SetFlagsZS(cpu._rb);
-    }
-
-    private static void OrCA(Cpu cpu)
-    {
-        cpu.SetRegC(cpu._rc | cpu._ra);
-        cpu.SetFlagsZS(cpu._rc);
-    }
-
-    private static void OrDA(Cpu cpu)
-    {
-        cpu.SetRegD(cpu._rd | cpu._ra);
-        cpu.SetFlagsZS(cpu._rd);
-    }
-
-    private static void OrAB(Cpu cpu)
-    {
-        cpu.SetRegA(cpu._ra | cpu._rb);
-        cpu.SetFlagsZS(cpu._ra);
-    }
-
-    private static void OrCB(Cpu cpu)
-    {
-        cpu.SetRegC(cpu._rc | cpu._rb);
-        cpu.SetFlagsZS(cpu._rc);
-    }
-
-    private static void OrDB(Cpu cpu)
-    {
-        cpu.SetRegD(cpu._rd | cpu._rb);
-        cpu.SetFlagsZS(cpu._rd);
-    }
-
-    private static void OrBC(Cpu cpu)
-    {
-        cpu.SetRegB(cpu._rb | cpu._rc);
-        cpu.SetFlagsZS(cpu._rb);
-    }
-
-    private static void OrAC(Cpu cpu)
-    {
-        cpu.SetRegA(cpu._ra | cpu._rc);
-        cpu.SetFlagsZS(cpu._ra);
-    }
-
-    private static void OrDC(Cpu cpu)
-    {
-        cpu.SetRegD(cpu._rd | cpu._rc);
-        cpu.SetFlagsZS(cpu._rd);
-    }
-
-    private static void OrAD(Cpu cpu)
-    {
-        cpu.SetRegA(cpu._ra | cpu._rd);
-        cpu.SetFlagsZS(cpu._ra);
-    }
-
-    private static void OrBD(Cpu cpu)
-    {
-        cpu.SetRegB(cpu._rb | cpu._rd);
-        cpu.SetFlagsZS(cpu._rb);
-    }
-
-    private static void OrCD(Cpu cpu)
-    {
-        cpu.SetRegC(cpu._rc | cpu._rd);
-        cpu.SetFlagsZS(cpu._rc);
-    }
-
-    #endregion
-
-    #region Xor
-
-    private static void XorBA(Cpu cpu)
-    {
-        cpu.SetRegB(cpu._rb ^ cpu._ra);
-        cpu.SetFlagsZS(cpu._rb);
-    }
-
-    private static void XorCA(Cpu cpu)
-    {
-        cpu.SetRegC(cpu._rc ^ cpu._ra);
-        cpu.SetFlagsZS(cpu._rc);
-    }
-
-    private static void XorDA(Cpu cpu)
-    {
-        cpu.SetRegD(cpu._rd ^ cpu._ra);
-        cpu.SetFlagsZS(cpu._rd);
-    }
-
-    private static void XorAB(Cpu cpu)
-    {
-        cpu.SetRegA(cpu._ra ^ cpu._rb);
-        cpu.SetFlagsZS(cpu._ra);
-    }
-
-    private static void XorCB(Cpu cpu)
-    {
-        cpu.SetRegC(cpu._rc ^ cpu._rb);
-        cpu.SetFlagsZS(cpu._rc);
-    }
-
-    private static void XorDB(Cpu cpu)
-    {
-        cpu.SetRegD(cpu._rd ^ cpu._rb);
-        cpu.SetFlagsZS(cpu._rd);
-    }
-
-    private static void XorBC(Cpu cpu)
-    {
-        cpu.SetRegB(cpu._rb ^ cpu._rc);
-        cpu.SetFlagsZS(cpu._rb);
-    }
-
-    private static void XorAC(Cpu cpu)
-    {
-        cpu.SetRegA(cpu._ra ^ cpu._rc);
-        cpu.SetFlagsZS(cpu._ra);
-    }
-
-    private static void XorDC(Cpu cpu)
-    {
-        cpu.SetRegD(cpu._rd ^ cpu._rc);
-        cpu.SetFlagsZS(cpu._rd);
-    }
-
-    private static void XorAD(Cpu cpu)
-    {
-        cpu.SetRegA(cpu._ra ^ cpu._rd);
-        cpu.SetFlagsZS(cpu._ra);
-    }
-
-    private static void XorBD(Cpu cpu)
-    {
-        cpu.SetRegB(cpu._rb ^ cpu._rd);
-        cpu.SetFlagsZS(cpu._rb);
-    }
-
-    private static void XorCD(Cpu cpu)
-    {
-        cpu.SetRegC(cpu._rc ^ cpu._rd);
-        cpu.SetFlagsZS(cpu._rc);
-    }
-
-    #endregion
-
     #region Inc / Dec
 
     private static void IncA(Cpu cpu)
@@ -948,106 +688,6 @@ internal class Cpu(Ram ram)
 
     #endregion
 
-    #region Rcl / Rcr
-
-    private static void RclA(Cpu cpu)
-    {
-        MyByte shifted = cpu._ra << 1;
-
-        if (cpu._fc)
-            shifted |= 1;
-
-        cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsC(cpu._ra.IsSigned);
-        cpu.SetRegA(shifted);
-    }
-
-    private static void RclB(Cpu cpu)
-    {
-        MyByte shifted = cpu._rb << 1;
-
-        if (cpu._fc)
-            shifted |= 1;
-
-        cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsC(cpu._rb.IsSigned);
-        cpu.SetRegB(shifted);
-    }
-
-    private static void RclC(Cpu cpu)
-    {
-        MyByte shifted = cpu._rc << 1;
-
-        if (cpu._fc)
-            shifted |= 1;
-
-        cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsC(cpu._rc.IsSigned);
-        cpu.SetRegC(shifted);
-    }
-
-    private static void RclD(Cpu cpu)
-    {
-        MyByte shifted = cpu._rd << 1;
-
-        if (cpu._fc)
-            shifted |= 1;
-
-        cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsC(cpu._rd.IsSigned);
-        cpu.SetRegD(shifted);
-    }
-
-    private static void RcrA(Cpu cpu)
-    {
-        MyByte shifted = cpu._ra >> 1;
-
-        if (cpu._fc)
-            shifted |= 128;
-
-        cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsC((cpu._ra & 1) != 0);
-        cpu.SetRegA(shifted);
-    }
-
-    private static void RcrB(Cpu cpu)
-    {
-        MyByte shifted = cpu._rb >> 1;
-
-        if (cpu._fc)
-            shifted |= 128;
-
-        cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsC((cpu._rb & 1) != 0);
-        cpu.SetRegB(shifted);
-    }
-
-    private static void RcrC(Cpu cpu)
-    {
-        MyByte shifted = cpu._rc >> 1;
-
-        if (cpu._fc)
-            shifted |= 128;
-
-        cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsC((cpu._rc & 1) != 0);
-        cpu.SetRegC(shifted);
-    }
-
-    private static void RcrD(Cpu cpu)
-    {
-        MyByte shifted = cpu._rd >> 1;
-
-        if (cpu._fc)
-            shifted |= 128;
-
-        cpu.SetFlagsZS(shifted);
-        cpu.SetFlagsC((cpu._rd & 1) != 0);
-        cpu.SetRegD(shifted);
-    }
-
-    #endregion
-
     #region Sub
 
     private static void SubBA(Cpu cpu)
@@ -1156,6 +796,365 @@ internal class Cpu(Ram ram)
         cpu.SetFlagsC(cpu._rc < cpu._rd);
         cpu.SetFlagsO(cpu._rc.IsSigned != cpu._rd.IsSigned && cpu._rd.IsSigned == result.IsSigned);
         cpu.SetRegC(result);
+    }
+
+    #endregion
+
+    #region Clr / Test
+
+    private static void ClrA(Cpu cpu) => cpu.SetRegA(0);
+    private static void ClrB(Cpu cpu) => cpu.SetRegB(0);
+    private static void ClrC(Cpu cpu) => cpu.SetRegC(0);
+    private static void ClrD(Cpu cpu) => cpu.SetRegD(0);
+
+    private static void TestA(Cpu cpu) => cpu.SetFlagsZS(cpu._ra);
+    private static void TestB(Cpu cpu) => cpu.SetFlagsZS(cpu._rb);
+    private static void TestC(Cpu cpu) => cpu.SetFlagsZS(cpu._rc);
+    private static void TestD(Cpu cpu) => cpu.SetFlagsZS(cpu._rd);
+
+    #endregion
+
+    #region Mov
+
+    private static void MovBA(Cpu cpu) => cpu.SetRegB(cpu._ra);
+    private static void MovCA(Cpu cpu) => cpu.SetRegC(cpu._ra);
+    private static void MovDA(Cpu cpu) => cpu.SetRegD(cpu._ra);
+    private static void MovAB(Cpu cpu) => cpu.SetRegA(cpu._rb);
+    private static void MovCB(Cpu cpu) => cpu.SetRegC(cpu._rb);
+    private static void MovDB(Cpu cpu) => cpu.SetRegD(cpu._rb);
+    private static void MovAC(Cpu cpu) => cpu.SetRegA(cpu._rc);
+    private static void MovBC(Cpu cpu) => cpu.SetRegB(cpu._rc);
+    private static void MovDC(Cpu cpu) => cpu.SetRegD(cpu._rc);
+    private static void MovAD(Cpu cpu) => cpu.SetRegA(cpu._rd);
+    private static void MovBD(Cpu cpu) => cpu.SetRegB(cpu._rd);
+    private static void MovCD(Cpu cpu) => cpu.SetRegC(cpu._rd);
+
+    #endregion
+
+    #region And
+
+    private static void AndBA(Cpu cpu)
+    {
+        cpu.SetRegB(cpu._rb & cpu._ra);
+        cpu.SetFlagsZS(cpu._rb);
+    }
+
+    private static void AndCA(Cpu cpu)
+    {
+        cpu.SetRegC(cpu._rc & cpu._ra);
+        cpu.SetFlagsZS(cpu._rc);
+    }
+
+    private static void AndDA(Cpu cpu)
+    {
+        cpu.SetRegD(cpu._rd & cpu._ra);
+        cpu.SetFlagsZS(cpu._rd);
+    }
+
+    private static void AndAB(Cpu cpu)
+    {
+        cpu.SetRegA(cpu._ra & cpu._rb);
+        cpu.SetFlagsZS(cpu._ra);
+    }
+
+    private static void AndCB(Cpu cpu)
+    {
+        cpu.SetRegC(cpu._rc & cpu._rb);
+        cpu.SetFlagsZS(cpu._rc);
+    }
+
+    private static void AndDB(Cpu cpu)
+    {
+        cpu.SetRegD(cpu._rd & cpu._rb);
+        cpu.SetFlagsZS(cpu._rd);
+    }
+
+    private static void AndBC(Cpu cpu)
+    {
+        cpu.SetRegB(cpu._rb & cpu._rc);
+        cpu.SetFlagsZS(cpu._rb);
+    }
+
+    private static void AndAC(Cpu cpu)
+    {
+        cpu.SetRegA(cpu._ra & cpu._rc);
+        cpu.SetFlagsZS(cpu._ra);
+    }
+
+    private static void AndDC(Cpu cpu)
+    {
+        cpu.SetRegD(cpu._rd & cpu._rc);
+        cpu.SetFlagsZS(cpu._rd);
+    }
+
+    private static void AndAD(Cpu cpu)
+    {
+        cpu.SetRegA(cpu._ra & cpu._rd);
+        cpu.SetFlagsZS(cpu._ra);
+    }
+
+    private static void AndBD(Cpu cpu)
+    {
+        cpu.SetRegB(cpu._rb & cpu._rd);
+        cpu.SetFlagsZS(cpu._rb);
+    }
+
+    private static void AndCD(Cpu cpu)
+    {
+        cpu.SetRegC(cpu._rc & cpu._rd);
+        cpu.SetFlagsZS(cpu._rc);
+    }
+
+    #endregion
+
+    #region Rcl / Rcr
+
+    private static void RclA(Cpu cpu)
+    {
+        MyByte shifted = cpu._ra << 1;
+
+        if (cpu._fc)
+            shifted |= 1;
+
+        cpu.SetFlagsZS(shifted);
+        cpu.SetFlagsC(cpu._ra.IsSigned);
+        cpu.SetRegA(shifted);
+    }
+
+    private static void RclB(Cpu cpu)
+    {
+        MyByte shifted = cpu._rb << 1;
+
+        if (cpu._fc)
+            shifted |= 1;
+
+        cpu.SetFlagsZS(shifted);
+        cpu.SetFlagsC(cpu._rb.IsSigned);
+        cpu.SetRegB(shifted);
+    }
+
+    private static void RclC(Cpu cpu)
+    {
+        MyByte shifted = cpu._rc << 1;
+
+        if (cpu._fc)
+            shifted |= 1;
+
+        cpu.SetFlagsZS(shifted);
+        cpu.SetFlagsC(cpu._rc.IsSigned);
+        cpu.SetRegC(shifted);
+    }
+
+    private static void RclD(Cpu cpu)
+    {
+        MyByte shifted = cpu._rd << 1;
+
+        if (cpu._fc)
+            shifted |= 1;
+
+        cpu.SetFlagsZS(shifted);
+        cpu.SetFlagsC(cpu._rd.IsSigned);
+        cpu.SetRegD(shifted);
+    }
+
+    private static void RcrA(Cpu cpu)
+    {
+        MyByte shifted = cpu._ra >> 1;
+
+        if (cpu._fc)
+            shifted |= 128;
+
+        cpu.SetFlagsZS(shifted);
+        cpu.SetFlagsC((cpu._ra & 1) != 0);
+        cpu.SetRegA(shifted);
+    }
+
+    private static void RcrB(Cpu cpu)
+    {
+        MyByte shifted = cpu._rb >> 1;
+
+        if (cpu._fc)
+            shifted |= 128;
+
+        cpu.SetFlagsZS(shifted);
+        cpu.SetFlagsC((cpu._rb & 1) != 0);
+        cpu.SetRegB(shifted);
+    }
+
+    private static void RcrC(Cpu cpu)
+    {
+        MyByte shifted = cpu._rc >> 1;
+
+        if (cpu._fc)
+            shifted |= 128;
+
+        cpu.SetFlagsZS(shifted);
+        cpu.SetFlagsC((cpu._rc & 1) != 0);
+        cpu.SetRegC(shifted);
+    }
+
+    private static void RcrD(Cpu cpu)
+    {
+        MyByte shifted = cpu._rd >> 1;
+
+        if (cpu._fc)
+            shifted |= 128;
+
+        cpu.SetFlagsZS(shifted);
+        cpu.SetFlagsC((cpu._rd & 1) != 0);
+        cpu.SetRegD(shifted);
+    }
+
+    #endregion
+
+    #region Or
+
+    private static void OrBA(Cpu cpu)
+    {
+        cpu.SetRegB(cpu._rb | cpu._ra);
+        cpu.SetFlagsZS(cpu._rb);
+    }
+
+    private static void OrCA(Cpu cpu)
+    {
+        cpu.SetRegC(cpu._rc | cpu._ra);
+        cpu.SetFlagsZS(cpu._rc);
+    }
+
+    private static void OrDA(Cpu cpu)
+    {
+        cpu.SetRegD(cpu._rd | cpu._ra);
+        cpu.SetFlagsZS(cpu._rd);
+    }
+
+    private static void OrAB(Cpu cpu)
+    {
+        cpu.SetRegA(cpu._ra | cpu._rb);
+        cpu.SetFlagsZS(cpu._ra);
+    }
+
+    private static void OrCB(Cpu cpu)
+    {
+        cpu.SetRegC(cpu._rc | cpu._rb);
+        cpu.SetFlagsZS(cpu._rc);
+    }
+
+    private static void OrDB(Cpu cpu)
+    {
+        cpu.SetRegD(cpu._rd | cpu._rb);
+        cpu.SetFlagsZS(cpu._rd);
+    }
+
+    private static void OrBC(Cpu cpu)
+    {
+        cpu.SetRegB(cpu._rb | cpu._rc);
+        cpu.SetFlagsZS(cpu._rb);
+    }
+
+    private static void OrAC(Cpu cpu)
+    {
+        cpu.SetRegA(cpu._ra | cpu._rc);
+        cpu.SetFlagsZS(cpu._ra);
+    }
+
+    private static void OrDC(Cpu cpu)
+    {
+        cpu.SetRegD(cpu._rd | cpu._rc);
+        cpu.SetFlagsZS(cpu._rd);
+    }
+
+    private static void OrAD(Cpu cpu)
+    {
+        cpu.SetRegA(cpu._ra | cpu._rd);
+        cpu.SetFlagsZS(cpu._ra);
+    }
+
+    private static void OrBD(Cpu cpu)
+    {
+        cpu.SetRegB(cpu._rb | cpu._rd);
+        cpu.SetFlagsZS(cpu._rb);
+    }
+
+    private static void OrCD(Cpu cpu)
+    {
+        cpu.SetRegC(cpu._rc | cpu._rd);
+        cpu.SetFlagsZS(cpu._rc);
+    }
+
+    #endregion
+
+    #region Xor
+
+    private static void XorBA(Cpu cpu)
+    {
+        cpu.SetRegB(cpu._rb ^ cpu._ra);
+        cpu.SetFlagsZS(cpu._rb);
+    }
+
+    private static void XorCA(Cpu cpu)
+    {
+        cpu.SetRegC(cpu._rc ^ cpu._ra);
+        cpu.SetFlagsZS(cpu._rc);
+    }
+
+    private static void XorDA(Cpu cpu)
+    {
+        cpu.SetRegD(cpu._rd ^ cpu._ra);
+        cpu.SetFlagsZS(cpu._rd);
+    }
+
+    private static void XorAB(Cpu cpu)
+    {
+        cpu.SetRegA(cpu._ra ^ cpu._rb);
+        cpu.SetFlagsZS(cpu._ra);
+    }
+
+    private static void XorCB(Cpu cpu)
+    {
+        cpu.SetRegC(cpu._rc ^ cpu._rb);
+        cpu.SetFlagsZS(cpu._rc);
+    }
+
+    private static void XorDB(Cpu cpu)
+    {
+        cpu.SetRegD(cpu._rd ^ cpu._rb);
+        cpu.SetFlagsZS(cpu._rd);
+    }
+
+    private static void XorBC(Cpu cpu)
+    {
+        cpu.SetRegB(cpu._rb ^ cpu._rc);
+        cpu.SetFlagsZS(cpu._rb);
+    }
+
+    private static void XorAC(Cpu cpu)
+    {
+        cpu.SetRegA(cpu._ra ^ cpu._rc);
+        cpu.SetFlagsZS(cpu._ra);
+    }
+
+    private static void XorDC(Cpu cpu)
+    {
+        cpu.SetRegD(cpu._rd ^ cpu._rc);
+        cpu.SetFlagsZS(cpu._rd);
+    }
+
+    private static void XorAD(Cpu cpu)
+    {
+        cpu.SetRegA(cpu._ra ^ cpu._rd);
+        cpu.SetFlagsZS(cpu._ra);
+    }
+
+    private static void XorBD(Cpu cpu)
+    {
+        cpu.SetRegB(cpu._rb ^ cpu._rd);
+        cpu.SetFlagsZS(cpu._rb);
+    }
+
+    private static void XorCD(Cpu cpu)
+    {
+        cpu.SetRegC(cpu._rc ^ cpu._rd);
+        cpu.SetFlagsZS(cpu._rc);
     }
 
     #endregion
@@ -1335,71 +1334,7 @@ internal class Cpu(Ram ram)
         new Instruction("(reserved)", Command),
         new Instruction("(reserved)", Command),
         new Instruction("(reserved)", Command),
-        new Instruction("clr a", ClrA), // 60
-        new Instruction("mov b, a", MovBA),
-        new Instruction("mov c, a", MovCA),
-        new Instruction("mov d, a", MovDA),
-        new Instruction("mov a, b", MovAB),
-        new Instruction("clr b", ClrB),
-        new Instruction("mov c, b", MovCB),
-        new Instruction("mov d, b", MovDB),
-        new Instruction("mov a, c", MovAC),
-        new Instruction("mov b, c", MovBC),
-        new Instruction("clr c", ClrC),
-        new Instruction("mov d, c", MovDC),
-        new Instruction("mov a, d", MovAD),
-        new Instruction("mov b, d", MovBD),
-        new Instruction("mov c, d", MovCD),
-        new Instruction("clr d", ClrD),
-        new Instruction("test a", TestA), // 70
-        new Instruction("and b, a", AndBA),
-        new Instruction("and c, a", AndCA),
-        new Instruction("and d, a", AndDA),
-        new Instruction("and a, b", AndAB),
-        new Instruction("test b", TestB),
-        new Instruction("and c, b", AndCB),
-        new Instruction("and d, b", AndDB),
-        new Instruction("and a, c", AndAC),
-        new Instruction("and b, c", AndBC),
-        new Instruction("test c", TestC),
-        new Instruction("and d, c", AndDC),
-        new Instruction("and a, d", AndAD),
-        new Instruction("and b, d", AndBD),
-        new Instruction("and c, d", AndCD),
-        new Instruction("test d", TestD),
-        new Instruction("not a", Command), // 80
-        new Instruction("or b, a", OrBA),
-        new Instruction("or c, a", OrCA),
-        new Instruction("or d, a", OrDA),
-        new Instruction("or a, b", OrAB),
-        new Instruction("not b", Command),
-        new Instruction("or c, b", OrCB),
-        new Instruction("or d, b", OrDB),
-        new Instruction("or a, c", OrAC),
-        new Instruction("or b, c", OrBC),
-        new Instruction("not c", Command),
-        new Instruction("or d, c", OrDC),
-        new Instruction("or a, d", OrAD),
-        new Instruction("or b, d", OrBD),
-        new Instruction("or c, d", OrCD),
-        new Instruction("not d", Command),
-        new Instruction("neg a", Command), // 90
-        new Instruction("xor b, a", XorBA),
-        new Instruction("xor c, a", XorCA),
-        new Instruction("xor d, a", XorDA),
-        new Instruction("xor a, b", XorAB),
-        new Instruction("neg b", Command),
-        new Instruction("xor c, b", XorCB),
-        new Instruction("xor d, b", XorDB),
-        new Instruction("xor a, c", XorAC),
-        new Instruction("xor b, c", XorBC),
-        new Instruction("neg c", Command),
-        new Instruction("xor d, c", XorDC),
-        new Instruction("xor a, d", XorAD),
-        new Instruction("xor b, d", XorBD),
-        new Instruction("xor c, d", XorCD),
-        new Instruction("neg d", Command),
-        new Instruction("inc a", IncA), // A0
+        new Instruction("inc a", IncA), // 60
         new Instruction("add b, a", AddBA),
         new Instruction("add c, a", AddCA),
         new Instruction("add d, a", AddDA),
@@ -1415,53 +1350,117 @@ internal class Cpu(Ram ram)
         new Instruction("add b, d", AddBD),
         new Instruction("add c, d", AddCD),
         new Instruction("inc d", IncD),
-        new Instruction("dec a", DecA), // B0
-        new Instruction("adc b, a", Command),
-        new Instruction("adc c, a", Command),
-        new Instruction("adc d, a", Command),
-        new Instruction("adc a, b", Command),
-        new Instruction("dec b", DecB),
-        new Instruction("adc c, b", Command),
-        new Instruction("adc d, b", Command),
-        new Instruction("adc a, c", Command),
-        new Instruction("adc b, c", Command),
-        new Instruction("dec c", DecC),
-        new Instruction("adc d, c", Command),
-        new Instruction("adc a, d", Command),
-        new Instruction("adc b, d", Command),
-        new Instruction("adc c, d", Command),
-        new Instruction("dec d", DecD),
-        new Instruction("rcl a", RclA), // C0
+        new Instruction("dec a", DecA), // 70
         new Instruction("sub b, a", SubBA),
         new Instruction("sub c, a", SubCA),
         new Instruction("sub d, a", SubDA),
         new Instruction("sub a, b", SubAB),
-        new Instruction("rcl b", RclB),
+        new Instruction("dec b", DecB),
         new Instruction("sub c, b", SubCB),
         new Instruction("sub d, b", SubDB),
         new Instruction("sub a, c", SubAC),
         new Instruction("sub b, c", SubBC),
-        new Instruction("rcl c", RclC),
+        new Instruction("dec c", DecC),
         new Instruction("sub d, c", SubDC),
         new Instruction("sub a, d", SubAD),
         new Instruction("sub b, d", SubBD),
         new Instruction("sub c, d", SubCD),
-        new Instruction("rcl d", RclD),
-        new Instruction("rcr a", RcrA), // D0
+        new Instruction("dec d", DecD),
+        new Instruction("not a", Command), // 80
+        new Instruction("adc b, a", Command),
+        new Instruction("adc c, a", Command),
+        new Instruction("adc d, a", Command),
+        new Instruction("adc a, b", Command),
+        new Instruction("not b", Command),
+        new Instruction("adc c, b", Command),
+        new Instruction("adc d, b", Command),
+        new Instruction("adc a, c", Command),
+        new Instruction("adc b, c", Command),
+        new Instruction("not c", Command),
+        new Instruction("adc d, c", Command),
+        new Instruction("adc a, d", Command),
+        new Instruction("adc b, d", Command),
+        new Instruction("adc c, d", Command),
+        new Instruction("not d", Command),
+        new Instruction("neg a", Command), // 90
         new Instruction("sbb b, a", Command),
         new Instruction("sbb c, a", Command),
         new Instruction("sbb d, a", Command),
         new Instruction("sbb a, b", Command),
-        new Instruction("rcr b", RcrB),
+        new Instruction("neg b", Command),
         new Instruction("sbb c, b", Command),
         new Instruction("sbb d, b", Command),
         new Instruction("sbb a, c", Command),
         new Instruction("sbb b, c", Command),
-        new Instruction("rcr c", RcrC),
+        new Instruction("neg c", Command),
         new Instruction("sbb d, c", Command),
         new Instruction("sbb a, d", Command),
         new Instruction("sbb b, d", Command),
         new Instruction("sbb c, d", Command),
+        new Instruction("neg d", Command),
+        new Instruction("clr a", ClrA), // A0
+        new Instruction("mov b, a", MovBA),
+        new Instruction("mov c, a", MovCA),
+        new Instruction("mov d, a", MovDA),
+        new Instruction("mov a, b", MovAB),
+        new Instruction("clr b", ClrB),
+        new Instruction("mov c, b", MovCB),
+        new Instruction("mov d, b", MovDB),
+        new Instruction("mov a, c", MovAC),
+        new Instruction("mov b, c", MovBC),
+        new Instruction("clr c", ClrC),
+        new Instruction("mov d, c", MovDC),
+        new Instruction("mov a, d", MovAD),
+        new Instruction("mov b, d", MovBD),
+        new Instruction("mov c, d", MovCD),
+        new Instruction("clr d", ClrD),
+        new Instruction("test a", TestA), // B0
+        new Instruction("and b, a", AndBA),
+        new Instruction("and c, a", AndCA),
+        new Instruction("and d, a", AndDA),
+        new Instruction("and a, b", AndAB),
+        new Instruction("test b", TestB),
+        new Instruction("and c, b", AndCB),
+        new Instruction("and d, b", AndDB),
+        new Instruction("and a, c", AndAC),
+        new Instruction("and b, c", AndBC),
+        new Instruction("test c", TestC),
+        new Instruction("and d, c", AndDC),
+        new Instruction("and a, d", AndAD),
+        new Instruction("and b, d", AndBD),
+        new Instruction("and c, d", AndCD),
+        new Instruction("test d", TestD),
+        new Instruction("rcl a", RclA), // C0
+        new Instruction("or b, a", OrBA),
+        new Instruction("or c, a", OrCA),
+        new Instruction("or d, a", OrDA),
+        new Instruction("or a, b", OrAB),
+        new Instruction("rcl b", RclB),
+        new Instruction("or c, b", OrCB),
+        new Instruction("or d, b", OrDB),
+        new Instruction("or a, c", OrAC),
+        new Instruction("or b, c", OrBC),
+        new Instruction("rcl c", RclC),
+        new Instruction("or d, c", OrDC),
+        new Instruction("or a, d", OrAD),
+        new Instruction("or b, d", OrBD),
+        new Instruction("or c, d", OrCD),
+        new Instruction("rcl d", RclD),
+        new Instruction("rcr a", RcrA), // D0
+        new Instruction("xor b, a", XorBA),
+        new Instruction("xor c, a", XorCA),
+        new Instruction("xor d, a", XorDA),
+        new Instruction("xor a, b", XorAB),
+        new Instruction("rcr b", RcrB),
+        new Instruction("xor c, b", XorCB),
+        new Instruction("xor d, b", XorDB),
+        new Instruction("xor a, c", XorAC),
+        new Instruction("xor b, c", XorBC),
+        new Instruction("rcr c", RcrC),
+        new Instruction("xor d, c", XorDC),
+        new Instruction("xor a, d", XorAD),
+        new Instruction("xor b, d", XorBD),
+        new Instruction("xor c, d", XorCD),
         new Instruction("rcr d", RcrD),
         new Instruction("shl a", ShlA), // E0
         new Instruction("shl b", ShlB),

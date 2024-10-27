@@ -7,26 +7,31 @@ internal class Ram
     private const int Size = 1024;
     private readonly IList<MyByte> _main = new MyByte[Size];
     private readonly IList<MyByte> _screen = new MyByte[32];
-    private MyByte _number = default;
-    private bool _numberSetted = false;
-    private static readonly MyByte _bankAddr = new("3D");
-    private static readonly MyByte _inAddr = new("3E");
-    private static readonly MyByte _outAddr = new("3F");
-    private static readonly MyByte _outNumber = new("10");
-    private static readonly MyByte _outScreen = new("80");
+    private MyByte _bcd = default;
+    private bool _bcdSetted = false;
+    private MyByte _in = new(0);
+    private static readonly MyByte _bcdAddr = new("3A");
+    private static readonly MyByte _ioAddr = new("3E");
+    private static readonly MyByte _bankAddr = new("3F");
     private static readonly MyByte _screenMinAddr = new("40");
     private static readonly MyByte _screenMaxAddr = new("5F");
-    private static readonly MyByte _numberAddr = new("60");
     private int _bankShift = 0;
+
+    private const byte Mode_Terminal = 1;
+    private const byte Mode_Bcd = 2;
+    private const byte Mode_Screen = 4;
+    private const byte Mode_ScreenColor = 8;
 
     public MyByte Read(MyByte rawAddr)
     {
-        var value = Get(rawAddr);
+        if (rawAddr == _ioAddr)
+        {
+            var value = _in;
+            _in = 0;
+            return value;
+        }
 
-        if (rawAddr == _inAddr)
-            SetIn(0);
-
-        return value;
+        return Get(rawAddr);
     }
 
     public MyByte Get(string rawAddr) => Get(new MyByte(rawAddr));
@@ -41,17 +46,16 @@ internal class Ram
 
     private void WriteInternal(int addr, MyByte value)
     {
-        if (addr != _inAddr)
-            _main[addr] = value;
+        _main[addr] = value;
 
-        if (_main[_outAddr] == _outNumber && addr == _numberAddr)
+        if ((_main[_ioAddr] & Mode_Bcd) != 0 && addr == _bcdAddr)
         {
-            _number = value;
-            _numberSetted = true;
+            _bcd = value;
+            _bcdSetted = true;
             Console.UpdatePin();
         }
 
-        if (_main[_outAddr] == _outScreen && addr >= _screenMinAddr && addr <= _screenMaxAddr)
+        if ((_main[_ioAddr] & Mode_Screen) != 0 && addr >= _screenMinAddr && addr <= _screenMaxAddr)
         {
             _screen[addr - 64] = value;
             Console.UpdatePin();
@@ -64,7 +68,7 @@ internal class Ram
         }
     }
 
-    public void SetIn(MyByte value) => _main[_inAddr] = value;
+    public void SetIn(MyByte value) => _in = value;
 
     private int GetFullAddr(MyByte rawAddr) => rawAddr < 128 ? rawAddr : rawAddr + _bankShift;
 
@@ -89,14 +93,17 @@ internal class Ram
             row += Pixels(_screen[i - 63]);
             items.Add(row);
 
+            items.Add("   ");
+            items.Add("rw`" + Pixels(_main[i + 32]) + Pixels(_main[i + 33]));
+
             if (i < _screenMaxAddr - 2)
                 items.Add("\n");
         }
 
         items.Add("    Num: ");
 
-        if (_numberSetted)
-            items.Add($"G`{_number.Value}");
+        if (_bcdSetted)
+            items.Add($"G`{_bcd.Value}");
 
         return items;
     }
