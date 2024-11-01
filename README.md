@@ -1,85 +1,115 @@
 ﻿# Стрелочки
-Моя коллекция карт, созданных в игре [«Стрелочки»](https://logic-arrows.io/) от [Onigiri](https://github.com/ArtemOnigiri).
+Коллекция карт, созданных в игре [«Стрелочки»](https://logic-arrows.io/) от [Onigiri](https://github.com/ArtemOnigiri).
 <br><br>
 
 Об игре от автора:<br>
-[![Видео об игре](img/youtube.png)](https://www.youtube.com/watch?v=q_ve9SsuyvU)
+[![Видео об игре](img/youtube.jpg)](https://www.youtube.com/watch?v=q_ve9SsuyvU)
 <br><br>
 
-## Мои карты
+## Карты из стрелочек
 
-### [Компьютер](./computer.md)
-[![Компьютер](img/computer.png)](./computer.md)
-<br><br>
-
-### [Жизнь](https://logic-arrows.io/map-life)
-[![Жизнь](img/life.png)](https://logic-arrows.io/map-life)
-<br><br>
-
-### [Матрица](https://logic-arrows.io/map-matrix)
-[![Матрица](img/matrix.png)](https://logic-arrows.io/map-matrix)
-<br><br>
-
-### [Матрица RGB](https://logic-arrows.io/map-matrix-rgb)
-[![Матрица RGB](img/matrix-rgb.png)](https://logic-arrows.io/map-matrix-rgb)
-<br><br>
-
-### [Матрица маленькая (разных цветов)](https://logic-arrows.io/map-CcGrVgC8)
-[![Матрица маленькая (разных цветов)](img/matrix-small-red.png)](https://logic-arrows.io/map-CcGrVgC8)
-<br><br>
-
-### [Память 32 КБ](https://logic-arrows.io/map-fsG82aDy)
-[![Память 32 КБ](img/ram32k.png)](https://logic-arrows.io/map-fsG82aDy)
-<br><br>
-
-### [Память 256 байт (v2)](https://logic-arrows.io/map-ram256)
-[![Память 256 байт (v2)](img/ram256v2.png)](https://logic-arrows.io/map-ram256)
-<br><br>
-
-### [Память 256 байт (v1)](https://logic-arrows.io/map-utcKt1dM)
-[![Память 256 байт (v1)](img/ram256v1.png)](https://logic-arrows.io/map-utcKt1dM)
-<br><br>
-
-### [Память 64 байта](https://logic-arrows.io/map-ram64)
-[![Память 64 байта](img/ram64.png)](https://logic-arrows.io/map-ram64)
-<br><br>
-
-### [ПЗУ 1 клетка на бит](https://logic-arrows.io/map-FI3Ue08n)
-[![ПЗУ 1 клетка на бит](img/rom-compact.png)](https://logic-arrows.io/map-FI3Ue08n)
-<br><br>
-
-### [Конвертер BCD](https://logic-arrows.io/map-0TNlFXRQa6Y)
-[![Конвертер BCD](img/bcd-converter.png)](https://logic-arrows.io/map-0TNlFXRQa6Y)
-<br><br>
-
-### [Сегментные дисплеи](https://logic-arrows.io/map-Xhj9Pead)
-[![Сегментные дисплеи](img/digits.png)](https://logic-arrows.io/map-Xhj9Pead)
-<br><br>
-
-### [Прототип процессора](https://logic-arrows.io/map-kBhOopki)
-[![Прототип процессора](img/cpu.png)](https://logic-arrows.io/map-kBhOopki)
-<br><br>
-
-### [Передатчики](https://logic-arrows.io/map-Io2FESYk)
-[![Передатчики](img/transmitter.png)](https://logic-arrows.io/map-Io2FESYk)
-<br><br>
-
-### [Вентили](https://logic-arrows.io/map-k_R4pB1A)
-[![Вентили](img/gates.png)](https://logic-arrows.io/map-k_R4pB1A)
-<br><br>
-
-### [Умножитель](https://logic-arrows.io/map-lF-KRVo4vtw)
-[![Умножитель](img/multiplier.png)](https://logic-arrows.io/map-lF-KRVo4vtw)
-<br><br>
-
-### [Сумматор](https://logic-arrows.io/map-5bk8IiWhZ6Q)
-[![Сумматор](img/adder.png)](https://logic-arrows.io/map-5bk8IiWhZ6Q)
-<br><br>
-
-### [Вычитатель](https://logic-arrows.io/map-GvPsAA38)
-[![Вычитатель](img/subtractor.png)](https://logic-arrows.io/map-GvPsAA38)
-<br><br>
-
-### [Муравей (клеточный автомат)](https://logic-arrows.io/map-um14l5Qr)
-[![Вычитатель](img/ant.jpg)](https://logic-arrows.io/map-um14l5Qr)
-<br><br>
+<table>
+  <thead>
+    <tr>
+      <td width="50%">
+        <h3><a href="https://logic-arrows.io/map-computer">Компьютер v2</a></h3>
+        <a href="https://logic-arrows.io/map-computer"><img src="img/computer-v2.jpg" alt="Компьютер v2"></a>
+      </td>
+      <td>
+        <h3><a href="computer-v1/index.md">Компьютер v1</a></h3>
+        <a href="computer-v1/index.md"><img src="img/computer-v1.jpg" alt="Компьютер"></a>
+      </td>
+    </tr>
+    <tr>
+    <tr>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-life">Жизнь</a></h3>
+        <a href="https://logic-arrows.io/map-life"><img src="img/life.jpg" alt="Жизнь"></a>
+      </td>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-matrix">Матрица</a></h3>
+        <a href="https://logic-arrows.io/map-matrix"><img src="img/matrix.jpg" alt="Матрица"></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-matrix-rgb">Матрица цветная</a></h3>
+        <a href="https://logic-arrows.io/map-matrix-rgb"><img src="img/matrix-rgb.jpg" alt="Матрица цветная"></a>
+      </td>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-CcGrVgC8">Матрицы плотные</a></h3>
+        <a href="https://logic-arrows.io/map-CcGrVgC8"><img src="img/matrix-compact.jpg" alt="Матрицы плотные"></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-fsG82aDy">RAM 32K</a></h3>
+        <a href="https://logic-arrows.io/map-fsG82aDy"><img src="img/ram-32k.jpg" alt="RAM 32K"></a>
+      </td>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-ram256">RAM 256 v2</a></h3>
+        <a href="https://logic-arrows.io/map-ram256"><img src="img/ram-256-v2.jpg" alt="RAM 256 v2"></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-utcKt1dM">RAM 256 v1</a></h3>
+        <a href="https://logic-arrows.io/map-utcKt1dM"><img src="img/ram-256-v1.jpg" alt="RAM 256 v1"></a>
+      </td>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-ram64">RAM 64</a></h3>
+        <a href="https://logic-arrows.io/map-ram64"><img src="img/ram-64.jpg" alt="RAM 64"></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-FI3Ue08n">ROM компактная</a></h3>
+        <a href="https://logic-arrows.io/map-FI3Ue08n"><img src="img/rom-compact.jpg" alt="ROM компактная"></a>
+      </td>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-0TNlFXRQa6Y">Конвертер BCD</a></h3>
+        <a href="https://logic-arrows.io/map-0TNlFXRQa6Y"><img src="img/bcd-converter.jpg" alt="Конвертер BCD"></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-Xhj9Pead">Сегментные дисплеи</a></h3>
+        <a href="https://logic-arrows.io/map-Xhj9Pead"><img src="img/digits.jpg" alt="Сегментные дисплеи"></a>
+      </td>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-kBhOopki">Прототип процессора</a></h3>
+        <a href="https://logic-arrows.io/map-kBhOopki"><img src="img/cpu.jpg" alt="Прототип процессора"></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-Io2FESYk">Передатчики</a></h3>
+        <a href="https://logic-arrows.io/map-Io2FESYk"><img src="img/transmitters.jpg" alt="Передатчики"></a>
+      </td>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-k_R4pB1A">Вентили</a></h3>
+        <a href="https://logic-arrows.io/map-k_R4pB1A"><img src="img/gates.jpg" alt="Вентили"></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-lF-KRVo4vtw">Умножитель</a></h3>
+        <a href="https://logic-arrows.io/map-lF-KRVo4vtw"><img src="img/multiplier.jpg" alt="Умножитель"></a>
+      </td>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-5bk8IiWhZ6Q">Сумматор</a></h3>
+        <a href="https://logic-arrows.io/map-5bk8IiWhZ6Q"><img src="img/adder.jpg" alt="Сумматор"></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-GvPsAA38">Вычитатель</a></h3>
+        <a href="https://logic-arrows.io/map-GvPsAA38"><img src="img/subtractor.jpg" alt="Вычитатель"></a>
+      </td>
+      <td>
+        <h3><a href="https://logic-arrows.io/map-um14l5Qr">Муравей</a></h3>
+        <a href="https://logic-arrows.io/map-um14l5Qr"><img src="img/ant.jpg" alt="Муравей"></a>
+      </td>
+    </tr>
+  </thead>
+</table>

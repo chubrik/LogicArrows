@@ -1,13 +1,13 @@
-﻿### [← Компьютер из стрелочек](./computer.md)
+﻿### [← Компьютер из стрелочек v1](index.md)
 
 # Примеры готовых программ
 
 ## Space Fight!
 На экране внизу располагается твой корабль, а остальная область заполнена врагами. Нужно уничтожить 30 врагов за ограниченное число ходов. Периодически все враги перемещаются к тебе, причём с каждым разом это происходит всё чаще. Если кто-то из врагов долетит до тебя — ты проиграл. А в случае победы ты получить главный галактический приз!
 
-[Перейти на карту](https://logic-arrows.io/map-space-fight) &nbsp;|&nbsp; [Исходный код игры](computer-space-fight.asm)
+[Перейти на карту](https://logic-arrows.io/map-space-fight) &nbsp;|&nbsp; [Исходный код игры](space-fight.asm)
 
-[![Space Fight!](img/computer-space-fight.png)](https://logic-arrows.io/map-space-fight)
+[![Space Fight!](../img/computer-v1-space-fight.jpg)](https://logic-arrows.io/map-space-fight)
 <br><br>
 
 ## Hello world
