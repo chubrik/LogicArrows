@@ -5,7 +5,7 @@ internal class Cpu(Ram ram)
     private static readonly Random _random = new();
 
     private readonly Ram _ram = ram;
-    private int counter;
+    private int _counter;
     private MyByte _ip;
     private MyByte _ir;
     private MyByte _ra;
@@ -27,12 +27,13 @@ internal class Cpu(Ram ram)
     private bool _jumped;
     private bool _halted;
     private bool _wasArgument;
+    private bool _wasArgimentSkipped;
 
     public void Run()
     {
         for (; ; )
         {
-            counter++;
+            _counter++;
 
             if (_jumpAddr != null)
             {
@@ -63,7 +64,7 @@ internal class Cpu(Ram ram)
     private MyByte GetArgument()
     {
         State();
-        counter++;
+        _counter++;
         var argument = _ram.Read(++_ip);
         _ir = _ram.Read(_ip);
         Console.ReadKey(intercept: true);
@@ -116,6 +117,7 @@ internal class Cpu(Ram ram)
 
     private void State()
     {
+        var counter = _wasArgimentSkipped ? "" : _counter.ToString();
         var ipColor = _jumped ? "W" : "G";
         var irDescrColor = _wasArgument ? "d" : "G";
         var irDescr = _wasArgument ? "argument" : _instructions[_ir].Name;
@@ -164,7 +166,7 @@ internal class Cpu(Ram ram)
            $"d`{caches}"
         ]);
 
-        _raSetted = _rbSetted = _rcSetted = _rdSetted = _fzsSetted = _fcSetted = _foSetted = _jumped = _wasArgument = false;
+        _raSetted = _rbSetted = _rcSetted = _rdSetted = _fzsSetted = _fcSetted = _foSetted = _jumped = _wasArgument = _wasArgimentSkipped = false;
     }
 
     [Obsolete]
@@ -203,6 +205,11 @@ internal class Cpu(Ram ram)
 
         if (cpu._fz)
             cpu._jumpAddr = arg;
+        else
+        {
+            cpu._counter--;
+            cpu._wasArgimentSkipped = true;
+        }
     }
 
     private static void Js(Cpu cpu)
@@ -211,6 +218,11 @@ internal class Cpu(Ram ram)
 
         if (cpu._fs)
             cpu._jumpAddr = arg;
+        else
+        {
+            cpu._counter--;
+            cpu._wasArgimentSkipped = true;
+        }
     }
 
     private static void Jc(Cpu cpu)
@@ -219,6 +231,11 @@ internal class Cpu(Ram ram)
 
         if (cpu._fc)
             cpu._jumpAddr = arg;
+        else
+        {
+            cpu._counter--;
+            cpu._wasArgimentSkipped = true;
+        }
     }
 
     private static void Jo(Cpu cpu)
@@ -227,6 +244,11 @@ internal class Cpu(Ram ram)
 
         if (cpu._fo)
             cpu._jumpAddr = arg;
+        else
+        {
+            cpu._counter--;
+            cpu._wasArgimentSkipped = true;
+        }
     }
 
     private static void Jnz(Cpu cpu)
@@ -235,6 +257,11 @@ internal class Cpu(Ram ram)
 
         if (!cpu._fz)
             cpu._jumpAddr = arg;
+        else
+        {
+            cpu._counter--;
+            cpu._wasArgimentSkipped = true;
+        }
     }
 
     private static void Jns(Cpu cpu)
@@ -243,6 +270,11 @@ internal class Cpu(Ram ram)
 
         if (!cpu._fs)
             cpu._jumpAddr = arg;
+        else
+        {
+            cpu._counter--;
+            cpu._wasArgimentSkipped = true;
+        }
     }
 
     private static void Jnc(Cpu cpu)
@@ -251,6 +283,11 @@ internal class Cpu(Ram ram)
 
         if (!cpu._fc)
             cpu._jumpAddr = arg;
+        else
+        {
+            cpu._counter--;
+            cpu._wasArgimentSkipped = true;
+        }
     }
 
     private static void Jno(Cpu cpu)
@@ -259,6 +296,11 @@ internal class Cpu(Ram ram)
 
         if (!cpu._fo)
             cpu._jumpAddr = arg;
+        else
+        {
+            cpu._counter--;
+            cpu._wasArgimentSkipped = true;
+        }
     }
 
     #endregion
