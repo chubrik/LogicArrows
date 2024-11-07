@@ -12,8 +12,8 @@
   <thead>
     <tr>
       <td width="50%">
-        <h3><a href="https://logic-arrows.io/map-computer">Компьютер v2</a></h3>
-        <a href="https://logic-arrows.io/map-computer"><img src="img/computer-v2.jpg" alt="Компьютер v2"></a>
+        <h3><a href="computer.md">Компьютер v2</a></h3>
+        <a href="computer.md"><img src="img/computer-v2.jpg" alt="Компьютер v2"></a>
       </td>
       <td>
         <h3><a href="computer-v1/index.md">Компьютер v1</a></h3>
