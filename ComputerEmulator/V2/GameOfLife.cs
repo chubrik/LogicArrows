@@ -58,7 +58,7 @@ internal static class GameOfLife
         "31", // 24                     st b, a
         "7A", // 25                     dec c
         "2C", // 26                     jnz d
-        "54", // 27                     ldi a, 0b_00000110          ; bw display + bcd
+        "54", // 27                     ldi a, 0b_00000110          ; b/w display + bcd
         "06", // 28
         "30", // 29                     st a, IN_OUT
         "3E", // 2A
