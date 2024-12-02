@@ -23,8 +23,8 @@
     <tr>
     <tr>
       <td>
-        <h3><a href="https://logic-arrows.io/map-life">Жизнь</a></h3>
-        <a href="https://logic-arrows.io/map-life"><img src="img/life.jpg" alt="Жизнь"></a>
+        <h3><a href="https://logic-arrows.io/map-life">Игра «Жизнь»</a></h3>
+        <a href="https://logic-arrows.io/map-life"><img src="img/life.jpg" alt="Игра «Жизнь»"></a>
       </td>
       <td>
         <h3><a href="https://logic-arrows.io/map-matrix">Матрица</a></h3>

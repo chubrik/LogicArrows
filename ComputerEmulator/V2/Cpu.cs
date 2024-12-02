@@ -49,7 +49,19 @@ internal class Cpu(Ram ram)
                 return;
 
             if (key != ConsoleKey.NumPad0)
-                _ram.SetIn((int)key);
+            {
+                var keyCode = key switch
+                {
+                    ConsoleKey.LeftArrow => 0x11,
+                    ConsoleKey.UpArrow => 0x12,
+                    ConsoleKey.RightArrow => 0x13,
+                    ConsoleKey.DownArrow => 0x14,
+                    ConsoleKey.Enter => 0x0A,
+                    _ => (int)key
+                };
+
+                _ram.SetIn(keyCode);
+            }
 
             var instruction = _instructions[_ir];
             instruction.Action(this);
@@ -57,7 +69,7 @@ internal class Cpu(Ram ram)
             _ip++;
 
             if (_halted)
-                return;
+                 return;
         }
     }
 
