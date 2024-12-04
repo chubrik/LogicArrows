@@ -1,23 +1,23 @@
 ﻿# Стрелочки
 Коллекция карт, созданных в игре [«Стрелочки»](https://logic-arrows.io/) от [Onigiri](https://github.com/ArtemOnigiri).
-<br><br>
+<br>
 
 Об игре от автора:<br>
 [![Видео об игре](img/youtube.jpg)](https://www.youtube.com/watch?v=q_ve9SsuyvU)
-<br><br>
+<br><br><br>
 
-## Карты из стрелочек
+## Карты
 
 <table>
   <thead>
     <tr>
       <td width="50%">
-        <h3><a href="computer.md">Компьютер v2</a></h3>
-        <a href="computer.md"><img src="img/computer-v2.jpg" alt="Компьютер v2"></a>
+        <h3><a href="computer-v2/README.md">Компьютер из стрелочек</a></h3>
+        <a href="computer-v2/README.md"><img src="computer-v2/img/summary.jpg" alt="Компьютер из стрелочек"></a>
       </td>
       <td>
-        <h3><a href="computer-v1/index.md">Компьютер v1</a></h3>
-        <a href="computer-v1/index.md"><img src="img/computer-v1.jpg" alt="Компьютер"></a>
+        <h3><a href="computer-v1/README.md">Компьютер из стрелочек <i><sup>(старый)</sup><i></a></h3>
+        <a href="computer-v1/README.md"><img src="computer-v1/img/summary.jpg" alt="Компьютер из стрелочек (старый)"></a>
       </td>
     </tr>
     <tr>
