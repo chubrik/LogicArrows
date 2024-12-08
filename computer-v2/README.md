@@ -54,8 +54,8 @@
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/fibonacci-numbers.asm">Fibonacci Numbers</a></h3>
-        <a href="asm/fibonacci-numbers.asm"><img src="img/fibonacci-numbers.jpg" alt="Fibonacci Numbers"></a><br>
+        <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
+        <a href="asm/fibonacci-sequence.asm"><img src="img/fibonacci-sequence.jpg" alt="Fibonacci Sequence"></a><br>
         Находит 12 чисел Фибоначчи. Выводит их на цифровой индикатор, а также на дисплей в двоичном формате.
       </td>
       <td valign="top">    
