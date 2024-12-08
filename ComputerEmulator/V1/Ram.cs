@@ -61,7 +61,7 @@ internal class Ram
                 items.Add("\n");
         }
 
-        items.Add("    Num: ");
+        items.Add("    BCD: ");
 
         if (_numberSetted)
             items.Add($"G`{_number.Value}");
