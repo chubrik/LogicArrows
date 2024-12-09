@@ -7,6 +7,8 @@ internal static class SpaceFight
         return _bytes.Select(x => new MyByte(x)).ToList();
     }
 
+    // WIN_LEFT     equ 30
+    // STEP_CNT     equ 14
     // KEY_LEFT     equ 0x11
     // KEY_RIGHT    equ 0x13
     // KEY_FIRE     equ 0x20
@@ -74,10 +76,10 @@ internal static class SpaceFight
         "D2", // 37                 xor c, a
         "03", // 38                 jmp step_end
         "60", // 39
-        "1E", // 3A win_left    db  30                  ; bcd
+        "1E", // 3A win_left    db  WIN_LEFT            ; bcd
         "00", // 3B ---                                 ; bcd (reserved)
-        "0E", // 3C step_cnt    db  14
-        "0E", // 3D step_left   db  14
+        "0E", // 3C step_cnt    db  STEP_CNT
+        "0E", // 3D step_left   db  STEP_CNT
         "06", // 3E in_out:     db  0b_00000110         ; b/w display + bcd
         "00", // 3F bank        db  0
         

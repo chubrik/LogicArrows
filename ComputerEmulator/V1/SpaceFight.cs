@@ -7,22 +7,30 @@ internal static class SpaceFight
         return _bytes.Select(x => new MyByte(x)).ToList();
     }
 
+    // WIN_LEFT     equ 30
+    // STEP_CNT     equ 14
+    // KEY_LEFT     equ 0x25
+    // KEY_RIGHT    equ 0x27
+    // KEY_FIRE     equ 0x20
+    // OUT_BCD      equ 0x10
+    // OUT_DISPLAY  equ 0x80
+
     private static readonly IReadOnlyList<string> _bytes = [
 
         // 00
-        "8A", // 00 CLEAR: ldi c, 0x5C
+        "8A", // 00 clear:          ldi c, 0x5C
         "5C", // 01
-        "8B", // 02        ldi d, CLEAR_TO
+        "8B", // 02                 ldi d, 0x58
         "58", // 03
-        "4E", // 04        loop1: dec c
-        "B9", // 05               st b, c
-        "02", // 06               mov a, c
-        "1B", // 07               xor a, d
-        "E4", // 08               jnz loop1
+        "4E", // 04 clear_loop:     dec c
+        "B9", // 05                 st b, c
+        "02", // 06                 mov a, c
+        "1B", // 07                 xor a, d
+        "E4", // 08                 jnz clear_loop
         "04", // 09
-        "8A", // 0A RND (d): ldi c, 0x40
+        "8A", // 0A random:         ldi c, display
         "40", // 0B
-        "A8", // 0C          loop2: rnd a
+        "A8", // 0C random_loop:    rnd a
         "A9", // 0D                 rnd b
         "09", // 0E                 and a, b
         "50", // 0F                 shl a
@@ -36,48 +44,48 @@ internal static class SpaceFight
         "BC", // 17                 st a, d
         "03", // 18                 mov a, d
         "1A", // 19                 xor a, c
-        "E4", // 1A                 jnz loop2
+        "E4", // 1A                 jnz random_loop
         "0C", // 1B
-        "80", // 1C SCORE: ld a, &win_left
+        "80", // 1C score:          ld a, win_left
         "3C", // 1D
-        "20", // 1E        add a, 0
-        "8B", // 1F        ldi d, 0x40       ; for WIN
+        "8B", // 1E                 ldi d, display
+        "40", // 1F
 
         // 20
-        "40", // 20
-        "9D", // 21        ld b, d
-        "8A", // 22        ldi c, OUT_NUM
-        "10", // 23        
-        "A2", // 24        st c, &out
-        "3F", // 25        
-        "BC", // 26        st a, d
-        "8A", // 27        ldi c, OUT_SCR
-        "80", // 28        
-        "A2", // 29        st c, &out
-        "3F", // 2A        
-        "BD", // 2B        st b, d
-        "E0", // 2C        jz WIN
-        "D4", // 2D
-        "89", // 2E STEP:  ldi b, STEP+      ; for KEYS, LEFT, RIGHT
+        "9D", // 20                 ld b, d
+        "8A", // 21                 ldi c, OUT_BCD
+        "10", // 22                 
+        "A2", // 23                 st c, out
+        "3F", // 24                 
+        "BC", // 25                 st a, d
+        "8A", // 26                 ldi c, OUT_DISPLAY
+        "80", // 27                 
+        "A2", // 28                 st c, out
+        "3F", // 29                 
+        "BD", // 2A                 st b, d
+        "20", // 1B                 add a, 0
+        "E0", // 2C                 jz win
+        "D5", // 2D
+        "89", // 2E step:           ldi b, step2
         "30", // 2F
-        "80", // 30 STEP+: ld a, &step_left
+        "80", // 30 step2:          ld a, step_left
         "3B", // 31
-        "4C", // 32        dec a
-        "E2", // 33        js LEVEL
-        "B1", // 34
-        "A0", // 35        st a, &step_left
+        "4C", // 32                 dec a
+        "E2", // 33                 js level
+        "B2", // 34
+        "A0", // 35                 st a, step_left
         "3B", // 36
-        "00", // 37 KEYS (b): mov a, 0
-        "E8", // 38           jmp 0x60
-        "60", // 39
-        "0E", // 3A step_cnt: 14
-        "0E", // 3B step_left: 14
-        "1E", // 3C win_left: 30
-        "00", // 3D (bank): 0
-        "00", // 3E (in): 0
-        "80", // 3F (out): 0x80
+        "E8", // 37                 jmp keys
+        "60", // 38
+        "00", // 39 ---
+        "0E", // 3A step_cnt:       STEP_CNT
+        "0E", // 3B step_left:      STEP_CNT
+        "1E", // 3C win_left:       WIN_LEFT
+        "00", // 3D bank:           0
+        "00", // 3E in:             0
+        "80", // 3F out:            OUT_DISPLAY
 
-        // 40 (screen)
+        // 40 (display)
         "28", // 40 00101000 00000000
         "00", // 41
         "20", // 42 00100000 00101000
@@ -111,139 +119,139 @@ internal static class SpaceFight
         "03", // 5E 00000011 10000000
         "80", // 5F
 
-        // 60 (...KEYS)
-        "82", // 60           ld c, &in
-        "3E", // 61
-        "A0", // 62           st a, &in
-        "3E", // 63
-        "88", // 64           ldi a, KEY_FIRE
-        "20", // 65
-        "1A", // 66           xor a, c
-        "E0", // 67           jz FIRE
-        "92", // 68
-        "88", // 69           ldi a, KEY_RIGHT
-        "27", // 6A
-        "1A", // 6B           xor a, c
-        "E0", // 6C           jz RIGHT
-        "82", // 6D
-        "88", // 6E           ldi a, KEY_LEFT
-        "25", // 6F
-        "1A", // 70           xor a, c
-        "D4", // 71           jnz b          ; STEP+
-        "80", // 72 LEFT (b): ld a, 0x5E
-        "5E", // 73
-        "50", // 74           shl a
-        "C5", // 75           jc b           ; STEP+
-        "8B", // 76           ldi d, 0x5F    ; move
-        "5F", // 77
-        "8A", // 78           ldi c, 4
-        "04", // 79
-        "9C", // 7A           loop3: ld a, d
-        "60", // 7B                  rcl a
-        "BC", // 7C                  st a, d
-        "4F", // 7D                  dec d
-        "4E", // 7E                  dec c
-        "E4", // 7F                  jnz loop3
+        // 60
+        "00", // 60 keys:           mov a, 0
+        "82", // 61                 ld c, in
+        "3E", // 62
+        "A0", // 63                 st a, in
+        "3E", // 64
+        "88", // 65                 ldi a, KEY_FIRE
+        "20", // 66
+        "1A", // 67                 xor a, c
+        "E0", // 68                 jz fire
+        "93", // 69
+        "88", // 6A                 ldi a, KEY_RIGHT
+        "27", // 6B
+        "1A", // 6C                 xor a, c
+        "E0", // 6D                 jz right
+        "83", // 6E
+        "88", // 6F                 ldi a, KEY_LEFT
+        "25", // 70
+        "1A", // 71                 xor a, c
+        "D4", // 72                 jnz b               ; step2
+        "80", // 73 left:           ld a, 0x5E
+        "5E", // 74
+        "50", // 75                 shl a
+        "C5", // 76                 jc b                ; step2
+        "8B", // 77                 ldi d, 0x5F
+        "5F", // 78
+        "8A", // 79                 ldi c, 4
+        "04", // 7A
+        "9C", // 7B left_loop:      ld a, d
+        "60", // 7C                 rcl a
+        "BC", // 7D                 st a, d
+        "4F", // 7E                 dec d
+        "4E", // 7F                 dec c
 
         // 80
-        "7A", // 80
-        "F4", // 81           jmp b          ; STEP+
-        "80", // 82 RIGHT (b): ld a, 0x5F
-        "5F", // 83
-        "54", // 84            shr a
-        "C5", // 85            jc b          ; STEP+
-        "8B", // 86            ldi d, 0x5C   ; move
-        "5C", // 87
-        "8A", // 88            ldi c, 4
-        "04", // 89
-        "9C", // 8A            loop4: ld a, d
-        "64", // 8B                   rcr a
-        "BC", // 8C                   st a, d
-        "4B", // 8D                   inc d
-        "4E", // 8E                   dec c
-        "E4", // 8F                   jnz loop4
-        "8A", // 90
-        "F4", // 91            jmp b         ; STEP+
-        "8B", // 92 FIRE: ldi d, 0x5C
-        "5C", // 93
-        "9C", // 94       ld a, d
-        "20", // 95       add a, 0
-        "E4", // 96       jnz shot
-        "99", // 97
-        "4B", // 98       inc d
-        "9D", // 99       shot: ld b, d
-        "8A", // 9A             ldi c, 14
-        "0E", // 9B
-        "4F", // 9C       loop5: dec d
-        "4F", // 9D              dec d
-        "9C", // 9E              ld a, d
-        "09", // 9F              and a, b
+        "E4", // 80                 jnz left_loop
+        "7B", // 81
+        "F4", // 82                 jmp b               ; step2
+        "80", // 83 right:          ld a, 0x5F
+        "5F", // 84
+        "54", // 85                 shr a
+        "C5", // 86                 jc b                ; step2
+        "8B", // 87                 ldi d, 0x5C
+        "5C", // 88
+        "8A", // 89                 ldi c, 4
+        "04", // 8A
+        "9C", // 8B right_loop:     ld a, d
+        "64", // 8C                 rcr a
+        "BC", // 8D                 st a, d
+        "4B", // 8E                 inc d
+        "4E", // 8F                 dec c
+        "E4", // 90                 jnz right_loop
+        "8B", // 91
+        "F4", // 92                 jmp b               ; step2
+        "8B", // 93 fire:           ldi d, 0x5C
+        "5C", // 94
+        "9C", // 95                 ld a, d
+        "20", // 96                 add a, 0
+        "E4", // 97                 jnz fire_shot
+        "9A", // 98
+        "4B", // 99                 inc d
+        "9D", // 9A fire_shot:      ld b, d
+        "8A", // 9B                 ldi c, 14
+        "0E", // 9C
+        "4F", // 9D fire_loop:      dec d
+        "4F", // 9E                 dec d
+        "9C", // 9F                 ld a, d
 
         // A0
-        "E4", // A0              jnz hit
-        "A7", // A1
-        "4E", // A2              dec c
-        "E4", // A3              jnz loop5
-        "9C", // A4
-        "E8", // A5       jmp STEP
-        "2E", // A6
-        "9C", // A7       hit: ld a, d
-        "19", // A8            xor a, b
-        "BC", // A9            st a, d
-        "80", // AA            ld a, &win_left
-        "3C", // AB
-        "4C", // AC            dec a
-        "A0", // AD            st a, &win_left
-        "3C", // AE
-        "E8", // AF            jmp SCORE
-        "1C", // B0
-        "80", // B1 LEVEL: ld a, &step_cnt
-        "3A", // B2
-        "4C", // B3        dec a
-        "4C", // B4        dec a
-        "A0", // B5        st a, &step_cnt
-        "3A", // B6
-        "A0", // B7        st a, &step_left
-        "3B", // B8
-        "8A", // B9        ldi c, 0x5A       ; for SCROLL
-        "5A", // BA
-        "98", // BB        ld a, c
-        "81", // BC        ld b, 0x5B
-        "5B", // BD
-        "11", // BE        or a, b
-        "E0", // BF        jz SCROLL
+        "09", // A0                 and a, b
+        "E4", // A1                 jnz fire_hit
+        "A8", // A2
+        "4E", // A3                 dec c
+        "E4", // A4                 jnz fire_loop
+        "9D", // A5
+        "E8", // A6                 jmp step
+        "2E", // A7
+        "9C", // A8 fire_hit:       ld a, d
+        "19", // A9                 xor a, b
+        "BC", // AA                 st a, d
+        "80", // AB                 ld a, win_left
+        "3C", // AC
+        "4C", // AD                 dec a
+        "A0", // AE                 st a, win_left
+        "3C", // AF
+        "E8", // B0                 jmp score
+        "1C", // B1
+        "80", // B2 level:          ld a, step_cnt
+        "3A", // B3
+        "4C", // B4                 dec a
+        "4C", // B5                 dec a
+        "A0", // B6                 st a, step_cnt
+        "3A", // B7
+        "A0", // B8                 st a, step_left
+        "3B", // B9
+        "8A", // BA                 ldi c, 0x5A
+        "5A", // BB
+        "98", // BC                 ld a, c
+        "81", // BD                 ld b, 0x5B
+        "5B", // BE
+        "11", // BF                 or a, b
 
         // C0
-        "C7", // C0
-        "4A", // C1        inc c             ; lose
-        "4A", // C2        inc c
-        "88", // C3        ldi a, (hlt)
-        "EC", // C4
-        "A0", // C5        st a, SCORE
-        "1C", // C6
-        "8B", // C7 SCROLL (c): ldi d, 0x42  ; for RND
-        "42", // C8
-        "4E", // C9             loop6: dec c
-        "02", // CA                    mov a, c
-        "91", // CB                    ld b, a
-        "48", // CC                    inc a
-        "48", // CD                    inc a
-        "B1", // CE                    st b, a
-        "1B", // CF                    xor a, d
-        "E4", // D0                    jnz loop6
-        "C9", // D1
-        "E8", // D2             jmp RND
-        "0A", // D3
-        "8A", // D4 WIN (d): ldi c, 0xE0
-        "E0", // D5
-        "98", // D6          loop7: ld a, c
-        "BC", // D7                 st a, d
-        "4B", // D8                 inc d
-        "4A", // D9                 inc c
-        "E4", // DA                 jnz loop7
-        "D6", // DB
-        "EC", // DC          hlt
-        "00", // DD ---
+        "E0", // C0                 jz scroll
+        "C8", // C1
+        "4A", // C2                 inc c
+        "4A", // C3                 inc c
+        "88", // C4                 ldi a, 0xEC         ; "hlt"
+        "EC", // C5
+        "A0", // C6                 st a, score
+        "1C", // C7
+        "8B", // C8 scroll:         ldi d, 0x42
+        "42", // C9
+        "4E", // CA scroll_loop:    dec c
+        "02", // CB                 mov a, c
+        "91", // CC                 ld b, a
+        "48", // CD                 inc a
+        "48", // CE                 inc a
+        "B1", // CF                 st b, a
+        "1B", // D0                 xor a, d
+        "E4", // D1                 jnz scroll_loop
+        "CA", // D2
+        "E8", // D3                 jmp random
+        "0A", // D4
+        "8A", // D5 win:            ldi c, prize
+        "E0", // D6
+        "98", // D7 win_loop:       ld a, c
+        "BC", // D8                 st a, d
+        "4B", // D9                 inc d
+        "4A", // DA                 inc c
+        "E4", // DB                 jnz win_loop
+        "D7", // DC
+        "EC", // DD                 hlt
         "00", // DE ---
         "00", // DF ---
 

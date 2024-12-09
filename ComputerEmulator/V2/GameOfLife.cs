@@ -7,19 +7,17 @@ internal static class GameOfLife
         return _bytes.Select(x => new MyByte(x)).ToList();
     }
 
-    // DISPLAY_AREA equ 0x40
     // BANK_INNER   equ 1
     // BANK_MAIN    equ 2
     // BANK_OUTER   equ 3
     // TERMINAL     equ 0x3C
-    // IN_OUT       equ 0x3E
 
     private static readonly IReadOnlyList<string> _bytes = [
         
         // 0000: COMMON (0)
-        "03", // 00 start:              jmp start_title
+        "03", // 00                     jmp title_show
         "19", // 01
-        "FC", // 02 start_text      db  "ь",
+        "FC", // 02 title           db  "ь",
         "ED", // 03                     "н",
         "E7", // 04                     "з",
         "E8", // 05                     "и",
@@ -42,27 +40,27 @@ internal static class GameOfLife
         "6D", // 16                     "m",
         "61", // 17                     "a",
         "47", // 18                     "G"
-        "55", // 19 start_title:        ldi b, " "
+        "55", // 19 title_show:         ldi b, " "
         "20", // 1A
-        "35", // 1B                     st b, 0x01
+        "35", // 1B                     st b, title -1
         "01", // 1C
         "54", // 1D                     ldi a, TERMINAL
         "3C", // 1E
-        "56", // 1F                     ldi c, start_title -1
+        "56", // 1F                     ldi c, title_show -1
         
         // 0020
         "18", // 20
-        "57", // 21                     ldi d, start_title_loop
+        "57", // 21                     ldi d, title_show_loop
         "23", // 22
-        "49", // 23 start_title_loop:   ld b, c
+        "49", // 23 title_show_loop:    ld b, c
         "31", // 24                     st b, a
         "7A", // 25                     dec c
         "2C", // 26                     jnz d
         "54", // 27                     ldi a, 0b_00000110          ; b/w display + bcd
         "06", // 28
-        "30", // 29                     st a, IN_OUT
+        "30", // 29                     st a, in_out
         "3E", // 2A
-        "54", // 2B                     ldi a, DISPLAY_AREA         ; b = 32
+        "54", // 2B                     ldi a, display              ; b = 32
         "40", // 2C
         "56", // 2D                     ldi c, BANK_MAIN
         "02", // 2E
@@ -75,12 +73,12 @@ internal static class GameOfLife
         "00", // 35 upper_area      db  0x00
         "10", // 36 current_area    db  0x10
         "20", // 37 lower_area      db  0x20
-        "00", // 38 upper_cur       db  0x00
-        "20", // 39 lower_cur       db  0x20
+        "00", // 38 upper_ptr       db  0x00
+        "20", // 39 lower_ptr       db  0x20
         "FF", // 3A step_count      db  0xFF                        ; bcd
         "00", // 3B ---                                             ; bcd (reserved)
         "00", // 3C incrementor     db  0                           ; terminal
-        "00", // 3D display_cur     db  0x00                        ; terminal (reserved)
+        "40", // 3D display_ptr     db  display                     ; terminal (reserved)
         "0D", // 3E in_out          db  0b_00001101                 ; color display + terminal
         "00", // 3F bank            db  0                           ; bank
         
@@ -118,7 +116,7 @@ internal static class GameOfLife
         "EE", // 5E 11101110 10001110
         "8E", // 5F
         
-        // 0060
+        // 0060 (frame_cache)
         "00", // 60 ---
         "00", // 61 ---
         "00", // 62 ---
@@ -161,7 +159,7 @@ internal static class GameOfLife
         "AA", // 85
         "35", // 86                     st b, inner_center_jmp +1
         "C1", // 87
-        "51", // 88                     ld b, display_cur
+        "51", // 88                     ld b, display_ptr
         "3D", // 89
         "44", // 8A                     ld a, b
         "E4", // 8B                     shr a
@@ -171,7 +169,7 @@ internal static class GameOfLife
         "C0", // 8F inner_edge:         rcl a
         "0D", // 90                     jns inner_edge_end
         "A7", // 91
-        "53", // 92                     ld d, upper_cur
+        "53", // 92                     ld d, upper_ptr
         "38", // 93
         "4D", // 94                     ld b, d
         "65", // 95                     inc b
@@ -183,7 +181,7 @@ internal static class GameOfLife
         "49", // 9B                     ld b, c
         "65", // 9C                     inc b
         "39", // 9D                     st b, c
-        "53", // 9E                     ld d, lower_cur
+        "53", // 9E                     ld d, lower_ptr
         "39", // 9F
 
         // 00A0
@@ -205,7 +203,7 @@ internal static class GameOfLife
         "F6", // AF
         "35", // B0                     st b, inner_edge_jmp +1
         "A9", // B1
-        "51", // B2                     ld b, display_cur
+        "51", // B2                     ld b, display_ptr
         "3D", // B3
         "65", // B4                     inc b
         "44", // B5                     ld a, b
@@ -226,7 +224,7 @@ internal static class GameOfLife
         "C0", // C2                     rcl a
         "0D", // C3                     jns inner_center_end
         "E9", // C4
-        "53", // C5                     ld d, upper_cur
+        "53", // C5                     ld d, upper_ptr
         "38", // C6
         "4D", // C7                     ld b, d
         "65", // C8                     inc b
@@ -249,7 +247,7 @@ internal static class GameOfLife
         "39", // D9                     st b, c
         "7A", // DA                     dec c
         "7A", // DB                     dec c
-        "53", // DC                     ld d, lower_cur
+        "53", // DC                     ld d, lower_ptr
         "39", // DD
         "4D", // DE                     ld b, d
         "65", // DF                     inc b
@@ -264,16 +262,16 @@ internal static class GameOfLife
         "4D", // E6                     ld b, d
         "65", // E7                     inc b
         "3D", // E8                     st b, d
-        "53", // E9 inner_center_end:   ld d, upper_cur
+        "53", // E9 inner_center_end:   ld d, upper_ptr
         "38", // EA
         "6F", // EB                     inc d
-        "3F", // EC                     st d, upper_cur
+        "3F", // EC                     st d, upper_ptr
         "38", // ED
         "6A", // EE                     inc c
-        "53", // EF                     ld d, lower_cur
+        "53", // EF                     ld d, lower_ptr
         "39", // F0
         "6F", // F1                     inc d
-        "3F", // F2                     st d, lower_cur
+        "3F", // F2                     st d, lower_ptr
         "39", // F3
         "03", // F4                     jmp inner_center_loop
         "BB", // F5
@@ -301,11 +299,11 @@ internal static class GameOfLife
         "36", // 89
         "35", // 8A                     st b, lower_area
         "37", // 8B
-        "3A", // 8C                     st c, upper_cur
+        "3A", // 8C                     st c, upper_ptr
         "38", // 8D
-        "35", // 8E                     st b, lower_cur
+        "35", // 8E                     st b, lower_ptr
         "39", // 8F
-        "53", // 90                     ld d, display_cur
+        "53", // 90                     ld d, display_ptr
         "3D", // 91
         "54", // 92                     ldi a, 0x5E
         "5E", // 93
@@ -335,7 +333,7 @@ internal static class GameOfLife
         "93", // A9                     
         "03", // AA                     jmp set_bank
         "31", // AB 
-        "52", // AC main_calc:          ld c, display_cur
+        "52", // AC main_calc:          ld c, display_ptr
         "3D", // AD 
         "53", // AE                     ld d, upper_area
         "35", // AF 
@@ -359,14 +357,14 @@ internal static class GameOfLife
         // 0140
         "0C", // C0                     jnz main_calc_loop
         "B5", // C1                     
-        "52", // C2                     ld c, display_cur
+        "52", // C2                     ld c, display_ptr
         "3D", // C3                     
         "55", // C4                     ldi b, 30
         "1E", // C5                     
         "69", // C6                     add b, c
         "34", // C7                     st a, b
         "6A", // C8                     inc c
-        "3A", // C9                     st c, display_cur
+        "3A", // C9                     st c, display_ptr
         "3D", // CA                     
         "E5", // CB                     shr b
         "0E", // CC                     jnc main_calc_iter
@@ -391,9 +389,9 @@ internal static class GameOfLife
         "CF", // DF 
 
         // 0160
-        "55", // E0 main_frame:         ldi b, DISPLAY_AREA
+        "55", // E0 main_frame:         ldi b, display
         "40", // E1 
-        "56", // E2                     ldi c, 0x60
+        "56", // E2                     ldi c, frame_cache
         "60", // E3 
         "57", // E4                     ldi d, main_frame_loop
         "E6", // E5 
@@ -425,9 +423,9 @@ internal static class GameOfLife
         "EB", // FF
 
         // 0180: BANK_OUTER (3)
-        "56", // 80 outer_up:           ldi c, DISPLAY_AREA
+        "56", // 80 outer_up:           ldi c, display
         "40", // 81
-        "3A", // 82                     st c, display_cur
+        "3A", // 82                     st c, display_ptr
         "3D", // 83
         "E6", // 84                     shr c                       ; = 0x20
         "3A", // 85                     st c, lower_area
@@ -455,7 +453,7 @@ internal static class GameOfLife
         "B7", // 9B
         "35", // 9C                     st b, outer_center_jmp +1
         "CE", // 9D
-        "51", // 9E                     ld b, display_cur
+        "51", // 9E                     ld b, display_ptr
         "3D", // 9F
 
         // 01A0
@@ -490,7 +488,7 @@ internal static class GameOfLife
         "ED", // BC
         "35", // BD                     st b, outer_edge_jmp +1
         "B6", // BE
-        "51", // BF                     ld b, display_cur
+        "51", // BF                     ld b, display_ptr
 
         // 01C0
         "3D", // C0
@@ -549,7 +547,7 @@ internal static class GameOfLife
         "FC", // F3
         "54", // F4 outer_end_up:       ldi a, 0x42
         "42", // F5
-        "30", // F6                     st a, display_cur
+        "30", // F6                     st a, display_ptr
         "3D", // F7
         "57", // F8                     ldi d, main_row
         "80", // F9
