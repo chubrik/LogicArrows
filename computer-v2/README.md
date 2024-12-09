@@ -30,14 +30,14 @@
   <thead>
     <tr>
       <td valign="top" width="50%">
-        <h3><a href="asm/space-fight.asm">Игра «Space Fight!»</a></h3>
-        <a href="asm/space-fight.asm"><img src="img/space-fight.jpg" alt="Игра «Space Fight!»"></a><br>
-        На дисплее внизу расположен корабль, а остальная область заполнена врагами. Нужно уничтожить 30 врагов за ограниченное число ходов. Периодически все враги приближаются к кораблю, причём с каждым разом это происходит всё чаще. Если кто-то из врагов долетит до корабля, игра проиграна. А в случае победы на дисплей выведется приз.
-      </td>
-      <td valign="top">
         <h3><a href="asm/game-of-life.asm">Игра «Жизнь»</a></h3>
         <a href="asm/game-of-life.asm"><img src="img/game-of-life.jpg" alt="Игра «Жизнь»"></a><br>
         В терминал выводится название игры, дисплей заполняется случайным наборов пикселей, а на цифровом индикаторе отображается счётчик кадров. Затем запускается бесконечный цикл вычислений, на обработку одного кадра уходит около часа.
+      </td>
+      <td valign="top">
+        <h3><a href="asm/space-fight.asm">Игра «Space Fight!»</a></h3>
+        <a href="asm/space-fight.asm"><img src="img/space-fight.jpg" alt="Игра «Space Fight!»"></a><br>
+        На дисплее внизу расположен корабль, а остальная область заполнена врагами. Нужно уничтожить 30 врагов за ограниченное число ходов. Периодически все враги приближаются к кораблю, причём с каждым разом это происходит всё чаще. Если кто-то из врагов долетит до корабля, игра проиграна. А в случае победы на дисплей выведется приз.
       </td>
     </tr>
     <tr>
@@ -47,18 +47,21 @@
         При загрузке выводит на дисплей бабочку, а при запуске выводит в терминал надпись «Привет, Онигири!».
       </td>
       <td valign="top">
-        <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
-        <a href="asm/typewriter.asm"><img src="img/typewriter.jpg" alt="Typewriter"></a><br>
-        Выводит в терминал текст, набираемый на клавиатуре.
+        <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
+        <a href="asm/prime-numbers.asm"><img src="img/prime-numbers.jpg" alt="Prime Numbers"></a><br>
+        Находит первые 16 простых чисел и выводит их на цифровой индикатор, а также на дисплей в двоичном формате. Выполнение занимает 3091 операцию.
       </td>
-    </tr>
+     </tr>
     <tr>
-      <td valign="top">
+      <td valign="top">    
         <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="img/fibonacci-sequence.jpg" alt="Fibonacci Sequence"></a><br>
         Находит 12 чисел Фибоначчи. Выводит их на цифровой индикатор, а также на дисплей в двоичном формате.
       </td>
-      <td valign="top">    
+      <td valign="top">
+        <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
+        <a href="asm/typewriter.asm"><img src="img/typewriter.jpg" alt="Typewriter"></a><br>
+        Выводит в терминал текст, набираемый на клавиатуре.
       </td>
     </tr>
   </thead>
