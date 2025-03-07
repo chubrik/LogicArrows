@@ -48,7 +48,7 @@ internal static class SpaceFight
         "50", // 1D score:          ld a, win_left
         "3A", // 1E
         "30", // 1F                 st a, win_left
-        
+
         // 20
         "3A", // 20
         "54", // 21                 ldi a, step
@@ -82,7 +82,7 @@ internal static class SpaceFight
         "0E", // 3D step_left   db  STEP_CNT
         "06", // 3E in_out:     db  0b_00000110         ; b/w display + bcd
         "00", // 3F bank        db  0
-        
+
         // 40 (display)
         "28", // 40 00101000 00000000
         "00", // 41
@@ -197,11 +197,11 @@ internal static class SpaceFight
         "0C", // A8                 jnz step
         "25", // A9
         "55", // AA win:            ldi b, 0x40
-        "40", // AB 
+        "40", // AB
         "56", // AC                 ldi c, 0xE0
-        "E0", // AD 
+        "E0", // AD
         "57", // AE                 ldi d, win_loop
-        "B0", // AF 
+        "B0", // AF
         "48", // B0 win_loop:       ld a, c
         "34", // B1                 st a, b
         "65", // B2                 inc b

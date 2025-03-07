@@ -54,14 +54,14 @@ internal static class SpaceFight
         // 20
         "9D", // 20                 ld b, d
         "8A", // 21                 ldi c, OUT_BCD
-        "10", // 22                 
+        "10", // 22
         "A2", // 23                 st c, out
-        "3F", // 24                 
+        "3F", // 24
         "BC", // 25                 st a, d
         "8A", // 26                 ldi c, OUT_DISPLAY
-        "80", // 27                 
+        "80", // 27
         "A2", // 28                 st c, out
-        "3F", // 29                 
+        "3F", // 29
         "BD", // 2A                 st b, d
         "20", // 1B                 add a, 0
         "E0", // 2C                 jz win
