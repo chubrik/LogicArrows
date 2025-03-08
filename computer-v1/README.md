@@ -1,8 +1,9 @@
-﻿### [← В начало](../README.md)
+﻿# Компьютер из стрелочек <sup><sup>*Gen. 1*</sup></sup>
 
-# Компьютер из стрелочек *<sup>(старый)</sup>*
-*(См. новый **[Компьютер из стрелочек](../computer-v2/README.md)**.)*
-<br><br><br>
+> [!TIP]
+> См. новый **[Компьютер из стрелочек <sup>*Gen. 2*</sup>](../computer-v2/README.md)**.
+
+<br>
 
 <table>
   <thead>
@@ -12,17 +13,18 @@
         различные программы и игры.<br><br>
         <a href="https://logic-arrows.io/map-lVeJ9jtX"><i><b>На карту с компьютером
             →</b></i></a><br><br>
-        <a href="specification.md">Характеристики и устройство</a><br><br>
+        <a href="specification.md">Устройство и характеристики</a><br><br>
         <a href="programming.md">Программирование</a><br><br>
         <a href="#examples">Готовые программы</a>
       </td>
       <td valign="top">
         <a href="https://logic-arrows.io/map-lVeJ9jtX"><img src="img/summary.jpg"
-            alt="Компьютер из стрелочек (старый)"></a>
+            alt="Компьютер из стрелочек (Gen. 1)"></a>
       </td>
     </tr>
   </thead>
 </table>
+<br><br>
 
 
 ## Демонстрация работы
@@ -46,7 +48,7 @@
 [Перейти на карту](https://logic-arrows.io/map-space-fight) &nbsp;|&nbsp;
 [Исходный код игры](asm/space-fight.asm)
 
-[![Space Fight!](img/space-fight.jpg)](asm/space-fight.asm)
+<a href="asm/space-fight.asm"><img src="img/space-fight.jpg" width="60%" alt="Space Fight!"></a>
 <br><br>
 
 

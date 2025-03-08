@@ -1,6 +1,5 @@
-﻿### [← В начало](../README.md)
-
-# Компьютер из стрелочек
+﻿# Компьютер из стрелочек <sup><sup>*Gen. 2*</sup></sup>
+<br>
 
 <table>
   <thead>
@@ -10,17 +9,18 @@
         различные программы и игры.<br><br>
         <a href="https://logic-arrows.io/map-computer"><i><b>На карту с компьютером
             →</b></i></a><br><br>
-        <a href="specification.md">Характеристики и устройство</a><br><br>
+        <a href="specification.md">Устройство и характеристики</a><br><br>
         <a href="programming.md">Программирование</a><br><br>
         <a href="#examples">Готовые программы</a>
       </td>
       <td valign="top">
         <a href="https://logic-arrows.io/map-computer"><img src="img/summary.jpg"
-            alt="Компьютер из стрелочек"></a>
+            alt="Компьютер из стрелочек (Gen. 2)"></a>
       </td>
     </tr>
   </thead>
 </table>
+<br><br>
 
 
 ## Демонстрация работы
