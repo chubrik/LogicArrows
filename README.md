@@ -13,15 +13,16 @@
   <thead>
     <tr>
       <td width="50%">
-        <h3><a href="computer-v2/README.md">Компьютер из стрелочек</a></h3>
+        <h3><a href="computer-v2/README.md">Компьютер из стрелочек
+            <sup><i>Gen. 2<i></sup></a></h3>
         <a href="computer-v2/README.md"><img src="computer-v2/img/summary.jpg"
-            alt="Компьютер из стрелочек"></a>
+            alt="Компьютер из стрелочек (Gen. 2)"></a>
       </td>
       <td>
         <h3><a href="computer-v1/README.md">Компьютер из стрелочек
-            <i><sup>(старый)</sup><i></a></h3>
+            <sup><i>Gen. 1<i></sup></a></h3>
         <a href="computer-v1/README.md"><img src="computer-v1/img/summary.jpg"
-            alt="Компьютер из стрелочек (старый)"></a>
+            alt="Компьютер из стрелочек (Gen. 1)"></a>
       </td>
     </tr>
     <tr>
