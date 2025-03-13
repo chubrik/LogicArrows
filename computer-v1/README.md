@@ -77,7 +77,7 @@
       </td>
       <td valign="top">
         <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
-        <a href="asm/typewriter.asm"><img src="img/typewriter.jpg" alt="Typewriter"></a><br>
+        <a href="asm/typewriter.asm"><img src="img/terminal.jpg" alt="Typewriter"></a><br>
         Выводит в терминал текст, набираемый на клавиатуре.
       </td>
     </tr>
