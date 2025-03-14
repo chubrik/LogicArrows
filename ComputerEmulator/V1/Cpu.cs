@@ -41,7 +41,19 @@ internal class Cpu(Ram ram)
                 return;
 
             if (key != ConsoleKey.NumPad0)
-                _inQueued = (int)key;
+            {
+                var keyCode = key switch
+                {
+                    ConsoleKey.LeftArrow => 0x11,
+                    ConsoleKey.UpArrow => 0x12,
+                    ConsoleKey.RightArrow => 0x13,
+                    ConsoleKey.DownArrow => 0x14,
+                    ConsoleKey.Enter => 0x0A,
+                    _ => (int)key
+                };
+
+                _inQueued = keyCode;
+            }
 
             var instruction = _instructions[_ir];
             instruction.Action(this);

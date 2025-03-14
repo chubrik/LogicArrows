@@ -9,8 +9,8 @@ internal static class SpaceFight
 
     // WIN_LEFT     equ 30
     // STEP_CNT     equ 14
-    // KEY_LEFT     equ 0x25
-    // KEY_RIGHT    equ 0x27
+    // KEY_LEFT     equ 0x11
+    // KEY_RIGHT    equ 0x13
     // KEY_FIRE     equ 0x20
     // OUT_BCD      equ 0x10
     // OUT_DISPLAY  equ 0x80
@@ -131,12 +131,12 @@ internal static class SpaceFight
         "E0", // 68                 jz fire
         "93", // 69
         "88", // 6A                 ldi a, KEY_RIGHT
-        "27", // 6B
+        "13", // 6B
         "1A", // 6C                 xor a, c
         "E0", // 6D                 jz right
         "83", // 6E
         "88", // 6F                 ldi a, KEY_LEFT
-        "25", // 70
+        "11", // 70
         "1A", // 71                 xor a, c
         "D4", // 72                 jnz b               ; step2
         "80", // 73 left:           ld a, 0x5E

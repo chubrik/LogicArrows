@@ -21,8 +21,8 @@
 // V2 - Game of Life
 {
     var ram = new ComputerEmulator.V2.Ram();
-Console.Pin(ram.Display);
-ram.Load(ComputerEmulator.V2.GameOfLife.Bytes());
-var cpu = new ComputerEmulator.V2.Cpu(ram);
-cpu.Run();
+    Console.Pin(ram.Display);
+    ram.Load(ComputerEmulator.V2.GameOfLife.Bytes());
+    var cpu = new ComputerEmulator.V2.Cpu(ram);
+    cpu.Run();
 }
