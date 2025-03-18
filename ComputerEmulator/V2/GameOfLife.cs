@@ -56,7 +56,7 @@ internal static class GameOfLife
         "31", // 24                     st b, a
         "7A", // 25                     dec c
         "2C", // 26                     jnz d
-        "54", // 27                     ldi a, 0b_00000110          ; b/w display + bcd
+        "54", // 27                     ldi a, 0b00000110           ; b/w display + bcd
         "06", // 28
         "30", // 29                     st a, in_out
         "3E", // 2A
@@ -79,7 +79,7 @@ internal static class GameOfLife
         "00", // 3B ---                                             ; bcd (reserved)
         "00", // 3C incrementor     db  0                           ; terminal
         "40", // 3D display_ptr     db  display                     ; terminal (reserved)
-        "0D", // 3E in_out          db  0b_00001101                 ; color display + terminal
+        "0D", // 3E in_out          db  0b00001101                  ; color display + terminal
         "00", // 3F bank            db  0                           ; bank
 
         // 0040 (display)
@@ -340,7 +340,7 @@ internal static class GameOfLife
         "7A", // B0 main_calc_iter:     dec c
         "7A", // B1                     dec c
         "48", // B2                     ld a, c
-        "56", // B3                     ldi c, 0b_10000000
+        "56", // B3                     ldi c, 0b10000000
         "80", // B4
         "4D", // B5 main_calc_loop:     ld b, d
         "B5", // B6                     test b
