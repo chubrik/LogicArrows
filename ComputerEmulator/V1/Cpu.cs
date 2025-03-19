@@ -66,14 +66,14 @@ internal class Cpu(Ram ram)
         }
     }
 
-    private MyByte GetArgument()
+    private MyByte GetOperand()
     {
         counter++;
-        var argument = _ram.Read(++_ip);
+        var operand = _ram.Read(++_ip);
         _ir = _ram.Read(_ip);
-        State(isArgument: true);
+        State(isOperand: true);
         Console.ReadKey(intercept: true);
-        return argument;
+        return operand;
     }
 
     private void SetRegA(MyByte value)
@@ -119,11 +119,11 @@ internal class Cpu(Ram ram)
         _foSetted = true;
     }
 
-    private void State(bool isArgument = false)
+    private void State(bool isOperand = false)
     {
         var ipColor = _jumped ? "W" : "G";
-        var irDescrColor = isArgument ? "d" : "G";
-        var irDescr = isArgument ? "argument" : _instructions[_ir].Name;
+        var irDescrColor = isOperand ? "d" : "G";
+        var irDescr = isOperand ? "operand" : _instructions[_ir].Name;
         var raColor = _raSetted ? "W" : _ra != 0 ? "G" : "d";
         var rbColor = _rbSetted ? "W" : _rb != 0 ? "G" : "d";
         var rcColor = _rcSetted ? "W" : _rc != 0 ? "G" : "d";
@@ -156,7 +156,7 @@ internal class Cpu(Ram ram)
     }
 
     [Obsolete]
-    private static void Command(Cpu cpu) => throw new NotImplementedException();
+    private static void NoImpl(Cpu cpu) => throw new NotImplementedException();
 
     private static void CheckIn(Cpu cpu, MyByte addr)
     {
@@ -167,7 +167,7 @@ internal class Cpu(Ram ram)
         }
     }
 
-    #region Commands
+    #region Instructions
 
     #region Mov
 
@@ -616,36 +616,36 @@ internal class Cpu(Ram ram)
 
     private static void LdA(Cpu cpu)
     {
-        var addr = cpu.GetArgument();
+        var addr = cpu.GetOperand();
         CheckIn(cpu, addr);
         cpu.SetRegA(cpu._ram.Read(addr));
     }
 
     private static void LdB(Cpu cpu)
     {
-        var addr = cpu.GetArgument();
+        var addr = cpu.GetOperand();
         CheckIn(cpu, addr);
         cpu.SetRegB(cpu._ram.Read(addr));
     }
 
     private static void LdC(Cpu cpu)
     {
-        var addr = cpu.GetArgument();
+        var addr = cpu.GetOperand();
         CheckIn(cpu, addr);
         cpu.SetRegC(cpu._ram.Read(addr));
     }
 
     private static void LdD(Cpu cpu)
     {
-        var addr = cpu.GetArgument();
+        var addr = cpu.GetOperand();
         CheckIn(cpu, addr);
         cpu.SetRegD(cpu._ram.Read(addr));
     }
 
-    private static void LdiA(Cpu cpu) => cpu.SetRegA(cpu.GetArgument());
-    private static void LdiB(Cpu cpu) => cpu.SetRegB(cpu.GetArgument());
-    private static void LdiC(Cpu cpu) => cpu.SetRegC(cpu.GetArgument());
-    private static void LdiD(Cpu cpu) => cpu.SetRegD(cpu.GetArgument());
+    private static void LdiA(Cpu cpu) => cpu.SetRegA(cpu.GetOperand());
+    private static void LdiB(Cpu cpu) => cpu.SetRegB(cpu.GetOperand());
+    private static void LdiC(Cpu cpu) => cpu.SetRegC(cpu.GetOperand());
+    private static void LdiD(Cpu cpu) => cpu.SetRegD(cpu.GetOperand());
 
     #endregion
 
@@ -760,10 +760,10 @@ internal class Cpu(Ram ram)
 
     #region St X
 
-    private static void StA(Cpu cpu) => cpu._ram.Write(cpu.GetArgument(), cpu._ra);
-    private static void StB(Cpu cpu) => cpu._ram.Write(cpu.GetArgument(), cpu._rb);
-    private static void StC(Cpu cpu) => cpu._ram.Write(cpu.GetArgument(), cpu._rc);
-    private static void StD(Cpu cpu) => cpu._ram.Write(cpu.GetArgument(), cpu._rd);
+    private static void StA(Cpu cpu) => cpu._ram.Write(cpu.GetOperand(), cpu._ra);
+    private static void StB(Cpu cpu) => cpu._ram.Write(cpu.GetOperand(), cpu._rb);
+    private static void StC(Cpu cpu) => cpu._ram.Write(cpu.GetOperand(), cpu._rc);
+    private static void StD(Cpu cpu) => cpu._ram.Write(cpu.GetOperand(), cpu._rd);
 
     #endregion
 
@@ -792,88 +792,88 @@ internal class Cpu(Ram ram)
 
     private static void Jz(Cpu cpu)
     {
-        var arg = cpu.GetArgument();
+        var operand = cpu.GetOperand();
 
         if (cpu._fz)
         {
-            cpu._ip = arg;
+            cpu._ip = operand;
             cpu._jumped = true;
         }
     }
 
     private static void Jc(Cpu cpu)
     {
-        var arg = cpu.GetArgument();
+        var operand = cpu.GetOperand();
 
         if (cpu._fc)
         {
-            cpu._ip = arg;
+            cpu._ip = operand;
             cpu._jumped = true;
         }
     }
 
     private static void Js(Cpu cpu)
     {
-        var arg = cpu.GetArgument();
+        var operand = cpu.GetOperand();
 
         if (cpu._fs)
         {
-            cpu._ip = arg;
+            cpu._ip = operand;
             cpu._jumped = true;
         }
     }
 
     private static void Jo(Cpu cpu)
     {
-        var arg = cpu.GetArgument();
+        var operand = cpu.GetOperand();
 
         if (cpu._fo)
         {
-            cpu._ip = arg;
+            cpu._ip = operand;
             cpu._jumped = true;
         }
     }
 
     private static void Jnz(Cpu cpu)
     {
-        var arg = cpu.GetArgument();
+        var operand = cpu.GetOperand();
 
         if (!cpu._fz)
         {
-            cpu._ip = arg;
+            cpu._ip = operand;
             cpu._jumped = true;
         }
     }
 
     private static void Jnc(Cpu cpu)
     {
-        var arg = cpu.GetArgument();
+        var operand = cpu.GetOperand();
 
         if (!cpu._fc)
         {
-            cpu._ip = arg;
+            cpu._ip = operand;
             cpu._jumped = true;
         }
     }
 
     private static void Jns(Cpu cpu)
     {
-        var arg = cpu.GetArgument();
+        var operand = cpu.GetOperand();
 
         if (!cpu._fs)
         {
-            cpu._ip = arg;
+            cpu._ip = operand;
             cpu._jumped = true;
         }
     }
 
     private static void Jno(Cpu cpu)
     {
-        var arg = cpu.GetArgument();
+        var operand = cpu.GetOperand();
 
         if (!cpu._fo)
         {
-            cpu._ip = arg;
+            cpu._ip = operand;
             cpu._jumped = true;
         }
     }
@@ -1180,7 +1180,7 @@ internal class Cpu(Ram ram)
 
     private static void Jmp(Cpu cpu)
     {
-        cpu._ip = cpu.GetArgument();
+        cpu._ip = cpu.GetOperand();
         cpu._jumped = true;
     }
 
@@ -1254,41 +1254,41 @@ internal class Cpu(Ram ram)
         new Instruction("add a, c", AddAC),
         new Instruction("add a, d", AddAD),
         new Instruction("add a, 0*", AddA0),
-        new Instruction("add b, a", Command),
-        new Instruction("add c, a", Command),
-        new Instruction("add d, a", Command),
-        new Instruction("adc a, 0", Command),
-        new Instruction("adc a, b", Command),
-        new Instruction("adc a, c", Command),
-        new Instruction("adc a, d", Command),
-        new Instruction("adc a, 0*", Command),
-        new Instruction("adc b, a", Command),
-        new Instruction("adc c, a", Command),
-        new Instruction("adc d, a", Command),
+        new Instruction("add b, a", NoImpl),
+        new Instruction("add c, a", NoImpl),
+        new Instruction("add d, a", NoImpl),
+        new Instruction("adc a, 0", NoImpl),
+        new Instruction("adc a, b", NoImpl),
+        new Instruction("adc a, c", NoImpl),
+        new Instruction("adc a, d", NoImpl),
+        new Instruction("adc a, 0*", NoImpl),
+        new Instruction("adc b, a", NoImpl),
+        new Instruction("adc c, a", NoImpl),
+        new Instruction("adc d, a", NoImpl),
         new Instruction("sub a, 0", SubA0), // 30
         new Instruction("sub a, b", SubAB),
         new Instruction("sub a, c", SubAC),
         new Instruction("sub a, d", SubAD),
         new Instruction("sub a, 0*", SubA0),
-        new Instruction("sub b, a", Command),
-        new Instruction("sub c, a", Command),
-        new Instruction("sub d, a", Command),
-        new Instruction("sbb a, 0", Command),
-        new Instruction("sbb a, b", Command),
-        new Instruction("sbb a, c", Command),
-        new Instruction("sbb a, d", Command),
-        new Instruction("sbb a, 0*", Command),
-        new Instruction("sbb b, a", Command),
-        new Instruction("sbb c, a", Command),
-        new Instruction("sbb d, a", Command),
-        new Instruction("not a", Command), // 40
-        new Instruction("not b", Command),
-        new Instruction("not c", Command),
-        new Instruction("not d", Command),
-        new Instruction("neg a", Command),
-        new Instruction("neg b", Command),
-        new Instruction("neg c", Command),
-        new Instruction("neg d", Command),
+        new Instruction("sub b, a", NoImpl),
+        new Instruction("sub c, a", NoImpl),
+        new Instruction("sub d, a", NoImpl),
+        new Instruction("sbb a, 0", NoImpl),
+        new Instruction("sbb a, b", NoImpl),
+        new Instruction("sbb a, c", NoImpl),
+        new Instruction("sbb a, d", NoImpl),
+        new Instruction("sbb a, 0*", NoImpl),
+        new Instruction("sbb b, a", NoImpl),
+        new Instruction("sbb c, a", NoImpl),
+        new Instruction("sbb d, a", NoImpl),
+        new Instruction("not a", NoImpl), // 40
+        new Instruction("not b", NoImpl),
+        new Instruction("not c", NoImpl),
+        new Instruction("not d", NoImpl),
+        new Instruction("neg a", NoImpl),
+        new Instruction("neg b", NoImpl),
+        new Instruction("neg c", NoImpl),
+        new Instruction("neg d", NoImpl),
         new Instruction("inc a", IncA),
         new Instruction("inc b", IncB),
         new Instruction("inc c", IncC),
@@ -1305,14 +1305,14 @@ internal class Cpu(Ram ram)
         new Instruction("shr b", ShrB),
         new Instruction("shr c", ShrC),
         new Instruction("shr d", ShrD),
-        new Instruction("sar a", Command),
-        new Instruction("sar b", Command),
-        new Instruction("sar c", Command),
-        new Instruction("sar d", Command),
-        new Instruction("exp a", Command),
-        new Instruction("exp b", Command),
-        new Instruction("exp c", Command),
-        new Instruction("exp d", Command),
+        new Instruction("sar a", NoImpl),
+        new Instruction("sar b", NoImpl),
+        new Instruction("sar c", NoImpl),
+        new Instruction("sar d", NoImpl),
+        new Instruction("exp a", NoImpl),
+        new Instruction("exp b", NoImpl),
+        new Instruction("exp c", NoImpl),
+        new Instruction("exp d", NoImpl),
         new Instruction("rcl a", RclA), // 60
         new Instruction("rcl b", RclB),
         new Instruction("rcl c", RclC),
@@ -1321,30 +1321,30 @@ internal class Cpu(Ram ram)
         new Instruction("rcr b", RcrB),
         new Instruction("rcr c", RcrC),
         new Instruction("rcr d", RcrD),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command), // 70
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl), // 70
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
         new Instruction("ld a", LdA), // 80
         new Instruction("ld b", LdB),
         new Instruction("ld c", LdC),

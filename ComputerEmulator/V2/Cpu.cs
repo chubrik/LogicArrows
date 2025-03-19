@@ -26,8 +26,8 @@ internal class Cpu(Ram ram)
     private MyByte? _jumpAddr;
     private bool _jumped;
     private bool _halted;
-    private bool _wasArgument;
-    private bool _wasArgimentSkipped;
+    private bool _wasOperand;
+    private bool _wasOperandSkipped;
 
     public void Run()
     {
@@ -73,15 +73,15 @@ internal class Cpu(Ram ram)
         }
     }
 
-    private MyByte GetArgument()
+    private MyByte GetOperand()
     {
         State();
         _counter++;
-        var argument = _ram.Read(++_ip);
+        var operand = _ram.Read(++_ip);
         _ir = _ram.Read(_ip);
         Console.ReadKey(intercept: true);
-        _wasArgument = true;
-        return argument;
+        _wasOperand = true;
+        return operand;
     }
 
     private void SetRegA(MyByte value)
@@ -129,10 +129,10 @@ internal class Cpu(Ram ram)
 
     private void State()
     {
-        var counter = _wasArgimentSkipped ? "" : _counter.ToString();
+        var counter = _wasOperandSkipped ? "" : _counter.ToString();
         var ipColor = _jumped ? "W" : "G";
-        var irDescrColor = _wasArgument ? "d" : "G";
-        var irDescr = _wasArgument ? "argument" : _instructions[_ir].Name;
+        var irDescrColor = _wasOperand ? "d" : "G";
+        var irDescr = _wasOperand ? "operand" : _instructions[_ir].Name;
         var raColor = _raSetted ? "W" : _ra != 0 ? "G" : "d";
         var rbColor = _rbSetted ? "W" : _rb != 0 ? "G" : "d";
         var rcColor = _rcSetted ? "W" : _rc != 0 ? "G" : "d";
@@ -178,13 +178,13 @@ internal class Cpu(Ram ram)
            $"d`{caches}"
         ]);
 
-        _raSetted = _rbSetted = _rcSetted = _rdSetted = _fzsSetted = _fcSetted = _foSetted = _jumped = _wasArgument = _wasArgimentSkipped = false;
+        _raSetted = _rbSetted = _rcSetted = _rdSetted = _fzsSetted = _fcSetted = _foSetted = _jumped = _wasOperand = _wasOperandSkipped = false;
     }
 
     [Obsolete]
-    private static void Command(Cpu cpu) => throw new NotImplementedException();
+    private static void NoImpl(Cpu cpu) => throw new NotImplementedException();
 
-    #region Commands
+    #region Instructions
 
     #region Nop / Hlt
 
@@ -201,7 +201,7 @@ internal class Cpu(Ram ram)
 
     #region Jmp / Jmp X
 
-    private static void Jmp(Cpu cpu) => cpu._jumpAddr = cpu.GetArgument();
+    private static void Jmp(Cpu cpu) => cpu._jumpAddr = cpu.GetOperand();
     private static void JmpA(Cpu cpu) => cpu._jumpAddr = cpu._ra;
     private static void JmpB(Cpu cpu) => cpu._jumpAddr = cpu._rb;
     private static void JmpC(Cpu cpu) => cpu._jumpAddr = cpu._rc;
@@ -213,105 +213,105 @@ internal class Cpu(Ram ram)
 
     private static void Jz(Cpu cpu)
     {
-        var arg = cpu.GetArgument();
+        var operand = cpu.GetOperand();
 
         if (cpu._fz)
-            cpu._jumpAddr = arg;
+            cpu._jumpAddr = operand;
         else
         {
             cpu._counter--;
-            cpu._wasArgimentSkipped = true;
+            cpu._wasOperandSkipped = true;
         }
     }
 
     private static void Js(Cpu cpu)
     {
-        var arg = cpu.GetArgument();
+        var operand = cpu.GetOperand();
 
         if (cpu._fs)
-            cpu._jumpAddr = arg;
+            cpu._jumpAddr = operand;
         else
         {
             cpu._counter--;
-            cpu._wasArgimentSkipped = true;
+            cpu._wasOperandSkipped = true;
         }
     }
 
     private static void Jc(Cpu cpu)
     {
-        var arg = cpu.GetArgument();
+        var operand = cpu.GetOperand();
 
         if (cpu._fc)
-            cpu._jumpAddr = arg;
+            cpu._jumpAddr = operand;
         else
         {
             cpu._counter--;
-            cpu._wasArgimentSkipped = true;
+            cpu._wasOperandSkipped = true;
         }
     }
 
     private static void Jo(Cpu cpu)
     {
-        var arg = cpu.GetArgument();
+        var operand = cpu.GetOperand();
 
         if (cpu._fo)
-            cpu._jumpAddr = arg;
+            cpu._jumpAddr = operand;
         else
         {
             cpu._counter--;
-            cpu._wasArgimentSkipped = true;
+            cpu._wasOperandSkipped = true;
         }
     }
 
     private static void Jnz(Cpu cpu)
     {
-        var arg = cpu.GetArgument();
+        var operand = cpu.GetOperand();
 
         if (!cpu._fz)
-            cpu._jumpAddr = arg;
+            cpu._jumpAddr = operand;
         else
         {
             cpu._counter--;
-            cpu._wasArgimentSkipped = true;
+            cpu._wasOperandSkipped = true;
         }
     }
 
     private static void Jns(Cpu cpu)
     {
-        var arg = cpu.GetArgument();
+        var operand = cpu.GetOperand();
 
         if (!cpu._fs)
-            cpu._jumpAddr = arg;
+            cpu._jumpAddr = operand;
         else
         {
             cpu._counter--;
-            cpu._wasArgimentSkipped = true;
+            cpu._wasOperandSkipped = true;
         }
     }
 
     private static void Jnc(Cpu cpu)
     {
-        var arg = cpu.GetArgument();
+        var operand = cpu.GetOperand();
 
         if (!cpu._fc)
-            cpu._jumpAddr = arg;
+            cpu._jumpAddr = operand;
         else
         {
             cpu._counter--;
-            cpu._wasArgimentSkipped = true;
+            cpu._wasOperandSkipped = true;
         }
     }
 
     private static void Jno(Cpu cpu)
     {
-        var arg = cpu.GetArgument();
+        var operand = cpu.GetOperand();
 
         if (!cpu._fo)
-            cpu._jumpAddr = arg;
+            cpu._jumpAddr = operand;
         else
         {
             cpu._counter--;
-            cpu._wasArgimentSkipped = true;
+            cpu._wasOperandSkipped = true;
         }
     }
 
@@ -519,10 +519,10 @@ internal class Cpu(Ram ram)
 
     #region St X
 
-    private static void StA(Cpu cpu) => cpu._ram.Write(cpu.GetArgument(), cpu._ra);
-    private static void StB(Cpu cpu) => cpu._ram.Write(cpu.GetArgument(), cpu._rb);
-    private static void StC(Cpu cpu) => cpu._ram.Write(cpu.GetArgument(), cpu._rc);
-    private static void StD(Cpu cpu) => cpu._ram.Write(cpu.GetArgument(), cpu._rd);
+    private static void StA(Cpu cpu) => cpu._ram.Write(cpu.GetOperand(), cpu._ra);
+    private static void StB(Cpu cpu) => cpu._ram.Write(cpu.GetOperand(), cpu._rb);
+    private static void StC(Cpu cpu) => cpu._ram.Write(cpu.GetOperand(), cpu._rc);
+    private static void StD(Cpu cpu) => cpu._ram.Write(cpu.GetOperand(), cpu._rd);
 
     #endregion
 
@@ -566,15 +566,15 @@ internal class Cpu(Ram ram)
 
     #region Ld X / Ldi X
 
-    private static void LdA(Cpu cpu) => cpu.SetRegA(cpu._ram.Read(cpu.GetArgument()));
-    private static void LdB(Cpu cpu) => cpu.SetRegB(cpu._ram.Read(cpu.GetArgument()));
-    private static void LdC(Cpu cpu) => cpu.SetRegC(cpu._ram.Read(cpu.GetArgument()));
-    private static void LdD(Cpu cpu) => cpu.SetRegD(cpu._ram.Read(cpu.GetArgument()));
+    private static void LdA(Cpu cpu) => cpu.SetRegA(cpu._ram.Read(cpu.GetOperand()));
+    private static void LdB(Cpu cpu) => cpu.SetRegB(cpu._ram.Read(cpu.GetOperand()));
+    private static void LdC(Cpu cpu) => cpu.SetRegC(cpu._ram.Read(cpu.GetOperand()));
+    private static void LdD(Cpu cpu) => cpu.SetRegD(cpu._ram.Read(cpu.GetOperand()));
 
-    private static void LdiA(Cpu cpu) => cpu.SetRegA(cpu.GetArgument());
-    private static void LdiB(Cpu cpu) => cpu.SetRegB(cpu.GetArgument());
-    private static void LdiC(Cpu cpu) => cpu.SetRegC(cpu.GetArgument());
-    private static void LdiD(Cpu cpu) => cpu.SetRegD(cpu.GetArgument());
+    private static void LdiA(Cpu cpu) => cpu.SetRegA(cpu.GetOperand());
+    private static void LdiB(Cpu cpu) => cpu.SetRegB(cpu.GetOperand());
+    private static void LdiC(Cpu cpu) => cpu.SetRegC(cpu.GetOperand());
+    private static void LdiD(Cpu cpu) => cpu.SetRegD(cpu.GetOperand());
 
     #endregion
 
@@ -1294,7 +1294,7 @@ internal class Cpu(Ram ram)
     [
         new Instruction("nop", Nop), // 00
         new Instruction("hlt", Hlt),
-        new Instruction("(reserved)", Command),
+        new Instruction("(reserved)", NoImpl),
         new Instruction("jmp", Jmp),
         new Instruction("jmp a", JmpA),
         new Instruction("jmp b", JmpB),
@@ -1380,14 +1380,14 @@ internal class Cpu(Ram ram)
         new Instruction("ldi b", LdiB),
         new Instruction("ldi c", LdiC),
         new Instruction("ldi d", LdiD),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
         new Instruction("inc a", IncA), // 60
         new Instruction("add b, a", AddBA),
         new Instruction("add c, a", AddCA),
@@ -1420,38 +1420,38 @@ internal class Cpu(Ram ram)
         new Instruction("sub b, d", SubBD),
         new Instruction("sub c, d", SubCD),
         new Instruction("dec d", DecD),
-        new Instruction("not a", Command), // 80
-        new Instruction("adc b, a", Command),
-        new Instruction("adc c, a", Command),
-        new Instruction("adc d, a", Command),
-        new Instruction("adc a, b", Command),
-        new Instruction("not b", Command),
-        new Instruction("adc c, b", Command),
-        new Instruction("adc d, b", Command),
-        new Instruction("adc a, c", Command),
-        new Instruction("adc b, c", Command),
-        new Instruction("not c", Command),
-        new Instruction("adc d, c", Command),
-        new Instruction("adc a, d", Command),
-        new Instruction("adc b, d", Command),
-        new Instruction("adc c, d", Command),
-        new Instruction("not d", Command),
-        new Instruction("neg a", Command), // 90
-        new Instruction("sbb b, a", Command),
-        new Instruction("sbb c, a", Command),
-        new Instruction("sbb d, a", Command),
-        new Instruction("sbb a, b", Command),
-        new Instruction("neg b", Command),
-        new Instruction("sbb c, b", Command),
-        new Instruction("sbb d, b", Command),
-        new Instruction("sbb a, c", Command),
-        new Instruction("sbb b, c", Command),
-        new Instruction("neg c", Command),
-        new Instruction("sbb d, c", Command),
-        new Instruction("sbb a, d", Command),
-        new Instruction("sbb b, d", Command),
-        new Instruction("sbb c, d", Command),
-        new Instruction("neg d", Command),
+        new Instruction("not a", NoImpl), // 80
+        new Instruction("adc b, a", NoImpl),
+        new Instruction("adc c, a", NoImpl),
+        new Instruction("adc d, a", NoImpl),
+        new Instruction("adc a, b", NoImpl),
+        new Instruction("not b", NoImpl),
+        new Instruction("adc c, b", NoImpl),
+        new Instruction("adc d, b", NoImpl),
+        new Instruction("adc a, c", NoImpl),
+        new Instruction("adc b, c", NoImpl),
+        new Instruction("not c", NoImpl),
+        new Instruction("adc d, c", NoImpl),
+        new Instruction("adc a, d", NoImpl),
+        new Instruction("adc b, d", NoImpl),
+        new Instruction("adc c, d", NoImpl),
+        new Instruction("not d", NoImpl),
+        new Instruction("neg a", NoImpl), // 90
+        new Instruction("sbb b, a", NoImpl),
+        new Instruction("sbb c, a", NoImpl),
+        new Instruction("sbb d, a", NoImpl),
+        new Instruction("sbb a, b", NoImpl),
+        new Instruction("neg b", NoImpl),
+        new Instruction("sbb c, b", NoImpl),
+        new Instruction("sbb d, b", NoImpl),
+        new Instruction("sbb a, c", NoImpl),
+        new Instruction("sbb b, c", NoImpl),
+        new Instruction("neg c", NoImpl),
+        new Instruction("sbb d, c", NoImpl),
+        new Instruction("sbb a, d", NoImpl),
+        new Instruction("sbb b, d", NoImpl),
+        new Instruction("sbb c, d", NoImpl),
+        new Instruction("neg d", NoImpl),
         new Instruction("clr a", ClrA), // A0
         new Instruction("mov b, a", MovBA),
         new Instruction("mov c, a", MovCA),
@@ -1524,30 +1524,30 @@ internal class Cpu(Ram ram)
         new Instruction("shr b", ShrB),
         new Instruction("shr c", ShrC),
         new Instruction("shr d", ShrD),
-        new Instruction("sar a", Command),
-        new Instruction("sar b", Command),
-        new Instruction("sar c", Command),
-        new Instruction("sar d", Command),
+        new Instruction("sar a", NoImpl),
+        new Instruction("sar b", NoImpl),
+        new Instruction("sar c", NoImpl),
+        new Instruction("sar d", NoImpl),
         new Instruction("rnd a", RndA),
         new Instruction("rnd b", RndB),
         new Instruction("rnd c", RndC),
         new Instruction("rnd d", RndD),
-        new Instruction("(reserved)", Command), // F0
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
-        new Instruction("(reserved)", Command),
+        new Instruction("(reserved)", NoImpl), // F0
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
+        new Instruction("(reserved)", NoImpl),
     ];
 
     private class Instruction(string name, Action<Cpu> action)
