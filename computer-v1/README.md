@@ -23,7 +23,7 @@
     </tr>
   </thead>
 </table>
-<br><br>
+<br>
 
 
 ## Демонстрация работы
@@ -36,27 +36,26 @@
 
 
 ## <a name="examples"></a>Готовые программы
-
-### Space Fight!
-Внизу дисплея расположен корабль, а остальная область заполнена врагами. Нужно сбить 30 врагов за
-ограниченное время. Враги приближаются к кораблю с нарастающей скоростью, и, если враг достигнет
-корабля, игра проиграна. В случае победы на дисплее появится приз.
-
-[Перейти на карту](https://logic-arrows.io/map-space-fight) &nbsp;|&nbsp;
-[Исходный код игры](asm/space-fight.asm)
-
-<a href="asm/space-fight.asm"><img src="img/space-fight.jpg" width="60%" alt="Space Fight!"></a>
-<br><br>
-
-
 <table>
   <thead>
     <tr>
       <td valign="top" width="50%">
+        <h3><a href="asm/space-fight.asm">Игра «Space Fight!»</a></h3>
+        <a href="asm/space-fight.asm"><img src="img/space-fight.jpg"
+            alt="Игра «Space Fight!»"></a><br>
+        Внизу дисплея расположен корабль, а остальная область заполнена врагами. Нужно сбить 30
+        врагов за ограниченное время. Враги приближаются с нарастающей скоростью, и, если враг
+        достигнет корабля, игра проиграна. В случае победы на дисплее появится приз.<br><br>
+        Игра занимает весь доступный объём памяти 256 байт и выложена на
+        <a href="https://logic-arrows.io/map-space-fight">отдельной карте</a>.
+      </td>
+      <td valign="top">
         <h3><a href="asm/hello-world.asm">Hello World</a></h3>
         <a href="asm/hello-world.asm"><img src="img/summary.jpg" alt="Hello World"></a><br>
         Выводит на дисплей котика и надпись «Hello world».
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
         <a href="asm/prime-numbers.asm"><img src="img/prime-numbers.jpg"
@@ -64,18 +63,24 @@
         Находит первые 16 простых чисел и выводит их на дисплей в двоичном формате. Выполнение
         занимает 3691 операцию.
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="img/fibonacci-sequence.jpg"
             alt="Fibonacci Sequence"></a><br>
         Находит 10 чисел Фибоначчи и выводит их на дисплей в двоичном формате.
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
         <a href="asm/typewriter.asm"><img src="img/terminal.jpg" alt="Typewriter"></a><br>
         Выводит в терминал текст, набираемый на клавиатуре.
+      </td>
+      <td valign="top">
+        <h3><a href="asm/font-test.asm">Font Test</a></h3>
+        <a href="asm/font-test.asm"><img src="img/font-test.jpg" alt="Font Test"></a><br>
+        Выводит в терминал все возможные символы (кодировка
+        <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>).
       </td>
     </tr>
   </thead>
