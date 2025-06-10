@@ -229,7 +229,7 @@ win_loop:       ld a, c
                                         ;   вывода
                 jnz win_loop
 
-                hlt                     ; Остановка программы
+                hlt
 
 void2       db  0, 0
 
