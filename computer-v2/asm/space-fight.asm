@@ -1,9 +1,9 @@
-﻿####################################################################################################
-##           Source code for the "Space Fight!" game for a computer made of logic arrows          ##
-##             Исходный код игры "Space Fight!" для компьютера из логических стрелочек            ##
-##                  https://github.com/chubrik/LogicArrows/tree/main/computer-v2                  ##
-##                          (с) 2024 Arkadi Chubrik (arkadi@chubrik.org)                          ##
-####################################################################################################
+﻿; ##################################################################################################
+; ##          Source code for the "Space Fight!" game for a computer made of logic arrows         ##
+; ##            Исходный код игры "Space Fight!" для компьютера из логических стрелочек           ##
+; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v2                 ##
+; ##                         (с) 2024 Arkadi Chubrik (arkadi@chubrik.org)                         ##
+; ##################################################################################################
 
 
 
@@ -54,7 +54,7 @@ random_jmp:     jmp score
 score:          ld a, win_left
                 st a, win_left
                 ldi a, step
-                st a, random_jmp +1     ; Блок "score" нужен лишь однократно, поэтому делаем так,
+                st a, random_jmp + 1    ; Блок "score" нужен лишь однократно, поэтому делаем так,
                                         ;   чтобы в дальнейшем переходить через него
 
 ; Опрашиваем клавиатуру на нажатие одной из клавиш управления кораблём

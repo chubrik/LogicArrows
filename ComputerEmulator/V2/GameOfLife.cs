@@ -42,11 +42,11 @@ internal static class GameOfLife
         "47", // 18                     "G"
         "55", // 19 title_show:         ldi b, " "
         "20", // 1A
-        "35", // 1B                     st b, title -1
+        "35", // 1B                     st b, title - 1
         "01", // 1C
         "54", // 1D                     ldi a, TERMINAL
         "3C", // 1E
-        "56", // 1F                     ldi c, title_show -1
+        "56", // 1F                     ldi c, title_show - 1
 
         // 0020
         "18", // 20
@@ -153,11 +153,11 @@ internal static class GameOfLife
         // 0080: BANK_INNER (1)
         "55", // 80 inner_begin:        ldi b, inner_center
         "B7", // 81
-        "35", // 82                     st b, inner_edge_jmp +1
+        "35", // 82                     st b, inner_edge_jmp + 1
         "A9", // 83
         "55", // 84                     ldi b, inner_right
         "AA", // 85
-        "35", // 86                     st b, inner_center_jmp +1
+        "35", // 86                     st b, inner_center_jmp + 1
         "C1", // 87
         "51", // 88                     ld b, display_ptr
         "3D", // 89
@@ -197,11 +197,11 @@ internal static class GameOfLife
         "B7", // A9
         "55", // AA inner_right:        ldi b, inner_edge
         "8F", // AB
-        "35", // AC                     st b, inner_center_jmp +1
+        "35", // AC                     st b, inner_center_jmp + 1
         "C1", // AD
         "55", // AE                     ldi b, inner_end
         "F6", // AF
-        "35", // B0                     st b, inner_edge_jmp +1
+        "35", // B0                     st b, inner_edge_jmp + 1
         "A9", // B1
         "51", // B2                     ld b, display_ptr
         "3D", // B3
@@ -373,19 +373,19 @@ internal static class GameOfLife
         "80", // CF
         "55", // D0 main_final:         ldi b, main_final2
         "D6", // D1
-        "35", // D2                     st b, main_calc_jmp +1
+        "35", // D2                     st b, main_calc_jmp + 1
         "CF", // D3
         "03", // D4                     jmp main_calc
         "AC", // D5
         "55", // D6 main_final2:        ldi b, main_final3
         "DC", // D7
-        "35", // D8                     st b, main_calc_jmp +1
+        "35", // D8                     st b, main_calc_jmp + 1
         "CF", // D9
         "03", // DA                     jmp main_calc_iter
         "B0", // DB
         "55", // DC main_final3:        ldi b, main_row
         "80", // DD
-        "35", // DE                     st b, main_calc_jmp +1
+        "35", // DE                     st b, main_calc_jmp + 1
         "CF", // DF
 
         // 0160
@@ -447,11 +447,11 @@ internal static class GameOfLife
         "37", // 95
         "55", // 96 outer_begin:        ldi b, outer_center
         "C4", // 97
-        "35", // 98                     st b, outer_edge_jmp +1
+        "35", // 98                     st b, outer_edge_jmp + 1
         "B6", // 99
         "55", // 9A                     ldi b, outer_right
         "B7", // 9B
-        "35", // 9C                     st b, outer_center_jmp +1
+        "35", // 9C                     st b, outer_center_jmp + 1
         "CE", // 9D
         "51", // 9E                     ld b, display_ptr
         "3D", // 9F
@@ -459,7 +459,7 @@ internal static class GameOfLife
         // 01A0
         "44", // A0                     ld a, b
         "E4", // A1                     shr a
-        "56", // A2                     ldi c, 0x11                 ; = current_area +1
+        "56", // A2                     ldi c, 0x11                 ; = current_area + 1
         "11", // A3
         "53", // A4                     ld d, lower_area
         "37", // A5
@@ -482,11 +482,11 @@ internal static class GameOfLife
         "C4", // B6
         "55", // B7 outer_right:        ldi b, outer_edge
         "A6", // B8
-        "35", // B9                     st b, outer_center_jmp +1
+        "35", // B9                     st b, outer_center_jmp + 1
         "CE", // BA
         "55", // BB                     ldi b, outer_end
         "ED", // BC
-        "35", // BD                     st b, outer_edge_jmp +1
+        "35", // BD                     st b, outer_edge_jmp + 1
         "B6", // BE
         "51", // BF                     ld b, display_ptr
 

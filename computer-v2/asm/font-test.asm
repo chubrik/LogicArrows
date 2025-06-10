@@ -1,9 +1,9 @@
-﻿####################################################################################################
-##           Source code for the "Font Test" program for a computer made of logic arrows          ##
-##            Исходный код программы "Font Test" для компьютера из логических стрелочек           ##
-##                  https://github.com/chubrik/LogicArrows/tree/main/computer-v2                  ##
-##                          (с) 2025 Arkadi Chubrik (arkadi@chubrik.org)                          ##
-####################################################################################################
+﻿; ##################################################################################################
+; ##          Source code for the "Font Test" program for a computer made of logic arrows         ##
+; ##           Исходный код программы "Font Test" для компьютера из логических стрелочек          ##
+; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v2                 ##
+; ##                         (с) 2025 Arkadi Chubrik (arkadi@chubrik.org)                         ##
+; ##################################################################################################
 
 
         inc a           ; 0b00000001, код для подключения терминала

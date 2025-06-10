@@ -53,7 +53,7 @@ internal static class SpaceFight
         "3A", // 20
         "54", // 21                 ldi a, step
         "25", // 22
-        "30", // 23                 st a, random_jmp +1
+        "30", // 23                 st a, random_jmp + 1
         "1C", // 24
         "55", // 25 step:           ldi b, KEY_LEFT
         "11", // 26

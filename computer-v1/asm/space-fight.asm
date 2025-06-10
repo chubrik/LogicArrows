@@ -1,9 +1,9 @@
-﻿####################################################################################################
-##           Source code for the "Space Fight!" game for a computer made of logic arrows          ##
-##             Исходный код игры "Space Fight!" для компьютера из логических стрелочек            ##
-##                  https://github.com/chubrik/LogicArrows/tree/main/computer-v1                  ##
-##                          (с) 2024 Arkadi Chubrik (arkadi@chubrik.org)                          ##
-####################################################################################################
+﻿; ##################################################################################################
+; ##          Source code for the "Space Fight!" game for a computer made of logic arrows         ##
+; ##            Исходный код игры "Space Fight!" для компьютера из логических стрелочек           ##
+; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v1                 ##
+; ##                         (с) 2024 Arkadi Chubrik (arkadi@chubrik.org)                         ##
+; ##################################################################################################
 
 
 
@@ -229,7 +229,7 @@ win_loop:       ld a, c
                                         ;   вывода
                 jnz win_loop
 
-                hlt                     ; Остановка программы
+                hlt
 
 void2       db  0, 0
 

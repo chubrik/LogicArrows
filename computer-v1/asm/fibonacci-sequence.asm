@@ -1,9 +1,9 @@
-﻿####################################################################################################
-##      Source code for the "Fibonacci Sequence" program for a computer made of logic arrows      ##
-##       Исходный код программы "Fibonacci Sequence" для компьютера из логических стрелочек       ##
-##                  https://github.com/chubrik/LogicArrows/tree/main/computer-v1                  ##
-##                          (с) 2023 Arkadi Chubrik (arkadi@chubrik.org)                          ##
-####################################################################################################
+﻿; ##################################################################################################
+; ##     Source code for the "Fibonacci Sequence" program for a computer made of logic arrows     ##
+; ##      Исходный код программы "Fibonacci Sequence" для компьютера из логических стрелочек      ##
+; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v1                 ##
+; ##                         (с) 2023 Arkadi Chubrik (arkadi@chubrik.org)                         ##
+; ##################################################################################################
 
 
         ldi a, 0x80         ; Код для подключения дисплея

@@ -1,9 +1,9 @@
-﻿####################################################################################################
-##          Source code for the "Typewriter" program for a computer made of logic arrows          ##
-##           Исходный код программы "Typewriter" для компьютера из логических стрелочек           ##
-##                  https://github.com/chubrik/LogicArrows/tree/main/computer-v1                  ##
-##                          (с) 2024 Arkadi Chubrik (arkadi@chubrik.org)                          ##
-####################################################################################################
+﻿; ##################################################################################################
+; ##         Source code for the "Typewriter" program for a computer made of logic arrows         ##
+; ##          Исходный код программы "Typewriter" для компьютера из логических стрелочек          ##
+; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v1                 ##
+; ##                         (с) 2024 Arkadi Chubrik (arkadi@chubrik.org)                         ##
+; ##################################################################################################
 
 
         ldi b, 0x3E     ; Адрес порта ввода
