@@ -1,13 +1,17 @@
 ﻿# Стрелочки
-Коллекция карт, созданных в игре [«Стрелочки»](https://logic-arrows.io/) от
-[Onigiri](https://github.com/ArtemOnigiri).
+[![LogicArrows](https://img.shields.io/badge/logic--arrows-map-blue?logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cGF0aCBmaWxsPSIjNTAwIiBkPSJtOTkgMWMtMC44Ny0wLjg3LTIuMi0xLjMtMy42LTAuODJsLTc3IDI1Yy00LjkgMS43LTYuMyA3LjgtMi43IDExbDE1IDE1LTI5IDI5Yy0yLjcgMi43LTIuNyA3LjEgMCA5LjhsNyA3YzIuNyAyLjcgNy4xIDIuNyA5LjggMGwyOS0yOSAxNSAxNWMzLjcgMy43IDkuOCAyLjIgMTEtMi43bDI1LTc3YzAuNDktMS4zIDAuMDQ1LTIuNy0wLjgyLTMuNnoiIHN0cm9rZS13aWR0aD0iMS43Ii8+PC9zdmc+)](https://logic-arrows.io)
+[![GitHub stars](https://img.shields.io/github/stars/chubrik/LogicArrows?style=social)](https://github.com/chubrik/LogicArrows/stargazers)
+
+Коллекция карт в [«Стрелочках»](https://logic-arrows.io/), включая два полноценных компьютера с набором программ и игр для них.
 <br>
 
-Об игре от автора:<br>
-[![Видео об игре](img/youtube.jpg)](https://www.youtube.com/watch?v=q_ve9SsuyvU)
-<br><br><br>
+- [Карты](#maps)
+- [Об игре](#about)
+- [Ссылки](#links)
+<br><br>
 
-## Карты
+
+## <a name="maps"></a>Карты
 
 <table>
   <thead>
@@ -130,3 +134,27 @@
     </tr>
   </thead>
 </table>
+<br><br>
+
+
+## <a name="about"></a>Об игре
+
+Автор «Стрелочек» [Onigiri](https://github.com/ArtemOnigiri) рассказывает об игре:<br>
+[![Видео об игре](img/youtube.jpg)](https://www.youtube.com/watch?v=q_ve9SsuyvU)
+<br><br><br>
+
+
+## <a name="links"></a>Ссылки
+
+Общие:
+- [Стрелочки](https://logic-arrows.io) — официальный сайт игры
+- [Дискорд-сервер](https://discord.com/channels/1139657094459560006) — сообщество игроков на Дискорде
+- [Телеграм-канал](https://t.me/logic_arrows) — сообщество игроков в Телеграме
+
+Утилиты:
+- [ArrowsMod](https://discord.com/channels/1139657094459560006/1176222697294934026) — расширение для
+  браузера, повышает производительность и добавляет полезные функции
+- [CUDArrows](https://github.com/sagdrip/CUDArrows) — порт игры на CUDA, использует вычисления GPU
+  для максимальной производительности
+- [Mobile UI](https://discord.com/channels/1139657094459560006/1269681350332645519) — скрипт для
+  оптимизации игры на мобильных устройствах
