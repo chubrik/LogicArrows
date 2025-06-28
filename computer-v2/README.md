@@ -37,14 +37,20 @@
   <thead>
     <tr>
       <td valign="top" width="50%">
-        <h3><a href="asm/game-of-life.asm">Игра «Жизнь»</a></h3>
-        <a href="asm/game-of-life.asm"><img src="img/game-of-life.jpg" alt="Игра «Жизнь»"></a><br>
-        В терминал выводится название игры, дисплей заполняется случайным набором пикселей, а на
-        цифровом индикаторе отображается счётчик кадров. Затем запускается бесконечный цикл
-        вычислений, на обработку одного кадра уходит около часа.<br><br>
-        Программа занимает 512 байт.
+        <h3><a href="asm/tetris.asm">Игра «Тетрис»</a></h3>
+        <a href="asm/tetris.asm"><img src="img/tetris.jpg" alt="Игра «Тетрис»"></a><br>
+        Классическая компьютерная игра-головоломка.<br><br>
+        Программа занимает 888 байт.
       </td>
       <td valign="top">
+        <h3><a href="asm/game-of-life.asm">Игра «Жизнь»</a></h3>
+        <a href="asm/game-of-life.asm"><img src="img/game-of-life.jpg" alt="Игра «Жизнь»"></a><br>
+        Дисплей заполняет случайный набор пикселей, и запускается вычисление следующих поколений.<br><br>
+        Программа занимает 512 байт.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="50%">
         <h3><a href="asm/space-fight.asm">Игра «Space Fight!»</a></h3>
         <a href="asm/space-fight.asm"><img src="img/space-fight.jpg"
             alt="Игра «Space Fight!»"></a><br>
@@ -53,14 +59,14 @@
         достигнет корабля, игра проиграна. В случае победы на дисплее появится приз.<br><br>
         Программа занимает 256 байт.
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/demo.asm">Demo</a></h3>
         <a href="asm/demo.asm"><img src="img/summary.jpg" alt="Demo"></a><br>
         Во время загрузки выводит на дисплей цветную бабочку. При запуске пишет в терминал
         «Привет, Онигири!», рисует изображение онигири и звонит в колокольчик.
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
         <a href="asm/prime-numbers.asm"><img src="img/prime-numbers.jpg"
@@ -68,8 +74,6 @@
         Находит первые 16 простых чисел и выводит их на цифровой индикатор, а также на дисплей в
         двоичном формате. Выполнение занимает 3091 операцию.
       </td>
-     </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="img/fibonacci-sequence.jpg"
@@ -77,13 +81,13 @@
         Находит 12 чисел Фибоначчи. Выводит их на цифровой индикатор, а также на дисплей в двоичном
         формате.
       </td>
+     </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
         <a href="asm/typewriter.asm"><img src="img/typewriter.jpg" alt="Typewriter"></a><br>
         Выводит в терминал текст, набираемый на клавиатуре.
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/font-test.asm">Font Test</a></h3>
         <a href="asm/font-test.asm"><img src="img/font-test.jpg" alt="Font Test"></a><br>
