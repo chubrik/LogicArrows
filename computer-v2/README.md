@@ -96,5 +96,12 @@
         <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>).
       </td>
     </tr>
+    <tr>
+      <td valign="top">
+        <h3><a href="asm/ram-art.asm">RAM Art</a></h3>
+        <a href="asm/ram-art.asm"><img src="img/ram-art.jpg" alt="RAM Art"></a><br>
+        Программа-шутка, использующая RAM как холст для вывода изображения.
+      </td>
+    </tr>
   </thead>
 </table>
