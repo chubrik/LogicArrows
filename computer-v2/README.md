@@ -40,31 +40,26 @@
       <td valign="top" width="50%">
         <h3><a href="asm/tetris.asm">Игра «Тетрис»</a></h3>
         <a href="asm/tetris.asm"><img src="img/tetris.jpg" alt="Игра «Тетрис»"></a><br>
-        Классическая компьютерная игра-головоломка.<br><br>
-        Программа занимает 888 байт.
+        Классическая компьютерная игра-головоломка
       </td>
       <td valign="top">
         <h3><a href="asm/game-of-life.asm">Игра «Жизнь»</a></h3>
         <a href="asm/game-of-life.asm"><img src="img/game-of-life.jpg" alt="Игра «Жизнь»"></a><br>
-        Дисплей заполняет случайный набор пикселей, и запускается вычисление следующих поколений.<br><br>
-        Программа занимает 512 байт.
+        Заполняет дисплей случайными пикселями и вычисляет последующие поколения
       </td>
     </tr>
     <tr>
       <td valign="top" width="50%">
-        <h3><a href="asm/space-fight.asm">Игра «Space Fight!»</a></h3>
+        <h3><a href="asm/space-fight.asm">Игра «Space Fight»</a></h3>
         <a href="asm/space-fight.asm"><img src="img/space-fight.jpg"
-            alt="Игра «Space Fight!»"></a><br>
-        Внизу дисплея расположен корабль, а остальная область заполнена врагами. Нужно сбить 30
-        врагов за ограниченное время. Враги приближаются с нарастающей скоростью, и, если враг
-        достигнет корабля, игра проиграна. В случае победы на дисплее появится приз.<br><br>
-        Программа занимает 256 байт.
+            alt="Игра «Space Fight»"></a><br>
+        Нужно сбить 30 приближающихся врагов, чтобы получить специальный приз
       </td>
       <td valign="top">
         <h3><a href="asm/demo.asm">Demo</a></h3>
         <a href="asm/demo.asm"><img src="img/summary.jpg" alt="Demo"></a><br>
-        Во время загрузки выводит на дисплей цветную бабочку. При запуске пишет в терминал
-        «Привет, Онигири!», рисует изображение онигири и звонит в колокольчик.
+        Выводит на дисплей цветную бабочку, пишет в терминал «Привет, Онигири!», рисует изображение
+        онигири и звонит в колокольчик
       </td>
     </tr>
     <tr>
@@ -73,34 +68,34 @@
         <a href="asm/prime-numbers.asm"><img src="img/prime-numbers.jpg"
             alt="Prime Numbers"></a><br>
         Находит первые 16 простых чисел и выводит их на цифровой индикатор, а также на дисплей в
-        двоичном формате. Выполнение занимает 3091 операцию.
+        двоичном формате
       </td>
       <td valign="top">
         <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="img/fibonacci-sequence.jpg"
             alt="Fibonacci Sequence"></a><br>
         Находит 12 чисел Фибоначчи. Выводит их на цифровой индикатор, а также на дисплей в двоичном
-        формате.
+        формате
       </td>
     </tr>
     <tr>
       <td valign="top">
         <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
         <a href="asm/typewriter.asm"><img src="img/typewriter.jpg" alt="Typewriter"></a><br>
-        Выводит в терминал текст, набираемый на клавиатуре.
+        Выводит в терминал текст, набираемый на клавиатуре
       </td>
       <td valign="top">
         <h3><a href="asm/font-test.asm">Font Test</a></h3>
         <a href="asm/font-test.asm"><img src="img/font-test.jpg" alt="Font Test"></a><br>
         Выводит в терминал все возможные символы (кодировка
-        <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>).
+        <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>)
       </td>
     </tr>
     <tr>
       <td valign="top">
         <h3><a href="asm/ram-art.asm">RAM Art</a></h3>
         <a href="asm/ram-art.asm"><img src="img/ram-art.jpg" alt="RAM Art"></a><br>
-        Программа-шутка, использующая RAM как холст для вывода изображения.
+        Программа-шутка, использует RAM как холст для вывода изображения
       </td>
     </tr>
   </thead>

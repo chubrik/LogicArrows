@@ -1,6 +1,6 @@
 ﻿Console.Extras.WindowMaximize();
 
-// V1 - Space Fight!
+// V1 - Space Fight
 //{
 //    var ram = new ComputerEmulator.V1.Ram();
 //    Console.Pin(ram.Display);
@@ -9,7 +9,7 @@
 //    cpu.Run();
 //}
 
-// V2 - Space Fight!
+// V2 - Space Fight
 //{
 //    var ram = new ComputerEmulator.V2.Ram();
 //    Console.Pin(ram.Display);
