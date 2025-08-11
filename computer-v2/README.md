@@ -93,6 +93,11 @@
     </tr>
     <tr>
       <td valign="top">
+        <h3><a href="asm/terminal-art.asm">Terminal Art</a></h3>
+        <a href="asm/terminal-art.asm"><img src="img/terminal-art.jpg" alt="Terminal Art"></a><br>
+        Использует графический режим терминала для вывода изображения
+      </td>
+      <td valign="top">
         <h3><a href="asm/ram-art.asm">RAM Art</a></h3>
         <a href="asm/ram-art.asm"><img src="img/ram-art.jpg" alt="RAM Art"></a><br>
         Программа-шутка, использует RAM как холст для вывода изображения
