@@ -2,12 +2,12 @@
 ; ##         Source code for the "Typewriter" program for a computer made of logic arrows         ##
 ; ##          Исходный код программы "Typewriter" для компьютера из логических стрелочек          ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v2                 ##
-; ##                         (с) 2024 Arkadi Chubrik (arkadi@chubrik.org)                         ##
+; ##                         (c) 2024 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################
 
 
         inc a           ; 0b00000001, код для подключения терминала
-        ldi b, 0x3E     ; Порт ввода/вывода
+        ldi b, 0x3E     ; Адрес порта ввода/вывода
         st a, b         ; Подключаем вывод
         ldi c, 0x3C     ; Адрес для вывода в терминал
         ldi d, loop     ; Запоминаем ссылку на начало итерации для ускорения цикла

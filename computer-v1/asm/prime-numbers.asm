@@ -2,7 +2,7 @@
 ; ##        Source code for the "Prime Numbers" program for a computer made of logic arrows       ##
 ; ##         Исходный код программы "Prime Numbers" для компьютера из логических стрелочек        ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v1                 ##
-; ##                         (с) 2023 Arkadi Chubrik (arkadi@chubrik.org)                         ##
+; ##                         (c) 2023 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################
 
 

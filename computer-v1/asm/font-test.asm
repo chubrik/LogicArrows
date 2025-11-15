@@ -2,7 +2,7 @@
 ; ##          Source code for the "Font Test" program for a computer made of logic arrows         ##
 ; ##           Исходный код программы "Font Test" для компьютера из логических стрелочек          ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v1                 ##
-; ##                         (с) 2025 Arkadi Chubrik (arkadi@chubrik.org)                         ##
+; ##                         (c) 2025 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################
 
 

@@ -1,7 +1,7 @@
-﻿# Компьютер из стрелочек <sup>*Gen. 1*</sup>
+﻿# Компьютер v1
 
 > [!TIP]
-> См. новый [Компьютер из стрелочек <sup>***Gen. 2***</sup>](../computer-v2/README.md).
+> См. новый [Компьютер v2](../computer-v2/README.md).
 
 <br>
 
@@ -18,7 +18,7 @@
       </td>
       <td valign="top">
         <a href="https://logic-arrows.io/map-lVeJ9jtX"><img src="img/summary.jpg"
-            alt="Компьютер из стрелочек (Gen. 1)"></a>
+            alt="Компьютер v1"></a>
       </td>
     </tr>
   </thead>
@@ -44,7 +44,8 @@
         <h3><a href="asm/space-fight.asm">Игра «Space Fight»</a></h3>
         <a href="asm/space-fight.asm"><img src="img/space-fight.jpg"
             alt="Игра «Space Fight»"></a><br>
-        Нужно сбить 30 приближающихся врагов, чтобы получить специальный приз.<br><br>
+        К вам приближаются вражеские корабли, которые нужно сбить за ограниченное время. В случае
+        победы вы получите приз.<br><br>
         Игра занимает весь доступный объём памяти 256 байт и в целях производительности выложена на
         <a href="https://logic-arrows.io/map-space-fight">отдельной карте</a>.
       </td>

@@ -2,8 +2,8 @@
 [![LogicArrows](https://img.shields.io/badge/logic--arrows-map-blue?logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cGF0aCBmaWxsPSIjNTAwIiBkPSJtOTkgMWMtMC44Ny0wLjg3LTIuMi0xLjMtMy42LTAuODJsLTc3IDI1Yy00LjkgMS43LTYuMyA3LjgtMi43IDExbDE1IDE1LTI5IDI5Yy0yLjcgMi43LTIuNyA3LjEgMCA5LjhsNyA3YzIuNyAyLjcgNy4xIDIuNyA5LjggMGwyOS0yOSAxNSAxNWMzLjcgMy43IDkuOCAyLjIgMTEtMi43bDI1LTc3YzAuNDktMS4zIDAuMDQ1LTIuNy0wLjgyLTMuNnoiIHN0cm9rZS13aWR0aD0iMS43Ii8+PC9zdmc+)](https://logic-arrows.io)
 [![GitHub stars](https://img.shields.io/github/stars/chubrik/LogicArrows?style=social)](https://github.com/chubrik/LogicArrows/stargazers)
 
-Коллекция карт в [«Стрелочках»](https://logic-arrows.io/), включая два полноценных компьютера с набором программ и игр для них.
-<br>
+Коллекция карт в [«Стрелочках»](https://logic-arrows.io/), включая два полноценных компьютера с
+набором программ и игр для них.
 
 - [Карты](#maps)
 - [Об игре](#about)
@@ -17,16 +17,14 @@
   <thead>
     <tr>
       <td width="50%">
-        <h3><a href="computer-v2/README.md">Компьютер из стрелочек
-            <sup><i>Gen. 2<i></sup></a></h3>
+        <h3><a href="computer-v2/README.md">Компьютер v2</a></h3>
         <a href="computer-v2/README.md"><img src="computer-v2/img/summary.jpg"
-            alt="Компьютер из стрелочек (Gen. 2)"></a>
+            alt="Компьютер v2"></a>
       </td>
       <td>
-        <h3><a href="computer-v1/README.md">Компьютер из стрелочек
-            <sup><i>Gen. 1<i></sup></a></h3>
+        <h3><a href="computer-v1/README.md">Компьютер v1</a></h3>
         <a href="computer-v1/README.md"><img src="computer-v1/img/summary.jpg"
-            alt="Компьютер из стрелочек (Gen. 1)"></a>
+            alt="Компьютер v1"></a>
       </td>
     </tr>
     <tr>
@@ -128,8 +126,9 @@
             alt="Вычитатель"></a>
       </td>
       <td>
-        <h3><a href="https://logic-arrows.io/map-um14l5Qr">Муравей</a></h3>
-        <a href="https://logic-arrows.io/map-um14l5Qr"><img src="img/ant.jpg" alt="Муравей"></a>
+        <h3><a href="https://logic-arrows.io/map-um14l5Qr">Муравей Лэнгтона</a></h3>
+        <a href="https://logic-arrows.io/map-um14l5Qr"><img src="img/ant.jpg"
+            alt="Муравей Лэнгтона"></a>
       </td>
     </tr>
   </thead>
@@ -153,11 +152,9 @@
 - [Телеграм-канал](https://t.me/logic_arrows) — сообщество игроков в Телеграме
 
 Утилиты:
+- [Graph-DLC](https://discord.com/channels/1139657094459560006/1402026791568412712) — расширение для
+  браузера, запускает карты на максимальной скорости, в т. ч. на мобильных устройствах
 - [ArrowsMod](https://discord.com/channels/1139657094459560006/1176222697294934026) — расширение для
   браузера, повышает скорость и помогает в построении карт
-- [Graph-DLC](https://discord.com/channels/1139657094459560006/1402026791568412712) — расширение для браузера, запускает карты
-  на самой высокой скорости
-- [CUDArrows](https://github.com/sagdrip/CUDArrows) — порт игры на CUDA, использует вычисления GPU
-  для высокой скорости
-- [Mobile UI](https://discord.com/channels/1139657094459560006/1269681350332645519) — скрипт для
-  оптимизации игры на мобильных устройствах
+- [CUDArrows](https://github.com/sagdrip/CUDArrows) — порт игры на CUDA под ПК, использует
+  вычисления GPU для высокой скорости

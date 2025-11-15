@@ -2,7 +2,7 @@
 ; ##     Source code for the "Fibonacci Sequence" program for a computer made of logic arrows     ##
 ; ##      Исходный код программы "Fibonacci Sequence" для компьютера из логических стрелочек      ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v2                 ##
-; ##                         (с) 2024 Arkadi Chubrik (arkadi@chubrik.org)                         ##
+; ##                         (c) 2024 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################
 
 

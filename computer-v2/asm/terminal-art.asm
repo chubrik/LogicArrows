@@ -2,7 +2,7 @@
 ; ##        Source code for the "Terminal Art" program for a computer made of logic arrows        ##
 ; ##         Исходный код программы "Terminal Art" для компьютера из логических стрелочек         ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v2                 ##
-; ##                         (с) 2025 Arkadi Chubrik (arkadi@chubrik.org)                         ##
+; ##                         (c) 2025 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################
 
 

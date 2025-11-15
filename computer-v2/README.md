@@ -1,4 +1,4 @@
-﻿# Компьютер из стрелочек <sup>*Gen. 2*</sup>
+﻿# Компьютер v2
 <br>
 
 <table>
@@ -14,7 +14,7 @@
       </td>
       <td valign="top">
         <a href="https://logic-arrows.io/map-computer"><img src="img/summary.jpg"
-            alt="Компьютер из стрелочек (Gen. 2)"></a>
+            alt="Компьютер v2"></a>
       </td>
     </tr>
   </thead>
@@ -40,7 +40,7 @@
       <td valign="top" width="50%">
         <h3><a href="asm/tetris.asm">Игра «Тетрис»</a></h3>
         <a href="asm/tetris.asm"><img src="img/tetris.jpg" alt="Игра «Тетрис»"></a><br>
-        Классическая компьютерная игра-головоломка
+        Классическая игра-головоломка с цветной графикой
       </td>
       <td valign="top">
         <h3><a href="asm/game-of-life.asm">Игра «Жизнь»</a></h3>
@@ -53,7 +53,8 @@
         <h3><a href="asm/space-fight.asm">Игра «Space Fight»</a></h3>
         <a href="asm/space-fight.asm"><img src="img/space-fight.jpg"
             alt="Игра «Space Fight»"></a><br>
-        Нужно сбить 30 приближающихся врагов, чтобы получить специальный приз
+        К вам приближаются вражеские корабли, которые нужно сбить за ограниченное время. В случае
+        победы вы получите приз.
       </td>
       <td valign="top">
         <h3><a href="asm/demo.asm">Demo</a></h3>
