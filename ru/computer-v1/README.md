@@ -17,7 +17,7 @@
         <a href="#examples">Готовые программы</a>
       </td>
       <td valign="top">
-        <a href="https://logic-arrows.io/map-lVeJ9jtX"><img src="img/summary.jpg"
+        <a href="https://logic-arrows.io/map-lVeJ9jtX"><img src="../../computer-v1/img/summary.jpg"
             alt="Компьютер v1"></a>
       </td>
     </tr>
@@ -42,7 +42,7 @@
     <tr>
       <td valign="top" width="50%">
         <h3><a href="asm/space-fight.asm">Игра «Space Fight»</a></h3>
-        <a href="asm/space-fight.asm"><img src="img/space-fight.jpg"
+        <a href="asm/space-fight.asm"><img src="../../computer-v1/img/space-fight.jpg"
             alt="Игра «Space Fight»"></a><br>
         К вам приближаются вражеские корабли, которые нужно сбить за ограниченное время. В случае
         победы вы получите приз.<br><br>
@@ -51,20 +51,21 @@
       </td>
       <td valign="top">
         <h3><a href="asm/hello-world.asm">Hello World</a></h3>
-        <a href="asm/hello-world.asm"><img src="img/summary.jpg" alt="Hello World"></a><br>
+        <a href="asm/hello-world.asm"><img src="../../computer-v1/img/summary.jpg"
+            alt="Hello World"></a><br>
         Выводит на дисплей котика и надпись «Hello world»
       </td>
     </tr>
     <tr>
       <td valign="top">
         <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
-        <a href="asm/prime-numbers.asm"><img src="img/prime-numbers.jpg"
+        <a href="asm/prime-numbers.asm"><img src="../../computer-v1/img/prime-numbers.jpg"
             alt="Prime Numbers"></a><br>
         Находит первые 16 простых чисел и выводит их на дисплей в двоичном формате
       </td>
       <td valign="top">
         <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
-        <a href="asm/fibonacci-sequence.asm"><img src="img/fibonacci-sequence.jpg"
+        <a href="asm/fibonacci-sequence.asm"><img src="../../computer-v1/img/fibonacci-sequence.jpg"
             alt="Fibonacci Sequence"></a><br>
         Находит 10 чисел Фибоначчи и выводит их на дисплей в двоичном формате
       </td>
@@ -72,12 +73,14 @@
     <tr>
       <td valign="top">
         <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
-        <a href="asm/typewriter.asm"><img src="img/terminal.jpg" alt="Typewriter"></a><br>
+        <a href="asm/typewriter.asm"><img src="../../computer-v1/img/terminal.jpg"
+            alt="Typewriter"></a><br>
         Выводит в терминал текст, набираемый на клавиатуре
       </td>
       <td valign="top">
         <h3><a href="asm/font-test.asm">Font Test</a></h3>
-        <a href="asm/font-test.asm"><img src="img/font-test.jpg" alt="Font Test"></a><br>
+        <a href="asm/font-test.asm"><img src="../../computer-v1/img/font-test.jpg"
+            alt="Font Test"></a><br>
         Выводит в терминал все возможные символы (кодировка
         <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>)
       </td>
