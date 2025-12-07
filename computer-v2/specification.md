@@ -1,4 +1,6 @@
 ﻿# Structure and Specifications
+<br>
+
 The computer consists of a processor, RAM, input/output devices, and a set of programs.
 Main characteristics:
 - 8-bit architecture, processor with 4 registers and flags.

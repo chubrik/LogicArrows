@@ -1,5 +1,6 @@
 ﻿# Computer v2
-<br>
+🌐 English | [Русский](../ru/computer-v2/README.md)
+<br><br>
 
 <table>
   <thead>

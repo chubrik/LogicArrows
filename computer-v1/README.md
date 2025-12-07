@@ -1,9 +1,6 @@
 ﻿# Computer v1
-
-> [!TIP]
-> See the new [Computer v2](../computer-v2/README.md).
-
-<br>
+🌐 English | [Русский](../ru/computer-v1/README.md)
+<br><br>
 
 <table>
   <thead>
@@ -14,7 +11,8 @@
         <a href="https://logic-arrows.io/map-lVeJ9jtX"><b>Map with the computer</b></a><br><br>
         <a href="specification.md">Structure and Specifications</a><br><br>
         <a href="programming.md">Programming</a><br><br>
-        <a href="#examples">Ready-made programs</a>
+        <a href="#examples">Ready-made programs</a><br><br><br>
+        💡 <i>See also <a href="../computer-v2/README.md">Computer v2</a>.</i>
       </td>
       <td valign="top">
         <a href="https://logic-arrows.io/map-lVeJ9jtX"><img src="img/summary.jpg"
