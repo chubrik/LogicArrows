@@ -148,15 +148,8 @@ The author of “Logic Arrows”, [Onigiri](https://github.com/ArtemOnigiri), ta
 
 ## <a name="links"></a>Links
 
-General:
-- [Logic Arrows](https://logic-arrows.io) — official game website
-- [Discord server](https://discord.com/channels/1139657094459560006) — player community on Discord
-- [Telegram channel](https://t.me/logic_arrows) — player community on Telegram
-
-Utilities:
-- [Graph-DLC](https://discord.com/channels/1139657094459560006/1402026791568412712) — browser
-  extension that runs maps at maximum speed, including on mobile devices
-- [ArrowsMod](https://discord.com/channels/1139657094459560006/1176222697294934026) — browser
-  extension that increases speed and helps in building maps
-- [CUDArrows](https://github.com/sagdrip/CUDArrows) — a port of the game to CUDA for PC, uses GPU
-  calculations for high speed
+- [Logic Arrows](https://logic-arrows.io) – official game website
+- [Discord server](https://discord.com/channels/1139657094459560006) – player community on Discord
+- [Telegram channel](https://t.me/logic_arrows) – player community on Telegram
+- [Graph-DLC](https://github.com/MerinPrime/GraphDLC) – browser extension that speeds up Logic Arrows
+  by 2000 times

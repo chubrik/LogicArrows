@@ -52,7 +52,7 @@
       </td>
     </tr>
     <tr>
-      <td valign="top" width="50%">
+      <td valign="top">
         <h3><a href="asm/space-fight.asm">Игра «Space Fight»</a></h3>
         <a href="asm/space-fight.asm"><img src="../../computer-v2/img/space-fight.jpg"
             alt="Игра «Space Fight»"></a><br>
@@ -60,13 +60,19 @@
         победы вы получите приз.
       </td>
       <td valign="top">
+        <h3><a href="asm/space-fight.asm">Игра «Угадай число»</a></h3>
+        <a href="asm/guess-number.asm"><img src="../../computer-v2/img/guess-number.jpg"
+            alt="Игра «Угадай число»"></a><br>
+        Угадывай числа по правилу «больше/меньше» и повышай общий счёт побед
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
         <h3><a href="asm/demo.asm">Demo</a></h3>
         <a href="asm/demo.asm"><img src="../../computer-v2/img/summary.jpg" alt="Demo"></a><br>
         Выводит на дисплей цветную бабочку, пишет в терминал «Hello, Onigiri!», рисует изображение
         онигири и звонит в колокольчик
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
         <a href="asm/prime-numbers.asm"><img src="../../computer-v2/img/prime-numbers.jpg"
@@ -74,6 +80,8 @@
         Находит первые 16 простых чисел и выводит их на цифровой индикатор, а также на дисплей в
         двоичном формате
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="../../computer-v2/img/fibonacci-sequence.jpg"
@@ -81,14 +89,14 @@
         Находит 12 чисел Фибоначчи. Выводит их на цифровой индикатор, а также на дисплей в двоичном
         формате
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
         <a href="asm/typewriter.asm"><img src="../../computer-v2/img/typewriter.jpg"
             alt="Typewriter"></a><br>
         Выводит в терминал текст, набираемый на клавиатуре
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/font-test.asm">Font Test</a></h3>
         <a href="asm/font-test.asm"><img src="../../computer-v2/img/font-test.jpg"
@@ -96,14 +104,14 @@
         Выводит в терминал все возможные символы (кодировка
         <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>)
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/terminal-art.asm">Terminal Art</a></h3>
         <a href="asm/terminal-art.asm"><img src="../../computer-v2/img/terminal-art.jpg"
             alt="Terminal Art"></a><br>
         Использует графический режим терминала для вывода изображения
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/ram-art.asm">RAM Art</a></h3>
         <a href="asm/ram-art.asm"><img src="../../computer-v2/img/ram-art.jpg"

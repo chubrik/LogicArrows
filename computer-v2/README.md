@@ -50,7 +50,7 @@ To run your own program on the computer, see [Programming](programming.md).
       </td>
     </tr>
     <tr>
-      <td valign="top" width="50%">
+      <td valign="top">
         <h3><a href="asm/space-fight.asm">Space Fight Game</a></h3>
         <a href="asm/space-fight.asm"><img src="img/space-fight.jpg"
             alt="Space Fight Game"></a><br>
@@ -58,13 +58,19 @@ To run your own program on the computer, see [Programming](programming.md).
         win, you will receive a prize.
       </td>
       <td valign="top">
+        <h3><a href="asm/space-fight.asm">Guess the Number</a></h3>
+        <a href="asm/guess-number.asm"><img src="img/guess-number.jpg"
+            alt="Guess the Number"></a><br>
+        Guess the numbers using the “higher/lower” rule and increase your overall winning score
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
         <h3><a href="asm/demo.asm">Demo</a></h3>
         <a href="asm/demo.asm"><img src="img/summary.jpg" alt="Demo"></a><br>
         Displays a colored butterfly, writes “Hello, Onigiri!” in the terminal, draws an onigiri
         image, and rings the bell
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
         <a href="asm/prime-numbers.asm"><img src="img/prime-numbers.jpg"
@@ -72,6 +78,8 @@ To run your own program on the computer, see [Programming](programming.md).
         Finds the first 16 prime numbers and outputs them to the digital indicator, as well as to
         the display in binary format
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="img/fibonacci-sequence.jpg"
@@ -79,26 +87,26 @@ To run your own program on the computer, see [Programming](programming.md).
         Finds 12 Fibonacci numbers. Outputs them to the digital indicator, as well as to the display
         in binary format
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
         <a href="asm/typewriter.asm"><img src="img/typewriter.jpg" alt="Typewriter"></a><br>
         Outputs text typed on the keyboard to the terminal
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/font-test.asm">Font Test</a></h3>
         <a href="asm/font-test.asm"><img src="img/font-test.jpg" alt="Font Test"></a><br>
         Outputs all possible characters to the terminal (encoding
         <a href="https://en.wikipedia.org/wiki/Windows-1251">cp1251</a>)
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/terminal-art.asm">Terminal Art</a></h3>
         <a href="asm/terminal-art.asm"><img src="img/terminal-art.jpg" alt="Terminal Art"></a><br>
         Uses the terminal’s graphics mode to display an image
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/ram-art.asm">RAM Art</a></h3>
         <a href="asm/ram-art.asm"><img src="img/ram-art.jpg" alt="RAM Art"></a><br>
