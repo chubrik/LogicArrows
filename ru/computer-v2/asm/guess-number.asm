@@ -7,7 +7,7 @@
 
 
 ; Константы
-TRIES_STR   equ 0x36                ; "6" - число попыток в виде символа
+TRIES_STR   equ "6"                 ; Число попыток в виде символа
 
                 jmp start
 
@@ -147,7 +147,7 @@ lower:          ldi c, lower_str
 higher:         ldi c, higher_str
                 jmp write
 
-; Массив строк для вывода в терминал
+; Набор строк для вывода в терминал
 start_str   db  "Guess my number 1…99 in ", TRIES_STR, " tries.", 0
 win_str     db  "You win!", 0
 lose_str    db  "You lose…", 0
