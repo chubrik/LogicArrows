@@ -40,8 +40,7 @@ connects bank #1.
 
 ## Keyboard
 A full-format keyboard, similar to a real PC. It has Latin and Cyrillic layouts, single and permanent
-upper case. All modes are displayed on the corresponding keys. It also has an indicator that suggests
-when the next character can be entered.
+upper case, and an indicator that suggests when the next character can be entered.
 
 After entering any character, its code can be read by the program from port `3E`. After reading, the
 port is automatically reset to allow for the detection of repeated input. The character codes

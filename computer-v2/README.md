@@ -28,7 +28,7 @@ Go to the [map with the computer](https://logic-arrows.io/map-computer). On the 
 the maximum speed. Press the `Demo` button and wait for the program to load into the computer’s
 memory. During loading, a colored butterfly will be displayed. Next, press the `RUN` button and
 watch as the program writes “Hello, Onigiri!” in the terminal, draws an onigiri image, and rings the
-bell three times. When finished, the `DONE` light will turn on.
+bell. When finished, the `DONE` light will turn on.
 
 To run your own program on the computer, see [Programming](programming.md).
 <br><br><br>
@@ -75,8 +75,8 @@ To run your own program on the computer, see [Programming](programming.md).
         <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
         <a href="asm/prime-numbers.asm"><img src="img/prime-numbers.jpg"
             alt="Prime Numbers"></a><br>
-        Finds the first 16 prime numbers and outputs them to the digital indicator, as well as to
-        the display in binary format
+        Finds 16 prime numbers and outputs them to the digital indicator, as well as to the display
+        in binary format
       </td>
     </tr>
     <tr>
