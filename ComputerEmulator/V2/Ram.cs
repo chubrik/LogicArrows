@@ -8,7 +8,7 @@ internal class Ram
     private readonly IList<MyByte> _main = new MyByte[Size];
     private readonly IList<MyByte> _screen = new MyByte[32];
     private MyByte _bcd = default;
-    private bool _bcdSetted = false;
+    private bool _bcdDirty = false;
     private MyByte _in = new(0);
     private static readonly MyByte _bcdAddr = new("3A");
     private static readonly MyByte _ioAddr = new("3E");
@@ -18,9 +18,9 @@ internal class Ram
     private int _bankShift = 0;
 
     private const byte Mode_Terminal = 1;
-    private const byte Mode_Bcd = 2;
-    private const byte Mode_Screen = 4;
-    private const byte Mode_ScreenColor = 8;
+    private const byte Mode_Bcd = 4;
+    private const byte Mode_Screen = 16;
+    private const byte Mode_ScreenColor = 32;
 
     public MyByte Read(MyByte rawAddr)
     {
@@ -51,7 +51,7 @@ internal class Ram
         if ((_main[_ioAddr] & Mode_Bcd) != 0 && addr == _bcdAddr)
         {
             _bcd = value;
-            _bcdSetted = true;
+            _bcdDirty = true;
             Console.UpdatePin();
         }
 
@@ -102,7 +102,7 @@ internal class Ram
 
         items.Add("    BCD: ");
 
-        if (_bcdSetted)
+        if (_bcdDirty)
             items.Add($"G`{_bcd.Value}");
 
         return items;

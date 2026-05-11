@@ -1,4 +1,4 @@
-﻿# Компьютер v1
+# Компьютер v1
 🌐 [English](../../computer-v1/README.md) | Русский
 <br><br>
 

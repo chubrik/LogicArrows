@@ -1,4 +1,4 @@
-﻿# Компьютер v2
+# Компьютер v2
 🌐 [English](../../computer-v2/README.md) | Русский
 <br><br>
 
@@ -60,7 +60,7 @@
         победы вы получите приз.
       </td>
       <td valign="top">
-        <h3><a href="asm/space-fight.asm">Игра «Угадай число»</a></h3>
+        <h3><a href="asm/guess-number.asm">Игра «Угадай число»</a></h3>
         <a href="asm/guess-number.asm"><img src="../../computer-v2/img/guess-number.jpg"
             alt="Игра «Угадай число»"></a><br>
         Угадывайте числа по правилу «больше/меньше» и повышайте общий счёт побед

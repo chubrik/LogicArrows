@@ -1,5 +1,5 @@
 ﻿; ##################################################################################################
-; ##             Source code for the game "Tetris" for a computer made of logic arrows            ##
+; ##             Source code for the "Tetris" game for a computer made of logic arrows            ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v2                 ##
 ; ##                         (c) 2025 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################

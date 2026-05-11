@@ -1,4 +1,4 @@
-﻿# Programming
+# Programming
 <br>
 
 To run your own program on the computer, follow these steps:
@@ -37,14 +37,14 @@ computational operations and can be used as conditions for jumps:
 For the best understanding of the assembly language and its syntax, please review the
 [program examples](asm) created by the computer’s author. Here we will cover the main points:
 ```asm
-MY_CONST equ 100                ; Declare a constant MY_CONST with the value 100 using the "equ"
+MY_CONST equ 196                ; Declare a constant MY_CONST with the value 196 using the "equ"
                                 ; keyword. As values, you can use numbers from 0 to 255 anywhere in
-                                ; the code in decimal (100), hexadecimal (0x64), octal (0144), or
-                                ; binary (0b01100100) form. You can also use a character in quotes
-                                ; ("d"), which is equivalent to a number in the cp1251 encoding.
+                                ; the code in decimal (196), hexadecimal (0xC4), octal (0304), or
+                                ; binary (0b11000100) form. You can also use a character in quotes
+                                ; ("Д"), which is equivalent to a number in the cp1251 encoding.
 
 ldi a, MY_CONST                 ; When the code is assembled, "MY_CONST" is replaced with its final
-                                ; value, so the program will actually execute "ldi a, 100"
+                                ; value, so the program will actually execute "ldi a, 196"
 
 my_label:                       ; Declare a label, it denotes the current address in the code
   inc a

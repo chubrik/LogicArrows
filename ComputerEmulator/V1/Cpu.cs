@@ -6,7 +6,7 @@ internal class Cpu(Ram ram)
     private static readonly MyByte _inAddr = new("3E");
 
     private readonly Ram _ram = ram;
-    private int counter;
+    private int _counter;
     private MyByte _ip;
     private MyByte _ir;
     private MyByte _ra;
@@ -17,13 +17,13 @@ internal class Cpu(Ram ram)
     private bool _fc;
     private bool _fs;
     private bool _fo;
-    private bool _raSetted;
-    private bool _rbSetted;
-    private bool _rcSetted;
-    private bool _rdSetted;
-    private bool _fzsSetted;
-    private bool _fcSetted;
-    private bool _foSetted;
+    private bool _raDirty;
+    private bool _rbDirty;
+    private bool _rcDirty;
+    private bool _rdDirty;
+    private bool _fzsDirty;
+    private bool _fcDirty;
+    private bool _foDirty;
     private bool _jumped;
     private bool _halted;
     private MyByte? _inQueued;
@@ -32,7 +32,7 @@ internal class Cpu(Ram ram)
     {
         for (; ; )
         {
-            counter++;
+            _counter++;
             _ir = _ram.Read(_ip);
             State();
             var key = Console.ReadKey(intercept: true).Key;
@@ -68,7 +68,7 @@ internal class Cpu(Ram ram)
 
     private MyByte GetOperand()
     {
-        counter++;
+        _counter++;
         var operand = _ram.Read(++_ip);
         _ir = _ram.Read(_ip);
         State(isOperand: true);
@@ -79,44 +79,44 @@ internal class Cpu(Ram ram)
     private void SetRegA(MyByte value)
     {
         _ra = value;
-        _raSetted = true;
+        _raDirty = true;
     }
 
     private void SetRegB(MyByte value)
     {
         _rb = value;
-        _rbSetted = true;
+        _rbDirty = true;
     }
 
     private void SetRegC(MyByte value)
     {
         _rc = value;
-        _rcSetted = true;
+        _rcDirty = true;
     }
 
     private void SetRegD(MyByte value)
     {
         _rd = value;
-        _rdSetted = true;
+        _rdDirty = true;
     }
 
     private void SetFlagsZS(MyByte value)
     {
         _fz = value == 0;
         _fs = value.IsSigned;
-        _fzsSetted = true;
+        _fzsDirty = true;
     }
 
     private void SetFlagsC(bool fc)
     {
         _fc = fc;
-        _fcSetted = true;
+        _fcDirty = true;
     }
 
     private void SetFlagsO(bool fo)
     {
         _fo = fo;
-        _foSetted = true;
+        _foDirty = true;
     }
 
     private void State(bool isOperand = false)
@@ -124,17 +124,17 @@ internal class Cpu(Ram ram)
         var ipColor = _jumped ? "W" : "G";
         var irDescrColor = isOperand ? "d" : "G";
         var irDescr = isOperand ? "operand" : _instructions[_ir].Name;
-        var raColor = _raSetted ? "W" : _ra != 0 ? "G" : "d";
-        var rbColor = _rbSetted ? "W" : _rb != 0 ? "G" : "d";
-        var rcColor = _rcSetted ? "W" : _rc != 0 ? "G" : "d";
-        var rdColor = _rdSetted ? "W" : _rd != 0 ? "G" : "d";
-        var fzColor = _fzsSetted ? "W" : _fz ? "G" : "d";
-        var fcColor = _fcSetted ? "W" : _fc ? "G" : "d";
-        var fsColor = _fzsSetted ? "W" : _fs ? "G" : "d";
-        var foColor = _foSetted ? "W" : _fo ? "G" : "d";
+        var raColor = _raDirty ? "W" : _ra != 0 ? "G" : "d";
+        var rbColor = _rbDirty ? "W" : _rb != 0 ? "G" : "d";
+        var rcColor = _rcDirty ? "W" : _rc != 0 ? "G" : "d";
+        var rdColor = _rdDirty ? "W" : _rd != 0 ? "G" : "d";
+        var fzColor = _fzsDirty ? "W" : _fz ? "G" : "d";
+        var fcColor = _fcDirty ? "W" : _fc ? "G" : "d";
+        var fsColor = _fzsDirty ? "W" : _fs ? "G" : "d";
+        var foColor = _foDirty ? "W" : _fo ? "G" : "d";
 
         Console.WriteLine([
-           $"d`{counter,5}  ",
+           $"d`{_counter,5}  ",
            "d`IP:", $"{ipColor}`{_ip.Hex}  ",
            "d`IR:", $"G`{_ir.Hex}  ", $"{irDescrColor}`{irDescr,-10}  ",
            "d`A:", $"{raColor}`{_ra.Hex}  ",
@@ -152,7 +152,7 @@ internal class Cpu(Ram ram)
            $"d`3F:{_ram.Read("3F").Hex}"
         ]);
 
-        _raSetted = _rbSetted = _rcSetted = _rdSetted = _fzsSetted = _fcSetted = _foSetted = _jumped = false;
+        _raDirty = _rbDirty = _rcDirty = _rdDirty = _fzsDirty = _fcDirty = _foDirty = _jumped = false;
     }
 
     [Obsolete]
@@ -329,7 +329,7 @@ internal class Cpu(Ram ram)
     {
         MyByte result = cpu._ra + cpu._rb;
         cpu.SetFlagsZS(result);
-        cpu.SetFlagsC(cpu._ra.IsSigned && cpu._rb.IsSigned);
+        cpu.SetFlagsC(result < cpu._ra);
         cpu.SetFlagsO(cpu._ra.IsSigned == cpu._rb.IsSigned && cpu._rb.IsSigned != result.IsSigned);
         cpu.SetRegA(result);
     }
@@ -338,8 +338,8 @@ internal class Cpu(Ram ram)
     {
         MyByte result = cpu._ra + cpu._rc;
         cpu.SetFlagsZS(result);
-        cpu.SetFlagsC(cpu._ra.IsSigned && cpu._rc.IsSigned);
-        cpu.SetFlagsO(cpu._ra.IsSigned == cpu._rc.IsSigned && cpu._rb.IsSigned != result.IsSigned);
+        cpu.SetFlagsC(result < cpu._ra);
+        cpu.SetFlagsO(cpu._ra.IsSigned == cpu._rc.IsSigned && cpu._rc.IsSigned != result.IsSigned);
         cpu.SetRegA(result);
     }
 
@@ -347,8 +347,8 @@ internal class Cpu(Ram ram)
     {
         MyByte result = cpu._ra + cpu._rd;
         cpu.SetFlagsZS(result);
-        cpu.SetFlagsC(cpu._ra.IsSigned && cpu._rd.IsSigned);
-        cpu.SetFlagsO(cpu._ra.IsSigned == cpu._rd.IsSigned && cpu._rb.IsSigned != result.IsSigned);
+        cpu.SetFlagsC(result < cpu._ra);
+        cpu.SetFlagsO(cpu._ra.IsSigned == cpu._rd.IsSigned && cpu._rd.IsSigned != result.IsSigned);
         cpu.SetRegA(result);
     }
 
@@ -376,8 +376,8 @@ internal class Cpu(Ram ram)
     {
         MyByte result = cpu._ra - cpu._rc;
         cpu.SetFlagsZS(result);
-        cpu.SetFlagsC(cpu._ra < cpu._rb);
-        cpu.SetFlagsO(cpu._ra.IsSigned != cpu._rb.IsSigned && cpu._rb.IsSigned == result.IsSigned);
+        cpu.SetFlagsC(cpu._ra < cpu._rc);
+        cpu.SetFlagsO(cpu._ra.IsSigned != cpu._rc.IsSigned && cpu._rc.IsSigned == result.IsSigned);
         cpu.SetRegA(result);
     }
 
@@ -385,8 +385,8 @@ internal class Cpu(Ram ram)
     {
         MyByte result = cpu._ra - cpu._rd;
         cpu.SetFlagsZS(result);
-        cpu.SetFlagsC(cpu._ra < cpu._rb);
-        cpu.SetFlagsO(cpu._ra.IsSigned != cpu._rb.IsSigned && cpu._rb.IsSigned == result.IsSigned);
+        cpu.SetFlagsC(cpu._ra < cpu._rd);
+        cpu.SetFlagsO(cpu._ra.IsSigned != cpu._rd.IsSigned && cpu._rd.IsSigned == result.IsSigned);
         cpu.SetRegA(result);
     }
 

@@ -80,7 +80,7 @@ internal static class SpaceFight
         "00", // 3B ---                                 ; bcd (reserved)
         "0E", // 3C step_cnt    db  STEP_CNT
         "0E", // 3D step_left   db  STEP_CNT
-        "06", // 3E in_out      db  0b00000110          ; b/w display + bcd
+        "14", // 3E in_out      db  0b00010100          ; b/w display + bcd
         "00", // 3F bank        db  0
 
         // 40 (display)

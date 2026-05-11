@@ -1,4 +1,4 @@
-﻿# Structure and Specifications
+# Structure and Specifications
 <br>
 
 The computer consists of a processor, RAM, input/output devices, and a set of programs.

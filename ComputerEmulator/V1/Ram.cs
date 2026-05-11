@@ -8,7 +8,7 @@ internal class Ram
     private readonly IList<MyByte> _main = new MyByte[Size];
     private readonly IList<MyByte> _screen = new MyByte[32];
     private MyByte _number = default;
-    private bool _numberSetted = false;
+    private bool _numberDirty = false;
     private static readonly MyByte _outAddr = new("3F");
     private static readonly MyByte _outNumber = new("10");
     private static readonly MyByte _outScreen = new("80");
@@ -26,7 +26,7 @@ internal class Ram
         if (_main[_outAddr] == _outNumber && addr == _screenMinAddr)
         {
             _number = value;
-            _numberSetted = true;
+            _numberDirty = true;
             Console.UpdatePin();
         }
 
@@ -63,7 +63,7 @@ internal class Ram
 
         items.Add("    BCD: ");
 
-        if (_numberSetted)
+        if (_numberDirty)
             items.Add($"G`{_number.Value}");
 
         return items;

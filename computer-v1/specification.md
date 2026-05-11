@@ -1,4 +1,4 @@
-﻿# Structure and Specifications
+# Structure and Specifications
 <br>
 
 The computer consists of a processor, RAM, input/output devices, and a set of programs.
@@ -14,8 +14,8 @@ Main characteristics:
 ## Processor
 The processor consists of two parts: a control unit and an arithmetic logic unit (ALU). The control
 unit consists of an instruction pointer `IP`, an instruction register `IR`, a control block, and
-free registers `A` `B` `C` `D`. The arithmetic logic unit consists of the instruction register `IR`,
-flags `Z` `C` `S` `O` a control block, a multifunctional adder, and other small mechanisms.
+free registers `A` `B` `C` `D`. The arithmetic logic unit consists of an additional `IR`, flags
+`Z` `S` `C` `O`, a control block, a multifunctional adder, and other small mechanisms.
 
 The processor reads an instruction from RAM at the address stored in `IP`. The instruction goes into
 `IR`, initiating the execution of a particular operation. During the operation, there is interaction
