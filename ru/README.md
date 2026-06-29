@@ -1,4 +1,4 @@
-# <a href="../README.md"><img src="../img/arrowcat-red.svg" width="30"></a> Стрелочки
+# <a href="../README.md"><img src="../img/arrowcat-blue.svg" width="30"></a> Стрелочки
 <sub>[![LogicArrows](https://img.shields.io/badge/logic--arrows-map-blue?logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cGF0aCBmaWxsPSIjNTAwIiBkPSJtOTkgMWMtMC44Ny0wLjg3LTIuMi0xLjMtMy42LTAuODJsLTc3IDI1Yy00LjkgMS43LTYuMyA3LjgtMi43IDExbDE1IDE1LTI5IDI5Yy0yLjcgMi43LTIuNyA3LjEgMCA5LjhsNyA3YzIuNyAyLjcgNy4xIDIuNyA5LjggMGwyOS0yOSAxNSAxNWMzLjcgMy43IDkuOCAyLjIgMTEtMi43bDI1LTc3YzAuNDktMS4zIDAuMDQ1LTIuNy0wLjgyLTMuNnoiIHN0cm9rZS13aWR0aD0iMS43Ii8+PC9zdmc+)](https://logic-arrows.io/)
 &nbsp;[![GitHub stars](https://img.shields.io/github/stars/chubrik/LogicArrows?style=social)](https://github.com/chubrik/LogicArrows/stargazers)</sub>
 &nbsp;&nbsp;&nbsp;
@@ -151,8 +151,7 @@
 ## <a name="links"></a>Ссылки
 
 - [Стрелочки](https://logic-arrows.io/) – официальный сайт игры
-- [Дискорд-сервер](https://discord.gg/8FMuQuMFCN) – сообщество игроков на
-  Дискорде
+- [Дискорд-сервер](https://discord.gg/8FMuQuMFCN) – сообщество игроков на Дискорде
 - [Телеграм-канал](https://t.me/logic_arrows) – сообщество игроков в Телеграме
-- [Graph-DLC](https://github.com/MerinPrime/GraphDLC) – расширение для браузера, ускоряющее Стрелочки
-  в 2000 раз
+- [GraphDLC](https://github.com/MerinPrime/GraphDLC) – расширение для браузера, ускоряющее Стрелочки
+  в 5000 раз
