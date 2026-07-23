@@ -250,7 +250,7 @@ inner_end:          ldi c, BANK_MAIN
                     ldi d, main_calc
                     jmp set_bank
 
-void3           db  0, 0, 0, 0
+void1           db  0, 0, 0, 0
 
 
 

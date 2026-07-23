@@ -124,8 +124,8 @@ input_2:        ld c, in_out
                 js input_2
                 st c, terminal
 
-; Суммирование двух введённых цифр для получения единого числа
-sum:            mov c, a
+; Объединение двух введённых цифр в единое число
+combine:        mov c, a
                 shl a
                 shl a
                 add a, c

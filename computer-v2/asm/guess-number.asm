@@ -123,7 +123,7 @@ input_2:        ld c, in_out
                 st c, terminal
 
 ; Combine the two entered digits into a single number
-sum:            mov c, a
+combine:        mov c, a
                 shl a
                 shl a
                 add a, c
