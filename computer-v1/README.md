@@ -6,13 +6,14 @@
   <thead>
     <tr>
       <td valign="top" width="50%">
-        A full-fledged computer made entirely of logic arrows. It allows you to create and run
-        various programs and games.<br><br>
+        A full-fledged computer assembled entirely of logic arrows: an 8-bit processor, 256 bytes
+        of memory, a keyboard, a display, a terminal, a digital indicator, and a set of disks with
+        programs and games. The predecessor of the more advanced
+        <a href="../computer-v2/README.md">Computer v2</a>.<br><br>
         <a href="https://logic-arrows.io/map-lVeJ9jtX"><b>Map with the computer</b></a><br><br>
         <a href="specification.md">Structure and Specifications</a><br><br>
         <a href="programming.md">Programming</a><br><br>
-        <a href="#examples">Ready-made programs</a><br><br><br>
-        💡 <i>See also <a href="../computer-v2/README.md">Computer v2</a>.</i>
+        <a href="#examples">Ready-made programs</a>
       </td>
       <td valign="top">
         <a href="https://logic-arrows.io/map-lVeJ9jtX"><img src="img/summary.jpg"

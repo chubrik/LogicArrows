@@ -6,8 +6,9 @@
   <thead>
     <tr>
       <td valign="top" width="50%">
-        Полноценный компьютер, целиком сделанный из стрелочек. Позволяет создавать и запускать
-        различные программы и игры.<br><br>
+        Полноценный компьютер, целиком собранный из стрелочек: 8-битный процессор, до 32 КБ памяти,
+        клавиатура, цветной дисплей, терминал, цифровой индикатор и набор дискет с программами и
+        играми, созданными в том числе участниками сообщества.<br><br>
         <a href="https://logic-arrows.io/map-computer"><b>Карта с компьютером</b></a><br><br>
         <a href="specification.md">Устройство и характеристики</a><br><br>
         <a href="programming.md">Программирование</a><br><br>
@@ -41,8 +42,8 @@
       <td valign="top" width="50%">
         <h3><a href="asm/tetris.asm">Игра «Тетрис»</a></h3>
         <a href="asm/tetris.asm"><img src="../../computer-v2/img/tetris.jpg"
-            alt="Игра «Тетрис»"></a><br>
-        Классическая игра-головоломка с цветной графикой
+          alt="Игра «Тетрис»"></a><br>
+        Заполняйте ряды и повышайте счёт. Классическая игра-головоломка с цветной графикой.
       </td>
       <td valign="top">
         <h3><a href="asm/game-of-life.asm">Игра «Жизнь»</a></h3>
@@ -53,11 +54,28 @@
     </tr>
     <tr>
       <td valign="top">
+        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake">
+          Игра «Змейка»</a></h3>
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake">
+          <img src="../../computer-v2/img/snake.jpg" alt="Игра «Змейка»"></a><br>
+        Собирайте яблоки и не врезайтесь в собственный хвост. Автор —
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Михаил Мосеев</a>.
+      </td>
+      <td valign="top">
         <h3><a href="asm/space-fight.asm">Игра «Space Fight»</a></h3>
         <a href="asm/space-fight.asm"><img src="../../computer-v2/img/space-fight.jpg"
           alt="Игра «Space Fight»"></a><br>
         К вам приближаются вражеские корабли, которые нужно сбить за ограниченное время. В случае
         победы вы получите приз.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <h3><a href="asm/demo.asm">Demo</a></h3>
+        <a href="asm/demo.asm"><img src="../../computer-v2/img/summary.jpg" alt="Demo"></a><br>
+        Выводит на дисплей цветную бабочку, пишет в терминал «Hello, Onigiri!», рисует изображение
+        онигири и звонит в колокольчик
       </td>
       <td valign="top">
         <h3><a href="asm/guess-number.asm">Игра «Угадай число»</a></h3>
@@ -68,10 +86,13 @@
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/demo.asm">Demo</a></h3>
-        <a href="asm/demo.asm"><img src="../../computer-v2/img/summary.jpg" alt="Demo"></a><br>
-        Выводит на дисплей цветную бабочку, пишет в терминал «Hello, Onigiri!», рисует изображение
-        онигири и звонит в колокольчик
+        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis">
+          Игра «Теннис»</a></h3>
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis">
+          <img src="../../computer-v2/img/tennis.jpg" alt="Игра «Теннис»"></a><br>
+        Отбивайте мяч платформой, не давая ему упасть. Автор —
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Михаил Мосеев</a>.
       </td>
       <td valign="top">
         <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>

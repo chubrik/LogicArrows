@@ -6,13 +6,14 @@
   <thead>
     <tr>
       <td valign="top" width="50%">
-        Полноценный компьютер, целиком сделанный из стрелочек. Позволяет создавать и запускать
-        различные программы и игры.<br><br>
+        Полноценный компьютер, целиком собранный из стрелочек: 8-битный процессор, 256 байт памяти,
+        клавиатура, дисплей, терминал, цифровой индикатор и набор дискет с программами и играми.
+        Предшественник более совершенного
+        <a href="../computer-v2/README.md">компьютера v2</a>.<br><br>
         <a href="https://logic-arrows.io/map-lVeJ9jtX"><b>Карта с компьютером</b></a><br><br>
         <a href="specification.md">Устройство и характеристики</a><br><br>
         <a href="programming.md">Программирование</a><br><br>
-        <a href="#examples">Готовые программы</a><br><br><br>
-        💡 <i>См. также <a href="../computer-v2/README.md">Компьютер v2</a>.</i>
+        <a href="#examples">Готовые программы</a>
       </td>
       <td valign="top">
         <a href="https://logic-arrows.io/map-lVeJ9jtX"><img src="../../computer-v1/img/summary.jpg"

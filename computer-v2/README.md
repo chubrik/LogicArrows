@@ -6,8 +6,9 @@
   <thead>
     <tr>
       <td valign="top" width="50%">
-        A full-fledged computer made entirely of logic arrows. It allows you to create and run
-        various programs and games.<br><br>
+        A full-fledged computer assembled entirely of logic arrows: an 8-bit processor, up to 32 KB
+        of memory, a keyboard, a color display, a terminal, a digital indicator, and a set of disks
+        with programs and games, some of them created by members of the community.<br><br>
         <a href="https://logic-arrows.io/map-computer"><b>Map with the computer</b></a><br><br>
         <a href="specification.md">Structure and Specifications</a><br><br>
         <a href="programming.md">Programming</a><br><br>
@@ -41,7 +42,7 @@ To run your own program on the computer, see [Programming](programming.md).
       <td valign="top" width="50%">
         <h3><a href="asm/tetris.asm">Tetris Game</a></h3>
         <a href="asm/tetris.asm"><img src="img/tetris.jpg" alt="Tetris Game"></a><br>
-        A classic puzzle game with color graphics
+        Fill the rows and increase your score. A classic puzzle game with color graphics.
       </td>
       <td valign="top">
         <h3><a href="asm/game-of-life.asm">Game of Life</a></h3>
@@ -51,11 +52,28 @@ To run your own program on the computer, see [Programming](programming.md).
     </tr>
     <tr>
       <td valign="top">
+        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake">
+          Snake Game</a></h3>
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake">
+          <img src="img/snake.jpg" alt="Snake Game"></a><br>
+        Control the snake, collect apples, and don’t run into your own tail. Author:
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Mikhail Moseev</a>.
+      </td>
+      <td valign="top">
         <h3><a href="asm/space-fight.asm">Space Fight Game</a></h3>
         <a href="asm/space-fight.asm"><img src="img/space-fight.jpg"
           alt="Space Fight Game"></a><br>
         Enemy ships are approaching you, which you need to shoot down within a limited time. If you
         win, you will receive a prize.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <h3><a href="asm/demo.asm">Demo</a></h3>
+        <a href="asm/demo.asm"><img src="img/summary.jpg" alt="Demo"></a><br>
+        Displays a colored butterfly, writes “Hello, Onigiri!” in the terminal, draws an onigiri
+        image, and rings the bell
       </td>
       <td valign="top">
         <h3><a href="asm/guess-number.asm">Guess the Number</a></h3>
@@ -66,10 +84,13 @@ To run your own program on the computer, see [Programming](programming.md).
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/demo.asm">Demo</a></h3>
-        <a href="asm/demo.asm"><img src="img/summary.jpg" alt="Demo"></a><br>
-        Displays a colored butterfly, writes “Hello, Onigiri!” in the terminal, draws an onigiri
-        image, and rings the bell
+        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis">
+          Tennis Game</a></h3>
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis">
+          <img src="img/tennis.jpg" alt="Tennis Game"></a><br>
+        Bounce the ball with the paddle and don’t let it fall. Author:
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Mikhail Moseev</a>.
       </td>
       <td valign="top">
         <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>

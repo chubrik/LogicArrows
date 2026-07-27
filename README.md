@@ -3,10 +3,12 @@
 &nbsp;[![GitHub stars](https://img.shields.io/github/stars/chubrik/LogicArrows?style=social)](https://github.com/chubrik/LogicArrows/stargazers)</sub>
 &nbsp;&nbsp;&nbsp;
 🌐 English | [Русский](ru/README.md)
-<br><br>
 
-A collection of maps in [“Logic Arrows”](https://logic-arrows.io/), including two computers with
-programs and games.
+A collection of maps in [“Logic Arrows”](https://logic-arrows.io/) — a browser game where complex
+logic circuits are assembled from simple arrows on a grid. Every map can be opened and run right
+in the browser: from gates and adders to two full-fledged computers with programs and games. The
+computers come with detailed documentation — structure, their own assembler, and the source code
+of all programs.
 
 - [Maps](#maps)
 - [About](#about)
@@ -19,15 +21,20 @@ programs and games.
 <table>
   <thead>
     <tr>
-      <td width="50%">
+      <td valign="top" width="50%">
         <h3><a href="computer-v2/README.md">Computer v2</a></h3>
         <a href="computer-v2/README.md"><img src="computer-v2/img/summary.jpg"
-            alt="Computer v2"></a>
+          alt="Computer v2"></a><br>
+        <b>The flagship project.</b>
+        A computer with its own assembler, programs, and games: Tetris, Game of Life, Snake, and
+        more. Actively discussed and developed in the community of Logic Arrows enthusiasts.
       </td>
-      <td>
+      <td valign="top">
         <h3><a href="computer-v1/README.md">Computer v1</a></h3>
         <a href="computer-v1/README.md"><img src="computer-v1/img/summary.jpg"
-            alt="Computer v1"></a>
+          alt="Computer v1"></a><br>
+        The first version of the computer. It was created based on a physical prototype and helped
+        master the construction of complex circuits.
       </td>
     </tr>
     <tr>
