@@ -16,7 +16,7 @@
       </td>
       <td valign="top">
         <a href="https://logic-arrows.io/map-lVeJ9jtX"><img src="img/summary.jpg"
-            alt="Computer v1"></a>
+          alt="Computer v1"></a>
       </td>
     </tr>
   </thead>
@@ -41,7 +41,7 @@ To run your own program on the computer, see [Programming](programming.md).
       <td valign="top" width="50%">
         <h3><a href="asm/space-fight.asm">Space Fight Game</a></h3>
         <a href="asm/space-fight.asm"><img src="img/space-fight.jpg"
-            alt="Space Fight Game"></a><br>
+          alt="Space Fight Game"></a><br>
         Enemy ships are approaching you, which you need to shoot down within a limited time. If you
         win, you will receive a prize.<br><br>
         The game occupies the entire available memory of 256 bytes and for performance purposes is
@@ -57,13 +57,13 @@ To run your own program on the computer, see [Programming](programming.md).
       <td valign="top">
         <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
         <a href="asm/prime-numbers.asm"><img src="img/prime-numbers.jpg"
-            alt="Prime Numbers"></a><br>
+          alt="Prime Numbers"></a><br>
         Finds the first 16 prime numbers and displays them on the screen in binary format
       </td>
       <td valign="top">
         <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="img/fibonacci-sequence.jpg"
-            alt="Fibonacci Sequence"></a><br>
+          alt="Fibonacci Sequence"></a><br>
         Finds 10 Fibonacci numbers and displays them on the screen in binary format
       </td>
     </tr>

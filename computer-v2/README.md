@@ -15,7 +15,7 @@
       </td>
       <td valign="top">
         <a href="https://logic-arrows.io/map-computer"><img src="img/summary.jpg"
-            alt="Computer v2"></a>
+          alt="Computer v2"></a>
       </td>
     </tr>
   </thead>
@@ -53,14 +53,14 @@ To run your own program on the computer, see [Programming](programming.md).
       <td valign="top">
         <h3><a href="asm/space-fight.asm">Space Fight Game</a></h3>
         <a href="asm/space-fight.asm"><img src="img/space-fight.jpg"
-            alt="Space Fight Game"></a><br>
+          alt="Space Fight Game"></a><br>
         Enemy ships are approaching you, which you need to shoot down within a limited time. If you
         win, you will receive a prize.
       </td>
       <td valign="top">
         <h3><a href="asm/guess-number.asm">Guess the Number</a></h3>
         <a href="asm/guess-number.asm"><img src="img/guess-number.jpg"
-            alt="Guess the Number"></a><br>
+          alt="Guess the Number"></a><br>
         Guess the numbers using the “higher/lower” rule and increase your overall winning score
       </td>
     </tr>
@@ -74,7 +74,7 @@ To run your own program on the computer, see [Programming](programming.md).
       <td valign="top">
         <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
         <a href="asm/prime-numbers.asm"><img src="img/prime-numbers.jpg"
-            alt="Prime Numbers"></a><br>
+          alt="Prime Numbers"></a><br>
         Finds 16 prime numbers and outputs them to the digital indicator, as well as to the display
         in binary format
       </td>
@@ -83,7 +83,7 @@ To run your own program on the computer, see [Programming](programming.md).
       <td valign="top">
         <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="img/fibonacci-sequence.jpg"
-            alt="Fibonacci Sequence"></a><br>
+          alt="Fibonacci Sequence"></a><br>
         Finds 12 Fibonacci numbers. Outputs them to the digital indicator, as well as to the display
         in binary format
       </td>

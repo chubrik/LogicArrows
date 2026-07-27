@@ -44,12 +44,12 @@ programs and games.
       <td>
         <h3><a href="https://logic-arrows.io/map-matrix-rgb">Matrix RGB</a></h3>
         <a href="https://logic-arrows.io/map-matrix-rgb"><img src="img/matrix-rgb.jpg"
-            alt="Matrix RGB"></a>
+          alt="Matrix RGB"></a>
       </td>
       <td>
         <h3><a href="https://logic-arrows.io/map-CcGrVgC8">Compact Matrices</a></h3>
         <a href="https://logic-arrows.io/map-CcGrVgC8"><img src="img/matrix-compact.jpg"
-            alt="Compact Matrices"></a>
+          alt="Compact Matrices"></a>
       </td>
     </tr>
     <tr>
@@ -60,14 +60,14 @@ programs and games.
       <td>
         <h3><a href="https://logic-arrows.io/map-ram256">RAM 256 v2</a></h3>
         <a href="https://logic-arrows.io/map-ram256"><img src="img/ram-256-v2.jpg"
-            alt="RAM 256 v2"></a>
+          alt="RAM 256 v2"></a>
       </td>
     </tr>
     <tr>
       <td>
         <h3><a href="https://logic-arrows.io/map-utcKt1dM">RAM 256 v1</a></h3>
         <a href="https://logic-arrows.io/map-utcKt1dM"><img src="img/ram-256-v1.jpg"
-            alt="RAM 256 v1"></a>
+          alt="RAM 256 v1"></a>
       </td>
       <td>
         <h3><a href="https://logic-arrows.io/map-ram64">RAM 64</a></h3>
@@ -78,31 +78,31 @@ programs and games.
       <td>
         <h3><a href="https://logic-arrows.io/map-FI3Ue08n">Compact ROM</a></h3>
         <a href="https://logic-arrows.io/map-FI3Ue08n"><img src="img/rom-compact.jpg"
-            alt="Compact ROM"></a>
+          alt="Compact ROM"></a>
       </td>
       <td>
         <h3><a href="https://logic-arrows.io/map-0TNlFXRQa6Y">BCD Converter</a></h3>
         <a href="https://logic-arrows.io/map-0TNlFXRQa6Y"><img src="img/bcd-converter.jpg"
-            alt="BCD Converter"></a>
+          alt="BCD Converter"></a>
       </td>
     </tr>
     <tr>
       <td>
         <h3><a href="https://logic-arrows.io/map-Xhj9Pead">Segment Displays</a></h3>
         <a href="https://logic-arrows.io/map-Xhj9Pead"><img src="img/digits.jpg"
-            alt="Segment Displays"></a>
+          alt="Segment Displays"></a>
       </td>
       <td>
         <h3><a href="https://logic-arrows.io/map-kBhOopki">CPU Prototype</a></h3>
         <a href="https://logic-arrows.io/map-kBhOopki"><img src="img/cpu.jpg"
-            alt="CPU Prototype"></a>
+          alt="CPU Prototype"></a>
       </td>
     </tr>
     <tr>
       <td>
         <h3><a href="https://logic-arrows.io/map-Io2FESYk">Transmitters</a></h3>
         <a href="https://logic-arrows.io/map-Io2FESYk"><img src="img/transmitters.jpg"
-            alt="Transmitters"></a>
+          alt="Transmitters"></a>
       </td>
       <td>
         <h3><a href="https://logic-arrows.io/map-k_R4pB1A">Gates</a></h3>
@@ -113,24 +113,24 @@ programs and games.
       <td>
         <h3><a href="https://logic-arrows.io/map-lF-KRVo4vtw">Multiplier</a></h3>
         <a href="https://logic-arrows.io/map-lF-KRVo4vtw"><img src="img/multiplier.jpg"
-            alt="Multiplier"></a>
+          alt="Multiplier"></a>
       </td>
       <td>
         <h3><a href="https://logic-arrows.io/map-5bk8IiWhZ6Q">Adder</a></h3>
         <a href="https://logic-arrows.io/map-5bk8IiWhZ6Q"><img src="img/adder.jpg"
-            alt="Adder"></a>
+          alt="Adder"></a>
       </td>
     </tr>
     <tr>
       <td>
         <h3><a href="https://logic-arrows.io/map-GvPsAA38">Subtractor</a></h3>
         <a href="https://logic-arrows.io/map-GvPsAA38"><img src="img/subtractor.jpg"
-            alt="Subtractor"></a>
+          alt="Subtractor"></a>
       </td>
       <td>
         <h3><a href="https://logic-arrows.io/map-um14l5Qr">Langton’s Ant</a></h3>
         <a href="https://logic-arrows.io/map-um14l5Qr"><img src="img/ant.jpg"
-            alt="Langton’s Ant"></a>
+          alt="Langton’s Ant"></a>
       </td>
     </tr>
   </thead>

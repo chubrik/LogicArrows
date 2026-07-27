@@ -27,12 +27,16 @@ see [Programming](programming.md).
 
 ## RAM
 The computer’s memory is 1 KB of RAM, expandable to 32 KB. The unit of stored information is 1 byte,
-and the memory access address is also 1 byte.
+and the memory access address is also 1 byte. Since an 8-bit address can only access 256 RAM
+addresses, there is a memory bank switching system. The banks are numbered from 1 to 255 and are
+connected to the address range `80...FF` by writing the bank number to port `3F`. Bank #0 does not
+exist: the number `0` as an exception connects bank #1, which is also connected by default while
+nothing has been written to port `3F`.
 
-Since an 8-bit address can only access 256 RAM addresses, there is a memory bank switching system.
-By default, bank #1 is connected, but if a number is written to port `3F`, the address range
-`80...FF` will switch to the bank of the corresponding number. The number `0` as an exception
-connects bank #1.
+The address range `00...7F` is not a bank: it is the common part of the memory, and it is fixed
+permanently. Thus, the RAM in its maximum configuration consists of the common part and 255 banks
+of 128 bytes each — exactly 32 KB in total. Unlike other ports, bank switching is only possible
+programmatically: writing to port `3F` during disk loading does not switch the bank.
 
 <img src="img/ram.jpg" width="80%" alt="RAM">
 <br><br>
@@ -57,6 +61,11 @@ to `01` for monochrome mode or `11` for color mode. In monochrome mode, the disp
 range `40...5F`, and in color mode `40...7F`. The correspondence of addresses to different parts of
 the display is shown below. Sending data to these addresses results in the appearance of
 corresponding pixels on the display.
+
+When connecting, disconnecting, or switching the mode via port `3E`, the current image on the
+display is preserved, but the effect of subsequent writes to the screen memory area changes. The
+display can be connected not only programmatically, but also directly during disk loading, which
+makes it possible to show a startup splash image on the display.
 
 <img src="img/display.jpg" width="60%" alt="Display">
 <br><br>

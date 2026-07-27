@@ -15,7 +15,7 @@
       </td>
       <td valign="top">
         <a href="https://logic-arrows.io/map-computer"><img src="../../computer-v2/img/summary.jpg"
-            alt="Компьютер v2"></a>
+          alt="Компьютер v2"></a>
       </td>
     </tr>
   </thead>
@@ -47,7 +47,7 @@
       <td valign="top">
         <h3><a href="asm/game-of-life.asm">Игра «Жизнь»</a></h3>
         <a href="asm/game-of-life.asm"><img src="../../computer-v2/img/game-of-life.jpg"
-            alt="Игра «Жизнь»"></a><br>
+          alt="Игра «Жизнь»"></a><br>
         Заполняет дисплей случайными пикселями и вычисляет последующие поколения
       </td>
     </tr>
@@ -55,14 +55,14 @@
       <td valign="top">
         <h3><a href="asm/space-fight.asm">Игра «Space Fight»</a></h3>
         <a href="asm/space-fight.asm"><img src="../../computer-v2/img/space-fight.jpg"
-            alt="Игра «Space Fight»"></a><br>
+          alt="Игра «Space Fight»"></a><br>
         К вам приближаются вражеские корабли, которые нужно сбить за ограниченное время. В случае
         победы вы получите приз.
       </td>
       <td valign="top">
         <h3><a href="asm/guess-number.asm">Игра «Угадай число»</a></h3>
         <a href="asm/guess-number.asm"><img src="../../computer-v2/img/guess-number.jpg"
-            alt="Игра «Угадай число»"></a><br>
+          alt="Игра «Угадай число»"></a><br>
         Угадывайте числа по правилу «больше/меньше» и повышайте общий счёт побед
       </td>
     </tr>
@@ -76,7 +76,7 @@
       <td valign="top">
         <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
         <a href="asm/prime-numbers.asm"><img src="../../computer-v2/img/prime-numbers.jpg"
-            alt="Prime Numbers"></a><br>
+          alt="Prime Numbers"></a><br>
         Находит 16 простых чисел и выводит их на цифровой индикатор, а также на дисплей в двоичном
         формате
       </td>
@@ -85,14 +85,14 @@
       <td valign="top">
         <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="../../computer-v2/img/fibonacci-sequence.jpg"
-            alt="Fibonacci Sequence"></a><br>
+          alt="Fibonacci Sequence"></a><br>
         Находит 12 чисел Фибоначчи. Выводит их на цифровой индикатор, а также на дисплей в двоичном
         формате
       </td>
       <td valign="top">
         <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
         <a href="asm/typewriter.asm"><img src="../../computer-v2/img/typewriter.jpg"
-            alt="Typewriter"></a><br>
+          alt="Typewriter"></a><br>
         Выводит в терминал текст, набираемый на клавиатуре
       </td>
     </tr>
@@ -100,14 +100,14 @@
       <td valign="top">
         <h3><a href="asm/font-test.asm">Font Test</a></h3>
         <a href="asm/font-test.asm"><img src="../../computer-v2/img/font-test.jpg"
-            alt="Font Test"></a><br>
+          alt="Font Test"></a><br>
         Выводит в терминал все возможные символы (кодировка
         <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>)
       </td>
       <td valign="top">
         <h3><a href="asm/terminal-art.asm">Terminal Art</a></h3>
         <a href="asm/terminal-art.asm"><img src="../../computer-v2/img/terminal-art.jpg"
-            alt="Terminal Art"></a><br>
+          alt="Terminal Art"></a><br>
         Использует графический режим терминала для вывода изображения
       </td>
     </tr>
@@ -115,7 +115,7 @@
       <td valign="top">
         <h3><a href="asm/ram-art.asm">RAM Art</a></h3>
         <a href="asm/ram-art.asm"><img src="../../computer-v2/img/ram-art.jpg"
-            alt="RAM Art"></a><br>
+          alt="RAM Art"></a><br>
         Программа-шутка, использует RAM как холст для вывода изображения
       </td>
     </tr>
