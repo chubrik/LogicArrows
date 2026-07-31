@@ -52,9 +52,9 @@ To run your own program on the computer, see [Programming](programming.md).
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake">
+        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake.asm">
           Snake Game</a></h3>
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake.asm">
           <img src="img/snake.jpg" alt="Snake Game"></a><br>
         Control the snake, collect apples, and don’t run into your own tail. Author:
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
@@ -84,9 +84,9 @@ To run your own program on the computer, see [Programming](programming.md).
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis">
+        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
           Tennis Game</a></h3>
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
           <img src="img/tennis.jpg" alt="Tennis Game"></a><br>
         Bounce the ball with the paddle and don’t let it fall. Author:
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
@@ -116,23 +116,23 @@ To run your own program on the computer, see [Programming](programming.md).
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/font-test.asm">Font Test</a></h3>
-        <a href="asm/font-test.asm"><img src="img/font-test.jpg" alt="Font Test"></a><br>
-        Outputs all possible characters to the terminal (encoding
-        <a href="https://en.wikipedia.org/wiki/Windows-1251">cp1251</a>)
-      </td>
-      <td valign="top">
         <h3><a href="asm/terminal-art.asm">Terminal Art</a></h3>
         <a href="asm/terminal-art.asm"><img src="img/terminal-art.jpg" alt="Terminal Art"></a><br>
         Uses the terminal’s graphics mode to display an image
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/ram-art.asm">RAM Art</a></h3>
         <a href="asm/ram-art.asm"><img src="img/ram-art.jpg" alt="RAM Art"></a><br>
         A joke program that uses RAM as a canvas to display an image (“Where are the arrows?!” in
         Russian)
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <h3><a href="asm/font-test.asm">Font Test</a></h3>
+        <a href="asm/font-test.asm"><img src="img/font-test.jpg" alt="Font Test"></a><br>
+        Outputs all possible characters to the terminal (encoding
+        <a href="https://en.wikipedia.org/wiki/Windows-1251">cp1251</a>)
       </td>
     </tr>
   </thead>

@@ -54,9 +54,9 @@
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake">
+        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake.asm">
           Игра «Змейка»</a></h3>
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake.asm">
           <img src="../../computer-v2/img/snake.jpg" alt="Игра «Змейка»"></a><br>
         Собирайте яблоки и не врезайтесь в собственный хвост. Автор —
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
@@ -86,9 +86,9 @@
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis">
+        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
           Игра «Теннис»</a></h3>
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
           <img src="../../computer-v2/img/tennis.jpg" alt="Игра «Теннис»"></a><br>
         Отбивайте мяч платформой, не давая ему упасть. Автор —
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
@@ -119,25 +119,25 @@
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/font-test.asm">Font Test</a></h3>
-        <a href="asm/font-test.asm"><img src="../../computer-v2/img/font-test.jpg"
-          alt="Font Test"></a><br>
-        Выводит в терминал все возможные символы (кодировка
-        <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>)
-      </td>
-      <td valign="top">
         <h3><a href="asm/terminal-art.asm">Terminal Art</a></h3>
         <a href="asm/terminal-art.asm"><img src="../../computer-v2/img/terminal-art.jpg"
           alt="Terminal Art"></a><br>
         Использует графический режим терминала для вывода изображения
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/ram-art.asm">RAM Art</a></h3>
         <a href="asm/ram-art.asm"><img src="../../computer-v2/img/ram-art.jpg"
           alt="RAM Art"></a><br>
         Программа-шутка, использует RAM как холст для вывода изображения
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <h3><a href="asm/font-test.asm">Font Test</a></h3>
+        <a href="asm/font-test.asm"><img src="../../computer-v2/img/font-test.jpg"
+          alt="Font Test"></a><br>
+        Выводит в терминал все возможные символы (кодировка
+        <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>)
       </td>
     </tr>
   </thead>

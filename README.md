@@ -6,7 +6,7 @@
 
 A collection of maps in [“Logic Arrows”](https://logic-arrows.io/) — a browser game where complex
 logic circuits are assembled from simple arrows on a grid. Every map can be opened and run right
-in the browser: from gates and adders to two full-fledged computers with programs and games. The
+in the browser: from gates and adders to full-fledged computers with programs and games. The
 computers come with detailed documentation — structure, their own assembler, and the source code
 of all programs.
 
@@ -147,7 +147,8 @@ of all programs.
 
 ## <a name="about"></a>About
 
-The author of “Logic Arrows”, [Onigiri](https://github.com/ArtemOnigiri), talks about the game:<br>
+“Logic Arrows” was inspired by Minecraft’s redstone. The game’s author,
+[Onigiri](https://github.com/ArtemOnigiri), talks about it:<br>
 [![Video about the game](img/youtube.jpg)](https://www.youtube.com/watch?v=q_ve9SsuyvU)
 <br><br><br>
 
@@ -159,3 +160,5 @@ The author of “Logic Arrows”, [Onigiri](https://github.com/ArtemOnigiri), ta
 - [Telegram channel](https://t.me/logic_arrows) – player community on Telegram
 - [GraphDLC](https://github.com/MerinPrime/GraphDLC) – browser extension that speeds up Logic Arrows
   by 5000 times
+- [ZX Spectrum](https://github.com/chubrik/arrows-zx-spectrum) – emulator running on the upcoming
+  version of Logic Arrows

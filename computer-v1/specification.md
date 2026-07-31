@@ -28,10 +28,8 @@ see [Programming](programming.md).
 
 ## RAM
 The computer’s memory is 256 bytes of RAM. The unit of stored information is 1 byte, and the memory
-access address is also 1 byte.
-
-Input port `3E` is connected to the keyboard. Output port `3F` allows switching between different
-output devices. The address range `40...7F` is shared video memory.
+access address is also 1 byte. Input port `3E` is connected to the keyboard. Output port `3F` allows
+switching between different output devices. The address range `40...7F` is shared video memory.
 
 <img src="img/ram.jpg" width="80%" alt="RAM">
 <br><br>
@@ -51,6 +49,11 @@ correspond to the codes `11` `12` `13` `14` `0A`.
 To switch the output to the display, you need to write the byte `80` to port `3F`. Below is a
 correspondence of addresses to different parts of the display. Sending data to these addresses
 results in the appearance of corresponding pixels on the display.
+
+When switching between output devices via port `3F`, the current image on the display is
+preserved, but the effect of subsequent writes to the screen memory area changes. The output can
+be switched to the display not only programmatically, but also directly during disk loading,
+which makes it possible to show a startup splash image.
 
 <img src="img/display.jpg" width="60%" alt="Display">
 <br><br>
