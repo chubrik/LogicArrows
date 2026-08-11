@@ -84,6 +84,13 @@ To run your own program on the computer, see [Programming](programming.md).
     </tr>
     <tr>
       <td valign="top">
+        <h3><a href="asm/community/maze-generator.asm">Maze Generator</a></h3>
+        <a href="asm/community/maze-generator.asm"><img src="img/maze-generator.jpg"
+          alt="Maze Generator"></a><br>
+        Generates a random maze on the display using the backtracking algorithm. Author:
+        <a href="https://t.me/farmer_2010">Farmer_2010</a>.
+      </td>
+      <td valign="top">
         <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
           Tennis Game</a></h3>
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
@@ -92,6 +99,8 @@ To run your own program on the computer, see [Programming](programming.md).
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
         Mikhail Moseev</a>.
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
         <a href="asm/prime-numbers.asm"><img src="img/prime-numbers.jpg"
@@ -99,19 +108,12 @@ To run your own program on the computer, see [Programming](programming.md).
         Finds 16 prime numbers and outputs them to the digital indicator, as well as to the display
         in binary format
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="img/fibonacci-sequence.jpg"
           alt="Fibonacci Sequence"></a><br>
         Finds 12 Fibonacci numbers. Outputs them to the digital indicator, as well as to the display
         in binary format
-      </td>
-      <td valign="top">
-        <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
-        <a href="asm/typewriter.asm"><img src="img/typewriter.jpg" alt="Typewriter"></a><br>
-        Outputs text typed on the keyboard to the terminal
       </td>
     </tr>
     <tr>
@@ -128,6 +130,11 @@ To run your own program on the computer, see [Programming](programming.md).
       </td>
     </tr>
     <tr>
+      <td valign="top">
+        <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
+        <a href="asm/typewriter.asm"><img src="img/typewriter.jpg" alt="Typewriter"></a><br>
+        Outputs text typed on the keyboard to the terminal
+      </td>
       <td valign="top">
         <h3><a href="asm/font-test.asm">Font Test</a></h3>
         <a href="asm/font-test.asm"><img src="img/font-test.jpg" alt="Font Test"></a><br>

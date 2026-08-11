@@ -86,6 +86,13 @@
     </tr>
     <tr>
       <td valign="top">
+        <h3><a href="../../computer-v2/asm/community/maze-generator.asm">Maze Generator</a></h3>
+        <a href="../../computer-v2/asm/community/maze-generator.asm">
+          <img src="../../computer-v2/img/maze-generator.jpg" alt="Maze Generator"></a><br>
+        Генерирует на дисплее случайный лабиринт методом поиска с возвратом. Автор —
+        <a href="https://t.me/farmer_2010">Farmer_2010</a>.
+      </td>
+      <td valign="top">
         <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
           Игра «Теннис»</a></h3>
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
@@ -94,6 +101,8 @@
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
         Михаил Мосеев</a>.
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
         <a href="asm/prime-numbers.asm"><img src="../../computer-v2/img/prime-numbers.jpg"
@@ -101,20 +110,12 @@
         Находит 16 простых чисел и выводит их на цифровой индикатор, а также на дисплей в двоичном
         формате
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="../../computer-v2/img/fibonacci-sequence.jpg"
           alt="Fibonacci Sequence"></a><br>
         Находит 12 чисел Фибоначчи. Выводит их на цифровой индикатор, а также на дисплей в двоичном
         формате
-      </td>
-      <td valign="top">
-        <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
-        <a href="asm/typewriter.asm"><img src="../../computer-v2/img/typewriter.jpg"
-          alt="Typewriter"></a><br>
-        Выводит в терминал текст, набираемый на клавиатуре
       </td>
     </tr>
     <tr>
@@ -132,6 +133,12 @@
       </td>
     </tr>
     <tr>
+      <td valign="top">
+        <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
+        <a href="asm/typewriter.asm"><img src="../../computer-v2/img/typewriter.jpg"
+          alt="Typewriter"></a><br>
+        Выводит в терминал текст, набираемый на клавиатуре
+      </td>
       <td valign="top">
         <h3><a href="asm/font-test.asm">Font Test</a></h3>
         <a href="asm/font-test.asm"><img src="../../computer-v2/img/font-test.jpg"
