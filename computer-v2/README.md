@@ -70,10 +70,13 @@ To run your own program on the computer, see [Programming](programming.md).
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/demo.asm">Demo</a></h3>
-        <a href="asm/demo.asm"><img src="img/summary.jpg" alt="Demo"></a><br>
-        Displays a colored butterfly, writes “Hello, Onigiri!” in the terminal, draws an onigiri
-        image, and rings the bell
+        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20minesweeper.asm">
+          Minesweeper Game</a></h3>
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20minesweeper.asm">
+          <img src="img/minesweeper.jpg" alt="Minesweeper Game"></a><br>
+        Open the cells, following the number clues, and don’t step on a mine. Author:
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Mikhail Moseev</a>.
       </td>
       <td valign="top">
         <h3><a href="asm/guess-number.asm">Guess the Number</a></h3>
@@ -102,12 +105,20 @@ To run your own program on the computer, see [Programming](programming.md).
     </tr>
     <tr>
       <td valign="top">
+        <h3><a href="asm/demo.asm">Demo</a></h3>
+        <a href="asm/demo.asm"><img src="img/summary.jpg" alt="Demo"></a><br>
+        Displays a colored butterfly, writes “Hello, Onigiri!” in the terminal, draws an onigiri
+        image, and rings the bell
+      </td>
+      <td valign="top">
         <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
         <a href="asm/prime-numbers.asm"><img src="img/prime-numbers.jpg"
           alt="Prime Numbers"></a><br>
         Finds 16 prime numbers and outputs them to the digital indicator, as well as to the display
         in binary format
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="img/fibonacci-sequence.jpg"
@@ -115,26 +126,26 @@ To run your own program on the computer, see [Programming](programming.md).
         Finds 12 Fibonacci numbers. Outputs them to the digital indicator, as well as to the display
         in binary format
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/terminal-art.asm">Terminal Art</a></h3>
         <a href="asm/terminal-art.asm"><img src="img/terminal-art.jpg" alt="Terminal Art"></a><br>
         Uses the terminal’s graphics mode to display an image
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/ram-art.asm">RAM Art</a></h3>
         <a href="asm/ram-art.asm"><img src="img/ram-art.jpg" alt="RAM Art"></a><br>
         A joke program that uses RAM as a canvas to display an image (“Where are the arrows?!” in
         Russian)
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
         <a href="asm/typewriter.asm"><img src="img/typewriter.jpg" alt="Typewriter"></a><br>
         Outputs text typed on the keyboard to the terminal
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/font-test.asm">Font Test</a></h3>
         <a href="asm/font-test.asm"><img src="img/font-test.jpg" alt="Font Test"></a><br>
