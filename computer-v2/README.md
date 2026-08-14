@@ -79,9 +79,9 @@ To run your own program on the computer, see [Programming](programming.md).
         Mikhail Moseev</a>.
       </td>
       <td valign="top">
-        <h3><a href="asm/guess-number.asm">Guess the Number</a></h3>
+        <h3><a href="asm/guess-number.asm">Guess the Number Game</a></h3>
         <a href="asm/guess-number.asm"><img src="img/guess-number.jpg"
-          alt="Guess the Number"></a><br>
+          alt="Guess the Number Game"></a><br>
         Guess the numbers using the “higher/lower” rule and increase your overall winning score
       </td>
     </tr>

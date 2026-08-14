@@ -40,9 +40,9 @@
   <thead>
     <tr>
       <td valign="top" width="50%">
-        <h3><a href="asm/space-fight.asm">Игра «Space Fight»</a></h3>
+        <h3><a href="asm/space-fight.asm">Игра «Бой в космосе»</a></h3>
         <a href="asm/space-fight.asm"><img src="../../computer-v1/img/space-fight.jpg"
-          alt="Игра «Space Fight»"></a><br>
+          alt="Игра «Бой в космосе»"></a><br>
         К вам приближаются вражеские корабли, которые нужно сбить за ограниченное время. В случае
         победы вы получите приз.<br><br>
         Игра занимает весь доступный объём памяти 256 байт и в целях производительности выложена на
@@ -57,29 +57,29 @@
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
+        <h3><a href="asm/prime-numbers.asm">Простые числа</a></h3>
         <a href="asm/prime-numbers.asm"><img src="../../computer-v1/img/prime-numbers.jpg"
-          alt="Prime Numbers"></a><br>
+          alt="Простые числа"></a><br>
         Находит первые 16 простых чисел и выводит их на дисплей в двоичном формате
       </td>
       <td valign="top">
-        <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
+        <h3><a href="asm/fibonacci-sequence.asm">Числа Фибоначчи</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="../../computer-v1/img/fibonacci-sequence.jpg"
-          alt="Fibonacci Sequence"></a><br>
+          alt="Числа Фибоначчи"></a><br>
         Находит 10 чисел Фибоначчи и выводит их на дисплей в двоичном формате
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
+        <h3><a href="asm/typewriter.asm">Пишущая машинка</a></h3>
         <a href="asm/typewriter.asm"><img src="../../computer-v1/img/terminal.jpg"
-          alt="Typewriter"></a><br>
+          alt="Пишущая машинка"></a><br>
         Выводит в терминал текст, набираемый на клавиатуре
       </td>
       <td valign="top">
-        <h3><a href="asm/font-test.asm">Font Test</a></h3>
+        <h3><a href="asm/font-test.asm">Тест шрифта</a></h3>
         <a href="asm/font-test.asm"><img src="../../computer-v1/img/font-test.jpg"
-          alt="Font Test"></a><br>
+          alt="Тест шрифта"></a><br>
         Выводит в терминал все возможные символы (кодировка
         <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>)
       </td>

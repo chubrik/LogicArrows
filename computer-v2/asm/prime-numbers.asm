@@ -1,5 +1,5 @@
 ﻿; ##################################################################################################
-; ##        Source code for the "Prime Numbers" program for a computer made of logic arrows       ##
+; ##       Source code for the "Prime Numbers" program for a computer made of logic arrows        ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v2                 ##
 ; ##                         (c) 2024 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################

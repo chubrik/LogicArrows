@@ -1,6 +1,5 @@
 ﻿; ##################################################################################################
 ; ##       Source code for the "Maze Generator" program for a computer made of logic arrows       ##
-; ##        Исходный код программы "Maze Generator" для компьютера из логических стрелочек        ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v2                 ##
 ; ##                       (c) 2026 Farmer_2010 (https://t.me/farmer_2010)                        ##
 ; ##################################################################################################
@@ -17,22 +16,22 @@ BANK_POS equ 4
 
 
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-;W                       ОБЩАЯ ОБЛАСТЬ                         W
+;W                        SHARED AREA                          W
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-;Функция получения байта дисплея, переменные
+;Display byte function, variables
 
 jmp start
 
 
 ;###############################################################
-;функция получения байта дисплея, его координаты и координаты бита. a - x, b - y, с - позиция(для однобайтового режима), d - индекс перехода
+;function to get a display byte, its address and the bit position. a - x, b - y, c - position(for single-byte mode), d - jump index
 
-;перевод байта координат в два байта. c - позиция. Возвращает a и b
+;converts a coordinate byte into two bytes. c - position. Returns a and b
 get_point_from_byte:
 
 ldi a, 0xF0;a - xpos
 and a, c
-shr a;сдвигаем на 4 бита вправо
+shr a;shift right by 4 bits
 shr a
 shr a
 shr a
@@ -40,29 +39,29 @@ shr a
 ldi b, 0x0F;b - ypos
 and b, c
 
-;сама функция
+;the function itself
 get_point:
 
-ldi c, 0b00000111;индекс бита(0 - старший)
+ldi c, 0b00000111;bit index(0 - most significant)
 and c, a
-st c, buffer;временно сохраняем в память
+st c, buffer;temporarily store in memory
 
-shl b;умножаем ypos на 2
-ldi c, 7;если xpos > 7, прибавляем 1
+shl b;multiply ypos by 2
+ldi c, 7;if xpos > 7, add 1
 sub a, c
 jc plus_1_end
 jz plus_1_end
 
 inc b
 plus_1_end:
-ld a, buffer;a - индекс бита(0 - старший), b - индекс байта
+ld a, buffer;a - bit index(0 - most significant), b - byte index
 
-ldi c, 7;вычитаем a из 7, чтобы 0 стал младшим битом
+ldi c, 7;subtract a from 7 so that 0 becomes the least significant bit
 sub c, a
 mov a, c
 
 ldi c, 1
-pow:;получаем в c число с активным битом номер a
+pow:;get into c a number with bit a set
 test a
 jz pow_end
 shl c
@@ -70,33 +69,33 @@ dec a
 jmp pow
 pow_end:
 
-ldi a, display;прибавляем к b адрес дисплея
+ldi a, display;add the display address to b
 add b, a
-ld a, b;считываем нужный байт из дисплея
+ld a, b;read the needed byte from the display
 
-;возвращает: a - байт дисплея, b - адрес на дисплее, c - маска для получения нужного бита
+;returns: a - display byte, b - display address, c - mask to extract the needed bit
 
-jmp d;переход обратно
+jmp d;jump back
 ;###############################################################
 
 
 void db 0,0
 
-border db 0;есть ли граница по направлению
-x db 0;позиция текущей точки
+border db 0;whether there is a border in the direction
+x db 0;current point position
 y db 0
-stack_length db 0;размер стека
-function_input db 0;данные на вход функции
-function_output db 0;выход функции
-function_output_index db 0, 0;индекс возврата функции
-buffer db 0, 0, 0, 0;буфер для хранения данных
+stack_length db 0;stack size
+function_input db 0;function input data
+function_output db 0;function output
+function_output_index db 0, 0;function return index
+buffer db 0, 0, 0, 0;buffer for storing data
 terminal_input db 0;0x3C
 terminal_graphics db 0;0x3D
 connect db MONO;0x3E
 bank db 1;0x3F
 
 
-;дисплей
+;display
 display db          0b00000000, 0b00000000, ;                                  ;
                     0b00000000, 0b00000000, ;                                  ;
                     0b10001001, 0b00111011, ; ██      ██    ██    ██████  ████ ;
@@ -116,66 +115,66 @@ display db          0b00000000, 0b00000000, ;                                  ;
 
 
 ;###############################################################
-;проверка состояния клетки для определения возможности передвижения
+;check the cell state to determine whether movement is possible
 test_cell:
 
-st a, function_output_index + 1;сохраняем индекс возврата функции
+st a, function_output_index + 1;save the function return index
 
-ld a, buffer + 3;восстанавливаем регистр a
+ld a, buffer + 3;restore register a
 
-st c, border;сохраняем регистр c
-st d, buffer + 2;сохраняем регистр d
+st c, border;save register c
+st d, buffer + 2;save register d
 
 ldi d, $ + 6
 st d, function_output_index
 jmp get_pixel_value
 
-ld c, border;восстанавливаем регистры c и d
+ld c, border;restore registers c and d
 ld d, buffer + 2
 
-jz border_cell;проверка состояния клетки 
+jz border_cell;check the cell state 
 jmp clear_cell
 
-border_cell:;если клетка занята
-or c, d;добавляем 1 по нужному направлению
+border_cell:;if the cell is occupied
+or c, d;add 1 in the needed direction
 
 clear_cell:
 
-ld a, function_output_index + 1;восстанавливаем индекс возврата функции
+ld a, function_output_index + 1;restore the function return index
 jmp a
 ;###############################################################
 
 void0 db 0,0,0,0,0,0
 
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-;W                           БАНК 1                            W
+;W                           BANK 1                            W
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-;Основная логика
+;Main logic
 
-in_out:;переход в/из текущего банка. c - индекс банка, d - индекс перехода
-st c, bank;смена банка
-jmp d;эта инструкция выполняется уже в другом банке. совершаем переход по нужному адресу
+in_out:;jump to/from the current bank. c - bank index, d - jump index
+st c, bank;switch the bank
+jmp d;this instruction is already executed in another bank. jump to the needed address
 
 
-start:;начало кода
+start:;code start
 
-ldi a, MONO;подключаем монохромный дисплей
+ldi a, MONO;connect the monochrome display
 st a, connect
 
 ldi a, 32
 ldi b, 255
 ldi c, display
-clear:;заполняем дисплей
+clear:;fill the display
 st b, c
 inc c
 dec a
 jnz clear
 
-rnd a;получаем случайные координаты
-ldi b, 0b11101110;обрезаем у координат младшие биты, чтобы координаты были четными
+rnd a;get random coordinates
+ldi b, 0b11101110;clear the low bits of the coordinates so they are even
 and a, b
 
-ldi c, BANK_STACK;ложим в стек случайную позицию
+ldi c, BANK_STACK;push a random position onto the stack
 ldi d, stack_add
 st a, function_input
 ldi a, $ + 6
@@ -184,40 +183,40 @@ jmp in_out
 
 
 ;###############################################################
-;главный цикл
+;main loop
 cycle:
 
-;получаем координаты из стека в регистр b
+;get coordinates from the stack into register b
 ldi c, BANK_STACK
 ldi d, stack_get
 ldi a, $ + 6
 st a, function_output_index
 jmp in_out
 
-ldi c, BANK_POS;получение позиции из байта вынесено в банк 4
+ldi c, BANK_POS;extracting the position from a byte is moved to bank 4
 ldi d, get_pos_from_byte
 jmp in_out
 get_pos_return:
 
-ld c, buffer;восстанавливаем c из буфера
+ld c, buffer;restore c from the buffer
 
-;рисование точки на дисплее
-ldi d, $ + 4;получаем байт дисплея
+;drawing a point on the display
+ldi d, $ + 4;get the display byte
 jmp get_point_from_byte;
 
-not c;инвертируем c, так как красим в белый
-and a, c;and между c и байтом дисплея(потому что красим в белый. Если красить цветом, то нужен or)
-st a, b;устанавливаем измененный байт обратно на дисплей
+not c;invert c because we paint white
+and a, c;and between c and the display byte(because we paint white. To paint with color, use or)
+st a, b;put the modified byte back onto the display
 
-ld a, x;загружаем позицию из памяти
+ld a, x;load the position from memory
 ld b, y
 
-ldi c, BANK_BORDER;проверка границ и соседних клеток
+ldi c, BANK_BORDER;check borders and neighboring cells
 ldi d, test_borders
 jmp in_out
 
 remove:
-;если клетка окружена, удаляем из стека
+;if the cell is surrounded, remove it from the stack
 
 ldi c, BANK_STACK
 ldi d, stack_remove
@@ -227,43 +226,43 @@ jmp in_out
 
 move:
 
-rnd d;генерируем случайное направление в регистр d
+rnd d;generate a random direction into register d
 ldi b, 0b00000011
-and d, b;оставляем младшие 2 бита
+and d, b;keep the low 2 bits
 
-ldi c, 0b00010000;маска для получения из байта границ 
+ldi c, 0b00010000;mask to extract from the border byte 
 
-;цикл для получения направления
-get_rotate:;получаем маску из направления при помощи побитового сдвига вправо
+;loop to get the direction
+get_rotate:;get a mask from the direction using bitwise right shift
 
-shr c;маска в регистре c
+shr c;mask in register c
 
 dec d
 jns get_rotate
 ;
 
-ld d, function_output;загружаем байт границ из памяти
+ld d, function_output;load the border byte from memory
 
-and d, c;проверяем границу по направлению
+and d, c;check the border in the direction
 test d
-jnz move;если граница, пробуем другое направление
+jnz move;if there is a border, try another direction
 
 mov b, c
-ldi c, BANK_POS;определение позиции соседних клеток вынесено в банк 4
+ldi c, BANK_POS;determining neighboring cell positions is moved to bank 4
 ldi d, get_coord
 jmp in_out
 get_coord_return:
 
-;рисование точки на дисплее
-;рисуем промежуточную точку между старой и новой позициями
-ldi d, $ + 4;получаем байт дисплея
+;drawing a point on the display
+;draw an intermediate point between the old and new positions
+ldi d, $ + 4;get the display byte
 jmp get_point;
 
-not c;инвертируем c, так как красим в белый
-and a, c;and между c и байтом дисплея(потому что красим в белый. Если красить цветом, то нужен or)
-st a, b;устанавливаем измененный байт обратно на дисплей
+not c;invert c because we paint white
+and a, c;and between c and the display byte(because we paint white. To paint with color, use or)
+st a, b;put the modified byte back onto the display
 
-ldi c, BANK_STACK;ложим в стек новую позицию
+ldi c, BANK_STACK;push the new position onto the stack
 ldi d, stack_add
 ldi a, $ + 6
 st a, function_output_index
@@ -271,83 +270,83 @@ jmp in_out
 
 continue:
 
-ld a, stack_length;продолжаем цикл, если длина стека > 0
+ld a, stack_length;continue the loop if the stack length > 0
 test a
 jnz cycle
 
-hlt;лабиринт сгенерирован, останавливаем программу
+hlt;the maze is generated, halt the program
 ;###############################################################
 
 void1 db 0,0,0
 
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-;W                           БАНК 2                            W
+;W                           BANK 2                            W
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-;Стек и функции для работы со стеком
+;Stack and stack functions
 
-in_out:;переход в/из текущего банка. c - индекс банка, d - индекс перехода
-st c, bank;смена банка
-jmp d;эта инструкция выполняется уже в другом банке. совершаем переход по нужному адресу
+in_out:;jump to/from the current bank. c - bank index, d - jump index
+st c, bank;switch the bank
+jmp d;this instruction is already executed in another bank. jump to the needed address
 
 
 ;###############################################################
-;функция добавления числа в стек. fn_input - число
+;function to push a number onto the stack. fn_input - the number
 stack_add:
 
-ld c, function_input;загружаем в c вход функции
+ld c, function_input;load the function input into c
 
-ld a, stack_length;складываем длину стека и адрес стека
+ld a, stack_length;add the stack length and the stack address
 ldi b, stack
-add b, a;конечный индекс в регистре b
+add b, a;final index in register b
 
-st c, b;записываем число по нужному адресу и увеличиваем длину стека
+st c, b;write the number to the needed address and increase the stack length
 inc a
 st a, stack_length
 
-ld d, function_output_index;загружаем в d адрес
-ldi c, BANK_MAIN;возвращаемся в банк 1 по нужному адресу
+ld d, function_output_index;load the address into d
+ldi c, BANK_MAIN;return to bank 1 at the needed address
 jmp in_out
 ;###############################################################
 
 
 ;###############################################################
-;функция удаления последнего элемента стека
+;function to remove the last element of the stack
 stack_remove:
 
-ld a, stack_length;складываем длину стека и адрес стека
+ld a, stack_length;add the stack length and the stack address
 ldi b, stack
-add b, a;конечный индекс в регистре b
+add b, a;final index in register b
 
-clr c;записываем 0 в ячейку
+clr c;write 0 to the cell
 st c, b
 
-dec a;уменьшаем длину стека
+dec a;decrease the stack length
 st a, stack_length
 
-ld d, function_output_index;загружаем в d адрес
-ldi c, BANK_MAIN;возвращаемся в банк 1 по нужному адресу
+ld d, function_output_index;load the address into d
+ldi c, BANK_MAIN;return to bank 1 at the needed address
 jmp in_out
 ;###############################################################
 
 
 ;###############################################################
-;функция получения последнего элемента из стека в b
+;function to get the last stack element into b
 stack_get:
 
-ld a, stack_length;складываем длину стека и адрес стека
-dec a;уменьшаем а, т.к. это длина стека, а не индекс последнего элемента
+ld a, stack_length;add the stack length and the stack address
+dec a;decrease a because it is the stack length, not the index of the last element
 ldi b, stack
-add b, a;конечный индекс в регистре b
+add b, a;final index in register b
 
-ld b, b;загружаем в регистр b последний элемент стека
+ld b, b;load the last stack element into register b
 
-ld d, function_output_index;загружаем в d адрес
-ldi c, BANK_MAIN;возвращаемся в банк 1 по нужному адресу
+ld d, function_output_index;load the address into d
+ldi c, BANK_MAIN;return to bank 1 at the needed address
 jmp in_out
 ;###############################################################
 
 
-stack db 0,0,0,0,0,0,0,0,;стек из 64 позиций
+stack db 0,0,0,0,0,0,0,0,;stack of 64 positions
          0,0,0,0,0,0,0,0,
          0,0,0,0,0,0,0,0,
          0,0,0,0,0,0,0,0,
@@ -359,151 +358,151 @@ stack db 0,0,0,0,0,0,0,0,;стек из 64 позиций
 void2 db 0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0
 
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-;W                           БАНК 3                            W
+;W                           BANK 3                            W
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-;Проверка границ и соседних клеток
+;Checking borders and neighboring cells
 
-in_out:;переход в/из текущего банка. c - индекс банка, d - индекс перехода
-st c, bank;смена банка
-jmp d;эта инструкция выполняется уже в другом банке. совершаем переход по нужному адресу
+in_out:;jump to/from the current bank. c - bank index, d - jump index
+st c, bank;switch the bank
+jmp d;this instruction is already executed in another bank. jump to the needed address
 
 
 ;###############################################################
-;функция получения значения пикселя дисплея по координатам из a, b во флаг z. fn_output_index - индекс перехода
+;function to get the display pixel value at coordinates from a, b into flag z. fn_output_index - jump index
 get_pixel_value:
 
-ldi d, $ + 4;получаем байт дисплея
-jmp get_point;a - байт дисплея, c - маска
+ldi d, $ + 4;get the display byte
+jmp get_point;a - display byte, c - mask
 
-and a, c;в a получаем значение бита
+and a, c;get the bit value into a
 
-test a;флаг z - a = 0
+test a;flag z - a = 0
 
 ld d, function_output_index
-jmp d;переход обратно
+jmp d;jump back
 ;###############################################################
 
 
 ;###############################################################
-;функция определения возможности передвижения по всем направлениям
+;function to determine whether movement is possible in all directions
 ;a - xpos, b - ypos
 test_borders:
 
-clr c;регистр с - для границ
-ldi d, 0b00001000;маска
+clr c;register c - for borders
+ldi d, 0b00001000;mask
 
 ;
-;ВВЕРХ
+;UP
 ;
-dec b;проверка верхней границы
+dec b;check the top border
 js up
 jns up_else
 
-up:;если сверху граница, прибавляем d к c
+up:;if there is a border above, add d to c
 or c, d
 jmp up_end
 
-up_else:;если сверху свободно, проверяем содержимое ячейки сверху
-dec b;вычитаем второй раз
+up_else:;if it is free above, check the contents of the cell above
+dec b;subtract a second time
 
-st a, buffer + 3;проверка клетки вынесена в функцию
+st a, buffer + 3;cell check is moved to a function
 ldi a, $ + 4
 jmp test_cell
 
 up_end:
-shr d;сдвигаем d на следующее направление
+shr d;shift d to the next direction
 
 ;
-;ВПРАВО
+;RIGHT
 ;
-ld a, x;загружаем изначальные координаты
+ld a, x;load the original coordinates
 ld b, y
 
-inc a;проверка правой границы
-inc a;прибавляем два раза, потому что размер экрана четный
+inc a;check the right border
+inc a;add twice because the screen size is even
 
-st d, buffer;сохраняем d
+st d, buffer;save d
 
-ldi d, 0x0F;обрезаем первые 4 бита позиции(имитация 4битной переменной)
+ldi d, 0x0F;trim the first 4 bits of the position(simulating a 4-bit variable)
 and d, a
 
-ld d, buffer;восстанавливаем d
+ld d, buffer;restore d
 
 jz right
 jnz right_else
 
-right:;если справа граница, прибавляем d к c
+right:;if there is a border on the right, add d to c
 or c, d
 jmp right_end
 
-right_else:;если справа свободно, проверяем содержимое ячейки справа
+right_else:;if it is free on the right, check the contents of the cell on the right
 
-st a, buffer + 3;проверка клетки вынесена в функцию
+st a, buffer + 3;cell check is moved to a function
 ldi a, $ + 4
 jmp test_cell
 
 right_end:
-shr d;сдвигаем d на следующее направление
+shr d;shift d to the next direction
 
 ;
-;ВНИЗ
+;DOWN
 ;
-ld a, x;загружаем изначальные координаты
+ld a, x;load the original coordinates
 ld b, y
 
-inc b;проверка нижней границы
-inc b;прибавляем два раза, потому что размер экрана четный
+inc b;check the bottom border
+inc b;add twice because the screen size is even
 
-st d, buffer;сохраняем d
+st d, buffer;save d
 
-ldi d, 0x0F;обрезаем первые 4 бита позиции(имитация 4битной переменной)
+ldi d, 0x0F;trim the first 4 bits of the position(simulating a 4-bit variable)
 and d, b
 
-ld d, buffer;восстанавливаем d
+ld d, buffer;restore d
 
 jz down
 jnz down_else
 
-down:;если снизу граница, прибавляем d к c
+down:;if there is a border below, add d to c
 or c, d
 jmp down_end
 
-down_else:;если снизу свободно, проверяем содержимое ячейки снизу
+down_else:;if it is free below, check the contents of the cell below
 
-st a, buffer + 3;проверка клетки вынесена в функцию
+st a, buffer + 3;cell check is moved to a function
 ldi a, $ + 4
 jmp test_cell
 
 down_end:
-shr d;сдвигаем d на следующее направление
+shr d;shift d to the next direction
 
 ;
-;ВЛЕВО
+;LEFT
 ;
-ld a, x;загружаем изначальные координаты
+ld a, x;load the original coordinates
 ld b, y
 
-dec a;проверка левой границы
+dec a;check the left border
 js left
 jns left_else
 
-left:;если слева граница, прибавляем d к c
+left:;if there is a border on the left, add d to c
 or c, d
 jmp left_end
 
-left_else:;если слева свободно, проверяем содержимое ячейки слева
-dec a;вычитаем второй раз
+left_else:;if it is free on the left, check the contents of the cell on the left
+dec a;subtract a second time
 
-st a, buffer + 3;проверка клетки вынесена в функцию
+st a, buffer + 3;cell check is moved to a function
 ldi a, $ + 4
 jmp test_cell
 
 left_end:
 
 
-st c, function_output;сохраняем байт границ в память
+st c, function_output;save the border byte to memory
 
-ldi d, 0x0F;если со всех сторон граница, переходим на remove, иначе на move
+ldi d, 0x0F;if there are borders on all sides, jump to remove, otherwise to move
 sub c, d
 
 jz jmp_remove
@@ -522,27 +521,27 @@ jmp in_out
 void3 db 0,0,0,0,0,0,0
 
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-;W                           БАНК 4                            W
+;W                           BANK 4                            W
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-;Получение координат соседней клетки по направлению
+;Getting the coordinates of a neighboring cell by direction
 
-in_out:;переход в/из текущего банка. c - индекс банка, d - индекс перехода
-st c, bank;смена банка
-jmp d;эта инструкция выполняется уже в другом банке. совершаем переход по нужному адресу
+in_out:;jump to/from the current bank. c - bank index, d - jump index
+st c, bank;switch the bank
+jmp d;this instruction is already executed in another bank. jump to the needed address
 
 
 ;###############################################################
-;функция определения положения соседней клетки по направлению
-;b - направление
-;fn_input - на сколько увеличивать/уменьшать
+;function to determine the position of a neighboring cell by direction
+;b - direction
+;fn_input - how much to increase/decrease
 get_rotate_position:
 
-mov c, b;копируем направление в c
+mov c, b;copy the direction into c
 
-ld a, x;загружаем координаты
+ld a, x;load the coordinates
 ld b, y
 
-;вверх
+;up
 ldi d, 0b00001000
 sub d, c
 jz test_up
@@ -553,7 +552,7 @@ ld d, function_input
 sub b, d
 test_up_end:
 
-;вправо
+;right
 ldi d, 0b00000100
 sub d, c
 jz test_right
@@ -564,7 +563,7 @@ ld d, function_input
 add a, d
 test_right_end:
 
-;вниз
+;down
 ldi d, 0b00000010
 sub d, c
 jz test_down
@@ -575,7 +574,7 @@ ld d, function_input
 add b, d
 test_down_end:
 
-;влево
+;left
 ldi d, 0b00000001
 sub d, c
 jz test_left
@@ -592,14 +591,14 @@ jmp d
 
 
 ;###############################################################
-;записывает координаты из регистра b
+;writes the coordinates from register b
 get_pos_from_byte:
 
-st b, buffer;сохраняем позицию в буфер, потому что функция рисования точки берет позицию из регистра c
+st b, buffer;save the position to the buffer because the point drawing function takes the position from register c
 
 ldi a, 0xF0;a - xpos
 and a, b
-shr a;сдвигаем на 4 бита вправо
+shr a;shift right by 4 bits
 shr a
 shr a
 shr a
@@ -607,8 +606,8 @@ shr a
 ldi c, 0x0F;b - ypos
 and b, c
 
-st a, x;сохраняем x в память
-st b, y;сохраняем y в память
+st a, x;save x to memory
+st b, y;save y to memory
 
 ldi c, BANK_MAIN
 ldi d, get_pos_return
@@ -617,35 +616,35 @@ jmp in_out
 
 
 ;###############################################################
-;продолжение кода из банка 1
+;continuation of the code from bank 1
 get_coord:
 
-st b, buffer;сохраняем направление в буфер(во избежание перезаписи регистра)
+st b, buffer;save the direction to the buffer(to avoid overwriting the register)
 
-ldi d, 2;получаем новые координаты(для стека)
+ldi d, 2;get the new coordinates(for the stack)
 st d, function_input
 ldi d, $ + 6
 st d, function_output_index
 jmp get_rotate_position
 
-shl a;переводим 2 байта координат в 1
+shl a;convert 2 coordinate bytes into 1
 shl a
 shl a
 shl a
 or a, b
-st a, function_output;сохраняем в fn_output
+st a, function_output;save to fn_output
 
 
-ld b, buffer;загружаем направление из буфера
+ld b, buffer;load the direction from the buffer
 
-ldi d, 1;получаем координаты для рисования линии
+ldi d, 1;get the coordinates for drawing the line
 st d, function_input
 ldi d, $ + 6
 st d, function_output_index
 jmp get_rotate_position
 
 
-ld d, function_output;копируем из fn_out в fn_in(потому, что функция добавления элемента в стек получает координаты в fn_in)
+ld d, function_output;copy from fn_out to fn_in(because the stack push function takes the coordinates in fn_in)
 st d, function_input
 
 ldi c, BANK_MAIN

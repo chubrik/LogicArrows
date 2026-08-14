@@ -1,6 +1,6 @@
 ﻿; ##################################################################################################
-; ##        Source code for the "Guess the Number" game for a computer made of logic arrows       ##
-; ##            Исходный код игры "Угадай число" для компьютера из логических стрелочек           ##
+; ##       Source code for the "Guess the Number" game for a computer made of logic arrows        ##
+; ##           Исходный код игры "Угадай число" для компьютера из логических стрелочек            ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v2                 ##
 ; ##                         (c) 2026 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################

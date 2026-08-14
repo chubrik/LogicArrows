@@ -63,9 +63,9 @@
         Михаил Мосеев</a>.
       </td>
       <td valign="top">
-        <h3><a href="asm/space-fight.asm">Игра «Space Fight»</a></h3>
+        <h3><a href="asm/space-fight.asm">Игра «Бой в космосе»</a></h3>
         <a href="asm/space-fight.asm"><img src="../../computer-v2/img/space-fight.jpg"
-          alt="Игра «Space Fight»"></a><br>
+          alt="Игра «Бой в космосе»"></a><br>
         К вам приближаются вражеские корабли, которые нужно сбить за ограниченное время. В случае
         победы вы получите приз.
       </td>
@@ -89,26 +89,25 @@
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="../../computer-v2/asm/community/maze-generator.asm">Maze Generator</a></h3>
-        <a href="../../computer-v2/asm/community/maze-generator.asm">
-          <img src="../../computer-v2/img/maze-generator.jpg" alt="Maze Generator"></a><br>
+        <h3><a href="asm/community/maze-generator.asm">Генератор лабиринтов</a></h3>
+        <a href="asm/community/maze-generator.asm">
+          <img src="../../computer-v2/img/maze-generator.jpg" alt="Генератор лабиринтов"></a><br>
         Генерирует на дисплее случайный лабиринт методом поиска с возвратом. Автор —
         <a href="https://t.me/farmer_2010">Farmer_2010</a>.
       </td>
       <td valign="top">
-        <h3><a href="../../computer-v2/asm/community/1d-cellular-automaton.asm">
-          1D Cellular Automaton</a></h3>
-        <a href="../../computer-v2/asm/community/1d-cellular-automaton.asm">
+        <h3><a href="asm/community/1d-cellular-automaton.asm">1D клеточный автомат</a></h3>
+        <a href="asm/community/1d-cellular-automaton.asm">
           <img src="../../computer-v2/img/1d-cellular-automaton.jpg"
-            alt="1D Cellular Automaton"></a><br>
+            alt="1D клеточный автомат"></a><br>
         Введите правило в двоичном виде и наблюдайте за эволюцией клеток на дисплее. Автор —
         <a href="https://t.me/farmer_2010">Farmer_2010</a>.
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/demo.asm">Demo</a></h3>
-        <a href="asm/demo.asm"><img src="../../computer-v2/img/summary.jpg" alt="Demo"></a><br>
+        <h3><a href="asm/demo.asm">Демо</a></h3>
+        <a href="asm/demo.asm"><img src="../../computer-v2/img/summary.jpg" alt="Демо"></a><br>
         Выводит на дисплей цветную бабочку, пишет в терминал «Hello, Onigiri!», рисует изображение
         онигири и звонит в колокольчик
       </td>
@@ -124,45 +123,45 @@
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
+        <h3><a href="asm/prime-numbers.asm">Простые числа</a></h3>
         <a href="asm/prime-numbers.asm"><img src="../../computer-v2/img/prime-numbers.jpg"
-          alt="Prime Numbers"></a><br>
+          alt="Простые числа"></a><br>
         Находит 16 простых чисел и выводит их на цифровой индикатор, а также на дисплей в двоичном
         формате
       </td>
       <td valign="top">
-        <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
+        <h3><a href="asm/fibonacci-sequence.asm">Числа Фибоначчи</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="../../computer-v2/img/fibonacci-sequence.jpg"
-          alt="Fibonacci Sequence"></a><br>
+          alt="Числа Фибоначчи"></a><br>
         Находит 12 чисел Фибоначчи. Выводит их на цифровой индикатор, а также на дисплей в двоичном
         формате
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/terminal-art.asm">Terminal Art</a></h3>
+        <h3><a href="asm/terminal-art.asm">Арт в терминале</a></h3>
         <a href="asm/terminal-art.asm"><img src="../../computer-v2/img/terminal-art.jpg"
-          alt="Terminal Art"></a><br>
+          alt="Арт в терминале"></a><br>
         Использует графический режим терминала для вывода изображения
       </td>
       <td valign="top">
-        <h3><a href="asm/ram-art.asm">RAM Art</a></h3>
+        <h3><a href="asm/ram-art.asm">Арт в RAM</a></h3>
         <a href="asm/ram-art.asm"><img src="../../computer-v2/img/ram-art.jpg"
-          alt="RAM Art"></a><br>
+          alt="Арт в RAM"></a><br>
         Программа-шутка, использует RAM как холст для вывода изображения
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
+        <h3><a href="asm/typewriter.asm">Пишущая машинка</a></h3>
         <a href="asm/typewriter.asm"><img src="../../computer-v2/img/typewriter.jpg"
-          alt="Typewriter"></a><br>
+          alt="Пишущая машинка"></a><br>
         Выводит в терминал текст, набираемый на клавиатуре
       </td>
       <td valign="top">
-        <h3><a href="asm/font-test.asm">Font Test</a></h3>
+        <h3><a href="asm/font-test.asm">Тест шрифта</a></h3>
         <a href="asm/font-test.asm"><img src="../../computer-v2/img/font-test.jpg"
-          alt="Font Test"></a><br>
+          alt="Тест шрифта"></a><br>
         Выводит в терминал все возможные символы (кодировка
         <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>)
       </td>

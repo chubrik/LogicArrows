@@ -1,5 +1,5 @@
 ﻿; ##################################################################################################
-; ##        Source code for the "Guess the Number" game for a computer made of logic arrows       ##
+; ##       Source code for the "Guess the Number" game for a computer made of logic arrows        ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v2                 ##
 ; ##                         (c) 2026 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################

@@ -1,6 +1,6 @@
 ﻿; ##################################################################################################
-; ##           Source code for the "RAM Art" program for a computer made of logic arrows          ##
-; ##            Исходный код программы "RAM Art" для компьютера из логических стрелочек           ##
+; ##          Source code for the "RAM Art" program for a computer made of logic arrows           ##
+; ##          Исходный код программы "Арт в RAM" для компьютера из логических стрелочек           ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v2                 ##
 ; ##                         (c) 2025 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################

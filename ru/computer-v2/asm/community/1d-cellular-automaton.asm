@@ -1,5 +1,6 @@
 ﻿; ##################################################################################################
 ; ##   Source code for the "1D Cellular Automaton" program for a computer made of logic arrows    ##
+; ##     Исходный код программы "1D клеточный автомат" для компьютера из логических стрелочек     ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v2                 ##
 ; ##                       (c) 2026 Farmer_2010 (https://t.me/farmer_2010)                        ##
 ; ##################################################################################################
@@ -10,19 +11,19 @@ COLORED equ 0b00110101
 MONO    equ 0b00010101
 
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-;W                        SHARED AREA                          W
+;W                       ОБЩАЯ ОБЛАСТЬ                         W
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 
 ldi a, 32
 ldi c, display
-clear:;fill the display
+clear:;заполняем дисплей
 st b, c
 inc c
 dec a
 jnz clear
 
 
-ldi a, 16;fill the first row with random cells
+ldi a, 16;заполняем первую полосу случайными клетками
 ldi b, display + 1
 ldi c, 0b00000001
 rand:
@@ -76,7 +77,7 @@ terminal_graphics db 0;0x3D
 connect db MONO;0x3E
 bank_change db 1;0x3F
 
-;display
+;дисплей
 display db          0b00000000, 0b00000000, ;                                  ;
                     0b00010000, 0b00111000, ;                                  ;
                     0b00110000, 0b00100100, ; ██      ██    ██    ██████  ████ ;
@@ -99,7 +100,7 @@ continue:
 new_gen:
 st a, buffer
 
-clr a;a - state of neighboring cells
+clr a;a - состояние соседних ячеек
 
 ld c, b
 ldi d, 0b00000010

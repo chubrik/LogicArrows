@@ -1,6 +1,6 @@
 ﻿; ##################################################################################################
-; ##         Source code for the "Hello World" program for a computer made of logic arrows        ##
-; ##          Исходный код программы "Hello World" для компьютера из логических стрелочек         ##
+; ##        Source code for the "Hello World" program for a computer made of logic arrows         ##
+; ##         Исходный код программы "Hello World" для компьютера из логических стрелочек          ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v1                 ##
 ; ##                         (c) 2023 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################

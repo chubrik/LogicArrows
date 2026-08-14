@@ -1,5 +1,5 @@
 ﻿; ##################################################################################################
-; ##          Source code for the "Font Test" program for a computer made of logic arrows         ##
+; ##         Source code for the "Font Test" program for a computer made of logic arrows          ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v1                 ##
 ; ##                         (c) 2025 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################
