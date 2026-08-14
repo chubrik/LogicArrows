@@ -96,6 +96,23 @@
         <a href="https://t.me/farmer_2010">Farmer_2010</a>.
       </td>
       <td valign="top">
+        <h3><a href="../../computer-v2/asm/community/1d-cellular-automaton.asm">
+          1D Cellular Automaton</a></h3>
+        <a href="../../computer-v2/asm/community/1d-cellular-automaton.asm">
+          <img src="../../computer-v2/img/1d-cellular-automaton.jpg"
+            alt="1D Cellular Automaton"></a><br>
+        Введите правило в двоичном виде и наблюдайте за эволюцией клеток на дисплее. Автор —
+        <a href="https://t.me/farmer_2010">Farmer_2010</a>.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <h3><a href="asm/demo.asm">Demo</a></h3>
+        <a href="asm/demo.asm"><img src="../../computer-v2/img/summary.jpg" alt="Demo"></a><br>
+        Выводит на дисплей цветную бабочку, пишет в терминал «Hello, Onigiri!», рисует изображение
+        онигири и звонит в колокольчик
+      </td>
+      <td valign="top">
         <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
           Игра «Теннис»</a></h3>
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
@@ -107,20 +124,12 @@
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/demo.asm">Demo</a></h3>
-        <a href="asm/demo.asm"><img src="../../computer-v2/img/summary.jpg" alt="Demo"></a><br>
-        Выводит на дисплей цветную бабочку, пишет в терминал «Hello, Onigiri!», рисует изображение
-        онигири и звонит в колокольчик
-      </td>
-      <td valign="top">
         <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
         <a href="asm/prime-numbers.asm"><img src="../../computer-v2/img/prime-numbers.jpg"
           alt="Prime Numbers"></a><br>
         Находит 16 простых чисел и выводит их на цифровой индикатор, а также на дисплей в двоичном
         формате
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="../../computer-v2/img/fibonacci-sequence.jpg"
@@ -128,28 +137,28 @@
         Находит 12 чисел Фибоначчи. Выводит их на цифровой индикатор, а также на дисплей в двоичном
         формате
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/terminal-art.asm">Terminal Art</a></h3>
         <a href="asm/terminal-art.asm"><img src="../../computer-v2/img/terminal-art.jpg"
           alt="Terminal Art"></a><br>
         Использует графический режим терминала для вывода изображения
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/ram-art.asm">RAM Art</a></h3>
         <a href="asm/ram-art.asm"><img src="../../computer-v2/img/ram-art.jpg"
           alt="RAM Art"></a><br>
         Программа-шутка, использует RAM как холст для вывода изображения
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
         <a href="asm/typewriter.asm"><img src="../../computer-v2/img/typewriter.jpg"
           alt="Typewriter"></a><br>
         Выводит в терминал текст, набираемый на клавиатуре
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/font-test.asm">Font Test</a></h3>
         <a href="asm/font-test.asm"><img src="../../computer-v2/img/font-test.jpg"
