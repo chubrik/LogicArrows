@@ -79,8 +79,9 @@ movement with arrow keys.
 
 To connect the output to the terminal, you need to write a value with bit 0 set to port `3E`. Then,
 each byte sent to address `3C` is output to the terminal as a character in the
-[`cp1251`](https://en.wikipedia.org/wiki/Windows-1251) encoding. Six bytes sent sequentially to
-address `3D` are output to the terminal as one graphic character.
+[`cp1251`](https://en.wikipedia.org/wiki/Windows-1251) encoding. Bytes sent to address `3D`
+accumulate up to six, after which they are output to the terminal all at once as one graphic
+character.
 
 <img src="img/terminal.jpg" width="60%" alt="Terminal">
 <br><br>

@@ -185,7 +185,8 @@ internal class Cpu(Ram ram)
 
     private static void AndA0(Cpu cpu)
     {
-        cpu.SetFlagsZS(cpu._ra);
+        cpu.SetFlagsZS(0);
+        cpu.SetRegA(0);
     }
 
     private static void AndAB(Cpu cpu)
@@ -354,6 +355,20 @@ internal class Cpu(Ram ram)
 
     #endregion
 
+    #region Adc
+
+    private static void AdcA0(Cpu cpu)
+    {
+        MyByte carry = cpu._fc ? 1 : 0;
+        MyByte result = cpu._ra + carry;
+        cpu.SetFlagsZS(result);
+        cpu.SetFlagsC(result < cpu._ra);
+        cpu.SetFlagsO(cpu._ra.IsSigned == carry.IsSigned && carry.IsSigned != result.IsSigned);
+        cpu.SetRegA(result);
+    }
+
+    #endregion
+
     #region Sub
 
     private static void SubA0(Cpu cpu)
@@ -387,6 +402,20 @@ internal class Cpu(Ram ram)
         cpu.SetFlagsZS(result);
         cpu.SetFlagsC(cpu._ra < cpu._rd);
         cpu.SetFlagsO(cpu._ra.IsSigned != cpu._rd.IsSigned && cpu._rd.IsSigned == result.IsSigned);
+        cpu.SetRegA(result);
+    }
+
+    #endregion
+
+    #region Sbb
+
+    private static void SbbA0(Cpu cpu)
+    {
+        MyByte carry = cpu._fc ? 1 : 0;
+        MyByte result = cpu._ra - carry;
+        cpu.SetFlagsZS(result);
+        cpu.SetFlagsC(cpu._ra < carry);
+        cpu.SetFlagsO(cpu._ra.IsSigned != carry.IsSigned && carry.IsSigned == result.IsSigned);
         cpu.SetRegA(result);
     }
 
@@ -1257,11 +1286,11 @@ internal class Cpu(Ram ram)
         new Instruction("add b, a", NoImpl),
         new Instruction("add c, a", NoImpl),
         new Instruction("add d, a", NoImpl),
-        new Instruction("adc a, 0", NoImpl),
+        new Instruction("adc a, 0", AdcA0),
         new Instruction("adc a, b", NoImpl),
         new Instruction("adc a, c", NoImpl),
         new Instruction("adc a, d", NoImpl),
-        new Instruction("adc a, 0*", NoImpl),
+        new Instruction("adc a, 0*", AdcA0),
         new Instruction("adc b, a", NoImpl),
         new Instruction("adc c, a", NoImpl),
         new Instruction("adc d, a", NoImpl),
@@ -1273,11 +1302,11 @@ internal class Cpu(Ram ram)
         new Instruction("sub b, a", NoImpl),
         new Instruction("sub c, a", NoImpl),
         new Instruction("sub d, a", NoImpl),
-        new Instruction("sbb a, 0", NoImpl),
+        new Instruction("sbb a, 0", SbbA0),
         new Instruction("sbb a, b", NoImpl),
         new Instruction("sbb a, c", NoImpl),
         new Instruction("sbb a, d", NoImpl),
-        new Instruction("sbb a, 0*", NoImpl),
+        new Instruction("sbb a, 0*", SbbA0),
         new Instruction("sbb b, a", NoImpl),
         new Instruction("sbb c, a", NoImpl),
         new Instruction("sbb d, a", NoImpl),

@@ -91,16 +91,18 @@ table below, the conventional ***X*** and ***Y*** are used to denote any registe
 
 Instruction | Description | Effect<br> on flags
 ---|---|---
-mov ***X***, 0 | Clears ***X*** | –
 mov ***X***, ***Y*** | Copies from ***Y*** to ***X*** | –
+mov ***X***, 0 | Clears ***X*** | –
 and ***X***, ***Y*** | Bitwise AND between ***X*** and ***Y***, result is written to ***X*** | Z, S
+and ***X***, 0 | Clears ***X*** and updates the flags | Z, S
 or ***X***, ***Y*** | Bitwise OR between ***X*** and ***Y***, result is written to ***X*** | Z, S
 xor ***X***, ***Y*** | Exclusive OR between ***X*** and ***Y***, result is written to ***X*** | Z, S
+or ***X***, 0<br> xor ***X***, 0 | Do not perform calculations, but only update the flags based on the value of ***X*** | Z, S
 add ***X***, ***Y*** | Adds ***X*** and ***Y***, result is written to ***X*** | Z, S, C, O
 adc ***X***, ***Y*** | Adds ***X***, ***Y*** and the `C` flag, result is written to ***X*** | Z, S, C, O
 sub ***X***, ***Y*** | Subtracts ***Y*** from ***X***, result is written to ***X*** | Z, S, C, O
 sbb ***X***, ***Y*** | Subtracts ***Y*** and the `C` flag from ***X***, result is written to ***X*** | Z, S, C, O
-and ***X***, 0<br> or ***X***, 0<br> xor ***X***, 0<br> add ***X***, 0<br> adc ***X***, 0<br> sub ***X***, 0<br> sbb ***X***, 0 | Does not perform calculations, but only updates the flags based on the value of ***X*** | Z, S
+add ***X***, 0<br> adc ***X***, 0<br> sub ***X***, 0<br> sbb ***X***, 0 | Work like their counterparts above, but with 0 as the second operand | Z, S, C, O
 inc ***X*** | Adds 1 | Z, S
 dec ***X*** | Subtracts 1 | Z, S
 not ***X*** | Inverts each bit | Z, S
