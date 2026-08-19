@@ -69,21 +69,21 @@ The instructions in this set are responsible for memory operations and jumps. In
 the conventional ***X*** and ***Y*** are used to denote any registers, and ***F*** is used to denote
 any flag.
 
-Instruction | Description
----|---
-nop | Does nothing, proceeds to the next instruction
-ld ***X*** | Loads into ***X*** a value from memory, using the operand as an address
-ld ***X***, ***Y*** | Loads into ***X*** a value from memory, using ***Y*** as an address
-ldi ***X*** | Loads the operand directly into ***X***
-st ***X*** | Stores the value of ***X*** in memory at the address from the operand
-st ***X***, ***Y*** | Stores the value of ***X*** in memory at the address from ***Y***
-jmp | Unconditional jump to the address from the operand
-jmp ***X*** | Unconditional jump to the address from ***X***
-j***F*** | Jump to the address from the operand, if ***F*** = 1
-jn***F*** | Jump to the address from the operand, if ***F*** = 0
-j***F*** ***X*** | Jump to the address from ***X***, if ***F*** = 1
-jn***F*** ***X*** | Jump to the address from ***X***, if ***F*** = 0
-hlt | Halts the program execution
+Instruction | Description | Code example
+---|---|---
+nop | Does nothing, proceeds to the next instruction | `nop`
+ld ***X*** | Loads into ***X*** a value from memory, using the operand as an address | `ld a, 0xC4`
+ld ***X***, ***Y*** | Loads into ***X*** a value from memory, using ***Y*** as an address | `ld a, b`
+ldi ***X*** | Loads the operand directly into ***X*** | `ldi a, 196`
+st ***X*** | Stores the value of ***X*** in memory at the address from the operand | `st a, 0xC4`
+st ***X***, ***Y*** | Stores the value of ***X*** in memory at the address from ***Y*** | `st a, b`
+jmp | Unconditional jump to the address from the operand | `jmp 0xC4`
+jmp ***X*** | Unconditional jump to the address from ***X*** | `jmp a`
+j***F*** | Jump to the address from the operand, if ***F*** = 1 | `jz 0xC4`
+jn***F*** | Jump to the address from the operand, if ***F*** = 0 | `jnz 0xC4`
+j***F*** ***X*** | Jump to the address from ***X***, if ***F*** = 1 | `jz a`
+jn***F*** ***X*** | Jump to the address from ***X***, if ***F*** = 0 | `jnz a`
+hlt | Halts the program execution | `hlt`
 
 <br>
 
