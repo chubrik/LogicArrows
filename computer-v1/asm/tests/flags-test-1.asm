@@ -106,7 +106,7 @@ t8o:            inc c
                 jno t9
                 st c, d             ; "P" = false overflow after 0-0
 
-; Case 9: sub 0-1, expect C=1, O=0. Borrow through zero, result 255.
+; Case 9: sub 0-1, expect C=1, O=0. Carry through zero, result 255.
 t9:             inc c
                 mov a, 0
                 ldi b, 1
@@ -128,7 +128,7 @@ t10o:           inc c
                 jno t11
                 st c, d             ; "T" = false overflow after 255-255
 
-; Case 11: sub 0-255, expect C=1, O=0. Maximum borrow.
+; Case 11: sub 0-255, expect C=1, O=0. Maximum carry.
 t11:            inc c
                 mov a, 0
                 ldi b, 255

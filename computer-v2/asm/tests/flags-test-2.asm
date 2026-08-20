@@ -190,16 +190,16 @@ t13o:           inc c
                 jno t14
                 st c, d             ; "Z" = false overflow after sbb 5-3-1
 
-; Case 14: 16-bit chain 0x0100 - 0x0001 = 0x00FF: sub makes the borrow, sbb must consume it
+; Case 14: 16-bit chain 0x0100 - 0x0001 = 0x00FF: sub makes the carry, sbb must consume it
 t14:            ldi b, 7            ; The "+7" step: jump the probe counter over the codes between
                                     ;   "Z" and "a"
                 add c, b
                 clr a
                 ldi b, 1
-                sub a, b            ; Low byte: 0-1 = 255, borrow out
+                sub a, b            ; Low byte: 0-1 = 255, carry out
                 ldi a, 1
                 clr b
-                sbb a, b            ; High byte: 1-0-C = 0, no borrow out
+                sbb a, b            ; High byte: 1-0-C = 0, no carry out
                 jz t14o             ; The Z probe must run before "inc c", which legally rewrites Z
                 st c, d             ; "a" = high byte of 0x0100-0x0001 is not zero, the chain is
                                     ;   broken

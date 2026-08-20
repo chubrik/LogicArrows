@@ -84,7 +84,7 @@ random:         rnd a
                 inc a
                 ldi b, 256 - 100
                 add b, a
-                jns random
+                jc random
                 st a, number
 
 ; Проверка и инкрементация счётчика попыток. Если попытки закончились, переходим к поражению.
@@ -103,11 +103,11 @@ input_1:        ld c, in_out
                 mov a, c
                 ldi d, "1"
                 sub a, d
-                js input_1
+                jc input_1
                 inc a
                 ldi d, 9
                 sub d, a
-                js input_1
+                jc input_1
                 st c, terminal
 
 ; Ввод второго символа. Допускаются цифры от 0 до 9 и Enter.
@@ -118,10 +118,10 @@ input_2:        ld c, in_out
                 mov b, c
                 ldi d, "0"
                 sub b, d
-                js input_2
+                jc input_2
                 ldi d, 9
                 sub d, b
-                js input_2
+                jc input_2
                 st c, terminal
 
 ; Объединение двух введённых цифр в единое число
@@ -137,7 +137,7 @@ compare:        ld b, number
                 sub a, b
                 jz win              ; Если числа совпадают, переходим к победе
                 ldi d, try
-                js higher
+                jc higher
 
 ; Вывод сообщения "Lower" и переход к следующей попытке
 lower:          ldi c, lower_str

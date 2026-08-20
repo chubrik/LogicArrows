@@ -29,18 +29,18 @@ factor: inc d               ; Move the pointer to the next prime number on the d
         mov a, b            ; Copy the candidate number
         shr a               ; Divide it by 2
         sub a, c            ; Subtract the current factor from it
-        js prime            ; If the factor is greater than half of the candidate number, the result
-                            ;   will be less than zero, meaning there's no point in checking
-                            ;   further factors - we've found a new prime number
+        jc prime            ; If the factor is greater than half of the candidate number, then
+                            ;   there's no point in checking further factors - we've found a new
+                            ;   prime number
         mov a, b            ; Copy the candidate number
 
 ; Loop for subtracting the factor from the candidate number
 loop:   sub a, c            ; Subtraction
         jz next             ; If the result is zero, the number is not prime, so jump to the next
                             ;   candidate
-        jns loop            ; If the result is greater than zero, continue subtracting
+        jnc loop            ; If there is no carry, continue subtracting
 
-        jmp factor          ; If the result is less than zero, jump to the next factor
+        jmp factor          ; If there is a carry, jump to the next factor
 
 ; Work with the found prime number
 prime:  ld d, last          ; Read the pointer to the last found prime number on the display

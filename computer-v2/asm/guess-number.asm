@@ -82,7 +82,7 @@ random:         rnd a
                 inc a
                 ldi b, 256 - 100
                 add b, a
-                jns random
+                jc random
                 st a, number
 
 ; Check and increment the try counter. If attempts are over, go to lose.
@@ -101,11 +101,11 @@ input_1:        ld c, in_out
                 mov a, c
                 ldi d, "1"
                 sub a, d
-                js input_1
+                jc input_1
                 inc a
                 ldi d, 9
                 sub d, a
-                js input_1
+                jc input_1
                 st c, terminal
 
 ; Read the second character. Digits 0 through 9 and Enter are allowed.
@@ -116,10 +116,10 @@ input_2:        ld c, in_out
                 mov b, c
                 ldi d, "0"
                 sub b, d
-                js input_2
+                jc input_2
                 ldi d, 9
                 sub d, b
-                js input_2
+                jc input_2
                 st c, terminal
 
 ; Combine the two entered digits into a single number
@@ -135,7 +135,7 @@ compare:        ld b, number
                 sub a, b
                 jz win              ; If numbers match, go to win
                 ldi d, try
-                js higher
+                jc higher
 
 ; Output "Lower" and proceed to the next try
 lower:          ldi c, lower_str

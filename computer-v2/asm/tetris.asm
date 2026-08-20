@@ -552,7 +552,7 @@ drop1_loop_end:     ld a, buffer_ptr_2
 
 drop2_loop:         ldi a, display_r
                     sub a, c
-                    jns drop3_start
+                    jnc drop3_start
 
                     ld b, c
                     ldi a, WALL
