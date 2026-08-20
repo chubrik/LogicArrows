@@ -464,7 +464,7 @@ turn_l3         db  turn_l0, 0b00000000, 0b00100000, 0b00100000, 0b01100000
 
 ; Check if the piece can be rotated based on its type and location
 turn_start:         ld a, column
-                    ld b, display_ptr
+                    ld b, buffer_ptr
                     ld c, type
                     test a
                     jz step_next            ; Rotation is not possible in the leftmost column
@@ -474,17 +474,17 @@ turn_start:         ld a, column
                     jz turn_check_i         ; Separate restrictions for the I piece
 
 turn_check:         ldi c, 8                ; Rotation is not possible in the rightmost column
-                    ldi d, 0x82             ; Rotation is not possible in the two bottom rows
+                    ldi d, 0x05             ; Rotation is not possible in the two bottom rows
                     jmp turn_check_end
 
 turn_check_i:       ldi c, 7                ; Rotation is not possible in the two rightmost columns
-                    ldi d, 0x80             ; Rotation is not possible in the three bottom rows
+                    ldi d, 0x07             ; Rotation is not possible in the three bottom rows
 
 ; If one of the restrictions is met, interrupt the step
 turn_check_end:     sub c, a
-                    js step_next
-                    sub d, b
-                    js step_next
+                    jc step_next
+                    sub b, d
+                    jc step_next
 
 ; Prepare a separate buffer pointer, independent of the piece's position on the display
                     ldi a, buffer_end
