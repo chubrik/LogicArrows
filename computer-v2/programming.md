@@ -103,11 +103,11 @@ add ***X***, ***Y*** | Adds ***X*** and ***Y***, result is written to ***X*** | 
 adc ***X***, ***Y*** | Adds ***X***, ***Y*** and the `C` flag, result is written to ***X*** | Z, S, C, O
 sub ***X***, ***Y*** | Subtracts ***Y*** from ***X***, result is written to ***X*** | Z, S, C, O
 sbb ***X***, ***Y*** | Subtracts ***Y*** and the `C` flag from ***X***, result is written to ***X*** | Z, S, C, O
-test ***X*** | Updates flags based on the value of ***X*** | Z, S
+neg ***X*** | Changes the sign (treats the value as a signed number) | Z, S, C, O
 inc ***X*** | Adds 1 | Z, S
 dec ***X*** | Subtracts 1 | Z, S
 not ***X*** | Inverts each bit | Z, S
-neg ***X*** | Changes the sign (treats the value as a signed number) | Z, S
+test ***X*** | Updates flags based on the value | Z, S
 rnd ***X*** | Generates a random value | Z, S
 shl ***X*** | Shifts all bits one position to the left, the rightmost bit is cleared | Z, S, C
 shr ***X*** | Shifts all bits one position to the right, the leftmost bit is cleared | Z, S, C
