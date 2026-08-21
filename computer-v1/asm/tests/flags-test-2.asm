@@ -1,5 +1,5 @@
 ﻿; ##################################################################################################
-; ##       Diagnostic disk #2: flag preservation (inc/dec/not/mov/shr), NEG data, SBB chain       ##
+; ##      Diagnostic disk #2: flag preservation (inc/dec/not/mov/shr), NEG flags, SBB chain       ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v1                 ##
 ; ##                         (c) 2026 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################
@@ -120,22 +120,22 @@ t8o:            inc c
                 jo t9
                 st c, d             ; "P" = shr destroyed O=1
 
-; NEG data collection: per the documentation, C must not change
+; NEG checks: behaves like sub with zero on the left - C for a non-zero operand, O only for 128
 
-; Case 9: neg 5 with C=0, O=0 prepared
+; Case 9: neg 5 with C=0, O=0 prepared, expect C=1, O=0
 t9:             inc c
                 ldi a, 1
                 ldi b, 1
                 add a, b            ; Prepare C=0, O=0
                 ldi a, 5
                 neg a
-                jnc t9o
-                st c, d             ; "Q" = neg 5 set C
+                jc t9o
+                st c, d             ; "Q" = no carry after neg 5
 t9o:            inc c
                 jno t10
-                st c, d             ; "R" = neg 5 set O
+                st c, d             ; "R" = false overflow after neg 5
 
-; Case 10: neg 5 with C=1 prepared
+; Case 10: neg 5 with C=1 prepared, expect C=1, O=0
 t10:            inc c
                 ldi a, 255
                 ldi b, 1
@@ -143,37 +143,36 @@ t10:            inc c
                 ldi a, 5
                 neg a
                 jc t10o
-                st c, d             ; "S" = neg 5 cleared C
+                st c, d             ; "S" = no carry after neg 5 with C=1 prepared
 t10o:           inc c
                 jno t11
-                st c, d             ; "T" = neg 5 set O
+                st c, d             ; "T" = false overflow after neg 5 with C=1 prepared
 
-; Case 11: neg 0 with C=1 prepared
+; Case 11: neg 0 with C=1 prepared, expect C=0, O=0
 t11:            inc c
                 ldi a, 255
                 ldi b, 1
                 add a, b            ; Prepare C=1, O=0
                 mov a, 0
                 neg a
-                jc t11o
-                st c, d             ; "U" = neg 0 cleared C
+                jnc t11o
+                st c, d             ; "U" = neg 0 did not clear C=1
 t11o:           inc c
                 jno t12
-                st c, d             ; "V" = neg 0 set O
+                st c, d             ; "V" = false overflow after neg 0
 
-; Case 12: neg 128 with C=0, O=0 prepared: the references set both C and O here
+; Case 12: neg 128 with C=0, O=0 prepared, expect C=1, O=1 (-128 has no pair)
 t12:            inc c
                 ldi a, 1
                 ldi b, 1
                 add a, b            ; Prepare C=0, O=0
                 ldi a, 128
                 neg a
-                jnc t12o
-                st c, d             ; "W" = neg 128 set C (the references behavior)
+                jc t12o
+                st c, d             ; "W" = no carry after neg 128
 t12o:           inc c
-                jno t13
-                st c, d             ; "X" = neg 128 set O (the references behavior: -128 has no
-                                    ;   pair)
+                jo t13
+                st c, d             ; "X" = no overflow after neg 128 (-128 has no pair)
 
 ; Case 13: direct sbb: 5-3-1 with C=1 prepared, expect result 1, C=0, O=0
 t13:            inc c
