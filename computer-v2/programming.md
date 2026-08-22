@@ -103,6 +103,7 @@ add ***X***, ***Y*** | Adds ***X*** and ***Y***, result is written to ***X*** | 
 adc ***X***, ***Y*** | Adds ***X***, ***Y*** and the `C` flag, result is written to ***X*** | Z, S, C, O
 sub ***X***, ***Y*** | Subtracts ***Y*** from ***X***, result is written to ***X*** | Z, S, C, O
 sbb ***X***, ***Y*** | Subtracts ***Y*** and the `C` flag from ***X***, result is written to ***X*** | Z, S, C, O
+cmp ***X***, ***Y*** | Compares ***X*** and ***Y*** and updates the flags. `Z`: ***X*** = ***Y***, `S`: ***X*** < ***Y*** (signed),<br> `C`: ***X*** < ***Y*** (unsigned), `O`: signed overflow of the difference ***X*** − ***Y***. | Z, S, C, O
 neg ***X*** | Changes the sign (treats the value as a signed number) | Z, S, C, O
 inc ***X*** | Adds 1 | Z, S
 dec ***X*** | Subtracts 1 | Z, S
@@ -171,7 +172,8 @@ column).
       <th>5</th>
       <td align="center">ld a</td><td align="center">ld b</td><td align="center">ld c</td><td align="center">ld d</td>
       <td align="center">ldi a</td><td align="center">ldi b</td><td align="center">ldi c</td><td align="center">ldi d</td>
-      <td align="center" colspan="8"><i>reserved</i></td>
+      <td align="center">clr a</td><td align="center">clr b</td><td align="center">clr c</td><td align="center">clr d</td>
+      <td align="center">rnd a</td><td align="center">rnd b</td><td align="center">rnd c</td><td align="center">rnd d</td>
     </tr>
     <tr>
       <th>6</th>
@@ -203,42 +205,44 @@ column).
     </tr>
     <tr>
       <th>A</th>
-      <td align="center">clr a</td><td align="center">mov b, a</td><td align="center">mov c, a</td><td align="center">mov d, a</td>
-      <td align="center">mov a, b</td><td align="center">clr b</td><td align="center">mov c, b</td><td align="center">mov d, b</td>
-      <td align="center">mov a, c</td><td align="center">mov b, c</td><td align="center">clr c</td><td align="center">mov d, c</td>
-      <td align="center">mov a, d</td><td align="center">mov b, d</td><td align="center">mov c, d</td><td align="center">clr d</td>
+      <td align="center">test a</td><td align="center">cmp b, a</td><td align="center">cmp c, a</td><td align="center">cmp d, a</td>
+      <td align="center">cmp a, b</td><td align="center">test b</td><td align="center">cmp c, b</td><td align="center">cmp d, b</td>
+      <td align="center">cmp a, c</td><td align="center">cmp b, c</td><td align="center">test c</td><td align="center">cmp d, c</td>
+      <td align="center">cmp a, d</td><td align="center">cmp b, d</td><td align="center">cmp c, d</td><td align="center">test d</td>
     </tr>
     <tr>
       <th>B</th>
-      <td align="center">test a</td><td align="center">and b, a</td><td align="center">and c, a</td><td align="center">and d, a</td>
-      <td align="center">and a, b</td><td align="center">test b</td><td align="center">and c, b</td><td align="center">and d, b</td>
-      <td align="center">and a, c</td><td align="center">and b, c</td><td align="center">test c</td><td align="center">and d, c</td>
-      <td align="center">and a, d</td><td align="center">and b, d</td><td align="center">and c, d</td><td align="center">test d</td>
+      <td align="center">shl a</td><td align="center">and b, a</td><td align="center">and c, a</td><td align="center">and d, a</td>
+      <td align="center">and a, b</td><td align="center">shl b</td><td align="center">and c, b</td><td align="center">and d, b</td>
+      <td align="center">and a, c</td><td align="center">and b, c</td><td align="center">shl c</td><td align="center">and d, c</td>
+      <td align="center">and a, d</td><td align="center">and b, d</td><td align="center">and c, d</td><td align="center">shl d</td>
     </tr>
     <tr>
       <th>C</th>
-      <td align="center">rcl a</td><td align="center">or b, a</td><td align="center">or c, a</td><td align="center">or d, a</td>
-      <td align="center">or a, b</td><td align="center">rcl b</td><td align="center">or c, b</td><td align="center">or d, b</td>
-      <td align="center">or a, c</td><td align="center">or b, c</td><td align="center">rcl c</td><td align="center">or d, c</td>
-      <td align="center">or a, d</td><td align="center">or b, d</td><td align="center">or c, d</td><td align="center">rcl d</td>
+      <td align="center">shr a</td><td align="center">or b, a</td><td align="center">or c, a</td><td align="center">or d, a</td>
+      <td align="center">or a, b</td><td align="center">shr b</td><td align="center">or c, b</td><td align="center">or d, b</td>
+      <td align="center">or a, c</td><td align="center">or b, c</td><td align="center">shr c</td><td align="center">or d, c</td>
+      <td align="center">or a, d</td><td align="center">or b, d</td><td align="center">or c, d</td><td align="center">shr d</td>
     </tr>
     <tr>
       <th>D</th>
-      <td align="center">rcr a</td><td align="center">xor b, a</td><td align="center">xor c, a</td><td align="center">xor d, a</td>
-      <td align="center">xor a, b</td><td align="center">rcr b</td><td align="center">xor c, b</td><td align="center">xor d, b</td>
-      <td align="center">xor a, c</td><td align="center">xor b, c</td><td align="center">rcr c</td><td align="center">xor d, c</td>
-      <td align="center">xor a, d</td><td align="center">xor b, d</td><td align="center">xor c, d</td><td align="center">rcr d</td>
+      <td align="center">sar a</td><td align="center">xor b, a</td><td align="center">xor c, a</td><td align="center">xor d, a</td>
+      <td align="center">xor a, b</td><td align="center">sar b</td><td align="center">xor c, b</td><td align="center">xor d, b</td>
+      <td align="center">xor a, c</td><td align="center">xor b, c</td><td align="center">sar c</td><td align="center">xor d, c</td>
+      <td align="center">xor a, d</td><td align="center">xor b, d</td><td align="center">xor c, d</td><td align="center">sar d</td>
     </tr>
     <tr>
       <th>E</th>
-      <td align="center">shl a</td><td align="center">shl b</td><td align="center">shl c</td><td align="center">shl d</td>
-      <td align="center">shr a</td><td align="center">shr b</td><td align="center">shr c</td><td align="center">shr d</td>
-      <td align="center">sar a</td><td align="center">sar b</td><td align="center">sar c</td><td align="center">sar d</td>
-      <td align="center">rnd a</td><td align="center">rnd b</td><td align="center">rnd c</td><td align="center">rnd d</td>
+      <td align="center">rcl a</td><td align="center">mov b, a</td><td align="center">mov c, a</td><td align="center">mov d, a</td>
+      <td align="center">mov a, b</td><td align="center">rcl b</td><td align="center">mov c, b</td><td align="center">mov d, b</td>
+      <td align="center">mov a, c</td><td align="center">mov b, c</td><td align="center">rcl c</td><td align="center">mov d, c</td>
+      <td align="center">mov a, d</td><td align="center">mov b, d</td><td align="center">mov c, d</td><td align="center">rcl d</td>
     </tr>
     <tr>
       <th>F</th>
-      <td align="center" colspan="16"><i>reserved</i></td>
+      <td align="center">rcr a</td><td align="center" colspan="4"><i>reserved</i></td><td align="center">rcr b</td>
+      <td align="center" colspan="4"><i>reserved</i></td><td align="center">rcr c</td>
+      <td align="center" colspan="4"><i>reserved</i></td><td align="center">rcr d</td>
     </tr>
   </tbody>
 </table>
