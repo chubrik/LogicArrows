@@ -52,11 +52,12 @@ To run your own program on the computer, see [Programming](programming.md).
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake.asm">
-          Snake Game</a></h3>
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake.asm">
-          <img src="img/snake.jpg" alt="Snake Game"></a><br>
-        Control the snake, collect apples, and don’t run into your own tail. Author:
+        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%203d%20maze.asm">
+          3D Maze Game</a></h3>
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%203d%20maze.asm">
+          <img src="img/3d-maze.jpg" alt="3D Maze Game"></a><br>
+        Find the way out of the maze in first-person view. The 3D graphics are rendered by ray
+        casting. Author:
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
         Mikhail Moseev</a>.
       </td>
@@ -70,12 +71,23 @@ To run your own program on the computer, see [Programming](programming.md).
     </tr>
     <tr>
       <td valign="top">
+        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake.asm">
+          Snake Game</a></h3>
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake.asm">
+          <img src="img/snake.jpg" alt="Snake Game"></a><br>
+        Control the snake, collect apples, and don’t run into your own tail. Author:
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Mikhail Moseev</a>.
+      </td>
+      <td valign="top">
         <h3><a href="asm/space-fight.asm">Space Fight Game</a></h3>
         <a href="asm/space-fight.asm"><img src="img/space-fight.jpg"
           alt="Space Fight Game"></a><br>
         Enemy ships are approaching you, which you need to shoot down within a limited time. If you
         win, you will receive a prize.
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20minesweeper.asm">
           Minesweeper Game</a></h3>
@@ -85,14 +97,14 @@ To run your own program on the computer, see [Programming](programming.md).
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
         Mikhail Moseev</a>.
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/guess-number.asm">Guess the Number Game</a></h3>
         <a href="asm/guess-number.asm"><img src="img/guess-number.jpg"
           alt="Guess the Number Game"></a><br>
         Guess the numbers using the “higher/lower” rule and increase your overall winning score
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/community/maze-generator.asm">Maze Generator</a></h3>
         <a href="asm/community/maze-generator.asm"><img src="img/maze-generator.jpg"
@@ -100,8 +112,6 @@ To run your own program on the computer, see [Programming](programming.md).
         Generates a random maze on the display using the backtracking algorithm. Author:
         <a href="https://t.me/farmer_2010">Farmer_2010</a>.
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/community/1d-cellular-automaton.asm">1D Cellular Automaton</a></h3>
         <a href="asm/community/1d-cellular-automaton.asm">
@@ -109,14 +119,14 @@ To run your own program on the computer, see [Programming](programming.md).
         Enter a rule in binary and watch the cells evolve on the display. Author:
         <a href="https://t.me/farmer_2010">Farmer_2010</a>.
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/demo.asm">Demo</a></h3>
         <a href="asm/demo.asm"><img src="img/summary.jpg" alt="Demo"></a><br>
         Displays a colored butterfly, writes “Hello, Onigiri!” in the terminal, draws an onigiri
         image, and rings the bell
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
           Tennis Game</a></h3>
@@ -126,6 +136,8 @@ To run your own program on the computer, see [Programming](programming.md).
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
         Mikhail Moseev</a>.
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
         <a href="asm/prime-numbers.asm"><img src="img/prime-numbers.jpg"
@@ -133,8 +145,6 @@ To run your own program on the computer, see [Programming](programming.md).
         Finds 16 prime numbers and outputs them to the digital indicator, as well as to the display
         in binary format
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="img/fibonacci-sequence.jpg"
@@ -142,26 +152,26 @@ To run your own program on the computer, see [Programming](programming.md).
         Finds 12 Fibonacci numbers. Outputs them to the digital indicator, as well as to the display
         in binary format
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/terminal-art.asm">Terminal Art</a></h3>
         <a href="asm/terminal-art.asm"><img src="img/terminal-art.jpg" alt="Terminal Art"></a><br>
         Uses the terminal’s graphics mode to display an image
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/ram-art.asm">RAM Art</a></h3>
         <a href="asm/ram-art.asm"><img src="img/ram-art.jpg" alt="RAM Art"></a><br>
         A joke program that uses RAM as a canvas to display an image (“Where are the arrows?!” in
         Russian)
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
         <a href="asm/typewriter.asm"><img src="img/typewriter.jpg" alt="Typewriter"></a><br>
         Outputs text typed on the keyboard to the terminal
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/font-test.asm">Font Test</a></h3>
         <a href="asm/font-test.asm"><img src="img/font-test.jpg" alt="Font Test"></a><br>

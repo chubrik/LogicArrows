@@ -26,8 +26,9 @@ of all programs.
         <a href="computer-v2/README.md"><img src="computer-v2/img/summary.jpg"
           alt="Computer v2"></a><br>
         <b>The flagship project.</b>
-        A computer with its own assembler, programs, and games: Tetris, Game of Life, Snake, and
-        more. Actively discussed and developed in the community of Logic Arrows enthusiasts.
+        A computer with its own assembler, programs, and games: Tetris, Game of Life, Arkanoid,
+        3D Maze, and more. Actively discussed and developed in the community of Logic Arrows
+        enthusiasts.
       </td>
       <td valign="top">
         <h3><a href="computer-v1/README.md">Computer v1</a></h3>
