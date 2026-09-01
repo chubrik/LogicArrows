@@ -276,7 +276,7 @@ main_row:           ld b, upper_area
                     st c, upper_ptr
                     st b, lower_ptr
 
-; If display_ptr has the value 0x5E, it means we have reached the bottom row of the display, and
+; If "display_ptr" has the value 0x5E, it means we have reached the bottom row of the display, and
 ; different code is needed to process it.
                     ld d, display_ptr
                     ldi a, 0x5E
@@ -286,7 +286,7 @@ main_row:           ld b, upper_area
 ; Reset the counters for the display row below the current one. Instead of zeros, use 0xFE, which
 ; optimizes the further calculation.
                     ldi a, 0xFE
-                    ;                           ; Register B already contains lower_area
+                    ;                           ; Register B already contains "lower_area"
                     ldi c, 16
                     ldi d, main_row_loop
 
@@ -297,7 +297,7 @@ main_row_loop:      st a, b
                     jnz d
 
 ; Jump to process the display row (except the bottom one)
-                    inc c                       ; Value 1 corresponds to BANK_INNER
+                    inc c                       ; Value 1 corresponds to "BANK_INNER"
                     ldi d, inner_begin
                     jmp set_bank
 
@@ -416,8 +416,8 @@ outer_up:           ldi c, display
                                                 ;   area
 
                     shr c                       ; The value becomes 0x20
-                    st c, lower_area            ; Restore the value of the lower_area variable after
-                                                ;   processing the previous frame
+                    st c, lower_area            ; Restore the value of the "lower_area" variable
+                                                ;   after processing the previous frame
 
 ; Reset the counters for the current display row and the row below. Instead of zeros, use 0xFE,
 ; which optimizes the further calculation.
@@ -434,10 +434,10 @@ outer_up_loop:      st a, b
 
                     jmp outer_begin
 
-; Prepare to process the bottom row of the display. Temporarily write the reference upper_area to
-; the lower_area variable. This allows using a single program code for both the top and bottom rows
-; of the display.
-outer_down:         clr c                       ; Value 0x00 corresponds to upper_area
+; Prepare to process the bottom row of the display. Temporarily write the reference "upper_area" to
+; the "lower_area" variable. This allows using a single program code for both the top and bottom
+; rows of the display.
+outer_down:         clr c                       ; Value 0x00 corresponds to "upper_area"
                     st c, lower_area
 
 ; Start processing the display row
@@ -547,7 +547,7 @@ outer_center_else:  inc c
                     jmp outer_center_loop
 
 ; Processing of the display row is complete. To determine if it was the top or bottom row, look at
-; the lower_area variable. For the bottom row, we changed its value with 0x00.
+; the "lower_area" variable. For the bottom row, we changed its value with 0x00.
 outer_end:          ldi c, BANK_MAIN
 
                     ld a, lower_area
