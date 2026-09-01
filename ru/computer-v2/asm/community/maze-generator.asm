@@ -15,6 +15,8 @@ BANK_STACK equ 2
 BANK_BORDER equ 3
 BANK_POS equ 4
 
+in_out equ 128
+
 
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 ;W                       ОБЩАЯ ОБЛАСТЬ                         W
@@ -152,7 +154,7 @@ void0 db 0,0,0,0,0,0
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 ;Основная логика
 
-in_out:;переход в/из текущего банка. c - индекс банка, d - индекс перехода
+;переход в/из текущего банка. c - индекс банка, d - индекс перехода
 st c, bank;смена банка
 jmp d;эта инструкция выполняется уже в другом банке. совершаем переход по нужному адресу
 
@@ -285,7 +287,7 @@ void1 db 0,0,0
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 ;Стек и функции для работы со стеком
 
-in_out:;переход в/из текущего банка. c - индекс банка, d - индекс перехода
+;переход в/из текущего банка. c - индекс банка, d - индекс перехода
 st c, bank;смена банка
 jmp d;эта инструкция выполняется уже в другом банке. совершаем переход по нужному адресу
 
@@ -363,7 +365,7 @@ void2 db 0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 ;Проверка границ и соседних клеток
 
-in_out:;переход в/из текущего банка. c - индекс банка, d - индекс перехода
+;переход в/из текущего банка. c - индекс банка, d - индекс перехода
 st c, bank;смена банка
 jmp d;эта инструкция выполняется уже в другом банке. совершаем переход по нужному адресу
 
@@ -526,7 +528,7 @@ void3 db 0,0,0,0,0,0,0
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 ;Получение координат соседней клетки по направлению
 
-in_out:;переход в/из текущего банка. c - индекс банка, d - индекс перехода
+;переход в/из текущего банка. c - индекс банка, d - индекс перехода
 st c, bank;смена банка
 jmp d;эта инструкция выполняется уже в другом банке. совершаем переход по нужному адресу
 

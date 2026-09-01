@@ -14,6 +14,8 @@ BANK_STACK equ 2
 BANK_BORDER equ 3
 BANK_POS equ 4
 
+in_out equ 128
+
 
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 ;W                        SHARED AREA                          W
@@ -151,7 +153,7 @@ void0 db 0,0,0,0,0,0
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 ;Main logic
 
-in_out:;jump to/from the current bank. c - bank index, d - jump index
+;jump to/from the current bank. c - bank index, d - jump index
 st c, bank;switch the bank
 jmp d;this instruction is already executed in another bank. jump to the needed address
 
@@ -284,7 +286,7 @@ void1 db 0,0,0
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 ;Stack and stack functions
 
-in_out:;jump to/from the current bank. c - bank index, d - jump index
+;jump to/from the current bank. c - bank index, d - jump index
 st c, bank;switch the bank
 jmp d;this instruction is already executed in another bank. jump to the needed address
 
@@ -362,7 +364,7 @@ void2 db 0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 ;Checking borders and neighboring cells
 
-in_out:;jump to/from the current bank. c - bank index, d - jump index
+;jump to/from the current bank. c - bank index, d - jump index
 st c, bank;switch the bank
 jmp d;this instruction is already executed in another bank. jump to the needed address
 
@@ -525,7 +527,7 @@ void3 db 0,0,0,0,0,0,0
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 ;Getting the coordinates of a neighboring cell by direction
 
-in_out:;jump to/from the current bank. c - bank index, d - jump index
+;jump to/from the current bank. c - bank index, d - jump index
 st c, bank;switch the bank
 jmp d;this instruction is already executed in another bank. jump to the needed address
 
