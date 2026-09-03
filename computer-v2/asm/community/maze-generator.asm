@@ -18,7 +18,7 @@ in_out equ 128
 
 
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-;W                        SHARED AREA                          W
+;W                        COMMON AREA                          W
 ;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 ;Display byte function, variables
 

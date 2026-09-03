@@ -125,11 +125,21 @@
     </tr>
     <tr>
       <td valign="top">
+        <h3><a href="asm/community/langton-ant.asm">Муравей Лэнгтона</a></h3>
+        <a href="asm/community/langton-ant.asm"><img src="../../computer-v2/img/langton-ant.jpg"
+          alt="Муравей Лэнгтона"></a><br>
+        Муравей ползает по дисплею, перекрашивает клетки и поворачивает по простому правилу,
+        порождая сложный узор. Автор —
+        <a href="https://t.me/farmer_2010">Farmer_2010</a>.
+      </td>
+      <td valign="top">
         <h3><a href="asm/demo.asm">Демо</a></h3>
         <a href="asm/demo.asm"><img src="../../computer-v2/img/summary.jpg" alt="Демо"></a><br>
         Выводит на дисплей цветную бабочку, пишет в терминал «Hello, Onigiri!», рисует изображение
         онигири и звонит в колокольчик
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
           Игра «Теннис»</a></h3>
@@ -139,8 +149,6 @@
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
         Михаил Мосеев</a>.
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/prime-numbers.asm">Простые числа</a></h3>
         <a href="asm/prime-numbers.asm"><img src="../../computer-v2/img/prime-numbers.jpg"
@@ -148,6 +156,8 @@
         Находит 16 простых чисел и выводит их на цифровой индикатор, а также на дисплей в двоичном
         формате
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/fibonacci-sequence.asm">Числа Фибоначчи</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="../../computer-v2/img/fibonacci-sequence.jpg"
@@ -155,28 +165,28 @@
         Находит 12 чисел Фибоначчи. Выводит их на цифровой индикатор, а также на дисплей в двоичном
         формате
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/terminal-art.asm">Арт в терминале</a></h3>
         <a href="asm/terminal-art.asm"><img src="../../computer-v2/img/terminal-art.jpg"
           alt="Арт в терминале"></a><br>
         Использует графический режим терминала для вывода изображения
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/ram-art.asm">Арт в RAM</a></h3>
         <a href="asm/ram-art.asm"><img src="../../computer-v2/img/ram-art.jpg"
           alt="Арт в RAM"></a><br>
         Программа-шутка, использует RAM как холст для вывода изображения
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/typewriter.asm">Пишущая машинка</a></h3>
         <a href="asm/typewriter.asm"><img src="../../computer-v2/img/typewriter.jpg"
           alt="Пишущая машинка"></a><br>
         Выводит в терминал текст, набираемый на клавиатуре
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/font-test.asm">Тест шрифта</a></h3>
         <a href="asm/font-test.asm"><img src="../../computer-v2/img/font-test.jpg"
