@@ -66,7 +66,7 @@ To run your own program on the computer, see [Programming](programming.md).
         <a href="asm/community/arkanoid.asm"><img src="img/arkanoid.jpg"
           alt="Arkanoid Game"></a><br>
         Bounce the ball with the paddle to break all the bricks on the screen. Author:
-        <a href="https://t.me/farmer_2010">Farmer_2010</a>.
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.
       </td>
     </tr>
     <tr>
@@ -110,14 +110,14 @@ To run your own program on the computer, see [Programming](programming.md).
         <a href="asm/community/maze-generator.asm"><img src="img/maze-generator.jpg"
           alt="Maze Generator"></a><br>
         Generates a random maze on the display using the backtracking algorithm. Author:
-        <a href="https://t.me/farmer_2010">Farmer_2010</a>.
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.
       </td>
       <td valign="top">
         <h3><a href="asm/community/1d-cellular-automaton.asm">1D Cellular Automaton</a></h3>
         <a href="asm/community/1d-cellular-automaton.asm">
           <img src="img/1d-cellular-automaton.jpg" alt="1D Cellular Automaton"></a><br>
         Enter a rule in binary and watch the cells evolve on the display. Author:
-        <a href="https://t.me/farmer_2010">Farmer_2010</a>.
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.
       </td>
     </tr>
     <tr>
@@ -127,7 +127,7 @@ To run your own program on the computer, see [Programming](programming.md).
           alt="Langton's Ant"></a><br>
         The ant crawls across the display, repainting the cells and turning by a simple rule that
         produces a complex pattern. Author:
-        <a href="https://t.me/farmer_2010">Farmer_2010</a>.
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.
       </td>
       <td valign="top">
         <h3><a href="asm/demo.asm">Demo</a></h3>

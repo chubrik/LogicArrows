@@ -161,5 +161,7 @@ of all programs.
 - [Telegram channel](https://t.me/logic_arrows) – player community on Telegram
 - [GraphDLC](https://github.com/MerinPrime/GraphDLC) – browser extension that speeds up Logic Arrows
   by 5000 times
+- [Arrows Compiler](https://github.com/chubrik/arrows-compiler) – online compiler for the in-game
+  computers
 - [ZX Spectrum](https://github.com/chubrik/arrows-zx-spectrum) – emulator running on the upcoming
   version of Logic Arrows

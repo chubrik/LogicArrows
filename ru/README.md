@@ -163,5 +163,7 @@
 - [Телеграм-канал](https://t.me/logic_arrows) – сообщество игроков в Телеграме
 - [GraphDLC](https://github.com/MerinPrime/GraphDLC) – расширение для браузера, ускоряющее Стрелочки
   в 5000 раз
-- [ZX Spectrum](https://github.com/chubrik/arrows-zx-spectrum) – эмулятор, работающий на будущей
-  версии Стрелочек
+- [Компилятор Стрелочек](https://github.com/chubrik/arrows-compiler/blob/main/ru/README.md) –
+  онлайн-компилятор для внутриигровых компьютеров
+- [ZX Spectrum](https://github.com/chubrik/arrows-zx-spectrum/blob/main/ru/README.md) – эмулятор,
+  работающий на будущей версии Стрелочек

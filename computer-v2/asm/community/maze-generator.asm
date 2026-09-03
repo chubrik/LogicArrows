@@ -1,7 +1,7 @@
 ﻿; ##################################################################################################
 ; ##       Source code for the "Maze Generator" program for a computer made of logic arrows       ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v2                 ##
-; ##                       (c) 2026 Farmer_2010 (https://t.me/farmer_2010)                        ##
+; ##                     (c) 2026 Farmer_2010 (https://github.com/farmer2010)                     ##
 ; ##################################################################################################
 
 

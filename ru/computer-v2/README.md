@@ -68,7 +68,7 @@
         <a href="asm/community/arkanoid.asm"><img src="../../computer-v2/img/arkanoid.jpg"
           alt="Игра «Арканоид»"></a><br>
         Отбивайте мяч платформой, чтобы разбить все блоки на экране. Автор —
-        <a href="https://t.me/farmer_2010">Farmer_2010</a>.
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.
       </td>
     </tr>
     <tr>
@@ -112,7 +112,7 @@
         <a href="asm/community/maze-generator.asm">
           <img src="../../computer-v2/img/maze-generator.jpg" alt="Генератор лабиринтов"></a><br>
         Генерирует на дисплее случайный лабиринт методом поиска с возвратом. Автор —
-        <a href="https://t.me/farmer_2010">Farmer_2010</a>.
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.
       </td>
       <td valign="top">
         <h3><a href="asm/community/1d-cellular-automaton.asm">1D клеточный автомат</a></h3>
@@ -120,7 +120,7 @@
           <img src="../../computer-v2/img/1d-cellular-automaton.jpg"
             alt="1D клеточный автомат"></a><br>
         Введите правило в двоичном виде и наблюдайте за эволюцией клеток на дисплее. Автор —
-        <a href="https://t.me/farmer_2010">Farmer_2010</a>.
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.
       </td>
     </tr>
     <tr>
@@ -130,7 +130,7 @@
           alt="Муравей Лэнгтона"></a><br>
         Муравей ползает по дисплею, перекрашивает клетки и поворачивает по простому правилу,
         порождая сложный узор. Автор —
-        <a href="https://t.me/farmer_2010">Farmer_2010</a>.
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.
       </td>
       <td valign="top">
         <h3><a href="asm/demo.asm">Демо</a></h3>

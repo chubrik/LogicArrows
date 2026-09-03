@@ -2,7 +2,7 @@
 ; ##       Source code for the "Langton's Ant" program for a computer made of logic arrows        ##
 ; ##       Исходный код программы "Муравей Лэнгтона" для компьютера из логических стрелочек       ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v2                 ##
-; ##                       (c) 2026 Farmer_2010 (https://t.me/farmer_2010)                        ##
+; ##                     (c) 2026 Farmer_2010 (https://github.com/farmer2010)                     ##
 ; ##################################################################################################
 
 
