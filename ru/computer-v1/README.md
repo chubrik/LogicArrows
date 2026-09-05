@@ -57,25 +57,37 @@
     </tr>
     <tr>
       <td valign="top">
+        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20Langton%27s%20ant.asm">
+          Муравей Лэнгтона</a></h3>
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20Langton%27s%20ant.asm">
+          <img src="../../computer-v1/img/langton-ant.jpg" alt="Муравей Лэнгтона"></a><br>
+        Муравей ползает по дисплею, перекрашивает клетки и поворачивает по простому правилу,
+        порождая сложный узор. Автор —
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Михаил Мосеев</a>.
+      </td>
+      <td valign="top">
         <h3><a href="asm/prime-numbers.asm">Простые числа</a></h3>
         <a href="asm/prime-numbers.asm"><img src="../../computer-v1/img/prime-numbers.jpg"
           alt="Простые числа"></a><br>
         Находит первые 16 простых чисел и выводит их на дисплей в двоичном формате
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/fibonacci-sequence.asm">Числа Фибоначчи</a></h3>
         <a href="asm/fibonacci-sequence.asm"><img src="../../computer-v1/img/fibonacci-sequence.jpg"
           alt="Числа Фибоначчи"></a><br>
         Находит 10 чисел Фибоначчи и выводит их на дисплей в двоичном формате
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <h3><a href="asm/typewriter.asm">Пишущая машинка</a></h3>
         <a href="asm/typewriter.asm"><img src="../../computer-v1/img/terminal.jpg"
           alt="Пишущая машинка"></a><br>
         Выводит в терминал текст, набираемый на клавиатуре
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <h3><a href="asm/font-test.asm">Тест шрифта</a></h3>
         <a href="asm/font-test.asm"><img src="../../computer-v1/img/font-test.jpg"
