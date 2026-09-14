@@ -22,128 +22,155 @@ of all programs.
   <thead>
     <tr>
       <td valign="top" width="50%">
-        <h3><a href="computer-v2/README.md">Computer v2</a></h3>
-        <a href="computer-v2/README.md"><img src="computer-v2/img/summary.jpg"
-          alt="Computer v2"></a><br>
-        <b>The flagship project.</b>
-        A computer with its own assembler, programs, and games: Tetris, Game of Life, Arkanoid,
-        3D Maze, and more. Actively discussed and developed in the community of Logic Arrows
-        enthusiasts.
+        <h3>
+          <a href="computer-v2/README.md">
+            <img src="computer-v2/img/summary.jpg" alt="Computer v2"><br>
+            Computer v2
+          </a>
+        </h3>
+        <b>The flagship project.</b> A computer with its own assembler, programs, and games: Tetris,
+        Game of Life, Arkanoid, 3D Maze, and more. Actively discussed and developed in the community
+        of Logic Arrows enthusiasts.<br><br>
       </td>
       <td valign="top">
-        <h3><a href="computer-v1/README.md">Computer v1</a></h3>
-        <a href="computer-v1/README.md"><img src="computer-v1/img/summary.jpg"
-          alt="Computer v1"></a><br>
+        <h3>
+          <a href="computer-v1/README.md">
+            <img src="computer-v1/img/summary.jpg" alt="Computer v1"><br>
+            Computer v1
+          </a>
+        </h3>
         The first version of the computer. It was created based on a physical prototype and helped
-        master the construction of complex circuits.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-life">Game of Life</a></h3>
-        <a href="https://logic-arrows.io/map-life"><img src="img/life.jpg" alt="Game of Life"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-matrix">Matrix</a></h3>
-        <a href="https://logic-arrows.io/map-matrix"><img src="img/matrix.jpg" alt="Matrix"></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-matrix-rgb">Matrix RGB</a></h3>
-        <a href="https://logic-arrows.io/map-matrix-rgb"><img src="img/matrix-rgb.jpg"
-          alt="Matrix RGB"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-CcGrVgC8">Compact Matrices</a></h3>
-        <a href="https://logic-arrows.io/map-CcGrVgC8"><img src="img/matrix-compact.jpg"
-          alt="Compact Matrices"></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-fsG82aDy">RAM 32K</a></h3>
-        <a href="https://logic-arrows.io/map-fsG82aDy"><img src="img/ram-32k.jpg" alt="RAM 32K"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-ram256">RAM 256 v2</a></h3>
-        <a href="https://logic-arrows.io/map-ram256"><img src="img/ram-256-v2.jpg"
-          alt="RAM 256 v2"></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-utcKt1dM">RAM 256 v1</a></h3>
-        <a href="https://logic-arrows.io/map-utcKt1dM"><img src="img/ram-256-v1.jpg"
-          alt="RAM 256 v1"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-ram64">RAM 64</a></h3>
-        <a href="https://logic-arrows.io/map-ram64"><img src="img/ram-64.jpg" alt="RAM 64"></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-FI3Ue08n">Compact ROM</a></h3>
-        <a href="https://logic-arrows.io/map-FI3Ue08n"><img src="img/rom-compact.jpg"
-          alt="Compact ROM"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-0TNlFXRQa6Y">BCD Converter</a></h3>
-        <a href="https://logic-arrows.io/map-0TNlFXRQa6Y"><img src="img/bcd-converter.jpg"
-          alt="BCD Converter"></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-Xhj9Pead">Segment Displays</a></h3>
-        <a href="https://logic-arrows.io/map-Xhj9Pead"><img src="img/digits.jpg"
-          alt="Segment Displays"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-kBhOopki">CPU Prototype</a></h3>
-        <a href="https://logic-arrows.io/map-kBhOopki"><img src="img/cpu.jpg"
-          alt="CPU Prototype"></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-Io2FESYk">Transmitters</a></h3>
-        <a href="https://logic-arrows.io/map-Io2FESYk"><img src="img/transmitters.jpg"
-          alt="Transmitters"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-k_R4pB1A">Gates</a></h3>
-        <a href="https://logic-arrows.io/map-k_R4pB1A"><img src="img/gates.jpg" alt="Gates"></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-lF-KRVo4vtw">Multiplier</a></h3>
-        <a href="https://logic-arrows.io/map-lF-KRVo4vtw"><img src="img/multiplier.jpg"
-          alt="Multiplier"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-5bk8IiWhZ6Q">Adder</a></h3>
-        <a href="https://logic-arrows.io/map-5bk8IiWhZ6Q"><img src="img/adder.jpg"
-          alt="Adder"></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-GvPsAA38">Subtractor</a></h3>
-        <a href="https://logic-arrows.io/map-GvPsAA38"><img src="img/subtractor.jpg"
-          alt="Subtractor"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-um14l5Qr">Langton’s Ant</a></h3>
-        <a href="https://logic-arrows.io/map-um14l5Qr"><img src="img/ant.jpg"
-          alt="Langton’s Ant"></a>
+        master the construction of complex circuits.<br><br>
       </td>
     </tr>
   </thead>
 </table>
-<br><br>
+
+<table>
+  <thead>
+    <tr>
+      <td valign="top" width="33%">
+        <a href="https://logic-arrows.io/map-life">
+          <img src="img/life.jpg" alt="Game of Life"><br>
+          <b>Game of Life</b>
+        </a><br><br>
+      </td>
+      <td valign="top" width="33%">
+        <a href="https://logic-arrows.io/map-matrix">
+          <img src="img/matrix.jpg" alt="Matrix"><br>
+          <b>Matrix</b>
+        </a><br><br>
+      </td>
+      <td valign="top" width="33%">
+        <a href="https://logic-arrows.io/map-matrix-rgb">
+          <img src="img/matrix-rgb.jpg" alt="Matrix RGB"><br>
+          <b>Matrix RGB</b>
+        </a><br><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-CcGrVgC8">
+          <img src="img/matrix-compact.jpg" alt="Compact Matrices"><br>
+          <b>Compact Matrices</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-fsG82aDy">
+          <img src="img/ram-32k.jpg" alt="RAM 32K"><br>
+          <b>RAM 32K</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-ram256">
+          <img src="img/ram-256-v2.jpg" alt="RAM 256 v2"><br>
+          <b>RAM 256 v2</b>
+        </a><br><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-utcKt1dM">
+          <img src="img/ram-256-v1.jpg" alt="RAM 256 v1"><br>
+          <b>RAM 256 v1</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-ram64">
+          <img src="img/ram-64.jpg" alt="RAM 64"><br>
+          <b>RAM 64</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-FI3Ue08n">
+          <img src="img/rom-compact.jpg" alt="Compact ROM"><br>
+          <b>Compact ROM</b>
+        </a><br><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-0TNlFXRQa6Y">
+          <img src="img/bcd-converter.jpg" alt="BCD Converter"><br>
+          <b>BCD Converter</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-Xhj9Pead">
+          <img src="img/digits.jpg" alt="Segment Displays"><br>
+          <b>Segment Displays</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-kBhOopki">
+          <img src="img/cpu.jpg" alt="CPU Prototype"><br>
+          <b>CPU Prototype</b>
+        </a><br><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-Io2FESYk">
+          <img src="img/transmitters.jpg" alt="Transmitters"><br>
+          <b>Transmitters</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-k_R4pB1A">
+          <img src="img/gates.jpg" alt="Gates"><br>
+          <b>Gates</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-lF-KRVo4vtw">
+          <img src="img/multiplier.jpg" alt="Multiplier"><br>
+          <b>Multiplier</b>
+        </a><br><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-5bk8IiWhZ6Q">
+          <img src="img/adder.jpg" alt="Adder"><br>
+          <b>Adder</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-GvPsAA38">
+          <img src="img/subtractor.jpg" alt="Subtractor"><br>
+          <b>Subtractor</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-um14l5Qr">
+          <img src="img/ant.jpg" alt="Langton’s Ant"><br>
+          <b>Langton’s Ant</b>
+        </a><br><br>
+      </td>
+    </tr>
+  </thead>
+</table>
+<br>
 
 
 ## <a name="about"></a>About
@@ -151,7 +178,7 @@ of all programs.
 “Logic Arrows” was inspired by Minecraft’s redstone. The game’s author,
 [Onigiri](https://github.com/ArtemOnigiri), talks about it:<br>
 [![Video about the game](img/youtube.jpg)](https://www.youtube.com/watch?v=q_ve9SsuyvU)
-<br><br><br>
+<br><br>
 
 
 ## <a name="links"></a>Links

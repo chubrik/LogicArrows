@@ -39,154 +39,170 @@ To run your own program on the computer, see [Programming](programming.md).
 <table>
   <thead>
     <tr>
-      <td valign="top" width="50%">
-        <h3><a href="asm/tetris.asm">Tetris Game</a></h3>
-        <a href="asm/tetris.asm"><img src="img/tetris.jpg" alt="Tetris Game"></a><br>
-        Fill the rows and increase your score. A classic puzzle game with color graphics.
+      <td valign="top" width="33%">
+        <a href="asm/tetris.asm">
+          <img src="img/tetris.jpg" alt="Tetris Game"><br>
+          <b>Tetris Game</b>
+        </a><br>
+        Fill the rows and increase your score. A classic puzzle game with color graphics.<br><br>
       </td>
-      <td valign="top">
-        <h3><a href="asm/game-of-life.asm">Game of Life</a></h3>
-        <a href="asm/game-of-life.asm"><img src="img/game-of-life.jpg" alt="Game of Life"></a><br>
-        Fills the display with random pixels and calculates subsequent generations
+      <td valign="top" width="33%">
+        <a href="asm/game-of-life.asm">
+          <img src="img/game-of-life.jpg" alt="Game of Life"><br>
+          <b>Game of Life</b>
+        </a><br>
+        Fills the display with random pixels and calculates subsequent generations<br><br>
       </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%203d%20maze.asm">
-          3D Maze Game</a></h3>
+      <td valign="top" width="33%">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%203d%20maze.asm">
-          <img src="img/3d-maze.jpg" alt="3D Maze Game"></a><br>
+          <img src="img/3d-maze.jpg" alt="3D Maze Game"><br>
+          <b>3D Maze Game</b>
+        </a><br>
         Find the way out of the maze in first-person view. The 3D graphics are rendered by ray
-        casting. Author:
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
-        Mikhail Moseev</a>.
-      </td>
-      <td valign="top">
-        <h3><a href="asm/community/arkanoid.asm">Arkanoid Game</a></h3>
-        <a href="asm/community/arkanoid.asm"><img src="img/arkanoid.jpg"
-          alt="Arkanoid Game"></a><br>
-        Bounce the ball with the paddle to break all the bricks on the screen. Author:
-        <a href="https://github.com/farmer2010">Farmer_2010</a>.
+        casting. Author: <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Mikhail Moseev</a>.<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake.asm">
-          Snake Game</a></h3>
+        <a href="asm/community/arkanoid.asm">
+          <img src="img/arkanoid.jpg" alt="Arkanoid Game"><br>
+          <b>Arkanoid Game</b>
+        </a><br>
+        Bounce the ball with the paddle to break all the bricks on the screen. Author:
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
+      </td>
+      <td valign="top">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake.asm">
-          <img src="img/snake.jpg" alt="Snake Game"></a><br>
+          <img src="img/snake.jpg" alt="Snake Game"><br>
+          <b>Snake Game</b>
+        </a><br>
         Control the snake, collect apples, and don’t run into your own tail. Author:
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
-        Mikhail Moseev</a>.
+        Mikhail Moseev</a>.<br><br>
       </td>
       <td valign="top">
-        <h3><a href="asm/space-fight.asm">Space Fight Game</a></h3>
-        <a href="asm/space-fight.asm"><img src="img/space-fight.jpg"
-          alt="Space Fight Game"></a><br>
+        <a href="asm/space-fight.asm">
+          <img src="img/space-fight.jpg" alt="Space Fight Game"><br>
+          <b>Space Fight Game</b>
+        </a><br>
         Enemy ships are approaching you, which you need to shoot down within a limited time. If you
-        win, you will receive a prize.
+        win, you will receive a prize.<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20minesweeper.asm">
-          Minesweeper Game</a></h3>
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20minesweeper.asm">
-          <img src="img/minesweeper.jpg" alt="Minesweeper Game"></a><br>
+          <img src="img/minesweeper.jpg" alt="Minesweeper Game"><br>
+          <b>Minesweeper Game</b>
+        </a><br>
         Open the cells, following the number clues, and don’t step on a mine. Author:
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
-        Mikhail Moseev</a>.
+        Mikhail Moseev</a>.<br><br>
       </td>
       <td valign="top">
-        <h3><a href="asm/guess-number.asm">Guess the Number Game</a></h3>
-        <a href="asm/guess-number.asm"><img src="img/guess-number.jpg"
-          alt="Guess the Number Game"></a><br>
-        Guess the numbers using the “higher/lower” rule and increase your overall winning score
+        <a href="asm/guess-number.asm">
+          <img src="img/guess-number.jpg" alt="Guess the Number Game"><br>
+          <b>Guess the Number Game</b>
+        </a><br>
+        Guess the numbers using the “higher/lower” rule and increase your overall winning
+        score<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
-        <h3><a href="asm/community/maze-generator.asm">Maze Generator</a></h3>
-        <a href="asm/community/maze-generator.asm"><img src="img/maze-generator.jpg"
-          alt="Maze Generator"></a><br>
+        <a href="asm/community/maze-generator.asm">
+          <img src="img/maze-generator.jpg" alt="Maze Generator"><br>
+          <b>Maze Generator</b>
+        </a><br>
         Generates a random maze on the display using the backtracking algorithm. Author:
-        <a href="https://github.com/farmer2010">Farmer_2010</a>.
-      </td>
-      <td valign="top">
-        <h3><a href="asm/community/1d-cellular-automaton.asm">1D Cellular Automaton</a></h3>
-        <a href="asm/community/1d-cellular-automaton.asm">
-          <img src="img/1d-cellular-automaton.jpg" alt="1D Cellular Automaton"></a><br>
-        Enter a rule in binary and watch the cells evolve on the display. Author:
-        <a href="https://github.com/farmer2010">Farmer_2010</a>.
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/community/langton-ant.asm">Langton's Ant</a></h3>
-        <a href="asm/community/langton-ant.asm"><img src="img/langton-ant.jpg"
-          alt="Langton's Ant"></a><br>
+        <a href="asm/community/1d-cellular-automaton.asm">
+          <img src="img/1d-cellular-automaton.jpg" alt="1D Cellular Automaton"><br>
+          <b>1D Cellular Automaton</b>
+        </a><br>
+        Enter a rule in binary and watch the cells evolve on the display. Author:
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
+      </td>
+      <td valign="top">
+        <a href="asm/community/langton-ant.asm">
+          <img src="img/langton-ant.jpg" alt="Langton's Ant"><br>
+          <b>Langton's Ant</b>
+        </a><br>
         The ant crawls across the display, repainting the cells and turning by a simple rule that
         produces a complex pattern. Author:
-        <a href="https://github.com/farmer2010">Farmer_2010</a>.
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
-        <h3><a href="asm/demo.asm">Demo</a></h3>
-        <a href="asm/demo.asm"><img src="img/summary.jpg" alt="Demo"></a><br>
+        <a href="asm/demo.asm">
+          <img src="img/summary.jpg" alt="Demo"><br>
+          <b>Demo</b>
+        </a><br>
         Displays a colored butterfly, writes “Hello, Onigiri!” in the terminal, draws an onigiri
-        image, and rings the bell
+        image, and rings the bell<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
-          Tennis Game</a></h3>
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
-          <img src="img/tennis.jpg" alt="Tennis Game"></a><br>
+          <img src="img/tennis.jpg" alt="Tennis Game"><br>
+          <b>Tennis Game</b>
+        </a><br>
         Bounce the ball with the paddle and don’t let it fall. Author:
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
-        Mikhail Moseev</a>.
+        Mikhail Moseev</a>.<br><br>
       </td>
       <td valign="top">
-        <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
-        <a href="asm/prime-numbers.asm"><img src="img/prime-numbers.jpg"
-          alt="Prime Numbers"></a><br>
+        <a href="asm/prime-numbers.asm">
+          <img src="img/prime-numbers.jpg" alt="Prime Numbers"><br>
+          <b>Prime Numbers</b>
+        </a><br>
         Finds 16 prime numbers and outputs them to the digital indicator, as well as to the display
-        in binary format
+        in binary format<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
-        <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
-        <a href="asm/fibonacci-sequence.asm"><img src="img/fibonacci-sequence.jpg"
-          alt="Fibonacci Sequence"></a><br>
+        <a href="asm/fibonacci-sequence.asm">
+          <img src="img/fibonacci-sequence.jpg" alt="Fibonacci Sequence"><br>
+          <b>Fibonacci Sequence</b>
+        </a><br>
         Finds 12 Fibonacci numbers. Outputs them to the digital indicator, as well as to the display
-        in binary format
-      </td>
-      <td valign="top">
-        <h3><a href="asm/terminal-art.asm">Terminal Art</a></h3>
-        <a href="asm/terminal-art.asm"><img src="img/terminal-art.jpg" alt="Terminal Art"></a><br>
-        Uses the terminal’s graphics mode to display an image
+        in binary format<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/ram-art.asm">RAM Art</a></h3>
-        <a href="asm/ram-art.asm"><img src="img/ram-art.jpg" alt="RAM Art"></a><br>
+        <a href="asm/terminal-art.asm">
+          <img src="img/terminal-art.jpg" alt="Terminal Art"><br>
+          <b>Terminal Art</b>
+        </a><br>
+        Uses the terminal’s graphics mode to display an image<br><br>
+      </td>
+      <td valign="top">
+        <a href="asm/ram-art.asm">
+          <img src="img/ram-art.jpg" alt="RAM Art"><br>
+          <b>RAM Art</b>
+        </a><br>
         A joke program that uses RAM as a canvas to display an image (“Where are the arrows?!” in
-        Russian)
+        Russian)<br><br>
       </td>
       <td valign="top">
-        <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
-        <a href="asm/typewriter.asm"><img src="img/typewriter.jpg" alt="Typewriter"></a><br>
-        Outputs text typed on the keyboard to the terminal
+        <a href="asm/typewriter.asm">
+          <img src="img/typewriter.jpg" alt="Typewriter"><br>
+          <b>Typewriter</b>
+        </a><br>
+        Outputs text typed on the keyboard to the terminal<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/font-test.asm">Font Test</a></h3>
-        <a href="asm/font-test.asm"><img src="img/font-test.jpg" alt="Font Test"></a><br>
+        <a href="asm/font-test.asm">
+          <img src="img/font-test.jpg" alt="Font Test"><br>
+          <b>Font Test</b>
+        </a><br>
         Outputs all possible characters to the terminal (encoding
-        <a href="https://en.wikipedia.org/wiki/Windows-1251">cp1251</a>)
+        <a href="https://en.wikipedia.org/wiki/Windows-1251">cp1251</a>)<br><br>
       </td>
     </tr>
   </thead>

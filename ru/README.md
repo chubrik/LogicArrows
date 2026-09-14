@@ -7,8 +7,8 @@
 Коллекция карт в [«Стрелочках»](https://logic-arrows.io/) — браузерной игре, где из простых
 стрелочек на клеточном поле собираются сложные логические схемы. Каждую карту можно открыть и
 запустить прямо в браузере: от вентилей и сумматоров до полноценных компьютеров с программами и
-играми. Компьютерам посвящена подробная документация — устройство, собственный ассемблер и
-исходный код всех программ.
+играми. Компьютерам посвящена подробная документация — устройство, собственный ассемблер и исходный
+код всех программ.
 
 - [Карты](#maps)
 - [Об игре](#about)
@@ -22,130 +22,155 @@
   <thead>
     <tr>
       <td valign="top" width="50%">
-        <h3><a href="computer-v2/README.md">Компьютер v2</a></h3>
-        <a href="computer-v2/README.md"><img src="../computer-v2/img/summary.jpg"
-          alt="Компьютер v2"></a><br>
-        <b>Проект-флагман.</b>
-        Компьютер с собственным ассемблером, программами и играми: Тетрис, Жизнь, Арканоид,
-        3D-лабиринт и др. Активно обсуждается и развивается в сообществе любителей Стрелочек.
+        <h3>
+          <a href="computer-v2/README.md">
+            <img src="../computer-v2/img/summary.jpg" alt="Компьютер v2"><br>
+            Компьютер v2
+          </a>
+        </h3>
+        <b>Проект-флагман.</b> Компьютер с собственным ассемблером, программами и играми: Тетрис,
+        Жизнь, Арканоид, 3D-лабиринт и др. Активно обсуждается и развивается в сообществе любителей
+        Стрелочек.<br><br>
       </td>
       <td valign="top">
-        <h3><a href="computer-v1/README.md">Компьютер v1</a></h3>
-        <a href="computer-v1/README.md"><img src="../computer-v1/img/summary.jpg"
-          alt="Компьютер v1"></a><br>
+        <h3>
+          <a href="computer-v1/README.md">
+            <img src="../computer-v1/img/summary.jpg" alt="Компьютер v1"><br>
+            Компьютер v1
+          </a>
+        </h3>
         Первая версия компьютера. Создана по физическому прототипу и помогла освоить построение
-        сложных схем.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-life">Игра «Жизнь»</a></h3>
-        <a href="https://logic-arrows.io/map-life"><img src="../img/life.jpg"
-          alt="Игра «Жизнь»"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-matrix">Матрица</a></h3>
-        <a href="https://logic-arrows.io/map-matrix"><img src="../img/matrix.jpg" alt="Матрица"></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-matrix-rgb">Матрица цветная</a></h3>
-        <a href="https://logic-arrows.io/map-matrix-rgb"><img src="../img/matrix-rgb.jpg"
-          alt="Матрица цветная"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-CcGrVgC8">Матрицы плотные</a></h3>
-        <a href="https://logic-arrows.io/map-CcGrVgC8"><img src="../img/matrix-compact.jpg"
-          alt="Матрицы плотные"></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-fsG82aDy">RAM 32K</a></h3>
-        <a href="https://logic-arrows.io/map-fsG82aDy"><img src="../img/ram-32k.jpg"
-          alt="RAM 32K"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-ram256">RAM 256 v2</a></h3>
-        <a href="https://logic-arrows.io/map-ram256"><img src="../img/ram-256-v2.jpg"
-          alt="RAM 256 v2"></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-utcKt1dM">RAM 256 v1</a></h3>
-        <a href="https://logic-arrows.io/map-utcKt1dM"><img src="../img/ram-256-v1.jpg"
-          alt="RAM 256 v1"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-ram64">RAM 64</a></h3>
-        <a href="https://logic-arrows.io/map-ram64"><img src="../img/ram-64.jpg" alt="RAM 64"></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-FI3Ue08n">ROM компактная</a></h3>
-        <a href="https://logic-arrows.io/map-FI3Ue08n"><img src="../img/rom-compact.jpg"
-          alt="ROM компактная"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-0TNlFXRQa6Y">Конвертер BCD</a></h3>
-        <a href="https://logic-arrows.io/map-0TNlFXRQa6Y"><img src="../img/bcd-converter.jpg"
-          alt="Конвертер BCD"></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-Xhj9Pead">Сегментные дисплеи</a></h3>
-        <a href="https://logic-arrows.io/map-Xhj9Pead"><img src="../img/digits.jpg"
-          alt="Сегментные дисплеи"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-kBhOopki">Прототип процессора</a></h3>
-        <a href="https://logic-arrows.io/map-kBhOopki"><img src="../img/cpu.jpg"
-          alt="Прототип процессора"></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-Io2FESYk">Передатчики</a></h3>
-        <a href="https://logic-arrows.io/map-Io2FESYk"><img src="../img/transmitters.jpg"
-          alt="Передатчики"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-k_R4pB1A">Вентили</a></h3>
-        <a href="https://logic-arrows.io/map-k_R4pB1A"><img src="../img/gates.jpg"
-          alt="Вентили"></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-lF-KRVo4vtw">Умножитель</a></h3>
-        <a href="https://logic-arrows.io/map-lF-KRVo4vtw"><img src="../img/multiplier.jpg"
-          alt="Умножитель"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-5bk8IiWhZ6Q">Сумматор</a></h3>
-        <a href="https://logic-arrows.io/map-5bk8IiWhZ6Q"><img src="../img/adder.jpg"
-          alt="Сумматор"></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-GvPsAA38">Вычитатель</a></h3>
-        <a href="https://logic-arrows.io/map-GvPsAA38"><img src="../img/subtractor.jpg"
-          alt="Вычитатель"></a>
-      </td>
-      <td>
-        <h3><a href="https://logic-arrows.io/map-um14l5Qr">Муравей Лэнгтона</a></h3>
-        <a href="https://logic-arrows.io/map-um14l5Qr"><img src="../img/ant.jpg"
-          alt="Муравей Лэнгтона"></a>
+        сложных схем.<br><br>
       </td>
     </tr>
   </thead>
 </table>
-<br><br>
+
+<table>
+  <thead>
+    <tr>
+      <td valign="top" width="33%">
+        <a href="https://logic-arrows.io/map-life">
+          <img src="../img/life.jpg" alt="Игра «Жизнь»"><br>
+          <b>Игра «Жизнь»</b>
+        </a><br><br>
+      </td>
+      <td valign="top" width="33%">
+        <a href="https://logic-arrows.io/map-matrix">
+          <img src="../img/matrix.jpg" alt="Матрица"><br>
+          <b>Матрица</b>
+        </a><br><br>
+      </td>
+      <td valign="top" width="33%">
+        <a href="https://logic-arrows.io/map-matrix-rgb">
+          <img src="../img/matrix-rgb.jpg" alt="Матрица цветная"><br>
+          <b>Матрица цветная</b>
+        </a><br><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-CcGrVgC8">
+          <img src="../img/matrix-compact.jpg" alt="Матрицы плотные"><br>
+          <b>Матрицы плотные</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-fsG82aDy">
+          <img src="../img/ram-32k.jpg" alt="RAM 32K"><br>
+          <b>RAM 32K</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-ram256">
+          <img src="../img/ram-256-v2.jpg" alt="RAM 256 v2"><br>
+          <b>RAM 256 v2</b>
+        </a><br><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-utcKt1dM">
+          <img src="../img/ram-256-v1.jpg" alt="RAM 256 v1"><br>
+          <b>RAM 256 v1</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-ram64">
+          <img src="../img/ram-64.jpg" alt="RAM 64"><br>
+          <b>RAM 64</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-FI3Ue08n">
+          <img src="../img/rom-compact.jpg" alt="ROM компактная"><br>
+          <b>ROM компактная</b>
+        </a><br><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-0TNlFXRQa6Y">
+          <img src="../img/bcd-converter.jpg" alt="Конвертер BCD"><br>
+          <b>Конвертер BCD</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-Xhj9Pead">
+          <img src="../img/digits.jpg" alt="Сегментные дисплеи"><br>
+          <b>Сегментные дисплеи</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-kBhOopki">
+          <img src="../img/cpu.jpg" alt="Прототип процессора"><br>
+          <b>Прототип процессора</b>
+        </a><br><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-Io2FESYk">
+          <img src="../img/transmitters.jpg" alt="Передатчики"><br>
+          <b>Передатчики</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-k_R4pB1A">
+          <img src="../img/gates.jpg" alt="Вентили"><br>
+          <b>Вентили</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-lF-KRVo4vtw">
+          <img src="../img/multiplier.jpg" alt="Умножитель"><br>
+          <b>Умножитель</b>
+        </a><br><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-5bk8IiWhZ6Q">
+          <img src="../img/adder.jpg" alt="Сумматор"><br>
+          <b>Сумматор</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-GvPsAA38">
+          <img src="../img/subtractor.jpg" alt="Вычитатель"><br>
+          <b>Вычитатель</b>
+        </a><br><br>
+      </td>
+      <td valign="top">
+        <a href="https://logic-arrows.io/map-um14l5Qr">
+          <img src="../img/ant.jpg" alt="Муравей Лэнгтона"><br>
+          <b>Муравей Лэнгтона</b>
+        </a><br><br>
+      </td>
+    </tr>
+  </thead>
+</table>
+<br>
 
 
 ## <a name="about"></a>Об игре
@@ -153,7 +178,7 @@
 «Стрелочки» вдохновлены редстоуном из Minecraft. Автор игры
 [Onigiri](https://github.com/ArtemOnigiri) рассказывает о ней:<br>
 [![Видео об игре](../img/youtube.jpg)](https://www.youtube.com/watch?v=q_ve9SsuyvU)
-<br><br><br>
+<br><br>
 
 
 ## <a name="links"></a>Ссылки

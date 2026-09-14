@@ -39,160 +39,168 @@
 <table>
   <thead>
     <tr>
-      <td valign="top" width="50%">
-        <h3><a href="asm/tetris.asm">Игра «Тетрис»</a></h3>
-        <a href="asm/tetris.asm"><img src="../../computer-v2/img/tetris.jpg"
-          alt="Игра «Тетрис»"></a><br>
-        Заполняйте ряды и повышайте счёт. Классическая игра-головоломка с цветной графикой.
+      <td valign="top" width="33%">
+        <a href="asm/tetris.asm">
+          <img src="../../computer-v2/img/tetris.jpg" alt="Игра «Тетрис»"><br>
+          <b>Игра «Тетрис»</b>
+        </a><br>
+        Заполняйте ряды и повышайте счёт. Классическая игра-головоломка с цветной графикой.<br><br>
       </td>
-      <td valign="top">
-        <h3><a href="asm/game-of-life.asm">Игра «Жизнь»</a></h3>
-        <a href="asm/game-of-life.asm"><img src="../../computer-v2/img/game-of-life.jpg"
-          alt="Игра «Жизнь»"></a><br>
-        Заполняет дисплей случайными пикселями и вычисляет последующие поколения
+      <td valign="top" width="33%">
+        <a href="asm/game-of-life.asm">
+          <img src="../../computer-v2/img/game-of-life.jpg" alt="Игра «Жизнь»"><br>
+          <b>Игра «Жизнь»</b>
+        </a><br>
+        Заполняет дисплей случайными пикселями и вычисляет последующие поколения<br><br>
       </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%203d%20maze.asm">
-          Игра «3D-лабиринт»</a></h3>
+      <td valign="top" width="33%">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%203d%20maze.asm">
-          <img src="../../computer-v2/img/3d-maze.jpg" alt="Игра «3D-лабиринт»"></a><br>
+          <img src="../../computer-v2/img/3d-maze.jpg" alt="Игра «3D-лабиринт»"><br>
+          <b>Игра «3D-лабиринт»</b>
+        </a><br>
         Найдите выход из лабиринта, глядя от первого лица. Трёхмерная графика строится через
-        рейкастинг. Автор —
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
-        Михаил Мосеев</a>.
-      </td>
-      <td valign="top">
-        <h3><a href="asm/community/arkanoid.asm">Игра «Арканоид»</a></h3>
-        <a href="asm/community/arkanoid.asm"><img src="../../computer-v2/img/arkanoid.jpg"
-          alt="Игра «Арканоид»"></a><br>
-        Отбивайте мяч платформой, чтобы разбить все блоки на экране. Автор —
-        <a href="https://github.com/farmer2010">Farmer_2010</a>.
+        рейкастинг. Автор — <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Михаил Мосеев</a>.<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake.asm">
-          Игра «Змейка»</a></h3>
+        <a href="asm/community/arkanoid.asm">
+          <img src="../../computer-v2/img/arkanoid.jpg" alt="Игра «Арканоид»"><br>
+          <b>Игра «Арканоид»</b>
+        </a><br>
+        Отбивайте мяч платформой, чтобы разбить все блоки на экране. Автор —
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
+      </td>
+      <td valign="top">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake.asm">
-          <img src="../../computer-v2/img/snake.jpg" alt="Игра «Змейка»"></a><br>
+          <img src="../../computer-v2/img/snake.jpg" alt="Игра «Змейка»"><br>
+          <b>Игра «Змейка»</b>
+        </a><br>
         Собирайте яблоки и не врезайтесь в собственный хвост. Автор —
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
-        Михаил Мосеев</a>.
+        Михаил Мосеев</a>.<br><br>
       </td>
       <td valign="top">
-        <h3><a href="asm/space-fight.asm">Игра «Бой в космосе»</a></h3>
-        <a href="asm/space-fight.asm"><img src="../../computer-v2/img/space-fight.jpg"
-          alt="Игра «Бой в космосе»"></a><br>
+        <a href="asm/space-fight.asm">
+          <img src="../../computer-v2/img/space-fight.jpg" alt="Игра «Бой в космосе»"><br>
+          <b>Игра «Бой в космосе»</b>
+        </a><br>
         К вам приближаются вражеские корабли, которые нужно сбить за ограниченное время. В случае
-        победы вы получите приз.
+        победы вы получите приз.<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20minesweeper.asm">
-          Игра «Сапёр»</a></h3>
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20minesweeper.asm">
-          <img src="../../computer-v2/img/minesweeper.jpg" alt="Игра «Сапёр»"></a><br>
+          <img src="../../computer-v2/img/minesweeper.jpg" alt="Игра «Сапёр»"><br>
+          <b>Игра «Сапёр»</b>
+        </a><br>
         Открывайте клетки, ориентируясь по цифрам, и не подорвитесь на мине. Автор —
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
-        Михаил Мосеев</a>.
+        Михаил Мосеев</a>.<br><br>
       </td>
       <td valign="top">
-        <h3><a href="asm/guess-number.asm">Игра «Угадай число»</a></h3>
-        <a href="asm/guess-number.asm"><img src="../../computer-v2/img/guess-number.jpg"
-          alt="Игра «Угадай число»"></a><br>
-        Угадывайте числа по правилу «больше/меньше» и повышайте общий счёт побед
+        <a href="asm/guess-number.asm">
+          <img src="../../computer-v2/img/guess-number.jpg" alt="Игра «Угадай число»"><br>
+          <b>Игра «Угадай число»</b>
+        </a><br>
+        Угадывайте числа по правилу «больше/меньше» и повышайте общий счёт побед<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
-        <h3><a href="asm/community/maze-generator.asm">Генератор лабиринтов</a></h3>
         <a href="asm/community/maze-generator.asm">
-          <img src="../../computer-v2/img/maze-generator.jpg" alt="Генератор лабиринтов"></a><br>
+          <img src="../../computer-v2/img/maze-generator.jpg" alt="Генератор лабиринтов"><br>
+          <b>Генератор лабиринтов</b>
+        </a><br>
         Генерирует на дисплее случайный лабиринт методом поиска с возвратом. Автор —
-        <a href="https://github.com/farmer2010">Farmer_2010</a>.
-      </td>
-      <td valign="top">
-        <h3><a href="asm/community/1d-cellular-automaton.asm">1D клеточный автомат</a></h3>
-        <a href="asm/community/1d-cellular-automaton.asm">
-          <img src="../../computer-v2/img/1d-cellular-automaton.jpg"
-            alt="1D клеточный автомат"></a><br>
-        Введите правило в двоичном виде и наблюдайте за эволюцией клеток на дисплее. Автор —
-        <a href="https://github.com/farmer2010">Farmer_2010</a>.
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/community/langton-ant.asm">Муравей Лэнгтона</a></h3>
-        <a href="asm/community/langton-ant.asm"><img src="../../computer-v2/img/langton-ant.jpg"
-          alt="Муравей Лэнгтона"></a><br>
+        <a href="asm/community/1d-cellular-automaton.asm">
+          <img src="../../computer-v2/img/1d-cellular-automaton.jpg" alt="1D клеточный автомат"><br>
+          <b>1D клеточный автомат</b>
+        </a><br>
+        Введите правило в двоичном виде и наблюдайте за эволюцией клеток на дисплее. Автор —
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
+      </td>
+      <td valign="top">
+        <a href="asm/community/langton-ant.asm">
+          <img src="../../computer-v2/img/langton-ant.jpg" alt="Муравей Лэнгтона"><br>
+          <b>Муравей Лэнгтона</b>
+        </a><br>
         Муравей ползает по дисплею, перекрашивает клетки и поворачивает по простому правилу,
         порождая сложный узор. Автор —
-        <a href="https://github.com/farmer2010">Farmer_2010</a>.
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
-        <h3><a href="asm/demo.asm">Демо</a></h3>
-        <a href="asm/demo.asm"><img src="../../computer-v2/img/summary.jpg" alt="Демо"></a><br>
+        <a href="asm/demo.asm">
+          <img src="../../computer-v2/img/summary.jpg" alt="Демо"><br>
+          <b>Демо</b>
+        </a><br>
         Выводит на дисплей цветную бабочку, пишет в терминал «Hello, Onigiri!», рисует изображение
-        онигири и звонит в колокольчик
+        онигири и звонит в колокольчик<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
-          Игра «Теннис»</a></h3>
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
-          <img src="../../computer-v2/img/tennis.jpg" alt="Игра «Теннис»"></a><br>
+          <img src="../../computer-v2/img/tennis.jpg" alt="Игра «Теннис»"><br>
+          <b>Игра «Теннис»</b>
+        </a><br>
         Отбивайте мяч платформой, не давая ему упасть. Автор —
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
-        Михаил Мосеев</a>.
+        Михаил Мосеев</a>.<br><br>
       </td>
       <td valign="top">
-        <h3><a href="asm/prime-numbers.asm">Простые числа</a></h3>
-        <a href="asm/prime-numbers.asm"><img src="../../computer-v2/img/prime-numbers.jpg"
-          alt="Простые числа"></a><br>
+        <a href="asm/prime-numbers.asm">
+          <img src="../../computer-v2/img/prime-numbers.jpg" alt="Простые числа"><br>
+          <b>Простые числа</b>
+        </a><br>
         Находит 16 простых чисел и выводит их на цифровой индикатор, а также на дисплей в двоичном
-        формате
+        формате<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
-        <h3><a href="asm/fibonacci-sequence.asm">Числа Фибоначчи</a></h3>
-        <a href="asm/fibonacci-sequence.asm"><img src="../../computer-v2/img/fibonacci-sequence.jpg"
-          alt="Числа Фибоначчи"></a><br>
+        <a href="asm/fibonacci-sequence.asm">
+          <img src="../../computer-v2/img/fibonacci-sequence.jpg" alt="Числа Фибоначчи"><br>
+          <b>Числа Фибоначчи</b>
+        </a><br>
         Находит 12 чисел Фибоначчи. Выводит их на цифровой индикатор, а также на дисплей в двоичном
-        формате
-      </td>
-      <td valign="top">
-        <h3><a href="asm/terminal-art.asm">Арт в терминале</a></h3>
-        <a href="asm/terminal-art.asm"><img src="../../computer-v2/img/terminal-art.jpg"
-          alt="Арт в терминале"></a><br>
-        Использует графический режим терминала для вывода изображения
+        формате<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/ram-art.asm">Арт в RAM</a></h3>
-        <a href="asm/ram-art.asm"><img src="../../computer-v2/img/ram-art.jpg"
-          alt="Арт в RAM"></a><br>
-        Программа-шутка, использует RAM как холст для вывода изображения
+        <a href="asm/terminal-art.asm">
+          <img src="../../computer-v2/img/terminal-art.jpg" alt="Арт в терминале"><br>
+          <b>Арт в терминале</b>
+        </a><br>
+        Использует графический режим терминала для вывода изображения<br><br>
       </td>
       <td valign="top">
-        <h3><a href="asm/typewriter.asm">Пишущая машинка</a></h3>
-        <a href="asm/typewriter.asm"><img src="../../computer-v2/img/typewriter.jpg"
-          alt="Пишущая машинка"></a><br>
-        Выводит в терминал текст, набираемый на клавиатуре
+        <a href="asm/ram-art.asm">
+          <img src="../../computer-v2/img/ram-art.jpg" alt="Арт в RAM"><br>
+          <b>Арт в RAM</b>
+        </a><br>
+        Программа-шутка, использует RAM как холст для вывода изображения<br><br>
+      </td>
+      <td valign="top">
+        <a href="asm/typewriter.asm">
+          <img src="../../computer-v2/img/typewriter.jpg" alt="Пишущая машинка"><br>
+          <b>Пишущая машинка</b>
+        </a><br>
+        Выводит в терминал текст, набираемый на клавиатуре<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/font-test.asm">Тест шрифта</a></h3>
-        <a href="asm/font-test.asm"><img src="../../computer-v2/img/font-test.jpg"
-          alt="Тест шрифта"></a><br>
+        <a href="asm/font-test.asm">
+          <img src="../../computer-v2/img/font-test.jpg" alt="Тест шрифта"><br>
+          <b>Тест шрифта</b>
+        </a><br>
         Выводит в терминал все возможные символы (кодировка
-        <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>)
+        <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>)<br><br>
       </td>
     </tr>
   </thead>

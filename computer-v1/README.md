@@ -39,58 +39,65 @@ To run your own program on the computer, see [Programming](programming.md).
 <table>
   <thead>
     <tr>
-      <td valign="top" width="50%">
-        <h3><a href="asm/space-fight.asm">Space Fight Game</a></h3>
-        <a href="asm/space-fight.asm"><img src="img/space-fight.jpg"
-          alt="Space Fight Game"></a><br>
+      <td valign="top" width="33%">
+        <a href="asm/space-fight.asm">
+          <img src="img/space-fight.jpg" alt="Space Fight Game"><br>
+          <b>Space Fight Game</b>
+        </a><br>
         Enemy ships are approaching you, which you need to shoot down within a limited time. If you
         win, you will receive a prize.<br><br>
         The game occupies the entire available memory of 256 bytes and for performance purposes is
-        available on a <a href="https://logic-arrows.io/map-space-fight">separate map</a>.
+        available on a <a href="https://logic-arrows.io/map-space-fight">separate map</a>.<br><br>
       </td>
-      <td valign="top">
-        <h3><a href="asm/hello-world.asm">Hello World</a></h3>
-        <a href="asm/hello-world.asm"><img src="img/summary.jpg" alt="Hello World"></a><br>
-        Displays a cat and the text “Hello world” on the screen
+      <td valign="top" width="33%">
+        <a href="asm/hello-world.asm">
+          <img src="img/summary.jpg" alt="Hello World"><br>
+          <b>Hello World</b>
+        </a><br>
+        Displays a cat and the text “Hello world” on the screen<br><br>
       </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20Langton%27s%20ant.asm">
-          Langton's Ant</a></h3>
+      <td valign="top" width="33%">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20Langton%27s%20ant.asm">
-          <img src="img/langton-ant.jpg" alt="Langton's Ant"></a><br>
+          <img src="img/langton-ant.jpg" alt="Langton's Ant"><br>
+          <b>Langton's Ant</b>
+        </a><br>
         The ant crawls across the display, repainting the cells and turning by a simple rule that
         produces a complex pattern. Author:
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
-        Mikhail Moseev</a>.
-      </td>
-      <td valign="top">
-        <h3><a href="asm/prime-numbers.asm">Prime Numbers</a></h3>
-        <a href="asm/prime-numbers.asm"><img src="img/prime-numbers.jpg"
-          alt="Prime Numbers"></a><br>
-        Finds the first 16 prime numbers and displays them on the screen in binary format
+        Mikhail Moseev</a>.<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/fibonacci-sequence.asm">Fibonacci Sequence</a></h3>
-        <a href="asm/fibonacci-sequence.asm"><img src="img/fibonacci-sequence.jpg"
-          alt="Fibonacci Sequence"></a><br>
-        Finds 10 Fibonacci numbers and displays them on the screen in binary format
+        <a href="asm/prime-numbers.asm">
+          <img src="img/prime-numbers.jpg" alt="Prime Numbers"><br>
+          <b>Prime Numbers</b>
+        </a><br>
+        Finds the first 16 prime numbers and displays them on the screen in binary format<br><br>
       </td>
       <td valign="top">
-        <h3><a href="asm/typewriter.asm">Typewriter</a></h3>
-        <a href="asm/typewriter.asm"><img src="img/terminal.jpg" alt="Typewriter"></a><br>
-        Outputs text typed on the keyboard to the terminal
+        <a href="asm/fibonacci-sequence.asm">
+          <img src="img/fibonacci-sequence.jpg" alt="Fibonacci Sequence"><br>
+          <b>Fibonacci Sequence</b>
+        </a><br>
+        Finds 10 Fibonacci numbers and displays them on the screen in binary format<br><br>
+      </td>
+      <td valign="top">
+        <a href="asm/typewriter.asm">
+          <img src="img/terminal.jpg" alt="Typewriter"><br>
+          <b>Typewriter</b>
+        </a><br>
+        Outputs text typed on the keyboard to the terminal<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/font-test.asm">Font Test</a></h3>
-        <a href="asm/font-test.asm"><img src="img/font-test.jpg" alt="Font Test"></a><br>
+        <a href="asm/font-test.asm">
+          <img src="img/font-test.jpg" alt="Font Test"><br>
+          <b>Font Test</b>
+        </a><br>
         Outputs all possible characters to the terminal (encoding
-        <a href="https://en.wikipedia.org/wiki/Windows-1251">cp1251</a>)
+        <a href="https://en.wikipedia.org/wiki/Windows-1251">cp1251</a>)<br><br>
       </td>
     </tr>
   </thead>

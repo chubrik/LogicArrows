@@ -39,61 +39,65 @@
 <table>
   <thead>
     <tr>
-      <td valign="top" width="50%">
-        <h3><a href="asm/space-fight.asm">Игра «Бой в космосе»</a></h3>
-        <a href="asm/space-fight.asm"><img src="../../computer-v1/img/space-fight.jpg"
-          alt="Игра «Бой в космосе»"></a><br>
+      <td valign="top" width="33%">
+        <a href="asm/space-fight.asm">
+          <img src="../../computer-v1/img/space-fight.jpg" alt="Игра «Бой в космосе»"><br>
+          <b>Игра «Бой в космосе»</b>
+        </a><br>
         К вам приближаются вражеские корабли, которые нужно сбить за ограниченное время. В случае
         победы вы получите приз.<br><br>
         Игра занимает весь доступный объём памяти 256 байт и в целях производительности выложена на
-        <a href="https://logic-arrows.io/map-space-fight">отдельной карте</a>.
+        <a href="https://logic-arrows.io/map-space-fight">отдельной карте</a>.<br><br>
       </td>
-      <td valign="top">
-        <h3><a href="asm/hello-world.asm">Hello World</a></h3>
-        <a href="asm/hello-world.asm"><img src="../../computer-v1/img/summary.jpg"
-          alt="Hello World"></a><br>
-        Выводит на дисплей котика и надпись «Hello world»
+      <td valign="top" width="33%">
+        <a href="asm/hello-world.asm">
+          <img src="../../computer-v1/img/summary.jpg" alt="Hello World"><br>
+          <b>Hello World</b>
+        </a><br>
+        Выводит на дисплей котика и надпись «Hello world»<br><br>
       </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <h3><a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20Langton%27s%20ant.asm">
-          Муравей Лэнгтона</a></h3>
+      <td valign="top" width="33%">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20Langton%27s%20ant.asm">
-          <img src="../../computer-v1/img/langton-ant.jpg" alt="Муравей Лэнгтона"></a><br>
+          <img src="../../computer-v1/img/langton-ant.jpg" alt="Муравей Лэнгтона"><br>
+          <b>Муравей Лэнгтона</b>
+        </a><br>
         Муравей ползает по дисплею, перекрашивает клетки и поворачивает по простому правилу,
         порождая сложный узор. Автор —
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
-        Михаил Мосеев</a>.
-      </td>
-      <td valign="top">
-        <h3><a href="asm/prime-numbers.asm">Простые числа</a></h3>
-        <a href="asm/prime-numbers.asm"><img src="../../computer-v1/img/prime-numbers.jpg"
-          alt="Простые числа"></a><br>
-        Находит первые 16 простых чисел и выводит их на дисплей в двоичном формате
+        Михаил Мосеев</a>.<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/fibonacci-sequence.asm">Числа Фибоначчи</a></h3>
-        <a href="asm/fibonacci-sequence.asm"><img src="../../computer-v1/img/fibonacci-sequence.jpg"
-          alt="Числа Фибоначчи"></a><br>
-        Находит 10 чисел Фибоначчи и выводит их на дисплей в двоичном формате
+        <a href="asm/prime-numbers.asm">
+          <img src="../../computer-v1/img/prime-numbers.jpg" alt="Простые числа"><br>
+          <b>Простые числа</b>
+        </a><br>
+        Находит первые 16 простых чисел и выводит их на дисплей в двоичном формате<br><br>
       </td>
       <td valign="top">
-        <h3><a href="asm/typewriter.asm">Пишущая машинка</a></h3>
-        <a href="asm/typewriter.asm"><img src="../../computer-v1/img/terminal.jpg"
-          alt="Пишущая машинка"></a><br>
-        Выводит в терминал текст, набираемый на клавиатуре
+        <a href="asm/fibonacci-sequence.asm">
+          <img src="../../computer-v1/img/fibonacci-sequence.jpg" alt="Числа Фибоначчи"><br>
+          <b>Числа Фибоначчи</b>
+        </a><br>
+        Находит 10 чисел Фибоначчи и выводит их на дисплей в двоичном формате<br><br>
+      </td>
+      <td valign="top">
+        <a href="asm/typewriter.asm">
+          <img src="../../computer-v1/img/terminal.jpg" alt="Пишущая машинка"><br>
+          <b>Пишущая машинка</b>
+        </a><br>
+        Выводит в терминал текст, набираемый на клавиатуре<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <h3><a href="asm/font-test.asm">Тест шрифта</a></h3>
-        <a href="asm/font-test.asm"><img src="../../computer-v1/img/font-test.jpg"
-          alt="Тест шрифта"></a><br>
+        <a href="asm/font-test.asm">
+          <img src="../../computer-v1/img/font-test.jpg" alt="Тест шрифта"><br>
+          <b>Тест шрифта</b>
+        </a><br>
         Выводит в терминал все возможные символы (кодировка
-        <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>)
+        <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>)<br><br>
       </td>
     </tr>
   </thead>
