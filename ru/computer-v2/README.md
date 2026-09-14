@@ -9,10 +9,15 @@
         Полноценный компьютер, целиком собранный из стрелочек: 8-битный процессор, до 32 КБ памяти,
         клавиатура, цветной дисплей, терминал, цифровой индикатор и набор дискет с программами и
         играми, созданными в том числе участниками сообщества.<br><br>
-        <a href="https://logic-arrows.io/map-computer"><b>Карта с компьютером</b></a><br><br>
-        <a href="specification.md">Устройство и характеристики</a><br><br>
-        <a href="programming.md">Программирование</a><br><br>
-        <a href="#examples">Готовые программы</a>
+        <ul>
+          <li><a href="https://logic-arrows.io/map-computer"><b>Карта с компьютером ⇾</b></a></li>
+        </ul>
+        <ul>
+          <li><a href="specification.md">Устройство и характеристики</a></li>
+          <li><a href="programming.md">Программирование</a></li>
+          <li><a href="#examples">Готовые программы</a></li>
+          <li><a href="#links">Ссылки</a></li>
+        </ul>
       </td>
       <td valign="top">
         <a href="https://logic-arrows.io/map-computer"><img src="../../computer-v2/img/summary.jpg"
@@ -205,3 +210,20 @@
     </tr>
   </thead>
 </table>
+<br>
+
+
+## <a name="links"></a>Ссылки
+
+- [Онлайн-компилятор](https://chubrik.github.io/arrows-compiler/) – напишите программу и получите
+  дискету для вставки в игру
+- [GraphDLC](https://github.com/MerinPrime/GraphDLC) – необходимое расширение для браузера,
+  ускоряющее Стрелочки в 5000 раз
+- [Программы Михаила Мосеева](https://github.com/mihail-moseev/program_for_computer_in_logic-arrows)
+  – репозиторий автора нескольких программ из списка выше
+- [Эмулятор на Python](https://github.com/farmer2010/Chubrik-processor-emulator) – написан
+  участником сообщества Farmer_2010, автором нескольких программ из списка выше
+- [Дискорд-сервер](https://discord.gg/8FMuQuMFCN) и [Телеграм-канал](https://t.me/logic_arrows) –
+  здесь обсуждают компьютер, делятся идеями и новыми программами
+- [Компьютер v1](../computer-v1/README.md) – ранняя версия компьютера, созданная по физическому
+  прототипу

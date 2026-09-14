@@ -183,12 +183,13 @@ of all programs.
 
 ## <a name="links"></a>Links
 
-- [Logic Arrows](https://logic-arrows.io/) – official game website
-- [Discord server](https://discord.gg/8FMuQuMFCN) – player community on Discord
-- [Telegram channel](https://t.me/logic_arrows) – player community on Telegram
-- [GraphDLC](https://github.com/MerinPrime/GraphDLC) – browser extension that speeds up Logic Arrows
-  by 5000 times
-- [Arrows Compiler](https://github.com/chubrik/arrows-compiler) – online compiler for the in-game
-  computers
-- [ZX Spectrum](https://github.com/chubrik/arrows-zx-spectrum) – emulator running on the upcoming
+- [Logic Arrows in browser](https://logic-arrows.io/) – browser version of the game
+- [Logic Arrows on Steam](https://store.steampowered.com/app/4210250/Logic_Arrows/) – new version
+  of the game, compatible with the browser one
+- [Online compiler](https://github.com/chubrik/arrows-compiler) – for the in-game computers
+- [ZX Spectrum](https://github.com/chubrik/arrows-zx-spectrum) – real-time emulator for the Steam
   version of Logic Arrows
+- [GraphDLC](https://github.com/MerinPrime/GraphDLC) – browser extension that speeds up the game
+  5000 times
+- [Discord server](https://discord.gg/8FMuQuMFCN) – community on Discord
+- [Telegram channel](https://t.me/logic_arrows) – community on Telegram

@@ -183,12 +183,14 @@
 
 ## <a name="links"></a>Ссылки
 
-- [Стрелочки](https://logic-arrows.io/) – официальный сайт игры
-- [Дискорд-сервер](https://discord.gg/8FMuQuMFCN) – сообщество игроков на Дискорде
-- [Телеграм-канал](https://t.me/logic_arrows) – сообщество игроков в Телеграме
-- [GraphDLC](https://github.com/MerinPrime/GraphDLC) – расширение для браузера, ускоряющее Стрелочки
+- [Стрелочки в браузере](https://logic-arrows.io/) – браузерная версия игры
+- [Стрелочки в Steam](https://store.steampowered.com/app/4210250/Logic_Arrows/) – новая версия игры,
+  совместимая с браузерной
+- [Онлайн-компилятор](https://github.com/chubrik/arrows-compiler/blob/main/ru/README.md) –
+  для внутриигровых компьютеров
+- [ZX Spectrum](https://github.com/chubrik/arrows-zx-spectrum/blob/main/ru/README.md) –
+  реалтайм-эмулятор для Steam-версии Стрелочек
+- [GraphDLC](https://github.com/MerinPrime/GraphDLC) – браузерное расширение для ускорения
   в 5000 раз
-- [Компилятор Стрелочек](https://github.com/chubrik/arrows-compiler/blob/main/ru/README.md) –
-  онлайн-компилятор для внутриигровых компьютеров
-- [ZX Spectrum](https://github.com/chubrik/arrows-zx-spectrum/blob/main/ru/README.md) – эмулятор,
-  работающий на будущей версии Стрелочек
+- [Дискорд-сервер](https://discord.gg/8FMuQuMFCN) – сообщество на Дискорде
+- [Телеграм-канал](https://t.me/logic_arrows) – сообщество в Телеграме

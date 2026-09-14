@@ -9,10 +9,15 @@
         A full-fledged computer assembled entirely of logic arrows: an 8-bit processor, up to 32 KB
         of memory, a keyboard, a color display, a terminal, a digital indicator, and a set of disks
         with programs and games, some of them created by members of the community.<br><br>
-        <a href="https://logic-arrows.io/map-computer"><b>Map with the computer</b></a><br><br>
-        <a href="specification.md">Structure and Specifications</a><br><br>
-        <a href="programming.md">Programming</a><br><br>
-        <a href="#examples">Ready-made programs</a>
+        <ul>
+          <li><a href="https://logic-arrows.io/map-computer"><b>Map with the computer ⇾</b></a></li>
+        </ul>
+        <ul>
+          <li><a href="specification.md">Structure and Specifications</a></li>
+          <li><a href="programming.md">Programming</a></li>
+          <li><a href="#examples">Ready-made programs</a></li>
+          <li><a href="#links">Links</a></li>
+        </ul>
       </td>
       <td valign="top">
         <a href="https://logic-arrows.io/map-computer"><img src="img/summary.jpg"
@@ -207,3 +212,20 @@ To run your own program on the computer, see [Programming](programming.md).
     </tr>
   </thead>
 </table>
+<br>
+
+
+## <a name="links"></a>Links
+
+- [Online compiler](https://chubrik.github.io/arrows-compiler/) – write a program and get a disk
+  to paste into the game
+- [GraphDLC](https://github.com/MerinPrime/GraphDLC) – essential browser extension that speeds up
+  Logic Arrows by 5000 times
+- [Programs by Mikhail Moseev](https://github.com/mihail-moseev/program_for_computer_in_logic-arrows)
+  – repository by the author of several programs listed above
+- [Python emulator](https://github.com/farmer2010/Chubrik-processor-emulator) – written by
+  community member Farmer_2010, the author of several programs listed above
+- [Discord server](https://discord.gg/8FMuQuMFCN) and [Telegram channel](https://t.me/logic_arrows)
+  – where people discuss the computer and share ideas and new programs
+- [Computer v1](../computer-v1/README.md) – early version of the computer, based on a physical
+  prototype

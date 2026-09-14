@@ -8,12 +8,16 @@
       <td valign="top" width="50%">
         Полноценный компьютер, целиком собранный из стрелочек: 8-битный процессор, 256 байт памяти,
         клавиатура, дисплей, терминал, цифровой индикатор и набор дискет с программами и играми.
-        Предшественник более совершенного
-        <a href="../computer-v2/README.md">компьютера v2</a>.<br><br>
-        <a href="https://logic-arrows.io/map-lVeJ9jtX"><b>Карта с компьютером</b></a><br><br>
-        <a href="specification.md">Устройство и характеристики</a><br><br>
-        <a href="programming.md">Программирование</a><br><br>
-        <a href="#examples">Готовые программы</a>
+        Предшественник <a href="../computer-v2/README.md">Компьютера v2</a>.<br><br>
+        <ul>
+          <li><a href="https://logic-arrows.io/map-lVeJ9jtX"><b>Карта с компьютером ⇾</b></a></li>
+        </ul>
+        <ul>
+          <li><a href="specification.md">Устройство и характеристики</a></li>
+          <li><a href="programming.md">Программирование</a></li>
+          <li><a href="#examples">Готовые программы</a></li>
+          <li><a href="#links">Ссылки</a></li>
+        </ul>
       </td>
       <td valign="top">
         <a href="https://logic-arrows.io/map-lVeJ9jtX"><img src="../../computer-v1/img/summary.jpg"
@@ -102,3 +106,20 @@
     </tr>
   </thead>
 </table>
+<br>
+
+
+## <a name="links"></a>Ссылки
+
+- [Онлайн-компилятор](https://chubrik.github.io/arrows-compiler/#cpu=v1) – напишите программу и
+  получите дискету для вставки в игру
+- [GraphDLC](https://github.com/MerinPrime/GraphDLC) – необходимое расширение для браузера,
+  ускоряющее Стрелочки в 5000 раз
+- [Программы Михаила Мосеева](https://github.com/mihail-moseev/program_for_computer_in_logic-arrows)
+  – репозиторий автора нескольких программ для обоих компьютеров
+- [Дискорд-сервер](https://discord.gg/8FMuQuMFCN) и [Телеграм-канал](https://t.me/logic_arrows) –
+  здесь обсуждают компьютеры, делятся идеями и новыми программами
+- [Компьютер v2](../computer-v2/README.md) – улучшенная версия компьютера с большим набором программ
+  и игр, в том числе от участников сообщества
+- [Мой компьютер на логических микросхемах](https://habr.com/ru/articles/590821/) – цикл статей
+  на Хабре о физическом прототипе, по которому создан Компьютер v1
