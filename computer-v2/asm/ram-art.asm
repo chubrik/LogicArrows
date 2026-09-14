@@ -54,9 +54,9 @@ bit_end:        shl b
                 jmp bank_start
 
 in_out      db  0
-bank        db  4                       ; The memory bank is not connected when loading from a disk,
-                                        ;   but decrementing the value allows starting writing from
-                                        ;   the correct place
+bank        db  4                       ; The memory bank is not connected when loading from a
+                                        ;   diskette, but decrementing the value allows starting
+                                        ;   writing from the correct place
 
 ; Right part of the image
 data2       db  0b00000010, 0b10000000, 0b00000000, 0b01000000,

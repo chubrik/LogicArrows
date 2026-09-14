@@ -1,6 +1,6 @@
 ﻿; ##################################################################################################
-; ##         Diagnostic disk #1: C and O flags after ADD (canaries) and SUB (main cases)          ##
-; ##      Диагностический диск №1: флаги C и O после ADD (канарейки) и SUB (основные случаи)      ##
+; ##       Diagnostic diskette #1: C and O flags after ADD (canaries) and SUB (main cases)        ##
+; ##    Диагностическая дискета №1: флаги C и O после ADD (канарейки) и SUB (основные случаи)     ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v2                 ##
 ; ##                         (c) 2026 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################
@@ -8,7 +8,7 @@
 
                 ldi d, terminal     ; В регистре D постоянно лежит адрес для вывода в терминал
                 ldi c, "A" - 1      ; Счётчик проб
-                ldi b, "1"          ; Маркер номера диска
+                ldi b, "1"          ; Маркер номера дискеты
                 st b, d
 
 ; Случай 1: add 255+1, ожидаем C=1, O=0

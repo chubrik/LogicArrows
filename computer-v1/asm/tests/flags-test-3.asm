@@ -1,5 +1,5 @@
 ﻿; ##################################################################################################
-; ##       Diagnostic disk #3: the X, 0 forms - effect on the C and O flags and the result        ##
+; ##     Diagnostic diskette #3: the X, 0 forms - effect on the C and O flags and the result      ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v1                 ##
 ; ##                         (c) 2026 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################
@@ -7,7 +7,7 @@
 
                 ldi d, terminal     ; Register D permanently holds the address for terminal output
                 ldi c, 0x40         ; Probe counter: the code before the letter "A"
-                ldi b, 0x33         ; Disk id marker: "3"
+                ldi b, 0x33         ; Diskette id marker: "3"
                 st b, d
 
 ; Case 1 (canary): add 255+1, expect C=1, O=0

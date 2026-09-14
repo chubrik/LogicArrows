@@ -1,5 +1,5 @@
 ﻿; ##################################################################################################
-; ##      Diagnostic disk #2: flag preservation (inc/dec/not/mov/shr), NEG flags, SBB chain       ##
+; ##    Diagnostic diskette #2: flag preservation (inc/dec/not/mov/shr), NEG flags, SBB chain     ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v1                 ##
 ; ##                         (c) 2026 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################
@@ -7,7 +7,7 @@
 
                 ldi d, terminal     ; Register D permanently holds the address for terminal output
                 ldi c, 0x40         ; Probe counter: the code before the letter "A"
-                ldi b, 0x32         ; Disk id marker: "2"
+                ldi b, 0x32         ; Diskette id marker: "2"
                 st b, d
 
 ; Case 1 (canary): add 255+1, expect C=1, O=0

@@ -7,7 +7,7 @@ Main characteristics:
 - 256 bytes of RAM with integrated video memory and ports.
 - Input/output: keyboard, display, terminal, and digital indicator.
 - Own assembly language (see [Programming](programming.md)).
-- Loading programs from special disks.
+- Loading programs from special diskettes.
 <br><br><br>
 
 
@@ -52,7 +52,7 @@ results in the appearance of corresponding pixels on the display.
 
 When switching between output devices via port `3F`, the current image on the display is
 preserved, but the effect of subsequent writes to the screen memory area changes. The output can
-be switched to the display not only programmatically, but also directly during disk loading,
+be switched to the display not only programmatically, but also directly during diskette loading,
 which makes it possible to show a startup splash image.
 
 <img src="img/display.jpg" width="60%" alt="Display">

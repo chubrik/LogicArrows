@@ -1,5 +1,5 @@
 ﻿; ##################################################################################################
-; ##         Diagnostic disk #1: C and O flags after ADD (canaries) and SUB (main cases)          ##
+; ##       Diagnostic diskette #1: C and O flags after ADD (canaries) and SUB (main cases)        ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v2                 ##
 ; ##                         (c) 2026 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################
@@ -7,7 +7,7 @@
 
                 ldi d, terminal     ; Register D permanently holds the address for terminal output
                 ldi c, "A" - 1      ; Probe counter
-                ldi b, "1"          ; Disk id marker
+                ldi b, "1"          ; Diskette id marker
                 st b, d
 
 ; Case 1: add 255+1, expect C=1, O=0

@@ -7,8 +7,8 @@
     <tr>
       <td valign="top" width="50%">
         A full-fledged computer assembled entirely of logic arrows: an 8-bit processor, up to 32 KB
-        of memory, a keyboard, a color display, a terminal, a digital indicator, and a set of disks
-        with programs and games, some of them created by members of the community.<br><br>
+        of memory, a keyboard, a color display, a terminal, a digital indicator, and a set of
+        diskettes with programs and games, some of them created by members of the community.<br><br>
         <ul>
           <li><a href="https://logic-arrows.io/map-computer"><b>Map with the computer ⇾</b></a></li>
         </ul>
@@ -217,7 +217,7 @@ To run your own program on the computer, see [Programming](programming.md).
 
 ## <a name="links"></a>Links
 
-- [Online compiler](https://chubrik.github.io/arrows-compiler/) – write a program and get a disk
+- [Online compiler](https://chubrik.github.io/arrows-compiler/) – write a program and get a diskette
   to paste into the game
 - [GraphDLC](https://github.com/MerinPrime/GraphDLC) – essential browser extension that speeds up
   Logic Arrows by 5000 times

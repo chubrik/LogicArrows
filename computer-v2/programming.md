@@ -7,9 +7,9 @@ To run your own program on the computer, follow these steps:
   the left panel.
 - Copy the compiled code from the right panel.
 - Go to the [computer map](https://logic-arrows.io/map-computer) and press `Ctrl+V` to paste the
-  disk with the program.
-- Connect the wire from the disk to the common wire from the other disks.
-- Press the button on the disk and wait for the program to load into the computer’s memory.
+  diskette with the program.
+- Connect the wire from the diskette to the common wire from the other diskettes.
+- Press the button on the diskette and wait for the program to load into the computer’s memory.
 - Press the `RUN` button on the computer and watch your program execute.
 <br><br><br>
 

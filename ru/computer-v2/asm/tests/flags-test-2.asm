@@ -1,6 +1,6 @@
 ﻿; ##################################################################################################
-; ##      Diagnostic disk #2: flag preservation (inc/dec/not/mov/shr), NEG flags, SBB chain       ##
-; ##   Диагностический диск №2: сохранение флагов (inc/dec/not/mov/shr), флаги NEG, цепочка SBB   ##
+; ##    Diagnostic diskette #2: flag preservation (inc/dec/not/mov/shr), NEG flags, SBB chain     ##
+; ## Диагностическая дискета №2: сохранение флагов (inc/dec/not/mov/shr), флаги NEG, цепочка SBB  ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v2                 ##
 ; ##                         (c) 2026 Arkadi Chubrik (arkadi@chubrik.org)                         ##
 ; ##################################################################################################
@@ -8,7 +8,7 @@
 
                 ldi d, terminal     ; В регистре D постоянно лежит адрес для вывода в терминал
                 ldi c, "A" - 1      ; Счётчик проб
-                ldi b, "2"          ; Маркер номера диска
+                ldi b, "2"          ; Маркер номера дискеты
                 st b, d
 
 ; Случай 1 (канарейка): add 255+1, ожидаем C=1, O=0

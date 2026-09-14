@@ -7,7 +7,7 @@ Main characteristics:
 - Up to 32 KB of RAM with integrated video memory and ports.
 - Input/output: keyboard, color display, terminal, and digital indicator.
 - Own assembly language (see [Programming](programming.md)).
-- Loading programs from special disks.
+- Loading programs from special diskettes.
 <br><br><br>
 
 
@@ -36,7 +36,7 @@ nothing has been written to port `3F`.
 The address range `00...7F` is not a bank: it is the common part of the memory, and it is fixed
 permanently. Thus, the RAM in its maximum configuration consists of the common part and 255 banks
 of 128 bytes each — exactly 32 KB in total. Unlike other ports, bank switching is only possible
-programmatically: writing to port `3F` during disk loading does not switch the bank.
+programmatically: writing to port `3F` during diskette loading does not switch the bank.
 
 <img src="img/ram.jpg" width="80%" alt="RAM">
 <br><br>
@@ -64,7 +64,7 @@ corresponding pixels on the display.
 
 When connecting, disconnecting, or switching the mode via port `3E`, the current image on the
 display is preserved, but the effect of subsequent writes to the screen memory area changes. The
-display can be connected not only programmatically, but also directly during disk loading, which
+display can be connected not only programmatically, but also directly during diskette loading, which
 makes it possible to show a startup splash image on the display.
 
 <img src="img/display.jpg" width="60%" alt="Display">
