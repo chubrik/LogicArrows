@@ -73,6 +73,15 @@
     </tr>
     <tr>
       <td valign="top">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20GMN.asm">
+          <img src="../../computer-v1/img/guess-number.jpg" alt="Игра «Угадай число»"><br>
+          <b>Игра «Угадай число»</b>
+        </a><br>
+        Угадывайте числа по правилу «больше/меньше», не растеряв пять жизней. Автор —
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Михаил Мосеев</a>.<br><br>
+      </td>
+      <td valign="top">
         <a href="asm/prime-numbers.asm">
           <img src="../../computer-v1/img/prime-numbers.jpg" alt="Простые числа"><br>
           <b>Простые числа</b>
@@ -86,6 +95,8 @@
         </a><br>
         Находит 10 чисел Фибоначчи и выводит их на дисплей в двоичном формате<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/typewriter.asm">
           <img src="../../computer-v1/img/terminal.jpg" alt="Пишущая машинка"><br>
@@ -93,8 +104,6 @@
         </a><br>
         Выводит в терминал текст, набираемый на клавиатуре<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/font-test.asm">
           <img src="../../computer-v1/img/font-test.jpg" alt="Тест шрифта"><br>

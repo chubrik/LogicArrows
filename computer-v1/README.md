@@ -75,6 +75,15 @@ To run your own program on the computer, see [Programming](programming.md).
     </tr>
     <tr>
       <td valign="top">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20GMN.asm">
+          <img src="img/guess-number.jpg" alt="Guess the Number Game"><br>
+          <b>Guess the Number Game</b>
+        </a><br>
+        Guess the numbers using the “higher/lower” rule without losing five lives. Author:
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Mikhail Moseev</a>.<br><br>
+      </td>
+      <td valign="top">
         <a href="asm/prime-numbers.asm">
           <img src="img/prime-numbers.jpg" alt="Prime Numbers"><br>
           <b>Prime Numbers</b>
@@ -88,6 +97,8 @@ To run your own program on the computer, see [Programming](programming.md).
         </a><br>
         Finds 10 Fibonacci numbers and displays them on the screen in binary format<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/typewriter.asm">
           <img src="img/terminal.jpg" alt="Typewriter"><br>
@@ -95,8 +106,6 @@ To run your own program on the computer, see [Programming](programming.md).
         </a><br>
         Outputs text typed on the keyboard to the terminal<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/font-test.asm">
           <img src="img/font-test.jpg" alt="Font Test"><br>
