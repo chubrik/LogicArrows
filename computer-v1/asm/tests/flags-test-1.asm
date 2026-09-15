@@ -6,8 +6,8 @@
 
 
                 ldi d, terminal     ; Register D permanently holds the address for terminal output
-                ldi c, 0x40         ; Probe counter: the code before the letter "A"
-                ldi b, 0x31         ; Diskette id marker: "1"
+                ldi c, "A" - 1      ; Probe counter
+                ldi b, "1"          ; Diskette id marker
                 st b, d
 
 ; Case 1: add 255+1, expect C=1, O=0
@@ -187,11 +187,11 @@ t15o:           inc c
 
 ; Counter check: after 30 probes the probe counter must be exactly "d"
 tchk:           mov a, c
-                ldi b, 0x64         ; The code of the letter "d"
+                ldi b, "d"
                 xor a, b
                 jz tdot
-                ldi c, 0x23         ; "#" = control flow went off plan, some probes did not run
+                ldi c, "#"          ; "#" = control flow went off plan, some probes did not run
                 st c, d
-tdot:           ldi c, 0x2E         ; End marker "."
+tdot:           ldi c, "."          ; End marker "."
                 st c, d
                 hlt

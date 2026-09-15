@@ -9,10 +9,10 @@
         st c, 0x3F      ; Connect output
         ldi d, loop     ; Store a reference to the start of the iteration to speed up the loop
 
-repeat: ldi a, 0x20     ; Take the code of the first character (space)
+repeat: ldi a, " "      ; Take the first character
 
 loop:   st a, c         ; Output the character to the terminal
-        inc a           ; Take the code of the next character
+        inc a           ; Take the next character
         jnz d           ; Repeat the iteration until the character code after 0xFF becomes 0x00
 
         jmp repeat      ; Repeat the program indefinitely

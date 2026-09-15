@@ -40,7 +40,8 @@ For the best understanding of the assembly language and its syntax, please revie
 MY_CONST equ 196                ; Declare a constant MY_CONST with the value 196 using the "equ"
                                 ; keyword. As values, you can use numbers from 0 to 255 anywhere in
                                 ; the code in decimal (196), hexadecimal (0xC4), octal (0304), or
-                                ; binary (0b11000100) form.
+                                ; binary (0b11000100) form. You can also use a character in quotes
+                                ; ("Д"), which is equivalent to a number in the cp1251 encoding.
 
 ldi a, MY_CONST                 ; When the code is assembled, "MY_CONST" is replaced with its final
                                 ; value, so the program will actually execute "ldi a, 196"
@@ -49,9 +50,10 @@ my_label:                       ; Declare a label, it denotes the current addres
   inc a
   jnz my_label                  ; The program will jump to the my_label label, creating a loop
 
-my_data db 1, 2, 3, 0x04, 0x05  ; Declare a data area using the "db" keyword. The my_data label
+my_data db 1, 2, 3, 0x4, "abc"  ; Declare a data area using the "db" keyword. The my_data label
                                 ; denotes the starting address of this area. As data, you can
-                                ; specify numbers, constants, and labels, separated by commas.
+                                ; specify numbers, constants, labels, and strings, separated by
+                                ; commas.
 
 my_data_size equ $ - my_data    ; "$" denotes the current address in the code. By subtracting the
                                 ; my_data address, we get the size of the data area, which we assign
