@@ -154,7 +154,7 @@
           <img src="../../computer-v2/img/tennis.jpg" alt="Игра «Теннис»"><br>
           <b>Игра «Теннис»</b>
         </a><br>
-        Отбивайте мяч платформой, не давая ему упасть. Автор —
+        Отбивайте мяч платформой, не давая ему упасть и зарабатывая очки. Автор —
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
         Михаил Мосеев</a>.<br><br>
       </td>

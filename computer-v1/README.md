@@ -63,6 +63,17 @@ To run your own program on the computer, see [Programming](programming.md).
         Displays a cat and the text “Hello world” on the screen<br><br>
       </td>
       <td valign="top" width="33%">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis%20v1.asm">
+          <img src="img/tennis.jpg" alt="Tennis Game"><br>
+          <b>Tennis Game</b>
+        </a><br>
+        Bounce the ball with the paddle, don’t let it fall, and score points. Author:
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Mikhail Moseev</a>.<br><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20Langton%27s%20ant.asm">
           <img src="img/langton-ant.jpg" alt="Langton's Ant"><br>
           <b>Langton's Ant</b>
@@ -72,8 +83,6 @@ To run your own program on the computer, see [Programming](programming.md).
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
         Mikhail Moseev</a>.<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20GMN.asm">
           <img src="img/guess-number.jpg" alt="Guess the Number Game"><br>
@@ -90,6 +99,8 @@ To run your own program on the computer, see [Programming](programming.md).
         </a><br>
         Finds the first 16 prime numbers and displays them on the screen in binary format<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/fibonacci-sequence.asm">
           <img src="img/fibonacci-sequence.jpg" alt="Fibonacci Sequence"><br>
@@ -97,8 +108,6 @@ To run your own program on the computer, see [Programming](programming.md).
         </a><br>
         Finds 10 Fibonacci numbers and displays them on the screen in binary format<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/typewriter.asm">
           <img src="img/terminal.jpg" alt="Typewriter"><br>

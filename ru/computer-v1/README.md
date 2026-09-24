@@ -61,6 +61,17 @@
         Выводит на дисплей котика и надпись «Hello world»<br><br>
       </td>
       <td valign="top" width="33%">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis%20v1.asm">
+          <img src="../../computer-v1/img/tennis.jpg" alt="Игра «Теннис»"><br>
+          <b>Игра «Теннис»</b>
+        </a><br>
+        Отбивайте мяч платформой, не давая ему упасть и зарабатывая очки. Автор —
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Михаил Мосеев</a>.<br><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20Langton%27s%20ant.asm">
           <img src="../../computer-v1/img/langton-ant.jpg" alt="Муравей Лэнгтона"><br>
           <b>Муравей Лэнгтона</b>
@@ -70,8 +81,6 @@
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
         Михаил Мосеев</a>.<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20GMN.asm">
           <img src="../../computer-v1/img/guess-number.jpg" alt="Игра «Угадай число»"><br>
@@ -88,6 +97,8 @@
         </a><br>
         Находит первые 16 простых чисел и выводит их на дисплей в двоичном формате<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/fibonacci-sequence.asm">
           <img src="../../computer-v1/img/fibonacci-sequence.jpg" alt="Числа Фибоначчи"><br>
@@ -95,8 +106,6 @@
         </a><br>
         Находит 10 чисел Фибоначчи и выводит их на дисплей в двоичном формате<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/typewriter.asm">
           <img src="../../computer-v1/img/terminal.jpg" alt="Пишущая машинка"><br>

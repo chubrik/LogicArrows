@@ -155,7 +155,7 @@ To run your own program on the computer, see [Programming](programming.md).
           <img src="img/tennis.jpg" alt="Tennis Game"><br>
           <b>Tennis Game</b>
         </a><br>
-        Bounce the ball with the paddle and don’t let it fall. Author:
+        Bounce the ball with the paddle, don’t let it fall, and score points. Author:
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
         Mikhail Moseev</a>.<br><br>
       </td>
