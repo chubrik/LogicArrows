@@ -89,7 +89,9 @@ hlt | Halts the program execution | `hlt`
 
 ### Computational Instructions
 The instructions in this set perform calculations based on registers and affect the flags. In the
-table below, the conventional ***X*** and ***Y*** are used to denote any registers.
+table below, the conventional ***X*** and ***Y*** are used to denote any registers. The rightmost
+column lists the flags whose value is updated according to the result of the computation. The other
+flags keep their value.
 
 Instruction | Description | Effect<br> on flags
 ---|---|---
