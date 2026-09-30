@@ -64,7 +64,8 @@ To run your own program on the computer, see [Programming](programming.md).
           <b>3D Maze Game</b>
         </a><br>
         Find the way out of the maze in first-person view. The 3D graphics are rendered by ray
-        casting. Author: <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        casting. Author:
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
         Mikhail Moseev</a>.<br><br>
       </td>
     </tr>
@@ -87,12 +88,13 @@ To run your own program on the computer, see [Programming](programming.md).
         Mikhail Moseev</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="asm/space-fight.asm">
-          <img src="img/space-fight.jpg" alt="Space Fight Game"><br>
-          <b>Space Fight Game</b>
+        <a href="asm/community/tic-tac-toe-bot.asm">
+          <img src="img/tic-tac-toe.jpg" alt="Tic-Tac-Toe Game"><br>
+          <b>Tic-Tac-Toe Game</b>
         </a><br>
-        Enemy ships are approaching you, which you need to shoot down within a limited time. If you
-        win, you will receive a prize.<br><br>
+        Line up three in a row playing against the bot. There is also a
+        <a href="asm/community/tic-tac-toe-pvp.asm">version for two</a>. Author:
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
     </tr>
     <tr>
@@ -106,6 +108,14 @@ To run your own program on the computer, see [Programming](programming.md).
         Mikhail Moseev</a>.<br><br>
       </td>
       <td valign="top">
+        <a href="asm/space-fight.asm">
+          <img src="img/space-fight.jpg" alt="Space Fight Game"><br>
+          <b>Space Fight Game</b>
+        </a><br>
+        Enemy ships are approaching you, which you need to shoot down within a limited time. If you
+        win, you will receive a prize.<br><br>
+      </td>
+      <td valign="top">
         <a href="asm/guess-number.asm">
           <img src="img/guess-number.jpg" alt="Guess the Number Game"><br>
           <b>Guess the Number Game</b>
@@ -113,6 +123,8 @@ To run your own program on the computer, see [Programming](programming.md).
         Guess the numbers using the “higher/lower” rule and increase your overall winning
         score<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/community/maze-generator.asm">
           <img src="img/maze-generator.jpg" alt="Maze Generator"><br>
@@ -121,8 +133,6 @@ To run your own program on the computer, see [Programming](programming.md).
         Generates a random maze on the display using the backtracking algorithm. Author:
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/community/1d-cellular-automaton.asm">
           <img src="img/1d-cellular-automaton.jpg" alt="1D Cellular Automaton"><br>
@@ -140,6 +150,8 @@ To run your own program on the computer, see [Programming](programming.md).
         produces a complex pattern. Author:
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/demo.asm">
           <img src="img/summary.jpg" alt="Demo"><br>
@@ -148,8 +160,6 @@ To run your own program on the computer, see [Programming](programming.md).
         Displays a colored butterfly, writes “Hello, Onigiri!” in the terminal, draws an onigiri
         image, and rings the bell<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
           <img src="img/tennis.jpg" alt="Tennis Game"><br>
@@ -167,6 +177,8 @@ To run your own program on the computer, see [Programming](programming.md).
         Finds 16 prime numbers and outputs them to the digital indicator, as well as to the display
         in binary format<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/fibonacci-sequence.asm">
           <img src="img/fibonacci-sequence.jpg" alt="Fibonacci Sequence"><br>
@@ -175,8 +187,6 @@ To run your own program on the computer, see [Programming](programming.md).
         Finds 12 Fibonacci numbers. Outputs them to the digital indicator, as well as to the display
         in binary format<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/terminal-art.asm">
           <img src="img/terminal-art.jpg" alt="Terminal Art"><br>
@@ -192,6 +202,8 @@ To run your own program on the computer, see [Programming](programming.md).
         A joke program that uses RAM as a canvas to display an image (“Where are the arrows?!” in
         Russian)<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/typewriter.asm">
           <img src="img/typewriter.jpg" alt="Typewriter"><br>
@@ -199,8 +211,6 @@ To run your own program on the computer, see [Programming](programming.md).
         </a><br>
         Outputs text typed on the keyboard to the terminal<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/font-test.asm">
           <img src="img/font-test.jpg" alt="Font Test"><br>
