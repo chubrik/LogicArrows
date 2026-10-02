@@ -59,12 +59,11 @@ To run your own program on the computer, see [Programming](programming.md).
         Fills the display with random pixels and calculates subsequent generations<br><br>
       </td>
       <td valign="top" width="33%">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%203d%20maze.asm">
-          <img src="img/3d-maze.jpg" alt="3D Maze Game"><br>
-          <b>3D Maze Game</b>
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake.asm">
+          <img src="img/snake.jpg" alt="Snake Game"><br>
+          <b>Snake Game</b>
         </a><br>
-        Find the way out of the maze in first-person view. The 3D graphics are rendered by ray
-        casting. Author:
+        Control the snake, collect apples, and don’t run into your own tail. Author:
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
         Mikhail Moseev</a>.<br><br>
       </td>
@@ -79,21 +78,49 @@ To run your own program on the computer, see [Programming](programming.md).
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake.asm">
-          <img src="img/snake.jpg" alt="Snake Game"><br>
-          <b>Snake Game</b>
-        </a><br>
-        Control the snake, collect apples, and don’t run into your own tail. Author:
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
-        Mikhail Moseev</a>.<br><br>
-      </td>
-      <td valign="top">
         <a href="asm/community/tic-tac-toe-bot.asm">
           <img src="img/tic-tac-toe.jpg" alt="Tic-Tac-Toe Game"><br>
           <b>Tic-Tac-Toe Game</b>
         </a><br>
         Line up three in a row playing against the bot. There is also a
         <a href="asm/community/tic-tac-toe-pvp.asm">version for two</a>. Author:
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
+      </td>
+      <td valign="top">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%203d%20maze.asm">
+          <img src="img/3d-maze.jpg" alt="3D Maze Game"><br>
+          <b>3D Maze Game</b>
+        </a><br>
+        Find the way out of the maze in first-person view. The 3D graphics are rendered by ray
+        casting. Author:
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Mikhail Moseev</a>.<br><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <a href="https://github.com/NnicanBuak/LogicArrows/blob/main/qr-terminal/qr_terminal21.asm">
+          <img src="img/qr-generator.jpg" alt="QR Generator"><br>
+          <b>QR Generator</b>
+        </a><br>
+        Type up to 16 characters and get a real QR code. The processor itself computes the
+        Reed–Solomon codes over the Galois field. Author:
+        <a href="https://github.com/NnicanBuak/LogicArrows">Nnican</a>.<br><br>
+      </td>
+      <td valign="top">
+        <a href="asm/community/maze-generator.asm">
+          <img src="img/maze-generator.jpg" alt="Maze Generator"><br>
+          <b>Maze Generator</b>
+        </a><br>
+        Generates a random maze on the display using the backtracking algorithm. Author:
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
+      </td>
+      <td valign="top">
+        <a href="asm/community/1d-cellular-automaton.asm">
+          <img src="img/1d-cellular-automaton.jpg" alt="1D Cellular Automaton"><br>
+          <b>1D Cellular Automaton</b>
+        </a><br>
+        Enter a rule in binary and watch the cells evolve on the display. Author:
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
     </tr>
@@ -126,22 +153,6 @@ To run your own program on the computer, see [Programming](programming.md).
     </tr>
     <tr>
       <td valign="top">
-        <a href="asm/community/maze-generator.asm">
-          <img src="img/maze-generator.jpg" alt="Maze Generator"><br>
-          <b>Maze Generator</b>
-        </a><br>
-        Generates a random maze on the display using the backtracking algorithm. Author:
-        <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
-      </td>
-      <td valign="top">
-        <a href="asm/community/1d-cellular-automaton.asm">
-          <img src="img/1d-cellular-automaton.jpg" alt="1D Cellular Automaton"><br>
-          <b>1D Cellular Automaton</b>
-        </a><br>
-        Enter a rule in binary and watch the cells evolve on the display. Author:
-        <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
-      </td>
-      <td valign="top">
         <a href="asm/community/langton-ant.asm">
           <img src="img/langton-ant.jpg" alt="Langton's Ant"><br>
           <b>Langton's Ant</b>
@@ -150,8 +161,6 @@ To run your own program on the computer, see [Programming](programming.md).
         produces a complex pattern. Author:
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/demo.asm">
           <img src="img/summary.jpg" alt="Demo"><br>
@@ -169,6 +178,8 @@ To run your own program on the computer, see [Programming](programming.md).
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
         Mikhail Moseev</a>.<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/prime-numbers.asm">
           <img src="img/prime-numbers.jpg" alt="Prime Numbers"><br>
@@ -177,8 +188,6 @@ To run your own program on the computer, see [Programming](programming.md).
         Finds 16 prime numbers and outputs them to the digital indicator, as well as to the display
         in binary format<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/fibonacci-sequence.asm">
           <img src="img/fibonacci-sequence.jpg" alt="Fibonacci Sequence"><br>
@@ -194,6 +203,8 @@ To run your own program on the computer, see [Programming](programming.md).
         </a><br>
         Uses the terminal’s graphics mode to display an image<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/ram-art.asm">
           <img src="img/ram-art.jpg" alt="RAM Art"><br>
@@ -202,8 +213,6 @@ To run your own program on the computer, see [Programming](programming.md).
         A joke program that uses RAM as a canvas to display an image (“Where are the arrows?!” in
         Russian)<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/typewriter.asm">
           <img src="img/typewriter.jpg" alt="Typewriter"><br>
@@ -233,6 +242,8 @@ To run your own program on the computer, see [Programming](programming.md).
   Logic Arrows by 5000 times
 - [Programs by Mikhail Moseev](https://github.com/mihail-moseev/program_for_computer_in_logic-arrows)
   – repository by the author of several programs listed above
+- [Programs by Nnican](https://github.com/NnicanBuak/LogicArrows)
+  – repository by the author of programs listed above
 - [Python emulator](https://github.com/farmer2010/Chubrik-processor-emulator) – written by
   community member Farmer_2010, the author of several programs listed above
 - [C emulator](https://github.com/KittenAmogus/ACPUEmulator) – written by community member

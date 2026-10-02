@@ -28,9 +28,9 @@ of all programs.
             Computer v2
           </a>
         </h3>
-        <b>The flagship project.</b> A computer with its own assembler, programs, and games: Tetris,
-        Game of Life, Arkanoid, 3D Maze, and more. Actively discussed and developed in the community
-        of Logic Arrows enthusiasts.<br><br>
+        <b>The flagship project.</b> A computer with its own assembler and a large gallery of
+        programs and games: Tetris, Game of Life, Arkanoid, 3D Maze, a QR code generator, and more.
+        Actively discussed and developed in the community of Logic Arrows enthusiasts.<br><br>
       </td>
       <td valign="top">
         <h3>
@@ -40,7 +40,8 @@ of all programs.
           </a>
         </h3>
         The first version of the computer. It was created based on a physical prototype and helped
-        master the construction of complex circuits.<br><br>
+        master the construction of complex circuits. It is still maintained, and the community
+        writes new programs for it.<br><br>
       </td>
     </tr>
   </thead>
