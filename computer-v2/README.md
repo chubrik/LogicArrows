@@ -153,6 +153,16 @@ To run your own program on the computer, see [Programming](programming.md).
     </tr>
     <tr>
       <td valign="top">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20casino.asm">
+          <img src="img/casino.jpg" alt="Casino Game"><br>
+          <b>Casino Game</b>
+        </a><br>
+        Place your bets and spin the reels: three matching symbols multiply the bet, three sevens
+        by ten. Author:
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Mikhail Moseev</a>.<br><br>
+      </td>
+      <td valign="top">
         <a href="asm/community/langton-ant.asm">
           <img src="img/langton-ant.jpg" alt="Langton's Ant"><br>
           <b>Langton's Ant</b>
@@ -169,6 +179,8 @@ To run your own program on the computer, see [Programming](programming.md).
         Displays a colored butterfly, writes “Hello, Onigiri!” in the terminal, draws an onigiri
         image, and rings the bell<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
           <img src="img/tennis.jpg" alt="Tennis Game"><br>
@@ -178,8 +190,6 @@ To run your own program on the computer, see [Programming](programming.md).
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
         Mikhail Moseev</a>.<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/prime-numbers.asm">
           <img src="img/prime-numbers.jpg" alt="Prime Numbers"><br>
@@ -196,6 +206,8 @@ To run your own program on the computer, see [Programming](programming.md).
         Finds 12 Fibonacci numbers. Outputs them to the digital indicator, as well as to the display
         in binary format<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/terminal-art.asm">
           <img src="img/terminal-art.jpg" alt="Terminal Art"><br>
@@ -203,8 +215,6 @@ To run your own program on the computer, see [Programming](programming.md).
         </a><br>
         Uses the terminal’s graphics mode to display an image<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/ram-art.asm">
           <img src="img/ram-art.jpg" alt="RAM Art"><br>
@@ -220,6 +230,8 @@ To run your own program on the computer, see [Programming](programming.md).
         </a><br>
         Outputs text typed on the keyboard to the terminal<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/font-test.asm">
           <img src="img/font-test.jpg" alt="Font Test"><br>

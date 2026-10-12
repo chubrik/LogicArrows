@@ -152,6 +152,16 @@
     </tr>
     <tr>
       <td valign="top">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20casino.asm">
+          <img src="../../computer-v2/img/casino.jpg" alt="Игра «Казино»"><br>
+          <b>Игра «Казино»</b>
+        </a><br>
+        Делайте ставки и крутите барабаны: три одинаковых символа умножают ставку, а три семёрки —
+        вдесятеро. Автор —
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Михаил Мосеев</a>.<br><br>
+      </td>
+      <td valign="top">
         <a href="asm/community/langton-ant.asm">
           <img src="../../computer-v2/img/langton-ant.jpg" alt="Муравей Лэнгтона"><br>
           <b>Муравей Лэнгтона</b>
@@ -168,6 +178,8 @@
         Выводит на дисплей цветную бабочку, пишет в терминал «Hello, Onigiri!», рисует изображение
         онигири и звонит в колокольчик<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
           <img src="../../computer-v2/img/tennis.jpg" alt="Игра «Теннис»"><br>
@@ -177,8 +189,6 @@
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
         Михаил Мосеев</a>.<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/prime-numbers.asm">
           <img src="../../computer-v2/img/prime-numbers.jpg" alt="Простые числа"><br>
@@ -195,6 +205,8 @@
         Находит 12 чисел Фибоначчи. Выводит их на цифровой индикатор, а также на дисплей в двоичном
         формате<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/terminal-art.asm">
           <img src="../../computer-v2/img/terminal-art.jpg" alt="Арт в терминале"><br>
@@ -202,8 +214,6 @@
         </a><br>
         Использует графический режим терминала для вывода изображения<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/ram-art.asm">
           <img src="../../computer-v2/img/ram-art.jpg" alt="Арт в RAM"><br>
@@ -218,6 +228,8 @@
         </a><br>
         Выводит в терминал текст, набираемый на клавиатуре<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/font-test.asm">
           <img src="../../computer-v2/img/font-test.jpg" alt="Тест шрифта"><br>
