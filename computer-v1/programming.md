@@ -3,7 +3,7 @@
 
 To run your own program on the computer, follow these steps:
 - Learn the assembly language on this page.
-- Open the [online compiler](https://chubrik.github.io/arrows-compiler/#cpu=v1) and write your
+- Open the [online compiler](https://chubrik.github.io/arrows-compiler/#in=asm-v1) and write your
   program in the left panel.
 - Copy the compiled code from the right panel.
 - Go to the [computer map](https://logic-arrows.io/map-lVeJ9jtX) and press `Ctrl+V` to paste the

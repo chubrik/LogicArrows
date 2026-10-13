@@ -131,7 +131,7 @@ To run your own program on the computer, see [Programming](programming.md).
 
 ## <a name="links"></a>Links
 
-- [Online compiler](https://chubrik.github.io/arrows-compiler/#cpu=v1) – write a program and get
+- [Online compiler](https://chubrik.github.io/arrows-compiler/#in=asm-v1) – write a program and get
   a diskette to paste into the game
 - [GraphDLC](https://github.com/MerinPrime/GraphDLC) – essential browser extension that speeds up
   Logic Arrows by 5000 times

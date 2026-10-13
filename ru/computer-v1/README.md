@@ -129,7 +129,7 @@
 
 ## <a name="links"></a>Ссылки
 
-- [Онлайн-компилятор](https://chubrik.github.io/arrows-compiler/#cpu=v1) – напишите программу и
+- [Онлайн-компилятор](https://chubrik.github.io/arrows-compiler/#in=asm-v1) – напишите программу и
   получите дискету для вставки в игру
 - [GraphDLC](https://github.com/MerinPrime/GraphDLC) – необходимое расширение для браузера,
   ускоряющее Стрелочки в 5000 раз
