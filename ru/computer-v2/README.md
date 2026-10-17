@@ -70,7 +70,7 @@
     </tr>
     <tr>
       <td valign="top">
-        <a href="asm/community/arkanoid.asm">
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/arcanoid.asm">
           <img src="../../computer-v2/img/arkanoid.jpg" alt="Игра «Арканоид»"><br>
           <b>Игра «Арканоид»</b>
         </a><br>
@@ -78,12 +78,12 @@
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="asm/community/tic-tac-toe-bot.asm">
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/XO_bot.asm">
           <img src="../../computer-v2/img/tic-tac-toe.jpg" alt="Игра «Крестики-нолики»"><br>
           <b>Игра «Крестики-нолики»</b>
         </a><br>
         Соберите линию из трёх, играя против бота. Также есть
-        <a href="asm/community/tic-tac-toe-pvp.asm">версия для двоих</a>. Автор —
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/XO_pvp.asm">версия для двоих</a>. Автор —
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
@@ -108,7 +108,7 @@
         <a href="https://github.com/NnicanBuak/LogicArrows">Nnican</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="asm/community/maze-generator.asm">
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/maze_generator.asm">
           <img src="../../computer-v2/img/maze-generator.jpg" alt="Генератор лабиринтов"><br>
           <b>Генератор лабиринтов</b>
         </a><br>
@@ -116,7 +116,7 @@
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="asm/community/1d-cellular-automaton.asm">
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/1d_ca.asm">
           <img src="../../computer-v2/img/1d-cellular-automaton.jpg" alt="1D клеточный автомат"><br>
           <b>1D клеточный автомат</b>
         </a><br>
@@ -162,7 +162,7 @@
         Михаил Мосеев</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="asm/community/langton-ant.asm">
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/langton_ant.asm">
           <img src="../../computer-v2/img/langton-ant.jpg" alt="Муравей Лэнгтона"><br>
           <b>Муравей Лэнгтона</b>
         </a><br>

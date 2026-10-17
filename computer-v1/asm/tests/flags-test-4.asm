@@ -1,4 +1,4 @@
-; ##################################################################################################
+﻿; ##################################################################################################
 ; ##        Diagnostic diskette #4: S and Z flags after the logical operations (and/or/xor)       ##
 ; ##                 https://github.com/chubrik/LogicArrows/tree/main/computer-v1                 ##
 ; ##                         (c) 2026 Arkadi Chubrik (arkadi@chubrik.org)                         ##
