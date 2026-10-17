@@ -87,18 +87,6 @@
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%203d%20maze.asm">
-          <img src="../../computer-v2/img/3d-maze.jpg" alt="Игра «3D-лабиринт»"><br>
-          <b>Игра «3D-лабиринт»</b>
-        </a><br>
-        Найдите выход из лабиринта, глядя от первого лица. Трёхмерная графика строится через
-        рейкастинг. Автор —
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
-        Михаил Мосеев</a>.<br><br>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
         <a href="https://github.com/NnicanBuak/LogicArrows/blob/main/qr-terminal/qr_terminal21.asm">
           <img src="../../computer-v2/img/qr-generator.jpg" alt="Генератор QR-кодов"><br>
           <b>Генератор QR-кодов</b>
@@ -106,6 +94,26 @@
         Наберите до 16 символов и получите настоящий QR-код. Коды Рида — Соломона над полем Галуа
         процессор считает сам. Автор —
         <a href="https://github.com/NnicanBuak/LogicArrows">Nnican</a>.<br><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/raycasting.asm">
+          <img src="../../computer-v2/img/3d-maze-farmer.jpg" alt="3D-лабиринт"><br>
+          <b>3D-лабиринт</b>
+        </a><br>
+        Прогулка по лабиринту от первого лица. Цветной рейкастинг позволяет чувствовать
+        дистанцию. Автор — <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
+      </td>
+      <td valign="top">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%203d%20maze.asm">
+          <img src="../../computer-v2/img/3d-maze-moseev.jpg" alt="3D-лабиринт"><br>
+          <b>3D-лабиринт</b>
+        </a><br>
+        Найдите выход из лабиринта, глядя от первого лица. Трёхмерная графика строится через
+        рейкастинг. Автор —
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Михаил Мосеев</a>.<br><br>
       </td>
       <td valign="top">
         <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/maze_generator.asm">
@@ -115,6 +123,8 @@
         Генерирует на дисплее случайный лабиринт методом поиска с возвратом. Автор —
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/1d_ca.asm">
           <img src="../../computer-v2/img/1d-cellular-automaton.jpg" alt="1D клеточный автомат"><br>
@@ -123,8 +133,6 @@
         Введите правило в двоичном виде и наблюдайте за эволюцией клеток на дисплее. Автор —
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20minesweeper.asm">
           <img src="../../computer-v2/img/minesweeper.jpg" alt="Игра «Сапёр»"><br>
@@ -142,6 +150,8 @@
         К вам приближаются вражеские корабли, которые нужно сбить за ограниченное время. В случае
         победы вы получите приз.<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/guess-number.asm">
           <img src="../../computer-v2/img/guess-number.jpg" alt="Игра «Угадай число»"><br>
@@ -149,8 +159,6 @@
         </a><br>
         Угадывайте числа по правилу «больше/меньше» и повышайте общий счёт побед<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20casino.asm">
           <img src="../../computer-v2/img/casino.jpg" alt="Игра «Казино»"><br>
@@ -170,6 +178,8 @@
         порождая сложный узор. Автор —
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/demo.asm">
           <img src="../../computer-v2/img/summary.jpg" alt="Демо"><br>
@@ -178,8 +188,6 @@
         Выводит на дисплей цветную бабочку, пишет в терминал «Hello, Onigiri!», рисует изображение
         онигири и звонит в колокольчик<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
           <img src="../../computer-v2/img/tennis.jpg" alt="Игра «Теннис»"><br>
@@ -197,6 +205,8 @@
         Находит 16 простых чисел и выводит их на цифровой индикатор, а также на дисплей в двоичном
         формате<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/fibonacci-sequence.asm">
           <img src="../../computer-v2/img/fibonacci-sequence.jpg" alt="Числа Фибоначчи"><br>
@@ -205,8 +215,6 @@
         Находит 12 чисел Фибоначчи. Выводит их на цифровой индикатор, а также на дисплей в двоичном
         формате<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/terminal-art.asm">
           <img src="../../computer-v2/img/terminal-art.jpg" alt="Арт в терминале"><br>
@@ -221,6 +229,8 @@
         </a><br>
         Программа-шутка, использует RAM как холст для вывода изображения<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/typewriter.asm">
           <img src="../../computer-v2/img/typewriter.jpg" alt="Пишущая машинка"><br>
@@ -228,8 +238,6 @@
         </a><br>
         Выводит в терминал текст, набираемый на клавиатуре<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/font-test.asm">
           <img src="../../computer-v2/img/font-test.jpg" alt="Тест шрифта"><br>

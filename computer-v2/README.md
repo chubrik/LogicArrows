@@ -87,18 +87,6 @@ To run your own program on the computer, see [Programming](programming.md).
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%203d%20maze.asm">
-          <img src="img/3d-maze.jpg" alt="3D Maze Game"><br>
-          <b>3D Maze Game</b>
-        </a><br>
-        Find the way out of the maze in first-person view. The 3D graphics are rendered by ray
-        casting. Author:
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
-        Mikhail Moseev</a>.<br><br>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
         <a href="https://github.com/NnicanBuak/LogicArrows/blob/main/qr-terminal/qr_terminal21.asm">
           <img src="img/qr-generator.jpg" alt="QR Generator"><br>
           <b>QR Generator</b>
@@ -106,6 +94,26 @@ To run your own program on the computer, see [Programming](programming.md).
         Type up to 16 characters and get a real QR code. The processor itself computes the
         Reed–Solomon codes over the Galois field. Author:
         <a href="https://github.com/NnicanBuak/LogicArrows">Nnican</a>.<br><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/raycasting.asm">
+          <img src="img/3d-maze-farmer.jpg" alt="3D Maze"><br>
+          <b>3D Maze</b>
+        </a><br>
+        Walk through a maze in first-person view. Color raycasting lets you feel the distance.
+        Author: <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
+      </td>
+      <td valign="top">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%203d%20maze.asm">
+          <img src="img/3d-maze-moseev.jpg" alt="3D Maze"><br>
+          <b>3D Maze</b>
+        </a><br>
+        Find the way out of the maze in first-person view. The 3D graphics are rendered by ray
+        casting. Author:
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Mikhail Moseev</a>.<br><br>
       </td>
       <td valign="top">
         <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/maze_generator.asm">
@@ -115,6 +123,8 @@ To run your own program on the computer, see [Programming](programming.md).
         Generates a random maze on the display using the backtracking algorithm. Author:
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/1d_ca.asm">
           <img src="img/1d-cellular-automaton.jpg" alt="1D Cellular Automaton"><br>
@@ -123,8 +133,6 @@ To run your own program on the computer, see [Programming](programming.md).
         Enter a rule in binary and watch the cells evolve on the display. Author:
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20minesweeper.asm">
           <img src="img/minesweeper.jpg" alt="Minesweeper Game"><br>
@@ -142,6 +150,8 @@ To run your own program on the computer, see [Programming](programming.md).
         Enemy ships are approaching you, which you need to shoot down within a limited time. If you
         win, you will receive a prize.<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/guess-number.asm">
           <img src="img/guess-number.jpg" alt="Guess the Number Game"><br>
@@ -150,8 +160,6 @@ To run your own program on the computer, see [Programming](programming.md).
         Guess the numbers using the “higher/lower” rule and increase your overall winning
         score<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20casino.asm">
           <img src="img/casino.jpg" alt="Casino Game"><br>
@@ -171,6 +179,8 @@ To run your own program on the computer, see [Programming](programming.md).
         produces a complex pattern. Author:
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/demo.asm">
           <img src="img/summary.jpg" alt="Demo"><br>
@@ -179,8 +189,6 @@ To run your own program on the computer, see [Programming](programming.md).
         Displays a colored butterfly, writes “Hello, Onigiri!” in the terminal, draws an onigiri
         image, and rings the bell<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
           <img src="img/tennis.jpg" alt="Tennis Game"><br>
@@ -198,6 +206,8 @@ To run your own program on the computer, see [Programming](programming.md).
         Finds 16 prime numbers and outputs them to the digital indicator, as well as to the display
         in binary format<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/fibonacci-sequence.asm">
           <img src="img/fibonacci-sequence.jpg" alt="Fibonacci Sequence"><br>
@@ -206,8 +216,6 @@ To run your own program on the computer, see [Programming](programming.md).
         Finds 12 Fibonacci numbers. Outputs them to the digital indicator, as well as to the display
         in binary format<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/terminal-art.asm">
           <img src="img/terminal-art.jpg" alt="Terminal Art"><br>
@@ -223,6 +231,8 @@ To run your own program on the computer, see [Programming](programming.md).
         A joke program that uses RAM as a canvas to display an image (“Where are the arrows?!” in
         Russian)<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/typewriter.asm">
           <img src="img/typewriter.jpg" alt="Typewriter"><br>
@@ -230,8 +240,6 @@ To run your own program on the computer, see [Programming](programming.md).
         </a><br>
         Outputs text typed on the keyboard to the terminal<br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="asm/font-test.asm">
           <img src="img/font-test.jpg" alt="Font Test"><br>
