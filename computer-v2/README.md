@@ -259,7 +259,7 @@ To run your own program on the computer, see [Programming](programming.md).
 - [Online compiler](https://chubrik.github.io/arrows-compiler/) – write a program and get a diskette
   to paste into the game
 - [GraphDLC](https://github.com/MerinPrime/GraphDLC) – essential browser extension that speeds up
-  Logic Arrows by 5000 times
+  Logic Arrows by 10 000 times
 - [Programs by Mikhail Moseev](https://github.com/mihail-moseev/program_for_computer_in_logic-arrows)
   – repository by the author of several programs listed above
 - [Programs by Nnican](https://github.com/NnicanBuak/LogicArrows)

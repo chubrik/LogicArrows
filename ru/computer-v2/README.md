@@ -257,7 +257,7 @@
 - [Онлайн-компилятор](https://chubrik.github.io/arrows-compiler/) – напишите программу и получите
   дискету для вставки в игру
 - [GraphDLC](https://github.com/MerinPrime/GraphDLC) – необходимое расширение для браузера,
-  ускоряющее Стрелочки в 5000 раз
+  ускоряющее Стрелочки в 10 000 раз
 - [Программы Михаила Мосеева](https://github.com/mihail-moseev/program_for_computer_in_logic-arrows)
   – репозиторий автора нескольких программ из списка выше
 - [Программы от Nnican](https://github.com/NnicanBuak/LogicArrows)

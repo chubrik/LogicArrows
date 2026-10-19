@@ -191,6 +191,6 @@
 - [ZX Spectrum](https://github.com/chubrik/arrows-zx-spectrum/blob/main/ru/README.md) –
   реалтайм-эмулятор для Steam-версии Стрелочек
 - [GraphDLC](https://github.com/MerinPrime/GraphDLC) – браузерное расширение для ускорения
-  в 5000 раз
+  в 10 000 раз
 - [Дискорд-сервер](https://discord.gg/8FMuQuMFCN) – сообщество на Дискорде
 - [Телеграм-канал](https://t.me/logic_arrows) – сообщество в Телеграме

@@ -191,6 +191,6 @@ of all programs.
 - [ZX Spectrum](https://github.com/chubrik/arrows-zx-spectrum) – real-time emulator for the Steam
   version of Logic Arrows
 - [GraphDLC](https://github.com/MerinPrime/GraphDLC) – browser extension that speeds up the game
-  5000 times
+  10 000 times
 - [Discord server](https://discord.gg/8FMuQuMFCN) – community on Discord
 - [Telegram channel](https://t.me/logic_arrows) – community on Telegram
