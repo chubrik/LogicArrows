@@ -51,6 +51,12 @@ of all programs.
   <thead>
     <tr>
       <td valign="top" width="33%">
+        <a href="https://logic-arrows.io/map-chubrik">
+          <img src="img/showcase.jpg" alt="Showcase"><br>
+          <b>Showcase</b>
+        </a><br><br>
+      </td>
+      <td valign="top" width="33%">
         <a href="https://logic-arrows.io/map-life">
           <img src="img/life.jpg" alt="Game of Life"><br>
           <b>Game of Life</b>
@@ -62,14 +68,14 @@ of all programs.
           <b>Matrix</b>
         </a><br><br>
       </td>
-      <td valign="top" width="33%">
+    </tr>
+    <tr>
+      <td valign="top">
         <a href="https://logic-arrows.io/map-matrix-rgb">
           <img src="img/matrix-rgb.jpg" alt="Matrix RGB"><br>
           <b>Matrix RGB</b>
         </a><br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-CcGrVgC8">
           <img src="img/matrix-compact.jpg" alt="Compact Matrices"><br>
@@ -77,9 +83,17 @@ of all programs.
         </a><br><br>
       </td>
       <td valign="top">
+        <a href="https://logic-arrows.io/map-5yiGRxtG">
+          <img src="img/ram-32k-v2.jpg" alt="RAM 32K v2"><br>
+          <b>RAM 32K v2</b>
+        </a><br><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
         <a href="https://logic-arrows.io/map-fsG82aDy">
-          <img src="img/ram-32k.jpg" alt="RAM 32K"><br>
-          <b>RAM 32K</b>
+          <img src="img/ram-32k-v1.jpg" alt="RAM 32K v1"><br>
+          <b>RAM 32K v1</b>
         </a><br><br>
       </td>
       <td valign="top">
@@ -88,14 +102,14 @@ of all programs.
           <b>RAM 256 v2</b>
         </a><br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-utcKt1dM">
           <img src="img/ram-256-v1.jpg" alt="RAM 256 v1"><br>
           <b>RAM 256 v1</b>
         </a><br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-ram64">
           <img src="img/ram-64.jpg" alt="RAM 64"><br>
@@ -108,14 +122,14 @@ of all programs.
           <b>Compact ROM</b>
         </a><br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-0TNlFXRQa6Y">
           <img src="img/bcd-converter.jpg" alt="BCD Converter"><br>
           <b>BCD Converter</b>
         </a><br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-Xhj9Pead">
           <img src="img/digits.jpg" alt="Segment Displays"><br>
@@ -128,14 +142,14 @@ of all programs.
           <b>CPU Prototype</b>
         </a><br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-Io2FESYk">
           <img src="img/transmitters.jpg" alt="Transmitters"><br>
           <b>Transmitters</b>
         </a><br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-k_R4pB1A">
           <img src="img/gates.jpg" alt="Gates"><br>
@@ -148,14 +162,14 @@ of all programs.
           <b>Multiplier</b>
         </a><br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-5bk8IiWhZ6Q">
           <img src="img/adder.jpg" alt="Adder"><br>
           <b>Adder</b>
         </a><br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-GvPsAA38">
           <img src="img/subtractor.jpg" alt="Subtractor"><br>

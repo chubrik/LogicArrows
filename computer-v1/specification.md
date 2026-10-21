@@ -22,7 +22,7 @@ The processor reads an instruction from RAM at the address stored in `IP`. The i
 with registers and flags. After that, `IP` is incremented and the process repeats. For more details,
 see [Programming](programming.md).
 
-<img src="img/cpu.jpg" width="80%" alt="Processor">
+<img src="img/cpu.jpg" width="70%" alt="Processor">
 <br><br>
 
 
@@ -31,7 +31,7 @@ The computer’s memory is 256 bytes of RAM. The unit of stored information is 1
 access address is also 1 byte. Input port `3E` is connected to the keyboard. Output port `3F` allows
 switching between different output devices. The address range `40...7F` is shared video memory.
 
-<img src="img/ram.jpg" width="80%" alt="RAM">
+<img src="img/ram.jpg" width="70%" alt="RAM">
 <br><br>
 
 
@@ -41,7 +41,7 @@ input, the program should reset the value in the port itself. The character code
 [`cp1251`](https://en.wikipedia.org/wiki/Windows-1251) encoding. The keys `←` `↑` `→` `↓` `Enter`
 correspond to the codes `11` `12` `13` `14` `0A`.
 
-<img src="img/keyboard.jpg" width="80%" alt="Keyboard">
+<img src="img/keyboard.jpg" width="70%" alt="Keyboard">
 <br><br>
 
 
@@ -55,7 +55,7 @@ preserved, but the effect of subsequent writes to the screen memory area changes
 be switched to the display not only programmatically, but also directly during diskette loading,
 which makes it possible to show a startup splash image.
 
-<img src="img/display.jpg" width="60%" alt="Display">
+<img src="img/display.jpg" width="50%" alt="Display">
 <br><br>
 
 
@@ -65,7 +65,7 @@ sent to address `40` is output to the terminal as a character in the
 [`cp1251`](https://en.wikipedia.org/wiki/Windows-1251) encoding, shifting all previous characters to
 the left and then up a line.
 
-<img src="img/terminal.jpg" width="60%" alt="Terminal">
+<img src="img/terminal.jpg" width="50%" alt="Terminal">
 <br><br>
 
 
@@ -74,4 +74,4 @@ It consists of 3 decimal digits and displays numbers in the range `0...255`. To 
 the digital indicator, you need to write the byte `10` to port `3F`. Then, each byte sent to address
 `40` is converted to decimal format and displayed on the digital indicator.
 
-<img src="img/digits.jpg" width="40%" alt="Digital Indicator">
+<img src="img/digits.jpg" width="30%" alt="Digital Indicator">

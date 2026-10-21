@@ -11,6 +11,7 @@
         играми, созданными в том числе участниками сообщества.<br><br>
         <ul>
           <li><a href="https://logic-arrows.io/map-computer"><b>Карта с компьютером ⇾</b></a></li>
+          <li><a href="https://logic-arrows.io/map-computer-32k"><b>Версия на 32 КБ ⇾</b></a></li>
         </ul>
         <ul>
           <li><a href="specification.md">Устройство и характеристики</a></li>

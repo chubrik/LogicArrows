@@ -22,7 +22,7 @@
 регистрами и флагами. После этого `IP` инкрементируется и процесс повторяется. Подробнее см.
 [Программирование](programming.md).
 
-<img src="../../computer-v1/img/cpu.jpg" width="80%" alt="Процессор">
+<img src="../../computer-v1/img/cpu.jpg" width="70%" alt="Процессор">
 <br><br>
 
 
@@ -32,7 +32,7 @@
 вывода `3F` позволяет переключаться между различными средствами вывода. Диапазон адресов `40...7F`
 является совмещённой видеопамятью.
 
-<img src="../../computer-v1/img/ram.jpg" width="80%" alt="Оперативная память">
+<img src="../../computer-v1/img/ram.jpg" width="70%" alt="Оперативная память">
 <br><br>
 
 
@@ -42,7 +42,7 @@
 соответствуют кодировке [`cp1251`](https://ru.wikipedia.org/wiki/Windows-1251). Клавишам `←` `↑`
 `→` `↓` `Enter` соответствуют коды `11` `12` `13` `14` `0A`.
 
-<img src="../../computer-v1/img/keyboard.jpg" width="80%" alt="Клавиатура">
+<img src="../../computer-v1/img/keyboard.jpg" width="70%" alt="Клавиатура">
 <br><br>
 
 
@@ -56,7 +56,7 @@
 можно не только программно, но и прямо во время загрузки с дискеты, что позволяет выводить
 стартовое изображение-заставку.
 
-<img src="../../computer-v1/img/display.jpg" width="60%" alt="Дисплей">
+<img src="../../computer-v1/img/display.jpg" width="50%" alt="Дисплей">
 <br><br>
 
 
@@ -66,7 +66,7 @@
 [`cp1251`](https://ru.wikipedia.org/wiki/Windows-1251), сдвигая все предыдущие символы влево и далее
 на строчку выше.
 
-<img src="../../computer-v1/img/terminal.jpg" width="60%" alt="Терминал">
+<img src="../../computer-v1/img/terminal.jpg" width="50%" alt="Терминал">
 <br><br>
 
 
@@ -75,4 +75,4 @@
 цифровой индикатор необходимо в порт `3F` записать байт `10`. Далее, каждый байт, отправленный по
 адресу `40`, преобразуется в десятичный формат и выводится на цифровой индикатор.
 
-<img src="../../computer-v1/img/digits.jpg" width="40%" alt="Цифровой индикатор">
+<img src="../../computer-v1/img/digits.jpg" width="30%" alt="Цифровой индикатор">

@@ -11,6 +11,7 @@
         diskettes with programs and games, some of them created by members of the community.<br><br>
         <ul>
           <li><a href="https://logic-arrows.io/map-computer"><b>Map with the computer ⇾</b></a></li>
+          <li><a href="https://logic-arrows.io/map-computer-32k"><b>32 KB version ⇾</b></a></li>
         </ul>
         <ul>
           <li><a href="specification.md">Structure and Specifications</a></li>

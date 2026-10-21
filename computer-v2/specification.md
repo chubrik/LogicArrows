@@ -21,25 +21,38 @@ The processor reads an instruction from RAM at the address stored in `IP`. The i
 with registers and flags. After that, `IP` is incremented and the process repeats. For more details,
 see [Programming](programming.md).
 
-<img src="img/cpu.jpg" width="60%" alt="Processor">
+<img src="img/cpu.jpg" width="50%" alt="Processor">
 <br><br>
 
 
 ## RAM
-The computer’s memory is 1 KB of RAM, expandable to 32 KB. The unit of stored information is 1 byte,
-and the memory access address is also 1 byte. Since an 8-bit address can only access 256 RAM
-addresses, there is a memory bank switching system. The banks are numbered from 1 to 255 and are
-connected to the address range `80...FF` by writing the bank number to port `3F`. Bank #0 does not
-exist: the number `0` as an exception connects bank #1, which is also connected by default while
-nothing has been written to port `3F`.
+The computer’s memory is up to 32 KB of RAM. The unit of stored information is 1 byte, and the
+memory access address is also 1 byte. Since an 8-bit address can only access 256 RAM addresses,
+there is a memory bank switching system. The banks are numbered from 1 to 255 and are connected to
+the address range `80...FF` by writing the bank number to port `3F`. Bank #0 does not exist: the
+number `0` as an exception connects bank #1, which is also connected by default while nothing has
+been written to port `3F`.
 
 The address range `00...7F` is not a bank: it is the common part of the memory, and it is fixed
 permanently. Thus, the RAM in its maximum configuration consists of the common part and 255 banks
 of 128 bytes each — exactly 32 KB in total. Unlike other ports, bank switching is only possible
 programmatically: writing to port `3F` during diskette loading does not switch the bank.
 
-<img src="img/ram.jpg" width="80%" alt="RAM">
-<br><br>
+<table>
+  <thead>
+    <tr>
+      <td width="50%">
+        <img src="img/ram-1k.jpg" alt="RAM 1 KB"><br>
+        <b>RAM 1 KB</b>
+      </td>
+      <td>
+        <img src="img/ram-32k.jpg" alt="RAM 32 KB"><br>
+        <b>RAM 32 KB</b>
+      </td>
+    </tr>
+  </thead>
+</table>
+<br>
 
 
 ## Keyboard
@@ -51,7 +64,7 @@ port is automatically reset to allow for the detection of repeated input. The ch
 correspond to the [`cp1251`](https://en.wikipedia.org/wiki/Windows-1251) encoding. The keys `←` `↑`
 `→` `↓` `Enter` correspond to the codes `11` `12` `13` `14` `0A`.
 
-<img src="img/keyboard.jpg" width="80%" alt="Keyboard">
+<img src="img/keyboard.jpg" width="70%" alt="Keyboard">
 <br><br>
 
 
@@ -67,7 +80,7 @@ display is preserved, but the effect of subsequent writes to the screen memory a
 display can be connected not only programmatically, but also directly during diskette loading, which
 makes it possible to show a startup splash image on the display.
 
-<img src="img/display.jpg" width="60%" alt="Display">
+<img src="img/display.jpg" width="50%" alt="Display">
 <br><br>
 
 
@@ -83,7 +96,7 @@ each byte sent to address `3C` is output to the terminal as a character in the
 accumulate up to six, after which they are output to the terminal all at once as one graphic
 character.
 
-<img src="img/terminal.jpg" width="60%" alt="Terminal">
+<img src="img/terminal.jpg" width="50%" alt="Terminal">
 <br><br>
 
 
@@ -95,4 +108,4 @@ signed mode. Then, each byte sent to address `3A` is converted to decimal format
 digital indicator. A byte sent to address `3B` is converted to decimal format with multiplication by
 256.
 
-<img src="img/digits.jpg" width="40%" alt="Digital Indicator">
+<img src="img/digits.jpg" width="30%" alt="Digital Indicator">

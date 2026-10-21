@@ -50,6 +50,12 @@
   <thead>
     <tr>
       <td valign="top" width="33%">
+        <a href="https://logic-arrows.io/map-chubrik">
+          <img src="../img/showcase.jpg" alt="Витрина"><br>
+          <b>Витрина</b>
+        </a><br><br>
+      </td>
+      <td valign="top" width="33%">
         <a href="https://logic-arrows.io/map-life">
           <img src="../img/life.jpg" alt="Игра «Жизнь»"><br>
           <b>Игра «Жизнь»</b>
@@ -61,14 +67,14 @@
           <b>Матрица</b>
         </a><br><br>
       </td>
-      <td valign="top" width="33%">
+    </tr>
+    <tr>
+      <td valign="top">
         <a href="https://logic-arrows.io/map-matrix-rgb">
           <img src="../img/matrix-rgb.jpg" alt="Матрица цветная"><br>
           <b>Матрица цветная</b>
         </a><br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-CcGrVgC8">
           <img src="../img/matrix-compact.jpg" alt="Матрицы плотные"><br>
@@ -76,9 +82,17 @@
         </a><br><br>
       </td>
       <td valign="top">
+        <a href="https://logic-arrows.io/map-5yiGRxtG">
+          <img src="../img/ram-32k-v2.jpg" alt="RAM 32K v2"><br>
+          <b>RAM 32K v2</b>
+        </a><br><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
         <a href="https://logic-arrows.io/map-fsG82aDy">
-          <img src="../img/ram-32k.jpg" alt="RAM 32K"><br>
-          <b>RAM 32K</b>
+          <img src="../img/ram-32k-v1.jpg" alt="RAM 32K v1"><br>
+          <b>RAM 32K v1</b>
         </a><br><br>
       </td>
       <td valign="top">
@@ -87,14 +101,14 @@
           <b>RAM 256 v2</b>
         </a><br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-utcKt1dM">
           <img src="../img/ram-256-v1.jpg" alt="RAM 256 v1"><br>
           <b>RAM 256 v1</b>
         </a><br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-ram64">
           <img src="../img/ram-64.jpg" alt="RAM 64"><br>
@@ -107,14 +121,14 @@
           <b>ROM компактная</b>
         </a><br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-0TNlFXRQa6Y">
           <img src="../img/bcd-converter.jpg" alt="Конвертер BCD"><br>
           <b>Конвертер BCD</b>
         </a><br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-Xhj9Pead">
           <img src="../img/digits.jpg" alt="Сегментные дисплеи"><br>
@@ -127,14 +141,14 @@
           <b>Прототип процессора</b>
         </a><br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-Io2FESYk">
           <img src="../img/transmitters.jpg" alt="Передатчики"><br>
           <b>Передатчики</b>
         </a><br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-k_R4pB1A">
           <img src="../img/gates.jpg" alt="Вентили"><br>
@@ -147,14 +161,14 @@
           <b>Умножитель</b>
         </a><br><br>
       </td>
-    </tr>
-    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-5bk8IiWhZ6Q">
           <img src="../img/adder.jpg" alt="Сумматор"><br>
           <b>Сумматор</b>
         </a><br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="https://logic-arrows.io/map-GvPsAA38">
           <img src="../img/subtractor.jpg" alt="Вычитатель"><br>
