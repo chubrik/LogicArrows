@@ -44,6 +44,30 @@ of all programs.
         writes new programs for it.<br><br>
       </td>
     </tr>
+    <tr>
+      <td valign="top" width="50%">
+        <h3>
+          <a href="https://github.com/chubrik/arrows-zx-spectrum">
+            <img src="img/steam-zx-spectrum.jpg" alt="ZX Spectrum"><br>
+            ZX Spectrum
+          </a>
+        </h3>
+        An emulator of the legendary home computer of the 1980s for the Steam version of Logic
+        Arrows. The screen, the memory, the keyboard and even the sound are made of arrows, and real
+        games run in real time.<br><br>
+      </td>
+      <td valign="top">
+        <h3>
+          <a href="https://www.youtube.com/live/DuRfo0lMg04?t=2899">
+            <img src="img/steam-bad-apple.jpg" alt="Bad Apple"><br>
+            Bad Apple
+          </a>
+        </h3>
+        The famous tune performed by music arrows in the Steam version of the game. The map was
+        presented <a href="https://www.youtube.com/live/DuRfo0lMg04?t=2899">on the stream</a> of
+        Onigiri, the author of Logic Arrows.<br><br>
+      </td>
+    </tr>
   </thead>
 </table>
 

@@ -43,6 +43,30 @@
         сложных схем. Поддержка продолжается, и сообщество пишет для неё новые программы.<br><br>
       </td>
     </tr>
+    <tr>
+      <td valign="top" width="50%">
+        <h3>
+          <a href="https://github.com/chubrik/arrows-zx-spectrum/blob/main/ru/README.md">
+            <img src="../img/steam-zx-spectrum.jpg" alt="ZX Spectrum"><br>
+            ZX Spectrum
+          </a>
+        </h3>
+        Эмулятор легендарного домашнего компьютера 1980-х для Steam-версии Стрелочек. Экран, память,
+        клавиатура и даже звук собраны из стрелочек, а настоящие игры идут в реальном времени.
+        <br><br>
+      </td>
+      <td valign="top">
+        <h3>
+          <a href="https://www.youtube.com/live/DuRfo0lMg04?t=2899">
+            <img src="../img/steam-bad-apple.jpg" alt="Bad Apple"><br>
+            Bad Apple
+          </a>
+        </h3>
+        Знаменитая композиция в исполнении музыкальных стрелочек в Steam-версии игры. Карта была
+        представлена <a href="https://www.youtube.com/live/DuRfo0lMg04?t=2899">на стриме</a> у
+        автора Стрелочек Onigiri.<br><br>
+      </td>
+    </tr>
   </thead>
 </table>
 
