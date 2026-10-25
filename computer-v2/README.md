@@ -278,7 +278,7 @@ To run your own program on the computer, see [Programming](programming.md).
   community member Farmer_2010, the author of several programs listed above
 - [C emulator](https://github.com/KittenAmogus/ACPUEmulator) – written by community member
   KittenAmogus, work in progress
-- [Discord server](https://discord.gg/8FMuQuMFCN) and [Telegram channel](https://t.me/logic_arrows)
+- [Discord server](https://discord.gg/zw2sRUGu5y) and [Telegram channel](https://t.me/logic_arrows)
   – where people discuss the computer and share ideas and new programs
 - [Computer v1](../computer-v1/README.md) – early version of the computer, based on a physical
   prototype

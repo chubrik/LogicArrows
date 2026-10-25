@@ -137,7 +137,7 @@ To run your own program on the computer, see [Programming](programming.md).
   Logic Arrows by 10 000 times
 - [Programs by Mikhail Moseev](https://github.com/mihail-moseev/program_for_computer_in_logic-arrows)
   – repository by the author of several programs for both computers
-- [Discord server](https://discord.gg/8FMuQuMFCN) and [Telegram channel](https://t.me/logic_arrows)
+- [Discord server](https://discord.gg/zw2sRUGu5y) and [Telegram channel](https://t.me/logic_arrows)
   – where people discuss the computers and share ideas and new programs
 - [Computer v2](../computer-v2/README.md) – improved version of the computer with a larger set of
   programs and games, including some by community members

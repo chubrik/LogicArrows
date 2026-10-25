@@ -230,5 +230,5 @@ of all programs.
   version of Logic Arrows
 - [GraphDLC](https://github.com/MerinPrime/GraphDLC) – browser extension that speeds up the game
   10 000 times
-- [Discord server](https://discord.gg/8FMuQuMFCN) – community on Discord
+- [Discord server](https://discord.gg/zw2sRUGu5y) – community on Discord
 - [Telegram channel](https://t.me/logic_arrows) – community on Telegram
