@@ -63,7 +63,7 @@ To run your own program on the computer, see [Programming](programming.md).
         Displays a cat and the text “Hello world” on the screen<br><br>
       </td>
       <td valign="top" width="33%">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis%20v1.asm">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v1/programs/code%20tennis.asm">
           <img src="img/tennis.jpg" alt="Tennis Game"><br>
           <b>Tennis Game</b>
         </a><br>
@@ -74,7 +74,7 @@ To run your own program on the computer, see [Programming](programming.md).
     </tr>
     <tr>
       <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20Langton%27s%20ant.asm">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v1/programs/code%20Langton%27s%20ant.asm">
           <img src="img/langton-ant.jpg" alt="Langton's Ant"><br>
           <b>Langton's Ant</b>
         </a><br>
@@ -84,7 +84,7 @@ To run your own program on the computer, see [Programming](programming.md).
         Mikhail Moseev</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20GMN.asm">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v1/programs/code%20guess%20num.asm">
           <img src="img/guess-number.jpg" alt="Guess the Number Game"><br>
           <b>Guess the Number Game</b>
         </a><br>

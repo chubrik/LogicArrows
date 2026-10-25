@@ -60,7 +60,7 @@
         Заполняет дисплей случайными пикселями и вычисляет последующие поколения<br><br>
       </td>
       <td valign="top" width="33%">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake.asm">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2/programs/code%20snake.asm">
           <img src="../../computer-v2/img/snake.jpg" alt="Игра «Змейка»"><br>
           <b>Игра «Змейка»</b>
         </a><br>
@@ -107,7 +107,7 @@
         дистанцию. Автор — <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%203d%20maze.asm">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2/programs/code%203d%20maze.asm">
           <img src="../../computer-v2/img/3d-maze-moseev.jpg" alt="3D-лабиринт"><br>
           <b>3D-лабиринт</b>
         </a><br>
@@ -135,7 +135,7 @@
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20minesweeper.asm">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2/programs/code%20minesweeper.asm">
           <img src="../../computer-v2/img/minesweeper.jpg" alt="Игра «Сапёр»"><br>
           <b>Игра «Сапёр»</b>
         </a><br>
@@ -161,7 +161,7 @@
         Угадывайте числа по правилу «больше/меньше» и повышайте общий счёт побед<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20casino.asm">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2/programs/code%20casino.asm">
           <img src="../../computer-v2/img/casino.jpg" alt="Игра «Казино»"><br>
           <b>Игра «Казино»</b>
         </a><br>
@@ -190,7 +190,7 @@
         онигири и звонит в колокольчик<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2/programs/code%20tennis.asm">
           <img src="../../computer-v2/img/tennis.jpg" alt="Игра «Теннис»"><br>
           <b>Игра «Теннис»</b>
         </a><br>

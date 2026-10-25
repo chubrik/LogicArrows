@@ -61,7 +61,7 @@
         Выводит на дисплей котика и надпись «Hello world»<br><br>
       </td>
       <td valign="top" width="33%">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis%20v1.asm">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v1/programs/code%20tennis.asm">
           <img src="../../computer-v1/img/tennis.jpg" alt="Игра «Теннис»"><br>
           <b>Игра «Теннис»</b>
         </a><br>
@@ -72,7 +72,7 @@
     </tr>
     <tr>
       <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20Langton%27s%20ant.asm">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v1/programs/code%20Langton%27s%20ant.asm">
           <img src="../../computer-v1/img/langton-ant.jpg" alt="Муравей Лэнгтона"><br>
           <b>Муравей Лэнгтона</b>
         </a><br>
@@ -82,7 +82,7 @@
         Михаил Мосеев</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20GMN.asm">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v1/programs/code%20guess%20num.asm">
           <img src="../../computer-v1/img/guess-number.jpg" alt="Игра «Угадай число»"><br>
           <b>Игра «Угадай число»</b>
         </a><br>

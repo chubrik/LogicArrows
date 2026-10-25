@@ -60,7 +60,7 @@ To run your own program on the computer, see [Programming](programming.md).
         Fills the display with random pixels and calculates subsequent generations<br><br>
       </td>
       <td valign="top" width="33%">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20snake.asm">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2/programs/code%20snake.asm">
           <img src="img/snake.jpg" alt="Snake Game"><br>
           <b>Snake Game</b>
         </a><br>
@@ -107,7 +107,7 @@ To run your own program on the computer, see [Programming](programming.md).
         Author: <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%203d%20maze.asm">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2/programs/code%203d%20maze.asm">
           <img src="img/3d-maze-moseev.jpg" alt="3D Maze"><br>
           <b>3D Maze</b>
         </a><br>
@@ -135,7 +135,7 @@ To run your own program on the computer, see [Programming](programming.md).
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20minesweeper.asm">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2/programs/code%20minesweeper.asm">
           <img src="img/minesweeper.jpg" alt="Minesweeper Game"><br>
           <b>Minesweeper Game</b>
         </a><br>
@@ -162,7 +162,7 @@ To run your own program on the computer, see [Programming](programming.md).
         score<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20casino.asm">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2/programs/code%20casino.asm">
           <img src="img/casino.jpg" alt="Casino Game"><br>
           <b>Casino Game</b>
         </a><br>
@@ -191,7 +191,7 @@ To run your own program on the computer, see [Programming](programming.md).
         image, and rings the bell<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/code%20tennis.asm">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2/programs/code%20tennis.asm">
           <img src="img/tennis.jpg" alt="Tennis Game"><br>
           <b>Tennis Game</b>
         </a><br>
