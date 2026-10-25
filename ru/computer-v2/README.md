@@ -224,21 +224,14 @@
         Использует графический режим терминала для вывода изображения<br><br>
       </td>
       <td valign="top">
-        <a href="asm/ram-art.asm">
-          <img src="../../computer-v2/img/ram-art.jpg" alt="Арт в RAM"><br>
-          <b>Арт в RAM</b>
-        </a><br>
-        Программа-шутка, использует RAM как холст для вывода изображения<br><br>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
         <a href="asm/typewriter.asm">
           <img src="../../computer-v2/img/typewriter.jpg" alt="Пишущая машинка"><br>
           <b>Пишущая машинка</b>
         </a><br>
         Выводит в терминал текст, набираемый на клавиатуре<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/font-test.asm">
           <img src="../../computer-v2/img/font-test.jpg" alt="Тест шрифта"><br>
@@ -246,6 +239,22 @@
         </a><br>
         Выводит в терминал все возможные символы (кодировка
         <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>)<br><br>
+      </td>
+      <td valign="top">
+        <a href="asm/ram-art.asm">
+          <img src="../../computer-v2/img/ram-art-1k.jpg" alt="Арт в RAM"><br>
+          <b>Арт в RAM</b>
+        </a><br>
+        Программа-шутка, использует RAM как холст для вывода изображения<br><br>
+      </td>
+      <td valign="top">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2%2032%20K/programs/code%20RAM%20ART.asm">
+          <img src="../../computer-v2/img/ram-art-32k.jpg" alt="Арт в RAM"><br>
+          <b>Арт в RAM</b>
+        </a><br>
+        Та же шутка на компьютере с RAM 32 КБ. Автор —
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Михаил Мосеев</a>.<br><br>
       </td>
     </tr>
   </thead>

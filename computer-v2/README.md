@@ -225,22 +225,14 @@ To run your own program on the computer, see [Programming](programming.md).
         Uses the terminal’s graphics mode to display an image<br><br>
       </td>
       <td valign="top">
-        <a href="asm/ram-art.asm">
-          <img src="img/ram-art.jpg" alt="RAM Art"><br>
-          <b>RAM Art</b>
-        </a><br>
-        A joke program that uses RAM as a canvas to display an image (“Where are the arrows?!” in
-        Russian)<br><br>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
         <a href="asm/typewriter.asm">
           <img src="img/typewriter.jpg" alt="Typewriter"><br>
           <b>Typewriter</b>
         </a><br>
         Outputs text typed on the keyboard to the terminal<br><br>
       </td>
+    </tr>
+    <tr>
       <td valign="top">
         <a href="asm/font-test.asm">
           <img src="img/font-test.jpg" alt="Font Test"><br>
@@ -248,6 +240,23 @@ To run your own program on the computer, see [Programming](programming.md).
         </a><br>
         Outputs all possible characters to the terminal (encoding
         <a href="https://en.wikipedia.org/wiki/Windows-1251">cp1251</a>)<br><br>
+      </td>
+      <td valign="top">
+        <a href="asm/ram-art.asm">
+          <img src="img/ram-art-1k.jpg" alt="RAM Art"><br>
+          <b>RAM Art</b>
+        </a><br>
+        A joke program that uses RAM as a canvas to display an image (“Where are the arrows?!” in
+        Russian)<br><br>
+      </td>
+      <td valign="top">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2%2032%20K/programs/code%20RAM%20ART.asm">
+          <img src="img/ram-art-32k.jpg" alt="RAM Art"><br>
+          <b>RAM Art</b>
+        </a><br>
+        The same joke on the computer with 32 KB of RAM. Author:
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Mikhail Moseev</a>.<br><br>
       </td>
     </tr>
   </thead>
