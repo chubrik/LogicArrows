@@ -99,22 +99,22 @@
     </tr>
     <tr>
       <td valign="top">
-        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/raycasting.asm">
-          <img src="../../computer-v2/img/3d-maze-farmer.jpg" alt="3D-лабиринт"><br>
-          <b>3D-лабиринт</b>
-        </a><br>
-        Прогулка по лабиринту от первого лица. Цветной рейкастинг позволяет чувствовать
-        дистанцию. Автор — <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
-      </td>
-      <td valign="top">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2/programs/code%203d%20maze.asm">
           <img src="../../computer-v2/img/3d-maze-moseev.jpg" alt="3D-лабиринт"><br>
           <b>3D-лабиринт</b>
         </a><br>
-        Найдите выход из лабиринта, глядя от первого лица. Трёхмерная графика строится через
-        рейкастинг. Автор —
+        Найдите выход из лабиринта, глядя от первого лица. Цветной рейкастинг позволяет различать
+        направления у стен. Автор —
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
         Михаил Мосеев</a>.<br><br>
+      </td>
+      <td valign="top">
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/raycasting.asm">
+          <img src="../../computer-v2/img/3d-maze-farmer.jpg" alt="3D-лабиринт"><br>
+          <b>3D-лабиринт</b>
+        </a><br>
+        Прогулка по лабиринту от первого лица. Цветной рейкастинг позволяет чувствовать дистанцию.
+        Автор — <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
         <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/maze_generator.asm">

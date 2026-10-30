@@ -99,22 +99,22 @@ To run your own program on the computer, see [Programming](programming.md).
     </tr>
     <tr>
       <td valign="top">
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2/programs/code%203d%20maze.asm">
+          <img src="img/3d-maze-moseev.jpg" alt="3D Maze"><br>
+          <b>3D Maze</b>
+        </a><br>
+        Find the way out of the maze in first-person view. Color raycasting lets you tell the wall
+        directions apart. Author:
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Mikhail Moseev</a>.<br><br>
+      </td>
+      <td valign="top">
         <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/raycasting.asm">
           <img src="img/3d-maze-farmer.jpg" alt="3D Maze"><br>
           <b>3D Maze</b>
         </a><br>
         Walk through a maze in first-person view. Color raycasting lets you feel the distance.
         Author: <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
-      </td>
-      <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2/programs/code%203d%20maze.asm">
-          <img src="img/3d-maze-moseev.jpg" alt="3D Maze"><br>
-          <b>3D Maze</b>
-        </a><br>
-        Find the way out of the maze in first-person view. The 3D graphics are rendered by ray
-        casting. Author:
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
-        Mikhail Moseev</a>.<br><br>
       </td>
       <td valign="top">
         <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/maze_generator.asm">
