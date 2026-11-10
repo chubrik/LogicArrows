@@ -4,15 +4,10 @@
 &nbsp;&nbsp;&nbsp;
 🌐 English | [Русский](ru/README.md)
 
-A collection of maps in [“Logic Arrows”](https://logic-arrows.io/) — a browser game where complex
-logic circuits are assembled from simple arrows on a grid. Every map can be opened and run right
-in the browser: from gates and adders to full-fledged computers with programs and games. The
-computers come with detailed documentation — structure, their own assembler, and the source code
-of all programs.
-
-- [Maps](#maps)
-- [About](#about)
-- [Links](#links)
+A collection of maps in [“Logic Arrows”](https://logic-arrows.io/) — a game where complex logic
+circuits are assembled out of simple arrows on a grid: from gates and adders to full-fledged
+computers with programs and games. The computers come with detailed documentation — structure, their
+own assembler, and the source code of all programs.
 <br><br>
 
 
@@ -58,14 +53,12 @@ of all programs.
       </td>
       <td valign="top">
         <h3>
-          <a href="https://www.youtube.com/live/DuRfo0lMg04?t=2899">
+          <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3837013886">
             <img src="img/steam-bad-apple.jpg" alt="Bad Apple"><br>
             Bad Apple
           </a>
         </h3>
-        The famous tune performed by music arrows in the Steam version of the game. The map was
-        presented <a href="https://www.youtube.com/live/DuRfo0lMg04?t=2899">on the stream</a> of
-        Onigiri, the author of Logic Arrows.<br><br>
+        The famous tune performed by music arrows in the Steam version of the game.<br><br>
       </td>
     </tr>
   </thead>
@@ -210,14 +203,6 @@ of all programs.
   </thead>
 </table>
 <br>
-
-
-## <a name="about"></a>About
-
-“Logic Arrows” was inspired by Minecraft’s redstone. The game’s author,
-[Onigiri](https://github.com/ArtemOnigiri), talks about it:<br>
-[![Video about the game](img/youtube.jpg)](https://www.youtube.com/watch?v=q_ve9SsuyvU)
-<br><br>
 
 
 ## <a name="links"></a>Links
