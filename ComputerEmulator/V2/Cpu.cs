@@ -1333,6 +1333,34 @@ internal class Cpu(Ram ram)
 
     #endregion
 
+    #region Cmp
+
+    private void Compare(MyByte x, MyByte y)
+    {
+        MyByte result = x - y;
+        var overflow = x.IsSigned != y.IsSigned && y.IsSigned == result.IsSigned;
+        _fz = x == y;
+        _fs = result.IsSigned != overflow;
+        _fzsDirty = true;
+        SetFlagsC(x < y);
+        SetFlagsO(overflow);
+    }
+
+    private static void CmpBA(Cpu cpu) => cpu.Compare(cpu._rb, cpu._ra);
+    private static void CmpCA(Cpu cpu) => cpu.Compare(cpu._rc, cpu._ra);
+    private static void CmpDA(Cpu cpu) => cpu.Compare(cpu._rd, cpu._ra);
+    private static void CmpAB(Cpu cpu) => cpu.Compare(cpu._ra, cpu._rb);
+    private static void CmpCB(Cpu cpu) => cpu.Compare(cpu._rc, cpu._rb);
+    private static void CmpDB(Cpu cpu) => cpu.Compare(cpu._rd, cpu._rb);
+    private static void CmpAC(Cpu cpu) => cpu.Compare(cpu._ra, cpu._rc);
+    private static void CmpBC(Cpu cpu) => cpu.Compare(cpu._rb, cpu._rc);
+    private static void CmpDC(Cpu cpu) => cpu.Compare(cpu._rd, cpu._rc);
+    private static void CmpAD(Cpu cpu) => cpu.Compare(cpu._ra, cpu._rd);
+    private static void CmpBD(Cpu cpu) => cpu.Compare(cpu._rb, cpu._rd);
+    private static void CmpCD(Cpu cpu) => cpu.Compare(cpu._rc, cpu._rd);
+
+    #endregion
+
     private readonly IReadOnlyList<Instruction> _instructions =
     [
         new Instruction("nop", Nop), // 00
@@ -1576,20 +1604,20 @@ internal class Cpu(Ram ram)
         new Instruction("rnd c", RndC),
         new Instruction("rnd d", RndD),
         new Instruction("(reserved)", NoImpl), // F0
+        new Instruction("cmp b, a", CmpBA),
+        new Instruction("cmp c, a", CmpCA),
+        new Instruction("cmp d, a", CmpDA),
+        new Instruction("cmp a, b", CmpAB),
         new Instruction("(reserved)", NoImpl),
+        new Instruction("cmp c, b", CmpCB),
+        new Instruction("cmp d, b", CmpDB),
+        new Instruction("cmp a, c", CmpAC),
+        new Instruction("cmp b, c", CmpBC),
         new Instruction("(reserved)", NoImpl),
-        new Instruction("(reserved)", NoImpl),
-        new Instruction("(reserved)", NoImpl),
-        new Instruction("(reserved)", NoImpl),
-        new Instruction("(reserved)", NoImpl),
-        new Instruction("(reserved)", NoImpl),
-        new Instruction("(reserved)", NoImpl),
-        new Instruction("(reserved)", NoImpl),
-        new Instruction("(reserved)", NoImpl),
-        new Instruction("(reserved)", NoImpl),
-        new Instruction("(reserved)", NoImpl),
-        new Instruction("(reserved)", NoImpl),
-        new Instruction("(reserved)", NoImpl),
+        new Instruction("cmp d, c", CmpDC),
+        new Instruction("cmp a, d", CmpAD),
+        new Instruction("cmp b, d", CmpBD),
+        new Instruction("cmp c, d", CmpCD),
         new Instruction("(reserved)", NoImpl),
     ];
 

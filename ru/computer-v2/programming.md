@@ -105,6 +105,7 @@ add ***X***, ***Y*** | Складывает ***X*** и ***Y***, результа
 adc ***X***, ***Y*** | Складывает ***X***, ***Y*** и флаг `C`, результат записывает в ***X*** | Z, S, C, O
 sub ***X***, ***Y*** | Из ***X*** вычитает ***Y***, результат записывает в ***X*** | Z, S, C, O
 sbb ***X***, ***Y*** | Из ***X*** вычитает ***Y*** и флаг `C`, результат записывает в ***X*** | Z, S, C, O
+cmp ***X***, ***Y*** | Сравнивает ***X*** и ***Y*** и обновляет флаги. `Z:` ***X*** = ***Y***, `S:` ***X*** < ***Y*** (знаковое),<br> `C:` ***X*** < ***Y*** (беззнаковое), `O:` знаковое переполнение разности ***X*** − ***Y***. | Z, S, C, O
 neg ***X*** | Меняет знак (значение трактует как число со знаком) | Z, S, C, O
 inc ***X*** | Прибавляет 1 | Z, S
 dec ***X*** | Вычитает 1 | Z, S
@@ -135,7 +136,7 @@ rcr ***X*** | Сдвигает все биты на один вправо, ле�
   <tbody>
     <tr>
       <th>0</th>
-      <td align="center">nop</td><td align="center">hlt</td><td align="center">–</td><td align="center">jmp</td>
+      <td align="center">nop</td><td align="center">hlt</td><td align="center"><i>*</i></td><td align="center">jmp</td>
       <td align="center">jmp a</td><td align="center">jmp b</td><td align="center">jmp c</td><td align="center">jmp d</td>
       <td align="center">jz</td><td align="center">js</td><td align="center">jc</td><td align="center">jo</td>
       <td align="center">jnz</td><td align="center">jns</td><td align="center">jnc</td><td align="center">jno</td>
@@ -172,7 +173,7 @@ rcr ***X*** | Сдвигает все биты на один вправо, ле�
       <th>5</th>
       <td align="center">ld a</td><td align="center">ld b</td><td align="center">ld c</td><td align="center">ld d</td>
       <td align="center">ldi a</td><td align="center">ldi b</td><td align="center">ldi c</td><td align="center">ldi d</td>
-      <td align="center" colspan="8"><i>reserved</i></td>
+      <td align="center" colspan="8"><i>reserved *</i></td>
     </tr>
     <tr>
       <th>6</th>
@@ -239,7 +240,11 @@ rcr ***X*** | Сдвигает все биты на один вправо, ле�
     </tr>
     <tr>
       <th>F</th>
-      <td align="center" colspan="16"><i>reserved</i></td>
+      <td align="center"><i>*</i></td><td align="center">cmp b, a</td><td align="center">cmp c, a</td><td align="center">cmp d, a</td>
+      <td align="center">cmp a, b</td><td align="center"><i>*</i></td><td align="center">cmp c, b</td><td align="center">cmp d, b</td>
+      <td align="center">cmp a, c</td><td align="center">cmp b, c</td><td align="center"><i>*</i></td><td align="center">cmp d, c</td>
+      <td align="center">cmp a, d</td><td align="center">cmp b, d</td><td align="center">cmp c, d</td><td align="center"><i>*</i></td>
     </tr>
   </tbody>
 </table>
+<i>* Код зарезервирован на будущее</i>

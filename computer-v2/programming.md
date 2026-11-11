@@ -105,6 +105,7 @@ add ***X***, ***Y*** | Adds ***X*** and ***Y***, result is written to ***X*** | 
 adc ***X***, ***Y*** | Adds ***X***, ***Y*** and the `C` flag, result is written to ***X*** | Z, S, C, O
 sub ***X***, ***Y*** | Subtracts ***Y*** from ***X***, result is written to ***X*** | Z, S, C, O
 sbb ***X***, ***Y*** | Subtracts ***Y*** and the `C` flag from ***X***, result is written to ***X*** | Z, S, C, O
+cmp ***X***, ***Y*** | Compares ***X*** and ***Y*** and updates the flags. `Z:` ***X*** = ***Y***, `S:` ***X*** < ***Y*** (signed),<br> `C:` ***X*** < ***Y*** (unsigned), `O:` signed overflow of the difference ***X*** − ***Y***. | Z, S, C, O
 neg ***X*** | Changes the sign (treats the value as a signed number) | Z, S, C, O
 inc ***X*** | Adds 1 | Z, S
 dec ***X*** | Subtracts 1 | Z, S
@@ -136,7 +137,7 @@ column).
   <tbody>
     <tr>
       <th>0</th>
-      <td align="center">nop</td><td align="center">hlt</td><td align="center">–</td><td align="center">jmp</td>
+      <td align="center">nop</td><td align="center">hlt</td><td align="center"><i>*</i></td><td align="center">jmp</td>
       <td align="center">jmp a</td><td align="center">jmp b</td><td align="center">jmp c</td><td align="center">jmp d</td>
       <td align="center">jz</td><td align="center">js</td><td align="center">jc</td><td align="center">jo</td>
       <td align="center">jnz</td><td align="center">jns</td><td align="center">jnc</td><td align="center">jno</td>
@@ -173,7 +174,7 @@ column).
       <th>5</th>
       <td align="center">ld a</td><td align="center">ld b</td><td align="center">ld c</td><td align="center">ld d</td>
       <td align="center">ldi a</td><td align="center">ldi b</td><td align="center">ldi c</td><td align="center">ldi d</td>
-      <td align="center" colspan="8"><i>reserved</i></td>
+      <td align="center" colspan="8"><i>reserved *</i></td>
     </tr>
     <tr>
       <th>6</th>
@@ -240,7 +241,11 @@ column).
     </tr>
     <tr>
       <th>F</th>
-      <td align="center" colspan="16"><i>reserved</i></td>
+      <td align="center"><i>*</i></td><td align="center">cmp b, a</td><td align="center">cmp c, a</td><td align="center">cmp d, a</td>
+      <td align="center">cmp a, b</td><td align="center"><i>*</i></td><td align="center">cmp c, b</td><td align="center">cmp d, b</td>
+      <td align="center">cmp a, c</td><td align="center">cmp b, c</td><td align="center"><i>*</i></td><td align="center">cmp d, c</td>
+      <td align="center">cmp a, d</td><td align="center">cmp b, d</td><td align="center">cmp c, d</td><td align="center"><i>*</i></td>
     </tr>
   </tbody>
 </table>
+<i>* The opcode is reserved for future use</i>
