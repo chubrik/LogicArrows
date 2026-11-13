@@ -213,6 +213,8 @@ own assembler, and the source code of all programs.
 - [Online compiler](https://github.com/chubrik/arrows-compiler) – for the in-game computers
 - [ZX Spectrum](https://github.com/chubrik/arrows-zx-spectrum) – real-time emulator for the Steam
   version of Logic Arrows
+- [Logic Arrows API](https://github.com/chubrik/logic-arrows-api) – script block API reference for
+  the Steam version, also an npm package
 - [GraphDLC](https://github.com/MerinPrime/GraphDLC) – browser extension that speeds up the game
   10 000 times
 - [Discord server](https://discord.gg/zw2sRUGu5y) – community on Discord

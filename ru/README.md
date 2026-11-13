@@ -215,6 +215,8 @@
   для внутриигровых компьютеров
 - [ZX Spectrum](https://github.com/chubrik/arrows-zx-spectrum/blob/main/ru/README.md) –
   реалтайм-эмулятор для Steam-версии Стрелочек
+- [Logic Arrows API](https://github.com/chubrik/logic-arrows-api) – справочник по API скриптовых
+  блоков Steam-версии, он же npm-пакет
 - [GraphDLC](https://github.com/MerinPrime/GraphDLC) – браузерное расширение для ускорения
   в 10 000 раз
 - [Дискорд-сервер](https://discord.gg/yR8aaJWWH5) – сообщество на Дискорде
