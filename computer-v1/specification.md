@@ -1,11 +1,13 @@
 # Structure and Specifications
-<br>
+💻 **Computer v1** | [Computer v2](../computer-v2/specification.md) &nbsp;&nbsp;&nbsp;
+🌐 **English** | [Русский](../ru/computer-v1/specification.md)
+<br><br>
 
 The computer consists of a processor, RAM, input/output devices, and a set of programs.
 Main characteristics:
 - 8-bit architecture, processor with 4 registers and flags.
 - 256 bytes of RAM with integrated video memory and ports.
-- Input/output: keyboard, display, terminal, and digital indicator.
+- Input/output: keyboard, monochrome display, terminal, and digital indicator.
 - Own assembly language (see [Programming](programming.md)).
 - Loading programs from special diskettes.
 <br><br><br>
@@ -13,8 +15,8 @@ Main characteristics:
 
 ## Processor
 The processor consists of two parts: a control unit and an arithmetic logic unit (ALU). The control
-unit consists of an instruction pointer `IP`, an instruction register `IR`, a control block, and
-free registers `A` `B` `C` `D`. The arithmetic logic unit consists of an additional `IR`, flags
+unit consists of an instruction pointer `IP`, an instruction register `IR`, a control block,
+and free registers `A` `B` `C` `D`. The arithmetic logic unit consists of an additional `IR`, flags
 `Z` `S` `C` `O`, a control block, a multifunctional adder, and other small mechanisms.
 
 The processor reads an instruction from RAM at the address stored in `IP`. The instruction goes into
@@ -22,14 +24,15 @@ The processor reads an instruction from RAM at the address stored in `IP`. The i
 with registers and flags. After that, `IP` is incremented and the process repeats. For more details,
 see [Programming](programming.md).
 
-<img src="img/cpu.jpg" width="70%" alt="Processor">
+<img src="img/cpu-en.jpg" width="70%" alt="Processor">
 <br><br>
 
 
 ## RAM
-The computer’s memory is 256 bytes of RAM. The unit of stored information is 1 byte, and the memory
-access address is also 1 byte. Input port `3E` is connected to the keyboard. Output port `3F` allows
-switching between different output devices. The address range `40...7F` is shared video memory.
+The computer’s memory is 256 bytes of RAM. The unit of stored information is one byte, and the
+memory access address is also one byte. Input port `3E` is connected to the keyboard. Output port
+`3F` allows switching between different output devices. The address range `40...5F` is shared video
+memory.
 
 <img src="img/ram.jpg" width="70%" alt="RAM">
 <br><br>
@@ -50,10 +53,10 @@ To switch the output to the display, you need to write the byte `80` to port `3F
 correspondence of addresses to different parts of the display. Sending data to these addresses
 results in the appearance of corresponding pixels on the display.
 
-When switching between output devices via port `3F`, the current image on the display is
-preserved, but the effect of subsequent writes to the screen memory area changes. The output can
-be switched to the display not only programmatically, but also directly during diskette loading,
-which makes it possible to show a startup splash image.
+When switching between output devices via port `3F`, the current image on the display is preserved,
+but the effect of subsequent writes to the screen memory area changes. The output can be switched
+to the display not only programmatically, but also directly during diskette loading, which makes
+it possible to show a startup splash image.
 
 <img src="img/display.jpg" width="50%" alt="Display">
 <br><br>
@@ -70,8 +73,8 @@ the left and then up a line.
 
 
 ## Digital Indicator
-It consists of 3 decimal digits and displays numbers in the range `0...255`. To switch the output to
-the digital indicator, you need to write the byte `10` to port `3F`. Then, each byte sent to address
-`40` is converted to decimal format and displayed on the digital indicator.
+It consists of three decimal digits and displays numbers in the range `0...255`. To switch the
+output to the digital indicator, you need to write the byte `10` to port `3F`. Then, each byte sent
+to address `40` is converted to decimal format and displayed on the digital indicator.
 
 <img src="img/digits.jpg" width="30%" alt="Digital Indicator">

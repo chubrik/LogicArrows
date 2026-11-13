@@ -2,7 +2,7 @@
 <sub>[![LogicArrows](https://img.shields.io/badge/logic--arrows-map-blue?logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cGF0aCBmaWxsPSIjNTAwIiBkPSJtOTkgMWMtMC44Ny0wLjg3LTIuMi0xLjMtMy42LTAuODJsLTc3IDI1Yy00LjkgMS43LTYuMyA3LjgtMi43IDExbDE1IDE1LTI5IDI5Yy0yLjcgMi43LTIuNyA3LjEgMCA5LjhsNyA3YzIuNyAyLjcgNy4xIDIuNyA5LjggMGwyOS0yOSAxNSAxNWMzLjcgMy43IDkuOCAyLjIgMTEtMi43bDI1LTc3YzAuNDktMS4zIDAuMDQ1LTIuNy0wLjgyLTMuNnoiIHN0cm9rZS13aWR0aD0iMS43Ii8+PC9zdmc+)](https://logic-arrows.io/)
 &nbsp;[![GitHub stars](https://img.shields.io/github/stars/chubrik/LogicArrows?style=social)](https://github.com/chubrik/LogicArrows/stargazers)</sub>
 &nbsp;&nbsp;&nbsp;
-🌐 English | [Русский](ru/README.md)
+🌐 **English** | [Русский](ru/README.md)
 
 A collection of maps in [“Logic Arrows”](https://logic-arrows.io/) — a game where complex logic
 circuits are assembled out of simple arrows on a grid: from gates and adders to full-fledged
@@ -213,7 +213,16 @@ own assembler, and the source code of all programs.
 - [Online compiler](https://github.com/chubrik/arrows-compiler) – for the in-game computers
 - [ZX Spectrum](https://github.com/chubrik/arrows-zx-spectrum) – real-time emulator for the Steam
   version of Logic Arrows
+- [Logic Arrows API](https://github.com/chubrik/logic-arrows-api) – script block API reference for
+  the Steam version, also an npm package
 - [GraphDLC](https://github.com/MerinPrime/GraphDLC) – browser extension that speeds up the game
   10 000 times
 - [Discord server](https://discord.gg/zw2sRUGu5y) – community on Discord
 - [Telegram channel](https://t.me/logic_arrows) – community on Telegram
+<br><br>
+
+
+## <a name="license"></a>License
+
+The project is distributed under the [MIT](LICENSE) license. Programs by community members featured
+in the computer showcases belong to their authors and live in their own repositories.

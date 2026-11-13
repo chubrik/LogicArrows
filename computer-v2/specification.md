@@ -1,5 +1,7 @@
 # Structure and Specifications
-<br>
+💻 [Computer v1](../computer-v1/specification.md) | **Computer v2** &nbsp;&nbsp;&nbsp;
+🌐 **English** | [Русский](../ru/computer-v2/specification.md)
+<br><br>
 
 The computer consists of a processor, RAM, input/output devices, and a set of programs.
 Main characteristics:
@@ -26,17 +28,20 @@ see [Programming](programming.md).
 
 
 ## RAM
-The computer’s memory is up to 32 KB of RAM. The unit of stored information is 1 byte, and the
-memory access address is also 1 byte. Since an 8-bit address can only access 256 RAM addresses,
-there is a memory bank switching system. The banks are numbered from 1 to 255 and are connected to
-the address range `80...FF` by writing the bank number to port `3F`. Bank #0 does not exist: the
-number `0` as an exception connects bank #1, which is also connected by default while nothing has
-been written to port `3F`.
+The computer’s memory is up to 32 KB of RAM. The unit of stored information is one byte. Since the
+processor’s 8-bit address can only access 256 RAM addresses, there is a memory bank switching
+system. The banks are numbered from 1 to 255 and are connected to the address range `80...FF` by
+writing the bank number to port `3F`. In the 1 KB RAM, only the low 3 bits of the number count, and
+the banks are numbered from 1 to 7. Bank #0 does not exist: the number `0` as an exception connects
+bank #1, which is also connected by default while nothing has been written to port `3F`.
 
 The address range `00...7F` is not a bank: it is the common part of the memory, and it is fixed
 permanently. Thus, the RAM in its maximum configuration consists of the common part and 255 banks
 of 128 bytes each — exactly 32 KB in total. Unlike other ports, bank switching is only possible
 programmatically: writing to port `3F` during diskette loading does not switch the bank.
+
+Port `3E` has a dual purpose: when read, it serves as the input port; when written, it sets the
+output mode.
 
 <table>
   <thead>
@@ -101,7 +106,7 @@ character.
 
 
 ## Digital Indicator
-It consists of 5 decimal digits and has two operating modes: unsigned with a range of `0...65535`
+It consists of five decimal digits and has two operating modes: unsigned with a range of `0...65535`
 and signed with a range of `−32768...+32767`. To connect the output to the digital indicator, you
 need to write a value to port `3E` with bits 3 and 2 equal to `01` for unsigned mode or `11` for
 signed mode. Then, each byte sent to address `3A` is converted to decimal format and output to the

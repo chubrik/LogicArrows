@@ -1,5 +1,6 @@
 # Компьютер v2
-🌐 [English](../../computer-v2/README.md) | Русский
+💻 [Компьютер v1](../computer-v1/README.md) | **Компьютер v2** &nbsp;&nbsp;&nbsp;
+🌐 [English](../../computer-v2/README.md) | **Русский**
 <br><br>
 
 <table>
@@ -203,8 +204,8 @@
           <img src="../../computer-v2/img/prime-numbers.jpg" alt="Простые числа"><br>
           <b>Простые числа</b>
         </a><br>
-        Находит 16 простых чисел и выводит их на цифровой индикатор, а также на дисплей в двоичном
-        формате<br><br>
+        Находит первые 16 простых чисел и выводит их на цифровой индикатор, а также на дисплей
+        в двоичном формате<br><br>
       </td>
     </tr>
     <tr>
@@ -217,11 +218,12 @@
         формате<br><br>
       </td>
       <td valign="top">
-        <a href="asm/terminal-art.asm">
-          <img src="../../computer-v2/img/terminal-art.jpg" alt="Арт в терминале"><br>
-          <b>Арт в терминале</b>
+        <a href="asm/font-test.asm">
+          <img src="../../computer-v2/img/font-test.jpg" alt="Тест шрифта"><br>
+          <b>Тест шрифта</b>
         </a><br>
-        Использует графический режим терминала для вывода изображения<br><br>
+        Выводит в терминал все возможные символы (кодировка
+        <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>)<br><br>
       </td>
       <td valign="top">
         <a href="asm/typewriter.asm">
@@ -233,12 +235,11 @@
     </tr>
     <tr>
       <td valign="top">
-        <a href="asm/font-test.asm">
-          <img src="../../computer-v2/img/font-test.jpg" alt="Тест шрифта"><br>
-          <b>Тест шрифта</b>
+        <a href="asm/terminal-art.asm">
+          <img src="../../computer-v2/img/terminal-art.jpg" alt="Арт в терминале"><br>
+          <b>Арт в терминале</b>
         </a><br>
-        Выводит в терминал все возможные символы (кодировка
-        <a href="https://ru.wikipedia.org/wiki/Windows-1251">cp1251</a>)<br><br>
+        Использует графический режим терминала для вывода изображения<br><br>
       </td>
       <td valign="top">
         <a href="asm/ram-art.asm">
@@ -270,8 +271,8 @@
   ускоряющее Стрелочки в 10 000 раз
 - [Программы Михаила Мосеева](https://github.com/mihail-moseev/program_for_computer_in_logic-arrows)
   – репозиторий автора нескольких программ из списка выше
-- [Программы от Nnican](https://github.com/NnicanBuak/LogicArrows)
-  – репозиторий автора программ из списка выше
+- [Программы от Nnican](https://github.com/NnicanBuak/LogicArrows) – репозиторий автора одной
+  из программ из списка выше
 - [Эмулятор на Python](https://github.com/farmer2010/Chubrik-processor-emulator) – написан
   участником сообщества Farmer_2010, автором нескольких программ из списка выше
 - [Эмулятор на C](https://github.com/KittenAmogus/ACPUEmulator) – написан участником сообщества
