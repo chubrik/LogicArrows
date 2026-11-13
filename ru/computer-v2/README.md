@@ -1,5 +1,6 @@
 # Компьютер v2
-🌐 [English](../../computer-v2/README.md) | Русский
+💻 [Компьютер v1](../computer-v1/README.md) | **Компьютер v2** &nbsp;&nbsp;&nbsp;
+🌐 [English](../../computer-v2/README.md) | **Русский**
 <br><br>
 
 <table>
@@ -203,8 +204,8 @@
           <img src="../../computer-v2/img/prime-numbers.jpg" alt="Простые числа"><br>
           <b>Простые числа</b>
         </a><br>
-        Находит 16 простых чисел и выводит их на цифровой индикатор, а также на дисплей в двоичном
-        формате<br><br>
+        Находит первые 16 простых чисел и выводит их на цифровой индикатор, а также на дисплей
+        в двоичном формате<br><br>
       </td>
     </tr>
     <tr>
@@ -270,8 +271,8 @@
   ускоряющее Стрелочки в 10 000 раз
 - [Программы Михаила Мосеева](https://github.com/mihail-moseev/program_for_computer_in_logic-arrows)
   – репозиторий автора нескольких программ из списка выше
-- [Программы от Nnican](https://github.com/NnicanBuak/LogicArrows)
-  – репозиторий автора программ из списка выше
+- [Программы от Nnican](https://github.com/NnicanBuak/LogicArrows) – репозиторий автора одной
+  из программ из списка выше
 - [Эмулятор на Python](https://github.com/farmer2010/Chubrik-processor-emulator) – написан
   участником сообщества Farmer_2010, автором нескольких программ из списка выше
 - [Эмулятор на C](https://github.com/KittenAmogus/ACPUEmulator) – написан участником сообщества

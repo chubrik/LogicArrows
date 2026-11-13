@@ -1,5 +1,6 @@
 # Computer v1
-🌐 English | [Русский](../ru/computer-v1/README.md)
+💻 **Computer v1** | [Computer v2](../computer-v2/README.md) &nbsp;&nbsp;&nbsp;
+🌐 **English** | [Русский](../ru/computer-v1/README.md)
 <br><br>
 
 <table>
@@ -7,8 +8,8 @@
     <tr>
       <td valign="top" width="50%">
         A full-fledged computer assembled entirely of logic arrows: an 8-bit processor, 256 bytes
-        of memory, a keyboard, a display, a terminal, a digital indicator, and a set of diskettes
-        with programs and games. The predecessor of
+        of memory, a keyboard, a monochrome display, a terminal, a digital indicator, and a set
+        of diskettes with programs and games. The predecessor of
         <a href="../computer-v2/README.md">Computer v2</a>.
         <br><br>
         <ul>
@@ -75,8 +76,8 @@ To run your own program on the computer, see [Programming](programming.md).
     <tr>
       <td valign="top">
         <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v1/programs/code%20Langton%27s%20ant.asm">
-          <img src="img/langton-ant.jpg" alt="Langton's Ant"><br>
-          <b>Langton's Ant</b>
+          <img src="img/langton-ant.jpg" alt="Langton’s Ant"><br>
+          <b>Langton’s Ant</b>
         </a><br>
         The ant crawls across the display, repainting the cells and turning by a simple rule that
         produces a complex pattern. Author:
@@ -141,5 +142,5 @@ To run your own program on the computer, see [Programming](programming.md).
   – where people discuss the computers and share ideas and new programs
 - [Computer v2](../computer-v2/README.md) – improved version of the computer with a larger set of
   programs and games, including some by community members
-- [My Computer on Logic Chips](https://habr.com/ru/articles/590821/) – a series of articles on
-  Habr (in Russian) about the physical prototype that Computer v1 was modeled on
+- [My Computer on Logic Chips](https://habr.com/p/590821/) – a series of articles on Habr
+  (in Russian) about the physical prototype that Computer v1 was modeled on

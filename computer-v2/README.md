@@ -1,5 +1,6 @@
 # Computer v2
-🌐 English | [Русский](../ru/computer-v2/README.md)
+💻 [Computer v1](../computer-v1/README.md) | **Computer v2** &nbsp;&nbsp;&nbsp;
+🌐 **English** | [Русский](../ru/computer-v2/README.md)
 <br><br>
 
 <table>
@@ -173,8 +174,8 @@ To run your own program on the computer, see [Programming](programming.md).
       </td>
       <td valign="top">
         <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/langton_ant.asm">
-          <img src="img/langton-ant.jpg" alt="Langton's Ant"><br>
-          <b>Langton's Ant</b>
+          <img src="img/langton-ant.jpg" alt="Langton’s Ant"><br>
+          <b>Langton’s Ant</b>
         </a><br>
         The ant crawls across the display, repainting the cells and turning by a simple rule that
         produces a complex pattern. Author:
@@ -204,8 +205,8 @@ To run your own program on the computer, see [Programming](programming.md).
           <img src="img/prime-numbers.jpg" alt="Prime Numbers"><br>
           <b>Prime Numbers</b>
         </a><br>
-        Finds 16 prime numbers and outputs them to the digital indicator, as well as to the display
-        in binary format<br><br>
+        Finds the first 16 prime numbers and outputs them to the digital indicator, as well as to
+        the display in binary format<br><br>
       </td>
     </tr>
     <tr>
@@ -272,10 +273,10 @@ To run your own program on the computer, see [Programming](programming.md).
   Logic Arrows by 10 000 times
 - [Programs by Mikhail Moseev](https://github.com/mihail-moseev/program_for_computer_in_logic-arrows)
   – repository by the author of several programs listed above
-- [Programs by Nnican](https://github.com/NnicanBuak/LogicArrows)
-  – repository by the author of programs listed above
-- [Python emulator](https://github.com/farmer2010/Chubrik-processor-emulator) – written by
-  community member Farmer_2010, the author of several programs listed above
+- [Programs by Nnican](https://github.com/NnicanBuak/LogicArrows) – repository by the author of one
+  of the programs listed above
+- [Python emulator](https://github.com/farmer2010/Chubrik-processor-emulator) – written by community
+  member Farmer_2010, the author of several programs listed above
 - [C emulator](https://github.com/KittenAmogus/ACPUEmulator) – written by community member
   KittenAmogus, work in progress
 - [Discord server](https://discord.gg/zw2sRUGu5y) and [Telegram channel](https://t.me/logic_arrows)

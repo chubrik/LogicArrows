@@ -1,5 +1,7 @@
 # Programming
-<br>
+💻 [Computer v1](../computer-v1/programming.md) | **Computer v2** &nbsp;&nbsp;&nbsp;
+🌐 **English** | [Русский](../ru/computer-v2/programming.md)
+<br><br>
 
 To run your own program on the computer, follow these steps:
 - Learn the assembly language on this page.
@@ -15,14 +17,14 @@ To run your own program on the computer, follow these steps:
 
 
 ## General Principles
-A program consists of a sequence of instructions and a set of data. Each instruction occupies 1 byte
-in memory. Some instructions require an additional operand, which also occupies 1 byte and is
-located in memory immediately after the instruction. The processor executes instructions one after
-another, starting from address `00`. According to the program, the processor can also make jumps to
-different parts of the code, thus creating loops, subroutines, etc.
+A program consists of a sequence of instructions and a set of data. Each instruction occupies one
+byte in memory. Some instructions require an additional operand, which also occupies one byte and
+is located in memory immediately after the instruction. The processor executes instructions one
+after another, starting from address `00`. According to the program, the processor can also make
+jumps to different parts of the code, thus creating loops, subroutines, etc.
 
 While executing a program, the processor interacts with registers `A` `B` `C` `D` and flags `Z` `S`
-`C` `O`. Each register stores 1 byte and is general-purpose. The flags represent the result of
+`C` `O`. Each register stores one byte and is general-purpose. The flags represent the result of
 computational operations and can be used as conditions for jumps:
 - **Z flag (zero)** indicates that the result is zero.
 - **S flag (sign)** indicates that the most significant bit of the result is active. In signed
@@ -65,9 +67,9 @@ my_data_size equ $ - my_data    ; "$" denotes the current address in the code. B
 ## Instructions
 
 ### Control Instructions
-The instructions in this set are responsible for memory operations and jumps. In the table below,
-the conventional ***X*** and ***Y*** are used to denote any registers, and ***F*** is used to denote
-any flag.
+The instructions in this set are responsible for memory operations and jumps. None of them affect
+the flags. In the table below, the conventional ***X*** and ***Y*** are used to denote any
+registers, and ***F*** is used to denote any flag.
 
 Instruction | Description | Code example
 ---|---|---

@@ -2,7 +2,7 @@
 <sub>[![LogicArrows](https://img.shields.io/badge/logic--arrows-map-blue?logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cGF0aCBmaWxsPSIjNTAwIiBkPSJtOTkgMWMtMC44Ny0wLjg3LTIuMi0xLjMtMy42LTAuODJsLTc3IDI1Yy00LjkgMS43LTYuMyA3LjgtMi43IDExbDE1IDE1LTI5IDI5Yy0yLjcgMi43LTIuNyA3LjEgMCA5LjhsNyA3YzIuNyAyLjcgNy4xIDIuNyA5LjggMGwyOS0yOSAxNSAxNWMzLjcgMy43IDkuOCAyLjIgMTEtMi43bDI1LTc3YzAuNDktMS4zIDAuMDQ1LTIuNy0wLjgyLTMuNnoiIHN0cm9rZS13aWR0aD0iMS43Ii8+PC9zdmc+)](https://logic-arrows.io/)
 &nbsp;[![GitHub stars](https://img.shields.io/github/stars/chubrik/LogicArrows?style=social)](https://github.com/chubrik/LogicArrows/stargazers)</sub>
 &nbsp;&nbsp;&nbsp;
-🌐 [English](../README.md) | Русский
+🌐 [English](../README.md) | **Русский**
 
 Коллекция карт в [«Стрелочках»](https://logic-arrows.io/) — игре, где из простых стрелочек
 на клеточном поле собираются сложные логические схемы: от вентилей и сумматоров до полноценных
@@ -215,7 +215,16 @@
   для внутриигровых компьютеров
 - [ZX Spectrum](https://github.com/chubrik/arrows-zx-spectrum/blob/main/ru/README.md) –
   реалтайм-эмулятор для Steam-версии Стрелочек
+- [Logic Arrows API](https://github.com/chubrik/logic-arrows-api) – справочник по API скриптовых
+  блоков Steam-версии, он же npm-пакет
 - [GraphDLC](https://github.com/MerinPrime/GraphDLC) – браузерное расширение для ускорения
   в 10 000 раз
 - [Дискорд-сервер](https://discord.gg/yR8aaJWWH5) – сообщество на Дискорде
 - [Телеграм-канал](https://t.me/logic_arrows) – сообщество в Телеграме
+<br><br>
+
+
+## <a name="license"></a>Лицензия
+
+Проект распространяется по лицензии [MIT](../LICENSE). Программы участников сообщества,
+представленные в витринах компьютеров, принадлежат своим авторам и размещены в их репозиториях.
