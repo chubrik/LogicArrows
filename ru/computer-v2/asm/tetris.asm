@@ -216,7 +216,7 @@ down_copy_loop:     ld a, d
 ; Проверяем, не упирается ли фигура в пол
                     ldi b, WALL
                     ld a, 0x7F
-                    xor a, b
+                    cmp a, b
                     jnz mino_block
                     ld a, 0x7E
                     test a
@@ -280,19 +280,19 @@ step_start:         ld a, step_remain
                     ld a, in_out
 
                     ldi b, KEY_DOWN
-                    xor b, a
+                    cmp b, a
                     jz step_down
 
                     ldi b, KEY_LEFT
-                    xor b, a
+                    cmp b, a
                     jz left_start
 
                     ldi b, KEY_RIGHT
-                    xor b, a
+                    cmp b, a
                     jz right_start
 
                     ldi b, KEY_UP
-                    xor b, a
+                    cmp b, a
                     jnz step_start
 
                     ldi c, BANK_TURN_1
@@ -486,9 +486,9 @@ turn_check_i:       ldi c, 7                ; В двух правых коло�
                     ldi d, 0x07             ; В трёх нижних рядах поворот невозможен
 
 ; Если сработало одно из ограничений, прерываем шаг
-turn_check_end:     sub c, a
+turn_check_end:     cmp c, a
                     jc step_next
-                    sub b, d
+                    cmp b, d
                     jc step_next
 
 ; Готовим отдельный указатель в буфере, не зависящий от положения фигуры на дисплее
@@ -556,7 +556,7 @@ drop1_loop_end:     ld a, buffer_ptr_2
 ; встречает пустой ряд или достигает верхней границы дисплея, переходим к следующей фазе.
 
 drop2_loop:         ldi a, display_r
-                    sub a, c
+                    cmp a, c
                     jnc drop3_start
 
                     ld b, c
@@ -582,21 +582,20 @@ drop2_loop_copy:    ld b, c
 ; Фаза drop3. Заполняем экран пустыми рядами, пока указатель вставки не совпадёт с указателем
 ; копирования.
 
-drop3_start:        ldi b, WALL
+drop3_start:        clr a
+                    ldi b, WALL
 
-drop3_loop:         clr a
-                    st b, d
+drop3_loop:         st b, d
                     dec d
                     st a, d
                     dec d
-                    mov a, c
-                    xor a, d
+                    cmp c, d
                     jnz drop3_loop
 
 ; Переходим к следующей фигуре
                     jmp mino_next
 
-void4           db  0, 0
+void4           db  0, 0, 0
 
 
 

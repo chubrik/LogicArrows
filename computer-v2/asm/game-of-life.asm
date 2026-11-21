@@ -280,7 +280,7 @@ main_row:           ld b, upper_area
 ; different code is needed to process it.
                     ld d, display_ptr
                     ldi a, 0x5E
-                    xor a, d
+                    cmp a, d
                     jz main_row_end
 
 ; Reset the counters for the display row below the current one. Instead of zeros, use 0xFE, which

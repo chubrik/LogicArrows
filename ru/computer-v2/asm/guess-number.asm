@@ -82,15 +82,15 @@ again:          ldi a, "0"
 random:         rnd a
                 js random
                 inc a
-                ldi b, 256 - 100
-                add b, a
-                jc random
+                ldi b, 100
+                cmp a, b
+                jnc random
                 st a, number
 
 ; Проверка и инкрементация счётчика попыток. Если попытки закончились, переходим к поражению.
 try:            ld a, try_count
                 ldi b, TRIES_STR
-                xor b, a
+                cmp b, a
                 jz lose
                 inc a
                 st a, try_count
@@ -106,21 +106,21 @@ input_1:        ld c, in_out
                 jc input_1
                 inc a
                 ldi d, 9
-                sub d, a
+                cmp d, a
                 jc input_1
                 st c, terminal
 
 ; Ввод второго символа. Допускаются цифры от 0 до 9 и Enter.
 input_2:        ld c, in_out
                 ldi d, "\n"
-                xor d, c
+                cmp d, c
                 jz compare          ; Если введён Enter, сразу переходим к сравнению
                 mov b, c
                 ldi d, "0"
                 sub b, d
                 jc input_2
                 ldi d, 9
-                sub d, b
+                cmp d, b
                 jc input_2
                 st c, terminal
 
@@ -134,7 +134,7 @@ combine:        mov c, a
 
 ; Сравнение введённого числа с загаданным
 compare:        ld b, number
-                sub a, b
+                cmp a, b
                 jz win              ; Если числа совпадают, переходим к победе
                 ldi d, try
                 jc higher

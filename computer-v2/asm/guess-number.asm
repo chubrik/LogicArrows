@@ -80,15 +80,15 @@ again:          ldi a, "0"
 random:         rnd a
                 js random
                 inc a
-                ldi b, 256 - 100
-                add b, a
-                jc random
+                ldi b, 100
+                cmp a, b
+                jnc random
                 st a, number
 
 ; Check and increment the try counter. If attempts are over, go to lose.
 try:            ld a, try_count
                 ldi b, TRIES_STR
-                xor b, a
+                cmp b, a
                 jz lose
                 inc a
                 st a, try_count
@@ -104,21 +104,21 @@ input_1:        ld c, in_out
                 jc input_1
                 inc a
                 ldi d, 9
-                sub d, a
+                cmp d, a
                 jc input_1
                 st c, terminal
 
 ; Read the second character. Digits 0 through 9 and Enter are allowed.
 input_2:        ld c, in_out
                 ldi d, "\n"
-                xor d, c
+                cmp d, c
                 jz compare          ; If Enter is pressed, compare immediately
                 mov b, c
                 ldi d, "0"
                 sub b, d
                 jc input_2
                 ldi d, 9
-                sub d, b
+                cmp d, b
                 jc input_2
                 st c, terminal
 
@@ -132,7 +132,7 @@ combine:        mov c, a
 
 ; Compare the entered number with the secret
 compare:        ld b, number
-                sub a, b
+                cmp a, b
                 jz win              ; If numbers match, go to win
                 ldi d, try
                 jc higher

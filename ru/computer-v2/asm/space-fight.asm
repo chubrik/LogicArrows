@@ -67,9 +67,9 @@ step_loop:      ld a, step_left         ; Уменьшаем счёт ходов
                 js level                ; Если ходов не осталось, переходим на следующий уровень
                 st a, step_left
                 ld a, in_out
-                xor d, a
+                cmp d, a
                 jz fire
-                xor c, a
+                cmp c, a
                 jmp step_end            ; Переходим через зарезервированную область памяти
 
 ; Переменные и порты
@@ -100,7 +100,7 @@ display     db  0b00101000, 0b00000000, ;     ██  ██                    
 
 ; Продолжаем обработку клавиатуры
 step_end:       jz right
-                xor b, a
+                cmp b, a
                 jnz step_loop
 
 ; Сдвигаем корабль влево

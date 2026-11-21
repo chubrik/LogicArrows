@@ -66,9 +66,9 @@ step_loop:      ld a, step_left         ; Decrement the step counter
                 js level                ; If no steps are left, go to the next level
                 st a, step_left
                 ld a, in_out
-                xor d, a
+                cmp d, a
                 jz fire
-                xor c, a
+                cmp c, a
                 jmp step_end            ; Jump over the reserved memory area
 
 ; Variables and ports
@@ -99,7 +99,7 @@ display     db  0b00101000, 0b00000000, ;     ██  ██                    
 
 ; Continue keyboard processing
 step_end:       jz right
-                xor b, a
+                cmp b, a
                 jnz step_loop
 
 ; Move the ship left

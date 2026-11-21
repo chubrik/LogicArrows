@@ -28,7 +28,7 @@ factor: inc d               ; Move the pointer to the next prime number on the d
         ld c, d             ; Take a prime number from the display as a factor
         mov a, b            ; Copy the candidate number
         shr a               ; Divide it by 2
-        sub a, c            ; Subtract the current factor from it
+        cmp a, c            ; Compare it with the current factor
         jc prime            ; If the factor is greater than half of the candidate number, then
                             ;   there's no point in checking further factors - we've found a new
                             ;   prime number
@@ -51,7 +51,7 @@ prime:  ld d, last          ; Read the pointer to the last found prime number on
         st b, d             ; Output the new prime number to the display
         ldi a, 0x5F         ; Get the pointer to the last possible position in the bottom row of the
                             ;   display
-        xor a, d            ; Compare the two pointers
+        cmp a, d            ; Compare the two pointers
         jnz next            ; If they are not equal, proceed to the next candidate number
 
         hlt                 ; End the program execution

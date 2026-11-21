@@ -279,7 +279,7 @@ main_row:           ld b, upper_area
 ; обработки нужно перейти к другому коду
                     ld d, display_ptr
                     ldi a, 0x5E
-                    xor a, d
+                    cmp a, d
                     jz main_row_end
 
 ; Сбрасываем счётчики для ряда на дисплее ниже текущего. Вместо нулей используем 0xFE, что

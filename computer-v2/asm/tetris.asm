@@ -211,7 +211,7 @@ down_copy_loop:     ld a, d
 ; Check if the piece is hitting the floor
                     ldi b, WALL
                     ld a, 0x7F
-                    xor a, b
+                    cmp a, b
                     jnz mino_block
                     ld a, 0x7E
                     test a
@@ -275,19 +275,19 @@ step_start:         ld a, step_remain
                     ld a, in_out
 
                     ldi b, KEY_DOWN
-                    xor b, a
+                    cmp b, a
                     jz step_down
 
                     ldi b, KEY_LEFT
-                    xor b, a
+                    cmp b, a
                     jz left_start
 
                     ldi b, KEY_RIGHT
-                    xor b, a
+                    cmp b, a
                     jz right_start
 
                     ldi b, KEY_UP
-                    xor b, a
+                    cmp b, a
                     jnz step_start
 
                     ldi c, BANK_TURN_1
@@ -481,9 +481,9 @@ turn_check_i:       ldi c, 7                ; Rotation is not possible in the tw
                     ldi d, 0x07             ; Rotation is not possible in the three bottom rows
 
 ; If one of the restrictions is met, interrupt the step
-turn_check_end:     sub c, a
+turn_check_end:     cmp c, a
                     jc step_next
-                    sub b, d
+                    cmp b, d
                     jc step_next
 
 ; Prepare a separate buffer pointer, independent of the piece's position on the display
@@ -551,7 +551,7 @@ drop1_loop_end:     ld a, buffer_ptr_2
 ; an empty row or reaches the top of the display, proceed to the next phase.
 
 drop2_loop:         ldi a, display_r
-                    sub a, c
+                    cmp a, c
                     jnc drop3_start
 
                     ld b, c
@@ -576,21 +576,20 @@ drop2_loop_copy:    ld b, c
 
 ; Phase drop3. Fill the screen with empty rows until the paste pointer matches the copy pointer.
 
-drop3_start:        ldi b, WALL
+drop3_start:        clr a
+                    ldi b, WALL
 
-drop3_loop:         clr a
-                    st b, d
+drop3_loop:         st b, d
                     dec d
                     st a, d
                     dec d
-                    mov a, c
-                    xor a, d
+                    cmp c, d
                     jnz drop3_loop
 
 ; Jump to the next piece
                     jmp mino_next
 
-void4           db  0, 0
+void4           db  0, 0, 0
 
 
 
