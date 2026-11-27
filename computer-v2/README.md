@@ -72,21 +72,21 @@ To run your own program on the computer, see [Programming](programming.md).
     </tr>
     <tr>
       <td valign="top">
-        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/arcanoid.asm">
-          <img src="img/arkanoid.jpg" alt="Arkanoid Game"><br>
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/programs/farmer_2010/arcanoid.asm">
+          <img src="img/arkanoid-farmer.jpg" alt="Arkanoid Game"><br>
           <b>Arkanoid Game</b>
         </a><br>
         Bounce the ball with the paddle to break all the bricks on the screen. Author:
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/XO_bot.asm">
-          <img src="img/tic-tac-toe.jpg" alt="Tic-Tac-Toe Game"><br>
-          <b>Tic-Tac-Toe Game</b>
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2/programs/code%20arkanoid.asm">
+          <img src="img/arkanoid-moseev.jpg" alt="Arkanoid Game"><br>
+          <b>Arkanoid Game</b>
         </a><br>
-        Line up three in a row playing against the bot. There is also a
-        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/XO_pvp.asm">version for two</a>. Author:
-        <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
+        Bounce the ball at different angles and score points. Author:
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Mikhail Moseev</a>.<br><br>
       </td>
       <td valign="top">
         <a href="https://github.com/NnicanBuak/LogicArrows/blob/main/qr-terminal/qr_terminal21.asm">
@@ -110,7 +110,7 @@ To run your own program on the computer, see [Programming](programming.md).
         Mikhail Moseev</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/raycasting.asm">
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/programs/farmer_2010/raycasting.asm">
           <img src="img/3d-maze-farmer.jpg" alt="3D Maze"><br>
           <b>3D Maze</b>
         </a><br>
@@ -118,17 +118,18 @@ To run your own program on the computer, see [Programming](programming.md).
         Author: <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/maze_generator.asm">
-          <img src="img/maze-generator.jpg" alt="Maze Generator"><br>
-          <b>Maze Generator</b>
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/programs/farmer_2010/XO_bot.asm">
+          <img src="img/tic-tac-toe.jpg" alt="Tic-Tac-Toe Game"><br>
+          <b>Tic-Tac-Toe Game</b>
         </a><br>
-        Generates a random maze on the display using the backtracking algorithm. Author:
+        Line up three in a row playing against the bot. There is also a
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/programs/farmer_2010/XO_pvp.asm">version for two</a>. Author:
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/1d_ca.asm">
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/programs/farmer_2010/1d_ca.asm">
           <img src="img/1d-cellular-automaton.jpg" alt="1D Cellular Automaton"><br>
           <b>1D Cellular Automaton</b>
         </a><br>
@@ -173,7 +174,7 @@ To run your own program on the computer, see [Programming](programming.md).
         Mikhail Moseev</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/langton_ant.asm">
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/programs/farmer_2010/langton_ant.asm">
           <img src="img/langton-ant.jpg" alt="Langton’s Ant"><br>
           <b>Langton’s Ant</b>
         </a><br>
@@ -192,13 +193,12 @@ To run your own program on the computer, see [Programming](programming.md).
         image, and rings the bell<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2/programs/code%20tennis.asm">
-          <img src="img/tennis.jpg" alt="Tennis Game"><br>
-          <b>Tennis Game</b>
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/programs/farmer_2010/maze_generator.asm">
+          <img src="img/maze-generator.jpg" alt="Maze Generator"><br>
+          <b>Maze Generator</b>
         </a><br>
-        Bounce the ball with the paddle, don’t let it fall, and score points. Author:
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
-        Mikhail Moseev</a>.<br><br>
+        Generates a random maze on the display using the backtracking algorithm. Author:
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
         <a href="asm/prime-numbers.asm">

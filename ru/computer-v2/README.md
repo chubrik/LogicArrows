@@ -72,21 +72,21 @@
     </tr>
     <tr>
       <td valign="top">
-        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/arcanoid.asm">
-          <img src="../../computer-v2/img/arkanoid.jpg" alt="Игра «Арканоид»"><br>
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/programs/farmer_2010/arcanoid.asm">
+          <img src="../../computer-v2/img/arkanoid-farmer.jpg" alt="Игра «Арканоид»"><br>
           <b>Игра «Арканоид»</b>
         </a><br>
         Отбивайте мяч платформой, чтобы разбить все блоки на экране. Автор —
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/XO_bot.asm">
-          <img src="../../computer-v2/img/tic-tac-toe.jpg" alt="Игра «Крестики-нолики»"><br>
-          <b>Игра «Крестики-нолики»</b>
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2/programs/code%20arkanoid.asm">
+          <img src="../../computer-v2/img/arkanoid-moseev.jpg" alt="Игра «Арканоид»"><br>
+          <b>Игра «Арканоид»</b>
         </a><br>
-        Соберите линию из трёх, играя против бота. Также есть
-        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/XO_pvp.asm">версия для двоих</a>. Автор —
-        <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
+        Отбивайте мяч под разными углами и зарабатывайте очки. Автор —
+        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
+        Михаил Мосеев</a>.<br><br>
       </td>
       <td valign="top">
         <a href="https://github.com/NnicanBuak/LogicArrows/blob/main/qr-terminal/qr_terminal21.asm">
@@ -110,7 +110,7 @@
         Михаил Мосеев</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/raycasting.asm">
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/programs/farmer_2010/raycasting.asm">
           <img src="../../computer-v2/img/3d-maze-farmer.jpg" alt="3D-лабиринт"><br>
           <b>3D-лабиринт</b>
         </a><br>
@@ -118,17 +118,18 @@
         Автор — <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/maze_generator.asm">
-          <img src="../../computer-v2/img/maze-generator.jpg" alt="Генератор лабиринтов"><br>
-          <b>Генератор лабиринтов</b>
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/programs/farmer_2010/XO_bot.asm">
+          <img src="../../computer-v2/img/tic-tac-toe.jpg" alt="Игра «Крестики-нолики»"><br>
+          <b>Игра «Крестики-нолики»</b>
         </a><br>
-        Генерирует на дисплее случайный лабиринт методом поиска с возвратом. Автор —
+        Соберите линию из трёх, играя против бота. Также есть
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/programs/farmer_2010/XO_pvp.asm">версия для двоих</a>. Автор —
         <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/1d_ca.asm">
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/programs/farmer_2010/1d_ca.asm">
           <img src="../../computer-v2/img/1d-cellular-automaton.jpg" alt="1D клеточный автомат"><br>
           <b>1D клеточный автомат</b>
         </a><br>
@@ -172,7 +173,7 @@
         Михаил Мосеев</a>.<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/emulator/files/programs/farmer_2010/langton_ant.asm">
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/programs/farmer_2010/langton_ant.asm">
           <img src="../../computer-v2/img/langton-ant.jpg" alt="Муравей Лэнгтона"><br>
           <b>Муравей Лэнгтона</b>
         </a><br>
@@ -191,13 +192,12 @@
         онигири и звонит в колокольчик<br><br>
       </td>
       <td valign="top">
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows/blob/main/computer%20v2/programs/code%20tennis.asm">
-          <img src="../../computer-v2/img/tennis.jpg" alt="Игра «Теннис»"><br>
-          <b>Игра «Теннис»</b>
+        <a href="https://github.com/farmer2010/Chubrik-processor-emulator/blob/main/programs/farmer_2010/maze_generator.asm">
+          <img src="../../computer-v2/img/maze-generator.jpg" alt="Генератор лабиринтов"><br>
+          <b>Генератор лабиринтов</b>
         </a><br>
-        Отбивайте мяч платформой, не давая ему упасть и зарабатывая очки. Автор —
-        <a href="https://github.com/mihail-moseev/program_for_computer_in_logic-arrows">
-        Михаил Мосеев</a>.<br><br>
+        Генерирует на дисплее случайный лабиринт методом поиска с возвратом. Автор —
+        <a href="https://github.com/farmer2010">Farmer_2010</a>.<br><br>
       </td>
       <td valign="top">
         <a href="asm/prime-numbers.asm">

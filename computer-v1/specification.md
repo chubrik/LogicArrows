@@ -24,7 +24,7 @@ The processor reads an instruction from RAM at the address stored in `IP`. The i
 with registers and flags. After that, `IP` is incremented and the process repeats. For more details,
 see [Programming](programming.md).
 
-<img src="img/cpu-en.jpg" width="70%" alt="Processor">
+<img src="img/cpu.jpg" width="70%" alt="Processor">
 <br><br>
 
 
